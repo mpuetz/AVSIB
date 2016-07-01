@@ -1,0 +1,947 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="LogoPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        /9j/4AAQSkZJRgABAQEAAAAAAAD/4QCORXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAABZAD
+        AAIAAAAUAAAAXJKGAAcAAAAWAAAAcKABAAMAAAABAAEAAKACAAQAAAABAAACfaADAAQAAAABAAABywAA
+        AAAyMDE1OjA5OjE0IDAxOjEzOjAwAFMAYwByAGUAZQBuAHMAaABvAHQAAAD/2wBDAAICAgICAgMCAgMF
+        AwMDBQYFBQUFBggGBgYGBggKCAgICAgICgoKCgoKCgoMDAwMDAwODg4ODg8PDw8PDw8PDw//2wBDAQIC
+        AgQEBAcEBAcQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQ
+        EBD/wAARCAHLAn0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAA
+        AgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRol
+        JicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZ
+        mqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QA
+        HwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+        BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RV
+        VldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPE
+        xcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/90ABAAo/9oADAMBAAIRAxEAPwD4vooor+Uz
+        /fwKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//9D4vooor+Uz/fwKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooA//9H4vooor+Uz/fwKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooA//9L4vooor+Uz/fwKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooA//9P4vooor+Uz/fwKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAor
+        2D4G+EdC8b+PYdB8RQtPZvBNIVV2jO5BkcqQa+1v+GavhH/0C5v/AAKm/wDiq8XMM+o4ap7OonffT/hz
+        804t8VctyXFLB4uM3Kyl7qTVnfvJdj8yaK/Tb/hmr4R/9Aub/wACpv8A4qj/AIZq+Ef/AEC5v/Aqb/4q
+        uH/W3C9pfcv8z5j/AImByT+Sp/4DH/5I/Mmiv02/4Zq+Ef8A0C5v/Aqb/wCKo/4Zq+Ef/QLm/wDAqb/4
+        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
+        yNfSH2m3/wCeqf8AfQr5s+J7o/ip2Rgw8mPkHPY1wZi/3fzP7z/Z0YWrDxAm5xaX1epuv71M88ooorwj
+        /dIKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD//0/i+iiiv5TP9/Aoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD//1Pi+iiiv5TP9/AooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigD//1fi+iiiv5TP9/AooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigD//1vi+iiiv5TP9/AooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD//
+        1/i+iiiv5TP9/AooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD//0Pi+iiiv5TP9/Aoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD//0fi+iiiv5TP9/AooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigD//0vi+iiiv5TP9/AooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigD//0/i+iiiv5TP9/AooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo
+        ooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD//
+        2Q==
+</value>
+  </data>
+  <data name="TextBoxDescription.Text" xml:space="preserve">
+    <value>Das Programm dient zum Aufbau und zur Pflege einer Datenbank, in welcher die Empfänger einer Informationsschrift den Austrägern zugeordnet werden. 
+Für die Austräger können entsprechende Adresslisten gedruckt werden. 
+    Copyright (C) 2016 Michael Pütz, E-Mail: software@mpuetzonline.de
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+
+____________________________________________________________________________
+
+
+GNU GENERAL PUBLIC LICENSE
+
+Version 3, 29 June 2007
+
+Copyright © 2007 Free Software Foundation, Inc. &lt;http://fsf.org/&gt;
+
+Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
+Preamble
+
+The GNU General Public License is a free, copyleft license for software and other kinds of works.
+
+The licenses for most software and other practical works are designed to take away your freedom to share and change the works. By contrast, the GNU General Public License is intended to guarantee your freedom to share and change all versions of a program--to make sure it remains free software for all its users. We, the Free Software Foundation, use the GNU General Public License for most of our software; it applies also to any other work released this way by its authors. You can apply it to your programs, too.
+
+When we speak of free software, we are referring to freedom, not price. Our General Public Licenses are designed to make sure that you have the freedom to distribute copies of free software (and charge for them if you wish), that you receive source code or can get it if you want it, that you can change the software or use pieces of it in new free programs, and that you know you can do these things.
+
+To protect your rights, we need to prevent others from denying you these rights or asking you to surrender the rights. Therefore, you have certain responsibilities if you distribute copies of the software, or if you modify it: responsibilities to respect the freedom of others.
+
+For example, if you distribute copies of such a program, whether gratis or for a fee, you must pass on to the recipients the same freedoms that you received. You must make sure that they, too, receive or can get the source code. And you must show them these terms so they know their rights.
+
+Developers that use the GNU GPL protect your rights with two steps: (1) assert copyright on the software, and (2) offer you this License giving you legal permission to copy, distribute and/or modify it.
+
+For the developers' and authors' protection, the GPL clearly explains that there is no warranty for this free software. For both users' and authors' sake, the GPL requires that modified versions be marked as changed, so that their problems will not be attributed erroneously to authors of previous versions.
+
+Some devices are designed to deny users access to install or run modified versions of the software inside them, although the manufacturer can do so. This is fundamentally incompatible with the aim of protecting users' freedom to change the software. The systematic pattern of such abuse occurs in the area of products for individuals to use, which is precisely where it is most unacceptable. Therefore, we have designed this version of the GPL to prohibit the practice for those products. If such problems arise substantially in other domains, we stand ready to extend this provision to those domains in future versions of the GPL, as needed to protect the freedom of users.
+
+Finally, every program is threatened constantly by software patents. States should not allow patents to restrict development and use of software on general-purpose computers, but in those that do, we wish to avoid the special danger that patents applied to a free program could make it effectively proprietary. To prevent this, the GPL assures that patents cannot be used to render the program non-free.
+
+The precise terms and conditions for copying, distribution and modification follow.
+
+TERMS AND CONDITIONS
+
+
+0. Definitions.
+
+“This License” refers to version 3 of the GNU General Public License.
+
+“Copyright” also means copyright-like laws that apply to other kinds of works, such as semiconductor masks.
+
+“The Program” refers to any copyrightable work licensed under this License. Each licensee is addressed as “you”. “Licensees” and “recipients” may be individuals or organizations.
+
+To “modify” a work means to copy from or adapt all or part of the work in a fashion requiring copyright permission, other than the making of an exact copy. The resulting work is called a “modified version” of the earlier work or a work “based on” the earlier work.
+
+A “covered work” means either the unmodified Program or a work based on the Program.
+
+To “propagate” a work means to do anything with it that, without permission, would make you directly or secondarily liable for infringement under applicable copyright law, except executing it on a computer or modifying a private copy. Propagation includes copying, distribution (with or without modification), making available to the public, and in some countries other activities as well.
+
+To “convey” a work means any kind of propagation that enables other parties to make or receive copies. Mere interaction with a user through a computer network, with no transfer of a copy, is not conveying.
+
+An interactive user interface displays “Appropriate Legal Notices” to the extent that it includes a convenient and prominently visible feature that (1) displays an appropriate copyright notice, and (2) tells the user that there is no warranty for the work (except to the extent that warranties are provided), that licensees may convey the work under this License, and how to view a copy of this License. If the interface presents a list of user commands or options, such as a menu, a prominent item in the list meets this criterion.
+
+
+1. Source Code.
+
+The “source code” for a work means the preferred form of the work for making modifications to it. “Object code” means any non-source form of a work.
+
+A “Standard Interface” means an interface that either is an official standard defined by a recognized standards body, or, in the case of interfaces specified for a particular programming language, one that is widely used among developers working in that language.
+
+The “System Libraries” of an executable work include anything, other than the work as a whole, that (a) is included in the normal form of packaging a Major Component, but which is not part of that Major Component, and (b) serves only to enable use of the work with that Major Component, or to implement a Standard Interface for which an implementation is available to the public in source code form. A “Major Component”, in this context, means a major essential component (kernel, window system, and so on) of the specific operating system (if any) on which the executable work runs, or a compiler used to produce the work, or an object code interpreter used to run it.
+
+The “Corresponding Source” for a work in object code form means all the source code needed to generate, install, and (for an executable work) run the object code and to modify the work, including scripts to control those activities. However, it does not include the work's System Libraries, or general-purpose tools or generally available free programs which are used unmodified in performing those activities but which are not part of the work. For example, Corresponding Source includes interface definition files associated with source files for the work, and the source code for shared libraries and dynamically linked subprograms that the work is specifically designed to require, such as by intimate data communication or control flow between those subprograms and other parts of the work.
+
+The Corresponding Source need not include anything that users can regenerate automatically from other parts of the Corresponding Source.
+
+The Corresponding Source for a work in source code form is that same work.
+
+
+2. Basic Permissions.
+
+All rights granted under this License are granted for the term of copyright on the Program, and are irrevocable provided the stated conditions are met. This License explicitly affirms your unlimited permission to run the unmodified Program. The output from running a covered work is covered by this License only if the output, given its content, constitutes a covered work. This License acknowledges your rights of fair use or other equivalent, as provided by copyright law.
+
+You may make, run and propagate covered works that you do not convey, without conditions so long as your license otherwise remains in force. You may convey covered works to others for the sole purpose of having them make modifications exclusively for you, or provide you with facilities for running those works, provided that you comply with the terms of this License in conveying all material for which you do not control copyright. Those thus making or running the covered works for you must do so exclusively on your behalf, under your direction and control, on terms that prohibit them from making any copies of your copyrighted material outside their relationship with you.
+
+Conveying under any other circumstances is permitted solely under the conditions stated below. Sublicensing is not allowed; section 10 makes it unnecessary.
+
+
+3. Protecting Users' Legal Rights From Anti-Circumvention Law.
+
+No covered work shall be deemed part of an effective technological measure under any applicable law fulfilling obligations under article 11 of the WIPO copyright treaty adopted on 20 December 1996, or similar laws prohibiting or restricting circumvention of such measures.
+
+When you convey a covered work, you waive any legal power to forbid circumvention of technological measures to the extent such circumvention is effected by exercising rights under this License with respect to the covered work, and you disclaim any intention to limit operation or modification of the work as a means of enforcing, against the work's users, your or third parties' legal rights to forbid circumvention of technological measures.
+
+
+4. Conveying Verbatim Copies.
+
+You may convey verbatim copies of the Program's source code as you receive it, in any medium, provided that you conspicuously and appropriately publish on each copy an appropriate copyright notice; keep intact all notices stating that this License and any non-permissive terms added in accord with section 7 apply to the code; keep intact all notices of the absence of any warranty; and give all recipients a copy of this License along with the Program.
+
+You may charge any price or no price for each copy that you convey, and you may offer support or warranty protection for a fee.
+
+
+5. Conveying Modified Source Versions.
+
+You may convey a work based on the Program, or the modifications to produce it from the Program, in the form of source code under the terms of section 4, provided that you also meet all of these conditions:
+
+    a) The work must carry prominent notices stating that you modified it, and giving a relevant date.
+    b) The work must carry prominent notices stating that it is released under this License and any conditions added under section 7. This requirement modifies the requirement in section 4 to “keep intact all notices”.
+    c) You must license the entire work, as a whole, under this License to anyone who comes into possession of a copy. This License will therefore apply, along with any applicable section 7 additional terms, to the whole of the work, and all its parts, regardless of how they are packaged. This License gives no permission to license the work in any other way, but it does not invalidate such permission if you have separately received it.
+    d) If the work has interactive user interfaces, each must display Appropriate Legal Notices; however, if the Program has interactive interfaces that do not display Appropriate Legal Notices, your work need not make them do so.
+
+A compilation of a covered work with other separate and independent works, which are not by their nature extensions of the covered work, and which are not combined with it such as to form a larger program, in or on a volume of a storage or distribution medium, is called an “aggregate” if the compilation and its resulting copyright are not used to limit the access or legal rights of the compilation's users beyond what the individual works permit. Inclusion of a covered work in an aggregate does not cause this License to apply to the other parts of the aggregate.
+
+
+6. Conveying Non-Source Forms.
+
+You may convey a covered work in object code form under the terms of sections 4 and 5, provided that you also convey the machine-readable Corresponding Source under the terms of this License, in one of these ways:
+
+    a) Convey the object code in, or embodied in, a physical product (including a physical distribution medium), accompanied by the Corresponding Source fixed on a durable physical medium customarily used for software interchange.
+    b) Convey the object code in, or embodied in, a physical product (including a physical distribution medium), accompanied by a written offer, valid for at least three years and valid for as long as you offer spare parts or customer support for that product model, to give anyone who possesses the object code either (1) a copy of the Corresponding Source for all the software in the product that is covered by this License, on a durable physical medium customarily used for software interchange, for a price no more than your reasonable cost of physically performing this conveying of source, or (2) access to copy the Corresponding Source from a network server at no charge.
+    c) Convey individual copies of the object code with a copy of the written offer to provide the Corresponding Source. This alternative is allowed only occasionally and noncommercially, and only if you received the object code with such an offer, in accord with subsection 6b.
+    d) Convey the object code by offering access from a designated place (gratis or for a charge), and offer equivalent access to the Corresponding Source in the same way through the same place at no further charge. You need not require recipients to copy the Corresponding Source along with the object code. If the place to copy the object code is a network server, the Corresponding Source may be on a different server (operated by you or a third party) that supports equivalent copying facilities, provided you maintain clear directions next to the object code saying where to find the Corresponding Source. Regardless of what server hosts the Corresponding Source, you remain obligated to ensure that it is available for as long as needed to satisfy these requirements.
+    e) Convey the object code using peer-to-peer transmission, provided you inform other peers where the object code and Corresponding Source of the work are being offered to the general public at no charge under subsection 6d.
+
+A separable portion of the object code, whose source code is excluded from the Corresponding Source as a System Library, need not be included in conveying the object code work.
+
+A “User Product” is either (1) a “consumer product”, which means any tangible personal property which is normally used for personal, family, or household purposes, or (2) anything designed or sold for incorporation into a dwelling. In determining whether a product is a consumer product, doubtful cases shall be resolved in favor of coverage. For a particular product received by a particular user, “normally used” refers to a typical or common use of that class of product, regardless of the status of the particular user or of the way in which the particular user actually uses, or expects or is expected to use, the product. A product is a consumer product regardless of whether the product has substantial commercial, industrial or non-consumer uses, unless such uses represent the only significant mode of use of the product.
+
+“Installation Information” for a User Product means any methods, procedures, authorization keys, or other information required to install and execute modified versions of a covered work in that User Product from a modified version of its Corresponding Source. The information must suffice to ensure that the continued functioning of the modified object code is in no case prevented or interfered with solely because modification has been made.
+
+If you convey an object code work under this section in, or with, or specifically for use in, a User Product, and the conveying occurs as part of a transaction in which the right of possession and use of the User Product is transferred to the recipient in perpetuity or for a fixed term (regardless of how the transaction is characterized), the Corresponding Source conveyed under this section must be accompanied by the Installation Information. But this requirement does not apply if neither you nor any third party retains the ability to install modified object code on the User Product (for example, the work has been installed in ROM).
+
+The requirement to provide Installation Information does not include a requirement to continue to provide support service, warranty, or updates for a work that has been modified or installed by the recipient, or for the User Product in which it has been modified or installed. Access to a network may be denied when the modification itself materially and adversely affects the operation of the network or violates the rules and protocols for communication across the network.
+
+Corresponding Source conveyed, and Installation Information provided, in accord with this section must be in a format that is publicly documented (and with an implementation available to the public in source code form), and must require no special password or key for unpacking, reading or copying.
+
+
+7. Additional Terms.
+
+“Additional permissions” are terms that supplement the terms of this License by making exceptions from one or more of its conditions. Additional permissions that are applicable to the entire Program shall be treated as though they were included in this License, to the extent that they are valid under applicable law. If additional permissions apply only to part of the Program, that part may be used separately under those permissions, but the entire Program remains governed by this License without regard to the additional permissions.
+
+When you convey a copy of a covered work, you may at your option remove any additional permissions from that copy, or from any part of it. (Additional permissions may be written to require their own removal in certain cases when you modify the work.) You may place additional permissions on material, added by you to a covered work, for which you have or can give appropriate copyright permission.
+
+Notwithstanding any other provision of this License, for material you add to a covered work, you may (if authorized by the copyright holders of that material) supplement the terms of this License with terms:
+
+    a) Disclaiming warranty or limiting liability differently from the terms of sections 15 and 16 of this License; or
+    b) Requiring preservation of specified reasonable legal notices or author attributions in that material or in the Appropriate Legal Notices displayed by works containing it; or
+    c) Prohibiting misrepresentation of the origin of that material, or requiring that modified versions of such material be marked in reasonable ways as different from the original version; or
+    d) Limiting the use for publicity purposes of names of licensors or authors of the material; or
+    e) Declining to grant rights under trademark law for use of some trade names, trademarks, or service marks; or
+    f) Requiring indemnification of licensors and authors of that material by anyone who conveys the material (or modified versions of it) with contractual assumptions of liability to the recipient, for any liability that these contractual assumptions directly impose on those licensors and authors.
+
+All other non-permissive additional terms are considered “further restrictions” within the meaning of section 10. If the Program as you received it, or any part of it, contains a notice stating that it is governed by this License along with a term that is a further restriction, you may remove that term. If a license document contains a further restriction but permits relicensing or conveying under this License, you may add to a covered work material governed by the terms of that license document, provided that the further restriction does not survive such relicensing or conveying.
+
+If you add terms to a covered work in accord with this section, you must place, in the relevant source files, a statement of the additional terms that apply to those files, or a notice indicating where to find the applicable terms.
+
+Additional terms, permissive or non-permissive, may be stated in the form of a separately written license, or stated as exceptions; the above requirements apply either way.
+
+
+8. Termination.
+
+You may not propagate or modify a covered work except as expressly provided under this License. Any attempt otherwise to propagate or modify it is void, and will automatically terminate your rights under this License (including any patent licenses granted under the third paragraph of section 11).
+
+However, if you cease all violation of this License, then your license from a particular copyright holder is reinstated (a) provisionally, unless and until the copyright holder explicitly and finally terminates your license, and (b) permanently, if the copyright holder fails to notify you of the violation by some reasonable means prior to 60 days after the cessation.
+
+Moreover, your license from a particular copyright holder is reinstated permanently if the copyright holder notifies you of the violation by some reasonable means, this is the first time you have received notice of violation of this License (for any work) from that copyright holder, and you cure the violation prior to 30 days after your receipt of the notice.
+
+Termination of your rights under this section does not terminate the licenses of parties who have received copies or rights from you under this License. If your rights have been terminated and not permanently reinstated, you do not qualify to receive new licenses for the same material under section 10.
+
+
+9. Acceptance Not Required for Having Copies.
+
+You are not required to accept this License in order to receive or run a copy of the Program. Ancillary propagation of a covered work occurring solely as a consequence of using peer-to-peer transmission to receive a copy likewise does not require acceptance. However, nothing other than this License grants you permission to propagate or modify any covered work. These actions infringe copyright if you do not accept this License. Therefore, by modifying or propagating a covered work, you indicate your acceptance of this License to do so.
+
+
+10. Automatic Licensing of Downstream Recipients.
+
+Each time you convey a covered work, the recipient automatically receives a license from the original licensors, to run, modify and propagate that work, subject to this License. You are not responsible for enforcing compliance by third parties with this License.
+
+An “entity transaction” is a transaction transferring control of an organization, or substantially all assets of one, or subdividing an organization, or merging organizations. If propagation of a covered work results from an entity transaction, each party to that transaction who receives a copy of the work also receives whatever licenses to the work the party's predecessor in interest had or could give under the previous paragraph, plus a right to possession of the Corresponding Source of the work from the predecessor in interest, if the predecessor has it or can get it with reasonable efforts.
+
+You may not impose any further restrictions on the exercise of the rights granted or affirmed under this License. For example, you may not impose a license fee, royalty, or other charge for exercise of rights granted under this License, and you may not initiate litigation (including a cross-claim or counterclaim in a lawsuit) alleging that any patent claim is infringed by making, using, selling, offering for sale, or importing the Program or any portion of it.
+
+
+11. Patents.
+
+A “contributor” is a copyright holder who authorizes use under this License of the Program or a work on which the Program is based. The work thus licensed is called the contributor's “contributor version”.
+
+A contributor's “essential patent claims” are all patent claims owned or controlled by the contributor, whether already acquired or hereafter acquired, that would be infringed by some manner, permitted by this License, of making, using, or selling its contributor version, but do not include claims that would be infringed only as a consequence of further modification of the contributor version. For purposes of this definition, “control” includes the right to grant patent sublicenses in a manner consistent with the requirements of this License.
+
+Each contributor grants you a non-exclusive, worldwide, royalty-free patent license under the contributor's essential patent claims, to make, use, sell, offer for sale, import and otherwise run, modify and propagate the contents of its contributor version.
+
+In the following three paragraphs, a “patent license” is any express agreement or commitment, however denominated, not to enforce a patent (such as an express permission to practice a patent or covenant not to sue for patent infringement). To “grant” such a patent license to a party means to make such an agreement or commitment not to enforce a patent against the party.
+
+If you convey a covered work, knowingly relying on a patent license, and the Corresponding Source of the work is not available for anyone to copy, free of charge and under the terms of this License, through a publicly available network server or other readily accessible means, then you must either (1) cause the Corresponding Source to be so available, or (2) arrange to deprive yourself of the benefit of the patent license for this particular work, or (3) arrange, in a manner consistent with the requirements of this License, to extend the patent license to downstream recipients. “Knowingly relying” means you have actual knowledge that, but for the patent license, your conveying the covered work in a country, or your recipient's use of the covered work in a country, would infringe one or more identifiable patents in that country that you have reason to believe are valid.
+
+If, pursuant to or in connection with a single transaction or arrangement, you convey, or propagate by procuring conveyance of, a covered work, and grant a patent license to some of the parties receiving the covered work authorizing them to use, propagate, modify or convey a specific copy of the covered work, then the patent license you grant is automatically extended to all recipients of the covered work and works based on it.
+
+A patent license is “discriminatory” if it does not include within the scope of its coverage, prohibits the exercise of, or is conditioned on the non-exercise of one or more of the rights that are specifically granted under this License. You may not convey a covered work if you are a party to an arrangement with a third party that is in the business of distributing software, under which you make payment to the third party based on the extent of your activity of conveying the work, and under which the third party grants, to any of the parties who would receive the covered work from you, a discriminatory patent license (a) in connection with copies of the covered work conveyed by you (or copies made from those copies), or (b) primarily for and in connection with specific products or compilations that contain the covered work, unless you entered into that arrangement, or that patent license was granted, prior to 28 March 2007.
+
+Nothing in this License shall be construed as excluding or limiting any implied license or other defenses to infringement that may otherwise be available to you under applicable patent law.
+
+
+12. No Surrender of Others' Freedom.
+
+If conditions are imposed on you (whether by court order, agreement or otherwise) that contradict the conditions of this License, they do not excuse you from the conditions of this License. If you cannot convey a covered work so as to satisfy simultaneously your obligations under this License and any other pertinent obligations, then as a consequence you may not convey it at all. For example, if you agree to terms that obligate you to collect a royalty for further conveying from those to whom you convey the Program, the only way you could satisfy both those terms and this License would be to refrain entirely from conveying the Program.
+
+
+13. Use with the GNU Affero General Public License.
+
+Notwithstanding any other provision of this License, you have permission to link or combine any covered work with a work licensed under version 3 of the GNU Affero General Public License into a single combined work, and to convey the resulting work. The terms of this License will continue to apply to the part which is the covered work, but the special requirements of the GNU Affero General Public License, section 13, concerning interaction through a network will apply to the combination as such.
+
+
+14. Revised Versions of this License.
+
+The Free Software Foundation may publish revised and/or new versions of the GNU General Public License from time to time. Such new versions will be similar in spirit to the present version, but may differ in detail to address new problems or concerns.
+
+Each version is given a distinguishing version number. If the Program specifies that a certain numbered version of the GNU General Public License “or any later version” applies to it, you have the option of following the terms and conditions either of that numbered version or of any later version published by the Free Software Foundation. If the Program does not specify a version number of the GNU General Public License, you may choose any version ever published by the Free Software Foundation.
+
+If the Program specifies that a proxy can decide which future versions of the GNU General Public License can be used, that proxy's public statement of acceptance of a version permanently authorizes you to choose that version for the Program.
+
+Later license versions may give you additional or different permissions. However, no additional obligations are imposed on any author or copyright holder as a result of your choosing to follow a later version.
+
+
+15. Disclaimer of Warranty.
+
+THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+
+16. Limitation of Liability.
+
+IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+
+17. Interpretation of Sections 15 and 16.
+
+If the disclaimer of warranty and limitation of liability provided above cannot be given local legal effect according to their terms, reviewing courts shall apply local law that most closely approximates an absolute waiver of all civil liability in connection with the Program, unless a warranty or assumption of liability accompanies a copy of the Program in return for a fee.
+
+END OF TERMS AND CONDITIONS</value>
+  </data>
+</root>

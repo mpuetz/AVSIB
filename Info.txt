@@ -1,0 +1,10 @@
+HINWEIS
+Sollten Sie einen Fehler auf grund einer fehlenden SQL-Server Installation erfahren können Sie unter 
+dem Installationspfad eine Datei mit Namen SQLServerLocalDB.msi finden, 
+welche die benötigten Funktionen auf ihrem System installiert.
+
+CREDITS:
+Das Speichern und Laden der Einstellungen in eine Datei basiert auf einer Klasse von "Animix":
+https://www.vb-paradise.de/index.php/Thread/24755-Settings-Speichern-Laden-und-L%C3%B6schen-in-einer-datei/
+Das Drucken der ListBox basiert auf einer Klassen von Matthias Zürn:
+http://www.vbarchiv.net/tipps/tipp_1473-listview-inhalt-drucken-vb-2005.html
