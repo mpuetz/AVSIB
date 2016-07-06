@@ -18,6 +18,7 @@
 '____________________________________________________________________________
 
 Public Class AVSIB_Ort
+    ' Within this Form the user is able to add or remove places in which the brochure shall be delivered
     Dim PLZ As Long
     Dim Ort As String
     Dim PLZOrt As String
@@ -25,6 +26,7 @@ Public Class AVSIB_Ort
     Dim PLZCount As Long
 
     Private Sub TBPLZ_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TBPLZ.KeyPress
+        ' Only allows the user to use numbers in the PLZ-Textbox (zip-code)
         Select Case Asc(e.KeyChar)
             Case 48 To 57
             Case Else
@@ -33,10 +35,13 @@ Public Class AVSIB_Ort
     End Sub
 
     Private Sub ButtonMenu_Click(sender As Object, e As EventArgs) Handles ButtonMenu.Click
-        Me.Dispose()
+        ' Closes the form, Main menu will be shown.
+        Me.Close()
     End Sub
 
     Private Sub ButtonAdd_Click(sender As Object, e As EventArgs) Handles ButtonAdd.Click
+        ' Checks if the TextBoxes are filled, if not it shows a msgBox, else it inserts the place and zip-code
+        ' in the database and reloads the list of places.
         If TBPLZ.Text <> Nothing And TBOrt.Text <> Nothing Then
             Orte.Insert(TBPLZ.Text, TBOrt.Text)
             TBPLZ.Text = Nothing
@@ -63,7 +68,10 @@ Public Class AVSIB_Ort
     End Sub
 
     Private Sub AVSIB_Ort_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Get's the count of places from the sql-database
         OrteCount = Orte.GetCount()
+        ' as long as i is smaller than the count of places in the places-database,
+        ' the places will get listed sorted alphabetically
         For i As Long = 0 To OrteCount - 1
             Ort = Orte.GetOrtabc(i)
             PLZCount = Orte.GetPLZCount(Ort)
@@ -79,9 +87,13 @@ Public Class AVSIB_Ort
     End Sub
 
     Private Sub ButtonDelete_Click(sender As Object, e As EventArgs) Handles ButtonDelete.Click
+        ' When the delete button is clicked, it is checked whether there are any places selected.
+        ' If not a msgBox is displayed.
         If ListView1.SelectedItems.Count = 0 Then
             MsgBox("Nichts zum löschen ausgewählt!", MsgBoxStyle.Critical)
         Else
+            ' If there are streets located in this place or persons living in one of these streets
+            ' these streets or persons get deleted from all databases.
             PLZ = ListView1.FocusedItem.Text
             Ort = ListView1.FocusedItem.SubItems(1).Text
             Dim straßencount As Long = Straße.getCount(Ort, PLZ)
@@ -101,6 +113,7 @@ Public Class AVSIB_Ort
                     Next
                 Next
             End If
+            ' after the streets and persons got deleted the place itself gets deleted from the database.
             Orte.Remove(PLZ, Ort)
             ListView1.Items.Clear()
             OrteCount = Orte.GetCount()
@@ -124,6 +137,7 @@ Public Class AVSIB_Ort
     End Sub
 
     Private Sub SKeyDown(sender As Object, e As KeyEventArgs) Handles TBOrt.KeyDown, TBPLZ.KeyDown
+        ' When enter is pressed in the textboxes a click on ButtonAdd will be triggered
         If e.KeyCode = Keys.Enter Then
             ButtonAdd.PerformClick()
         End If

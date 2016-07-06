@@ -30,7 +30,6 @@ Partial Class AVSIB_Austräger
         Me.CBBezirk = New System.Windows.Forms.ComboBox()
         Me.TBNachname = New System.Windows.Forms.TextBox()
         Me.TBVorname = New System.Windows.Forms.TextBox()
-        Me.ButtonAdd = New System.Windows.Forms.Button()
         Me.ButtonDelete = New System.Windows.Forms.Button()
         Me.ButtonSave = New System.Windows.Forms.Button()
         Me.ButtonMenu = New System.Windows.Forms.Button()
@@ -97,17 +96,6 @@ Partial Class AVSIB_Austräger
         Me.TBVorname.Name = "TBVorname"
         Me.TBVorname.Size = New System.Drawing.Size(148, 26)
         Me.TBVorname.TabIndex = 1
-        '
-        'ButtonAdd
-        '
-        Me.ButtonAdd.Image = CType(resources.GetObject("ButtonAdd.Image"), System.Drawing.Image)
-        Me.ButtonAdd.Location = New System.Drawing.Point(632, 165)
-        Me.ButtonAdd.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.ButtonAdd.Name = "ButtonAdd"
-        Me.ButtonAdd.Size = New System.Drawing.Size(51, 35)
-        Me.ButtonAdd.TabIndex = 3
-        Me.ToolTip1.SetToolTip(Me.ButtonAdd, "Fügt eine neue BEZIRK-NR. hinzu")
-        Me.ButtonAdd.UseVisualStyleBackColor = True
         '
         'ButtonDelete
         '
@@ -180,7 +168,6 @@ Partial Class AVSIB_Austräger
         Me.Controls.Add(Me.ButtonMenu)
         Me.Controls.Add(Me.ButtonSave)
         Me.Controls.Add(Me.ButtonDelete)
-        Me.Controls.Add(Me.ButtonAdd)
         Me.Controls.Add(Me.TBVorname)
         Me.Controls.Add(Me.TBNachname)
         Me.Controls.Add(Me.CBBezirk)
@@ -204,7 +191,6 @@ Partial Class AVSIB_Austräger
     Friend WithEvents CBBezirk As System.Windows.Forms.ComboBox
     Friend WithEvents TBNachname As System.Windows.Forms.TextBox
     Friend WithEvents TBVorname As System.Windows.Forms.TextBox
-    Friend WithEvents ButtonAdd As System.Windows.Forms.Button
     Friend WithEvents ButtonDelete As System.Windows.Forms.Button
     Friend WithEvents ButtonSave As System.Windows.Forms.Button
     Friend WithEvents ButtonMenu As System.Windows.Forms.Button

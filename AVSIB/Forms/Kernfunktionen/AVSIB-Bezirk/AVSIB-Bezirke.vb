@@ -18,6 +18,7 @@
 '____________________________________________________________________________
 
 Public Class AVSIB_Bezirke
+    ' This form is used to combine the places and streets with the district numbers.
     Dim Straßen As String
     Dim Ort As String
     Dim PLZ As Integer
@@ -28,6 +29,9 @@ Public Class AVSIB_Bezirke
     Dim BezirkNr As Long
 
     Private Sub AVSIB_Bezirke_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' At first it asks for the count of districts. After that it asks for the number of streets added to the 
+        ' districts. Then it gets the streets, places and zip-codes and adds them to the ListView.
+        ' Last, the places get added to the ComboBox CBOrt.
         BezAnz = Austräger.GetCount
         For i1 As Long = 1 To BezAnz
             BezirkNr = i1
@@ -52,6 +56,8 @@ Public Class AVSIB_Bezirke
     End Sub
 
     Private Sub CBOrt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBOrt.SelectedIndexChanged
+        ' If a place is selected, the count of zip-codes assigned to the selected place will be read.
+        ' After that, the zip-codes are added to the ComboBox CBPLZ.
         If CBOrt.SelectedItem <> Nothing Then
             countort = Orte.GetPLZCount(CBOrt.SelectedItem.ToString)
             CBPLZ.Enabled = True
@@ -67,6 +73,8 @@ Public Class AVSIB_Bezirke
     End Sub
 
     Private Sub CBPLZ_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBPLZ.SelectedIndexChanged
+        ' If a zip code is selected, it gets the number of streets assigned to the selected 
+        ' place and zip-code and adds them to the ComboBox CBStraße.
         If CBPLZ.SelectedItem <> Nothing Then
             countstraße = Straße.getCount(CBOrt.SelectedItem.ToString, CBPLZ.SelectedItem.ToString)
             Dim ID As Long
@@ -80,6 +88,8 @@ Public Class AVSIB_Bezirke
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        ' If Button1 (save) is clicked, it checks whether all required informations are selected.
+        ' If they are, the informations get inserted into the database and the listView gets refreshed.
         If CBBezirk.SelectedItem <> Nothing And CBOrt.SelectedItem <> Nothing And CBPLZ.SelectedItem <> Nothing And CBStraße.SelectedItem <> Nothing Then
             Straßen = CBStraße.SelectedItem.ToString
             Ort = CBOrt.SelectedItem.ToString
@@ -122,6 +132,8 @@ Public Class AVSIB_Bezirke
     End Sub
 
     Private Sub CBBezirk_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBBezirk.SelectedIndexChanged
+        ' If another district gets selected,the ListView gets refreshed to show only the data
+        ' for the selected district.
         ListView1.Items.Clear()
         BezirkNr = CBBezirk.SelectedItem.ToString
         countBez = Bezirke.GetCount(BezirkNr)
@@ -147,6 +159,7 @@ Public Class AVSIB_Bezirke
     End Sub
 
     Private Sub SKeyDown(sender As Object, e As KeyEventArgs) Handles CBStraße.KeyDown
+        ' If the enter key is pressed while at the combobox CBStraße, a click on Button1 (save) is performed
         If e.KeyCode = Keys.Enter Then
             Button1.PerformClick()
         End If
