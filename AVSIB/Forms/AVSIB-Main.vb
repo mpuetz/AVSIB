@@ -19,9 +19,12 @@
 
 Imports System.Deployment.Application
 
+' This class is mainly used to open the different forms and check, whether all settings are set.
 Public Class AVSIB_Main
     Dim FirstRun As Integer
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Checks if the settings.txt exists and whether the settings were entered by the user. If not, it starts the configuration form.
+        ' If the settings were not done yet, it replaces the database with a blank one.
         Me.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedSingle
         Me.WindowState = FormWindowState.Maximized
         If IO.File.Exists(Application.StartupPath + "\settings.ini") = False Then
@@ -86,6 +89,8 @@ Public Class AVSIB_Main
     End Sub
 
     Private Sub MainButtonReset_Click(sender As Object, e As EventArgs) Handles MainButtonReset.Click
+        ' When the reset-Button is clicked the database gets deleted and replaced by a new one.
+        ' The settings.txt will be reset, too, and the configuration-form will be loaded.
         MsgBox("Achtung, hierdurch werden alle Daten gelöscht! Wollen Sie fortfahren?", MsgBoxStyle.YesNo, "Warnung")
         If MsgBoxResult.Yes Then
             For Each proc In System.Diagnostics.Process.GetProcessesByName("sqlservr")
@@ -106,6 +111,8 @@ Public Class AVSIB_Main
     End Sub
 
     Private Sub MainButtonConfiguration_Click(sender As Object, e As EventArgs) Handles MainButtonConfiguration.Click
+        ' If the file settings.txt does not exist or FirstRun is set to 1 it starts the configuration-form, which displays
+        ' a quick introduction. Else, the configuration2-from is shown, which asks for the settings needed.
         If IO.File.Exists(Application.StartupPath + "\settings.ini") = False Then
             CSettings.Save("FirstRun", "1", Application.StartupPath + "\settings.ini")
             CSettings.Save("ConfigRunning", "0", Application.StartupPath + "\settings.ini")

@@ -18,10 +18,13 @@
 '____________________________________________________________________________
 
 Public Class AVSIB_Configuration2
+    ' asks for the company-name and the project-name
     Dim clicked As Integer = "0"
     Dim first As Integer = CSettings.Load("FirstRun", Application.StartupPath & "\settings.ini")
 
     Private Sub Config2ButtonNext_Click(sender As Object, e As EventArgs) Handles Config2ButtonNext.Click
+        ' checks whether all required informations were entered and saves them to settings.ini, else displays a message to the user
+        ' and tells him to enter all required informations.
         If TextBox2.Text <> Nothing And TextBox1.Text <> Nothing Then
             CSettings.Save("Organisation", TextBox1.Text, Application.StartupPath & "\settings.ini")
             CSettings.Save("Projekt", TextBox2.Text, Application.StartupPath & "\settings.ini")
@@ -36,14 +39,12 @@ Public Class AVSIB_Configuration2
     End Sub
 
     Private Sub ButtonBack_Click(sender As Object, e As EventArgs) Handles ButtonBack.Click
-        Dim First As Integer = CSettings.Load("FirstRun", Application.StartupPath & "\settings.ini")
-        If First = "0" Then
-            clicked = "0"
+        ' If the back-button is clicked and the configuration runs for the first time, it exits the program, else it closes the form.
+        If first = "0" Then
             Me.Close()
         Else
             Dim Auswahl As Integer = MsgBox("Dies beendet das Programm. Sind Sie sicher?", MsgBoxStyle.OkCancel, "Information")
             If Auswahl = "1" Then
-                clicked = "1"
                 AVSIB_Main.Close()
                 Me.Dispose()
             End If
@@ -52,14 +53,15 @@ Public Class AVSIB_Configuration2
 
     Private Sub AVSIB_Configuration2_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If first = "0" Then
+            AVSIB_Main.Show()
         Else
             AVSIB_Main.Close()
         End If
-        AVSIB_Main.Show()
         Me.Dispose()
     End Sub
 
     Private Sub SKeyDown(sender As Object, e As KeyEventArgs) Handles TextBox2.KeyDown, TextBox1.KeyDown
+        ' pressing enter triggers click on ConfigButton2.
         If e.KeyCode = Keys.Enter Then
             Config2ButtonNext.PerformClick()
         End If
