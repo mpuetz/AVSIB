@@ -25,6 +25,7 @@ Public Class AVSIB_PersonInsert
     Public PersCheck As Boolean
 
     Private Sub AVSIB_Person_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Populates the ComboBox for the places
         ortCount = Orte.GetCount
         For iOrt As Integer = 0 To ortCount - 1
             Dim Ort As String = Orte.GetOrtabc(iOrt)
@@ -33,6 +34,7 @@ Public Class AVSIB_PersonInsert
     End Sub
 
     Private Sub ButtonInsert_Click(sender As Object, e As EventArgs) Handles ButtonInsert.Click
+        ' Checks if all necessary informations are provided by the user and then adds the new person to the database. After that, the boxes form is resetted.
         If Nachname.Text <> Nothing And Vorname.Text <> Nothing And HausNr.Text <> Nothing Then
             Personen.Insert(Nachname.Text, Vorname.Text, CBStraße.SelectedItem.ToString, HausNr.Text, Zusatz.Text, PLZAuswahl.SelectedItem, OrtAuswahl.SelectedItem.ToString)
             Nachname.Text = Nothing
@@ -61,6 +63,7 @@ Public Class AVSIB_PersonInsert
     End Sub
 
     Private Sub OrtAuswahl_SelectedIndexChanged(sender As Object, e As EventArgs) Handles OrtAuswahl.SelectedIndexChanged
+        ' When the user selects a place, the ComboBox for the zip-codes gets populated and enabled.
         If OrtAuswahl.SelectedItem <> Nothing Then
             PLZAuswahl.Enabled = True
             PLZAuswahl.Items.Clear()
@@ -75,6 +78,8 @@ Public Class AVSIB_PersonInsert
     End Sub
 
     Private Sub PLZAuswahl_SelectedIndexChanged(sender As Object, e As EventArgs) Handles PLZAuswahl.SelectedIndexChanged
+        ' When the zip-code is selected, the ComboBox for the street is populated with the data from the database and the box gets
+        'enabled.
         If PLZAuswahl.SelectedItem <> Nothing Then
             CBStraße.Enabled = True
             CBStraße.Items.Clear()
@@ -92,7 +97,6 @@ Public Class AVSIB_PersonInsert
 
     Private Sub AVSIB_PersonInsert_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Me.Dispose()
-        '        AVSIB_PersonCheck.Show()
     End Sub
 
     Private Sub SKeyDown(sender As Object, e As KeyEventArgs) Handles Vorname.KeyDown, Zusatz.KeyDown, Nachname.KeyDown, HausNr.KeyDown
