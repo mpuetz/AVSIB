@@ -18,7 +18,7 @@
 '____________________________________________________________________________
 
 Public NotInheritable Class AboutBox
-
+    ' Simply adds an about-box to the project.
     Private Sub AboutBox1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         ' Legen Sie den Titel des Formulars fest.
         Dim ApplicationTitle As String

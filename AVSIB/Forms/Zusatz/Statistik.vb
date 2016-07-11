@@ -18,6 +18,7 @@
 '____________________________________________________________________________
 
 Public Class Statistik
+    ' Adds the possibility to see some statistic about the databases.
     Private Sub Statistik_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label1.Text = "Orte in der Datenbank: " & Orte.GetCount
         Label2.Text = "Straßen in der Datenbank: " & Straße.CountAll

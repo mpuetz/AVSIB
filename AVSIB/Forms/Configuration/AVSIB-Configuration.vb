@@ -18,6 +18,8 @@
 '____________________________________________________________________________
 
 Public Class AVSIB_Configuration
+    ' this class shows a quick introduction and checks whether the configuration is started for the 
+    ' first time
     Dim FirstRun As Integer
     Private Sub AVSIB_Configuration_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
@@ -42,6 +44,8 @@ Public Class AVSIB_Configuration
     End Sub
 
     Private Sub AVSIB_Configuration_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        ' If the configuration is started for the first time the variables are reset and the whole program gets closed.
+        ' Else the main menu will be shown
         Dim Running As Integer = CSettings.Load("ConfigRunning", Application.StartupPath + "\settings.ini")
         If FirstRun = "1" And Running = "1" Then
             CSettings.Remove("ConfigRunning", Application.StartupPath + "\settings.ini")

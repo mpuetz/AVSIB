@@ -18,6 +18,7 @@
 '____________________________________________________________________________
 
 Public Class AVSIB_Straße
+    'This form is used to add another street to the database.
     Dim ortcount As Long
     Dim ortselected As String
     Dim plzselected As Integer
@@ -26,6 +27,8 @@ Public Class AVSIB_Straße
     Dim nochange As Boolean = False
 
     Private Sub AVSIB_Straße_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' When the form loads, the ComboBox for the places will be populated with data from the database. If there are no places added yet,
+        ' a message box will be shown.
         ortcount = Orte.GetCount
         If ortcount <> 0 Then
             For i As Long = 0 To ortcount - 1
@@ -39,6 +42,8 @@ Public Class AVSIB_Straße
     End Sub
 
     Private Sub CBOrt_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBOrt.SelectedIndexChanged
+        ' When the user selects a place, the ComboBox for the zip-code will be populated with data from the zip-codes corresponding to the
+        ' selected place.
         If CBOrt.SelectedItem <> Nothing Then
             CBPLZ.Enabled = True
             CBPLZ.Items.Clear()
@@ -59,6 +64,8 @@ Public Class AVSIB_Straße
     End Sub
 
     Private Sub CBPLZ_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBPLZ.SelectedIndexChanged
+        ' When the user selects a zip-code, the streets in the database matching zip-code and place are listed in the ListBox.
+        ' The textbox for adding a new street gets enabled.
         If CBPLZ.SelectedItem.ToString <> Nothing Then
             plzselected = CBPLZ.SelectedItem.ToString
             ListBox1.Enabled = True
@@ -75,6 +82,8 @@ Public Class AVSIB_Straße
     End Sub
 
     Private Sub ButtonDelete_Click(sender As Object, e As EventArgs) Handles ButtonDelete.Click
+        ' When the user clicks on delete, the function checks if a street is selected in the ListBox. If so, the street and all persons 
+        ' living in this street will be deleted and the list will be refreshed.
         If ListBox1.SelectedItem = Nothing Then
             MsgBox("Keine Straße zum löschen ausgewählt!", MsgBoxStyle.Critical)
         Else
@@ -100,19 +109,21 @@ Public Class AVSIB_Straße
     End Sub
 
     Private Sub ButtonAdd_Click(sender As Object, e As EventArgs) Handles ButtonAdd.Click
-        Straße.Insert(TextBox1.Text, plzselected, ortselected)
-        TextBox1.Text = Nothing
-        ListBox1.Items.Clear()
-        straßencount = Straße.getCount(ortselected, plzselected)
-        If straßencount <> 0 Then
-            For i As Long = 0 To straßencount - 1
-                ID = Straße.getID(ortselected, plzselected, i)
-                ListBox1.Items.Add(Straße.GetStraßebyID(ID))
-            Next
+        ' When the user clicks on the Add-Button and the TextBox is not empty, the new street will be added.
+        If TextBox1.Text <> Nothing Then
+            Straße.Insert(TextBox1.Text, plzselected, ortselected)
+            TextBox1.Text = Nothing
+            ListBox1.Items.Clear()
+            straßencount = Straße.getCount(ortselected, plzselected)
+            If straßencount <> 0 Then
+                For i As Long = 0 To straßencount - 1
+                    ID = Straße.getID(ortselected, plzselected, i)
+                    ListBox1.Items.Add(Straße.GetStraßebyID(ID))
+                Next
+            End If
+        Else
+            MsgBox("Es scheint als wäre keine Straße zum hinzufügen eingetragen.", MsgBoxStyle.Critical, "Kein Straßennamen eingetragen")
         End If
-    End Sub
-
-    Private Sub AVSIB_Straße_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
     End Sub
 
     Private Sub AVSIB_Straße_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed

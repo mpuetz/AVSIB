@@ -18,6 +18,7 @@
 '____________________________________________________________________________
 
 Public Class AVSIB_PersonSort
+    ' this form is used to set the order by which the persons in the database get sorted.
     Dim SelectedOrder As String
     Dim Sort1 As String
     Dim Sort2 As String
@@ -28,6 +29,7 @@ Public Class AVSIB_PersonSort
     Dim Sort7 As String
 
     Private Sub AVSIB_PersonSort_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        ' When the form closes, the sorting order will be saved in a string-variable in PersonCheck.
         If ComboBox6.SelectedIndex = 0 Then
             Sort1 = "asc"
         Else
@@ -71,6 +73,7 @@ Public Class AVSIB_PersonSort
     End Sub
 
     Private Sub AVSIB_PersonSort_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Sets the ComboBoxes in the standrad-order
         ComboBox1.SelectedIndex = 0
         ComboBox2.SelectedIndex = 1
         ComboBox3.SelectedIndex = 2
@@ -88,6 +91,7 @@ Public Class AVSIB_PersonSort
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        'Checks if no sort-option is provided two times. After that, the form gets closed.
         If ComboBox1.SelectedItem.ToString = ComboBox2.SelectedItem.ToString Or ComboBox1.SelectedItem.ToString = ComboBox3.SelectedItem.ToString Or
             ComboBox1.SelectedItem.ToString = ComboBox4.SelectedItem.ToString Or ComboBox1.SelectedItem.ToString = ComboBox5.SelectedItem.ToString Or
             ComboBox1.SelectedItem.ToString = ComboBox12.SelectedItem.ToString Or ComboBox1.SelectedItem.ToString = ComboBox14.SelectedItem.ToString Or

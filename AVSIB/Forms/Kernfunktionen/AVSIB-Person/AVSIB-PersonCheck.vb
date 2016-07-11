@@ -20,6 +20,7 @@
 Imports System.Data.SqlClient
 
 Public Class AVSIB_PersonCheck
+    ' This form is used to make the user able to check already added persons.
     Dim count As Long = Personen.GetCount
     Dim PersonenCount As Long = 0
     Dim ID As Long
@@ -28,6 +29,7 @@ Public Class AVSIB_PersonCheck
     Public sortchanged As Boolean = False
 
     Private Function UpdateText(ByVal ID2 As Long)
+        ' This function is used to update the text with the data of the persons. The function needs the ID of the person.
         Vorname.Text = Personen.GetVorname(ID2)
         Nachname.Text = Personen.GetNachname(ID2)
         Straße.Text = Personen.GetStraße(ID2)
@@ -39,6 +41,8 @@ Public Class AVSIB_PersonCheck
     End Function
 
     Private Sub AVSIB_Person_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' On load the form checks if there are persons in the database and how much. After that the form gets filled with the data of the first person
+        ' or alternatively a messagebox will be shown.
         BindingNavigatorCountItem.Text = "von " & count
         If count <> 0 Then
             ID = Personen.GetID(PersonenCount, SelectedOrder)
@@ -60,6 +64,7 @@ Public Class AVSIB_PersonCheck
     End Sub
 
     Private Sub ButtonDelete_Click(sender As Object, e As EventArgs) Handles ButtonDelete.Click, BindingNavigatorDeleteItem.Click
+        ' This function deletes the person from the database and updates the form.
         ID = Personen.GetID(PersonenCount, SelectedOrder)
         Personen.Delete(ID)
         count = count - 1
@@ -105,6 +110,8 @@ Public Class AVSIB_PersonCheck
     End Sub
 
     Private Sub ButtonNext_Click(sender As Object, e As EventArgs) Handles ButtonNext.Click, TSBNext.Click
+        ' This person checks  if there are more persons in the database. If there are, the form will be updated with the data 
+        ' else, a messagebox is shown.
         If PersonenCount + 1 < count Then
             PersonenCount = PersonenCount + 1
             ID = Personen.GetID(PersonenCount, SelectedOrder)
@@ -126,6 +133,7 @@ Public Class AVSIB_PersonCheck
     End Sub
 
     Private Sub ButtonBack_Click(sender As Object, e As EventArgs) Handles ButtonBack.Click, TSBBack.Click
+        'updates the form with the data from the previous person. If there are no more previous persons, a messagebox is shown.
         If PersonenCount <> 0 Then
             PersonenCount = PersonenCount - 1
             ID = Personen.GetID(PersonenCount, SelectedOrder)
@@ -145,6 +153,7 @@ Public Class AVSIB_PersonCheck
     End Sub
 
     Private Sub BindingNavigatorMoveLastItem_Click(sender As Object, e As EventArgs) Handles BindingNavigatorMoveLastItem.Click
+        ' Same as ButtonBack.Click
         If count <> 0 Then
             PersonenCount = count - 1
             ID = Personen.GetID(PersonenCount, SelectedOrder)
@@ -165,6 +174,7 @@ Public Class AVSIB_PersonCheck
     End Sub
 
     Private Sub BindingNavigatorMoveFirstItem_Click(sender As Object, e As EventArgs) Handles BindingNavigatorMoveFirstItem.Click
+        ' Updates the form with the data of the first person in the database or shows a messagebox
         If count <> 0 Then
             PersonenCount = 0
             ID = Personen.GetID(PersonenCount, SelectedOrder)
@@ -185,6 +195,7 @@ Public Class AVSIB_PersonCheck
     End Sub
 
     Private Sub BindingNavigatorPositionItem_TextChanged(sender As Object, e As EventArgs) Handles BindingNavigatorPositionItem.TextChanged
+        ' Updates the form with the data from the person at the position entered by the user
         If nochange = False Then
             If count <> 0 And BindingNavigatorPositionItem.TextBox.Text < count - 1 Then
                 Dim BNPI As Long = BindingNavigatorPositionItem.TextBox.Text
@@ -214,11 +225,13 @@ Public Class AVSIB_PersonCheck
     End Sub
 
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
+        ' Shows the form PersonInsert for adding new persons.
         AVSIB_PersonInsert.ShowDialog()
         Inserted_Persons()
     End Sub
 
     Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
+        ' Shows the form PersonSort, which makes it possible to change the sorting of the persons.
         AVSIB_PersonSort.Show()
         Me.Hide()
     End Sub

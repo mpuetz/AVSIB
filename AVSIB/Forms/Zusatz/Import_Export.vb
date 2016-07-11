@@ -19,7 +19,9 @@
 
 Imports System.Deployment.Application
 Public Class Import_Export
+    ' This form is used to ex- and import the database file to places the user selects, so a backup to an external drive becomes possible.
     Private Sub B_Export_Click(sender As Object, e As EventArgs) Handles B_Export.Click
+        ' Whe Export is clicked, a FolderBrowser gets shown and the file will be saved at the location the user enters and with the name AVSIB_Data.
         If FolderBrowserDialog.ShowDialog() = Windows.Forms.DialogResult.Cancel Then
         Else
             Dim path As String = FolderBrowserDialog.SelectedPath.ToString & "\" & Date.Today.Year & Date.Today.Month & Date.Today.Day
@@ -45,6 +47,7 @@ Public Class Import_Export
     End Sub
 
     Private Sub B_Import_Click(sender As Object, e As EventArgs) Handles B_Import.Click
+        ' Gets the name and location of a backup the user enters. If there exists a file named AVSIB_DATA the file will be copied as the new database.
 Start:
         If OpenFileDialog1.ShowDialog() = Windows.Forms.DialogResult.Cancel Then
         Else
@@ -67,6 +70,7 @@ Start:
     End Sub
 
     Private Sub Import_Export_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' When the form is loaded, all SQL-processes get killed to make it able to work with the databse files.
         FolderBrowserDialog.SelectedPath = Application.StartupPath
         OpenFileDialog1.InitialDirectory = Application.StartupPath
         For Each proc In System.Diagnostics.Process.GetProcessesByName("sqlservr")

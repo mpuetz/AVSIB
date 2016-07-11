@@ -30,21 +30,19 @@ Partial Class Help
         '
         Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.WebBrowser1.Location = New System.Drawing.Point(0, 0)
-        Me.WebBrowser1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(22, 25)
+        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(789, 646)
+        Me.WebBrowser1.Size = New System.Drawing.Size(701, 517)
         Me.WebBrowser1.TabIndex = 0
         Me.WebBrowser1.Url = New System.Uri("http://wiki.mpts3.selfhost.eu/wiki/AVSIB", System.UriKind.Absolute)
         '
         'Help
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(789, 646)
+        Me.ClientSize = New System.Drawing.Size(701, 517)
         Me.Controls.Add(Me.WebBrowser1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "Help"
         Me.Text = "Hilfe"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
