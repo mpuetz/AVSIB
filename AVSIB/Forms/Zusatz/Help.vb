@@ -18,4 +18,5 @@
 '____________________________________________________________________________
 
 Public Class Help
+    ' Provides a browser to show the wiki entry for this program.
 End Class

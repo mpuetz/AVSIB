@@ -22,6 +22,7 @@
 
 
 Public Class AVSIB_Drucken
+    ' This class is used for printing lists created from the added data.
     Dim Start As Boolean
     Dim AutoSelectRunning As Boolean
     Dim SelectedCount As Long
@@ -56,6 +57,8 @@ Public Class AVSIB_Drucken
     End Sub
 
     Private Sub AVSIB_Drucken_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' When the form is loaded, the districts are added to the ListBox. By changing the Index of the ListBox, another event is triggered, which 
+        ' adds a preview to the listview.
         Start = True
         ListBox2.Items.Add("Alle")
         AusträgerCount = Austräger.GetCount
@@ -67,6 +70,8 @@ Public Class AVSIB_Drucken
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        ' When the user clicks on the printer-symbol, the CPrintListView function is called and with the help of this function, the
+        'ListView is printed after a Printdialog has been shown.
         If SelectedBezirk <> 0 And SelectedBezirk > 0 Then
             Dim SelectedObjects As New ListBox.SelectedObjectCollection(ListBox2)
             For i As Long = 1 To SelectedCount
@@ -98,6 +103,7 @@ Public Class AVSIB_Drucken
     End Sub
 
     Private Sub ListBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox2.SelectedIndexChanged
+        ' When the district gets changed, the Listview gets updated with the data for that district.
         If Start = True Then
             Start = False
             SelectedBezirk = "1"
@@ -149,6 +155,7 @@ EndLine:
     End Sub
 
     Private Function ChangeListView()
+        ' this function is used for updating the Listview
         BezirkNr = SelectedBezirk
         AusträgerVornameStr = Austräger.GetVornameByBezirk(BezirkNr)
         AusträgerNachnameStr = Austräger.GetNameByBezirk(BezirkNr)
@@ -193,6 +200,7 @@ EndLine:
     End Function
 
     Private Sub B_Next_Click(sender As Object, e As EventArgs) Handles B_Next.Click
+        ' Shows the preview of the next selected district.
         Dim SelectedObjects As New ListBox.SelectedObjectCollection(ListBox2)
         SelectedCount = SelectedObjects.Count
         If SelectedCount - 1 > Page Then
@@ -209,6 +217,7 @@ EndLine:
     End Sub
 
     Private Sub B_Previous_Click(sender As Object, e As EventArgs) Handles B_Previous.Click
+        ' Shows the preview of the previous selected district.
         Dim SelectedObjects As New ListBox.SelectedObjectCollection(ListBox2)
         SelectedCount = SelectedObjects.Count
         If 0 < Page Then
@@ -225,6 +234,7 @@ EndLine:
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        ' uses the same method as the print button, but selects the printer "Microsoft Print to PDF".
         If SelectedBezirk <> 0 And SelectedBezirk > 0 Then
             Dim SelectedObjects As New ListBox.SelectedObjectCollection(ListBox2)
             For i As Long = 1 To SelectedCount

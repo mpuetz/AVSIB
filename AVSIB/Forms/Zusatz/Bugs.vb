@@ -18,11 +18,8 @@
 '____________________________________________________________________________
 
 Public Class Bugs
+    ' Provides a browser to show the bugreporter.
     Private Sub Bugs_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         Me.Dispose()
-    End Sub
-
-    Private Sub Bugs_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
 End Class

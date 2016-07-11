@@ -18,4 +18,5 @@
 '____________________________________________________________________________
 
 Public Class Changelog
+    ' Provides a browser to show the changelog
 End Class

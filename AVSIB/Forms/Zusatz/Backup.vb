@@ -21,6 +21,7 @@ Imports System.IO
 Imports System.Deployment.Application
 
 Public Class Backup
+    ' adds the possibility to backup/restore the database in/from the program-folder.
     Dim count As Integer
     Dim changed As Boolean = False
 
@@ -30,7 +31,9 @@ Public Class Backup
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
+        ' When the backup-button gets clicked, the form checks if the backup-directory exists, otherwise creates it.
+        ' After that, the database-file gets copied in the format YYYY-MM-DD_HH-MM and adds the name to a backup.ini file, which lists all available
+        ' backups.
         If Directory.Exists(Application.StartupPath & "\Data\Backup\") = False Then
             Directory.CreateDirectory(Application.StartupPath & "\Data\Backup\")
         End If
@@ -58,6 +61,8 @@ Public Class Backup
     End Sub
 
     Private Sub CBRestore_CheckedChanged(sender As Object, e As EventArgs) Handles CBRestore.CheckedChanged
+        ' When the Button Restore at the top of the form is clicked, the elements for restoring a backup get shown
+        ' and all available backups get listed for selection/deletion.
         If changed = False Then
             changed = True
             RichTextBox1.Visible = False
@@ -85,6 +90,7 @@ Public Class Backup
     End Sub
 
     Private Sub CBBackup_CheckedChanged(sender As Object, e As EventArgs) Handles CBBackup.CheckedChanged
+        ' If the button Backup on top of the form is clicked, all options and buttons for backing up the database get shown.
         If changed = False Then
             changed = True
             RichTextBox1.Visible = True
@@ -104,6 +110,7 @@ Public Class Backup
     End Sub
 
     Private Sub BRestore_Click(sender As Object, e As EventArgs) Handles BRestore.Click
+        ' gets the name of the selected backup and replaces the existing database-file with it.
         If ListBox1.SelectedItem <> Nothing Then
             Dim name As String = CSettings.Load(ListBox1.SelectedIndex + 1, Application.StartupPath & "\Data\Backup\Backups.ini")
             File.Delete(ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data.mdf")
@@ -121,12 +128,14 @@ Public Class Backup
     End Sub
 
     Private Sub Backup_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' When the form gets loaded, all SQL-server processes get killed, so it is possible to work with the database-files.
         For Each proc In System.Diagnostics.Process.GetProcessesByName("sqlservr")
             proc.Kill()
         Next
     End Sub
 
     Private Sub BDelete_Click(sender As Object, e As EventArgs) Handles BDelete.Click
+        ' Deletes the selected backup.
         If ListBox1.SelectedItem <> Nothing Then
             Dim name As String = CSettings.Load(ListBox1.SelectedIndex + 1, Application.StartupPath & "\Data\Backup\Backups.ini")
             File.Delete(Application.StartupPath & "\Data\Backup\" & name & ".mdf")
