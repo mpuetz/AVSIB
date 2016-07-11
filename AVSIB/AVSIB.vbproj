@@ -88,7 +88,7 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>AVSIB_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>AVSIB_Test-Key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>
@@ -424,6 +424,7 @@
   <ItemGroup>
     <None Include="AVSIB_1_TemporaryKey.pfx" />
     <None Include="AVSIB_TemporaryKey.pfx" />
+    <None Include="AVSIB_Test-Key.snk" />
     <None Include="Data\AusträgerDataSet.xsc">
       <DependentUpon>AusträgerDataSet.xsd</DependentUpon>
     </None>
