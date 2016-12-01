@@ -16,7 +16,8 @@
 '    along with this program.  If Not, see < http: //www.gnu.org/licenses/>.
 
 '____________________________________________________________________________
-'Das Drucken der ListBox basiert auf einer Klassen von Matthias Zürn
+'Das Drucken der ListBox basiert auf einer Klassen von Matthias Zürn. Für weitere Informationen wenden Sie sich bitte an den Autor der 
+'ursprünglichen Funktion
 'http://www.vbarchiv.net/tipps/tipp_1473-listview-inhalt-drucken-vb-2005.html
 
 Imports System.Drawing

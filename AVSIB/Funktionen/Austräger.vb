@@ -18,6 +18,7 @@
 '____________________________________________________________________________
 
 Public Class Austräger
+    'This function allows to search for roundsmen by name and surname
     Public Shared Function GetBezirkByName(ByVal Nachname As String, Vorname As String)
         Try
             Dim AusträgerDataTable As New AusträgerTableAdapters.AusträgerTableAdapter
@@ -29,6 +30,7 @@ Public Class Austräger
         Return 0
     End Function
 
+    ' This function adds the possibility to look up the name of a roundsmen using the district number
     Public Shared Function GetNameByBezirk(ByVal Bezirk As Long)
         Try
             Dim AusträgerDataTable As New AusträgerTableAdapters.AusträgerTableAdapter
@@ -40,6 +42,7 @@ Public Class Austräger
         Return 0
     End Function
 
+    ' This function adds the possibility to look up the surname of a roundsman using the district number
     Public Shared Function GetVornameByBezirk(ByVal Bezirk As Long)
         Try
             Dim DataTable As New AusträgerTableAdapters.AusträgerTableAdapter
@@ -50,12 +53,14 @@ Public Class Austräger
         Return 0
     End Function
 
+    ' This function adds a new ID with the Values NULL
     Public Shared Function InsertNULL(ByVal Bezirk As Long)
         Dim DataTable As New AusträgerTableAdapters.AusträgerTableAdapter
         DataTable.InsertNULL(Bezirk)
         Return 0
     End Function
 
+    ' This function adds the possibility to update the name and surname of a roundsman using the district number
     Public Shared Function Update(ByVal Bezirk As Long, Nachname As String, Vorname As String)
         Try
             Dim AusträgerDataTable As New AusträgerTableAdapters.AusträgerTableAdapter
@@ -66,6 +71,8 @@ Public Class Austräger
         Return 0
     End Function
 
+    ' This functon is used to "delete" a roundsmen. Because the ID is used in the program, the roundsman is not deleted 
+    ' but overwritten with NULL
     Public Shared Function Delete(ByVal Bezirk As Long)
         Try
             Dim AusträgerDataTable As New AusträgerTableAdapters.AusträgerTableAdapter
@@ -76,6 +83,7 @@ Public Class Austräger
         Return 0
     End Function
 
+    ' This function counts the number of roundsmen in the database.
     Public Shared Function GetCount()
         Dim DataTable As New AusträgerTableAdapters.AusträgerTableAdapter
         Return DataTable.GetCount
