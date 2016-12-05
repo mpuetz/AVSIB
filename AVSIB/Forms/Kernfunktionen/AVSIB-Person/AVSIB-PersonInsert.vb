@@ -18,8 +18,10 @@
 '____________________________________________________________________________
 
 Imports System.Data.SqlClient
+Imports System.Resources
 
 Public Class AVSIB_PersonInsert
+    Dim LocRM As New ResourceManager("AVSIB.WinFormStrings", GetType(AVSIB_PersonInsert).Assembly)
     Dim count As Integer = Personen.GetCount
     Dim ortCount As Integer
     Public PersCheck As Boolean
@@ -49,7 +51,7 @@ Public Class AVSIB_PersonInsert
             LabelErfolg.Visible = True
             count = count + 1
         Else
-            MsgBox("Bitte füllen Sie alle Felder aus!", MsgBoxStyle.Exclamation, "Einige Daten fehlen")
+            MsgBox(LocRM.GetString("strFieldsMissing"), MsgBoxStyle.Exclamation, LocRM.GetString("titCaution"))
         End If
     End Sub
 

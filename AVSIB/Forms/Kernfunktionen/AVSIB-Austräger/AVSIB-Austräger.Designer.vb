@@ -42,128 +42,91 @@ Partial Class AVSIB_Austräger
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(495, 48)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(74, 20)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Bezirk-Nr"
+        Me.ToolTip1.SetToolTip(Me.Label1, resources.GetString("Label1.ToolTip"))
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(495, 129)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        resources.ApplyResources(Me.Label2, "Label2")
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(86, 20)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Nachname"
+        Me.ToolTip1.SetToolTip(Me.Label2, resources.GetString("Label2.ToolTip"))
         '
         'Label3
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(496, 89)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        resources.ApplyResources(Me.Label3, "Label3")
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(74, 20)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Vorname"
+        Me.ToolTip1.SetToolTip(Me.Label3, resources.GetString("Label3.ToolTip"))
         '
         'CBBezirk
         '
+        resources.ApplyResources(Me.CBBezirk, "CBBezirk")
         Me.CBBezirk.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CBBezirk.FormattingEnabled = True
-        Me.CBBezirk.Location = New System.Drawing.Point(592, 43)
-        Me.CBBezirk.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.CBBezirk.Name = "CBBezirk"
-        Me.CBBezirk.Size = New System.Drawing.Size(76, 28)
-        Me.CBBezirk.TabIndex = 0
-        Me.ToolTip1.SetToolTip(Me.CBBezirk, "Wählen Sie hier die Bezirk-Nr., der Sie einen Austräger zuweisen möchten.")
+        Me.ToolTip1.SetToolTip(Me.CBBezirk, resources.GetString("CBBezirk.ToolTip"))
         '
         'TBNachname
         '
-        Me.TBNachname.Location = New System.Drawing.Point(592, 125)
-        Me.TBNachname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        resources.ApplyResources(Me.TBNachname, "TBNachname")
         Me.TBNachname.Name = "TBNachname"
-        Me.TBNachname.Size = New System.Drawing.Size(148, 26)
-        Me.TBNachname.TabIndex = 2
+        Me.ToolTip1.SetToolTip(Me.TBNachname, resources.GetString("TBNachname.ToolTip"))
         '
         'TBVorname
         '
-        Me.TBVorname.Location = New System.Drawing.Point(592, 85)
-        Me.TBVorname.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        resources.ApplyResources(Me.TBVorname, "TBVorname")
         Me.TBVorname.Name = "TBVorname"
-        Me.TBVorname.Size = New System.Drawing.Size(148, 26)
-        Me.TBVorname.TabIndex = 1
+        Me.ToolTip1.SetToolTip(Me.TBVorname, resources.GetString("TBVorname.ToolTip"))
         '
         'ButtonDelete
         '
-        Me.ButtonDelete.Image = CType(resources.GetObject("ButtonDelete.Image"), System.Drawing.Image)
-        Me.ButtonDelete.Location = New System.Drawing.Point(358, 306)
-        Me.ButtonDelete.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        resources.ApplyResources(Me.ButtonDelete, "ButtonDelete")
         Me.ButtonDelete.Name = "ButtonDelete"
-        Me.ButtonDelete.Size = New System.Drawing.Size(51, 35)
-        Me.ButtonDelete.TabIndex = 6
-        Me.ToolTip1.SetToolTip(Me.ButtonDelete, "Löscht den ausgewählten Austräger")
+        Me.ToolTip1.SetToolTip(Me.ButtonDelete, resources.GetString("ButtonDelete.ToolTip"))
         Me.ButtonDelete.UseVisualStyleBackColor = True
         '
         'ButtonSave
         '
-        Me.ButtonSave.Image = CType(resources.GetObject("ButtonSave.Image"), System.Drawing.Image)
-        Me.ButtonSave.Location = New System.Drawing.Point(692, 165)
-        Me.ButtonSave.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        resources.ApplyResources(Me.ButtonSave, "ButtonSave")
         Me.ButtonSave.Name = "ButtonSave"
-        Me.ButtonSave.Size = New System.Drawing.Size(51, 35)
-        Me.ButtonSave.TabIndex = 4
-        Me.ToolTip1.SetToolTip(Me.ButtonSave, "Fügte der ausgewählten Bezirk-Nr. den eingetragenen Austräger hinzu")
+        Me.ToolTip1.SetToolTip(Me.ButtonSave, resources.GetString("ButtonSave.ToolTip"))
         Me.ButtonSave.UseVisualStyleBackColor = True
         '
         'ButtonMenu
         '
-        Me.ButtonMenu.Location = New System.Drawing.Point(627, 306)
-        Me.ButtonMenu.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        resources.ApplyResources(Me.ButtonMenu, "ButtonMenu")
         Me.ButtonMenu.Name = "ButtonMenu"
-        Me.ButtonMenu.Size = New System.Drawing.Size(112, 35)
-        Me.ButtonMenu.TabIndex = 7
-        Me.ButtonMenu.Text = "Menü"
-        Me.ToolTip1.SetToolTip(Me.ButtonMenu, "Zurück zum Hauptmenü")
+        Me.ToolTip1.SetToolTip(Me.ButtonMenu, resources.GetString("ButtonMenu.ToolTip"))
         Me.ButtonMenu.UseVisualStyleBackColor = True
         '
         'ListView1
         '
+        resources.ApplyResources(Me.ListView1, "ListView1")
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3})
         Me.ListView1.FullRowSelect = True
         Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(18, 18)
-        Me.ListView1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ListView1.MultiSelect = False
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(330, 321)
-        Me.ListView1.TabIndex = 8
+        Me.ToolTip1.SetToolTip(Me.ListView1, resources.GetString("ListView1.ToolTip"))
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
         '
         'ColumnHeader1
         '
-        Me.ColumnHeader1.Text = "Bezirk"
-        Me.ColumnHeader1.Width = 44
+        resources.ApplyResources(Me.ColumnHeader1, "ColumnHeader1")
         '
         'ColumnHeader2
         '
-        Me.ColumnHeader2.Text = "Vorname"
-        Me.ColumnHeader2.Width = 78
+        resources.ApplyResources(Me.ColumnHeader2, "ColumnHeader2")
         '
         'ColumnHeader3
         '
-        Me.ColumnHeader3.Text = "Nachname"
-        Me.ColumnHeader3.Width = 89
+        resources.ApplyResources(Me.ColumnHeader3, "ColumnHeader3")
         '
         'AVSIB_Austräger
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(748, 334)
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.ButtonMenu)
         Me.Controls.Add(Me.ButtonSave)
@@ -174,12 +137,8 @@ Partial Class AVSIB_Austräger
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.MaximumSize = New System.Drawing.Size(770, 390)
-        Me.MinimumSize = New System.Drawing.Size(770, 390)
         Me.Name = "AVSIB_Austräger"
-        Me.Text = "AVSIB_Austräger"
+        Me.ToolTip1.SetToolTip(Me, resources.GetString("$this.ToolTip"))
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
         Me.PerformLayout()

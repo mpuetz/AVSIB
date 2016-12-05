@@ -18,10 +18,12 @@
 '____________________________________________________________________________
 
 Imports System.Deployment.Application
+Imports System.Resources
 
 ' This class is mainly used to open the different forms and check, whether all settings are set.
 Public Class AVSIB_Main
     Dim FirstRun As Integer
+    Private LocRM As New ResourceManager("AVSIB.WinFormStrings", GetType(AVSIB_Main).Assembly)
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Checks if the settings.txt exists and whether the settings were entered by the user. If not, it starts the configuration form.
         ' If the settings were not done yet, it replaces the database with a blank one.
@@ -42,7 +44,7 @@ Public Class AVSIB_Main
             System.IO.File.Delete(Application.StartupPath & "\settings.ini")
             System.IO.File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\Data\Reset\AVSIB_Data.mdf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data.mdf")
             System.IO.File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\Data\Reset\AVSIB_Data_log.ldf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data_log.ldf")
-            MsgBox("Erfolg!", MsgBoxStyle.Information, "Erfolg")
+            MsgBox(LocRM.GetString("strSuccess"), MsgBoxStyle.Information, LocRM.GetString("titSuccess"))
             CSettings.Save("FirstRun", "1", Application.StartupPath + "\settings.ini")
             CSettings.Save("ConfigRunning", "0", Application.StartupPath + "\settings.ini")
             AVSIB_Configuration.Show()
@@ -91,7 +93,7 @@ Public Class AVSIB_Main
     Private Sub MainButtonReset_Click(sender As Object, e As EventArgs) Handles MainButtonReset.Click
         ' When the reset-Button is clicked the database gets deleted and replaced by a new one.
         ' The settings.txt will be reset, too, and the configuration-form will be loaded.
-        MsgBox("Achtung, hierdurch werden alle Daten gelöscht! Wollen Sie fortfahren?", MsgBoxStyle.YesNo, "Warnung")
+        MsgBox("strCautionDelete", MsgBoxStyle.YesNo, "titCaution")
         If MsgBoxResult.Yes Then
             For Each proc In System.Diagnostics.Process.GetProcessesByName("sqlservr")
                 proc.Kill()
@@ -102,7 +104,7 @@ Public Class AVSIB_Main
             System.IO.File.Delete(Application.StartupPath & "\settings.ini")
             System.IO.File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\Data\Reset\AVSIB_Data.mdf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data.mdf")
             System.IO.File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\Data\Reset\AVSIB_Data_log.ldf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data_log.ldf")
-            MsgBox("Erfolg!", MsgBoxStyle.Information, "Erfolg")
+            MsgBox(LocRM.GetString("strSuccess"), MsgBoxStyle.Information, LocRM.GetString("titSuccess"))
             CSettings.Save("FirstRun", "1", Application.StartupPath + "\settings.ini")
             CSettings.Save("ConfigRunning", "0", Application.StartupPath + "\settings.ini")
             AVSIB_Configuration.Show()
@@ -149,5 +151,9 @@ Public Class AVSIB_Main
 
     Private Sub ToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem3.Click
         Statistik.ShowDialog()
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
     End Sub
 End Class

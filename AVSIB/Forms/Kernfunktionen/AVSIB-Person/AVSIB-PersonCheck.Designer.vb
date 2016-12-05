@@ -61,275 +61,193 @@ Partial Class AVSIB_PersonCheck
         '
         'Vorname
         '
-        Me.Vorname.Location = New System.Drawing.Point(129, 25)
+        resources.ApplyResources(Me.Vorname, "Vorname")
         Me.Vorname.Name = "Vorname"
         Me.Vorname.ReadOnly = True
-        Me.Vorname.Size = New System.Drawing.Size(132, 20)
-        Me.Vorname.TabIndex = 3
         '
         'Nachname
         '
-        Me.Nachname.Location = New System.Drawing.Point(267, 25)
+        resources.ApplyResources(Me.Nachname, "Nachname")
         Me.Nachname.Name = "Nachname"
         Me.Nachname.ReadOnly = True
-        Me.Nachname.Size = New System.Drawing.Size(144, 20)
-        Me.Nachname.TabIndex = 4
         '
         'Straße
         '
-        Me.Straße.Location = New System.Drawing.Point(129, 54)
+        resources.ApplyResources(Me.Straße, "Straße")
         Me.Straße.Name = "Straße"
         Me.Straße.ReadOnly = True
-        Me.Straße.Size = New System.Drawing.Size(132, 20)
-        Me.Straße.TabIndex = 5
         '
         'HausNr
         '
-        Me.HausNr.Location = New System.Drawing.Point(267, 54)
-        Me.HausNr.MaxLength = 5
+        resources.ApplyResources(Me.HausNr, "HausNr")
         Me.HausNr.Name = "HausNr"
         Me.HausNr.ReadOnly = True
-        Me.HausNr.Size = New System.Drawing.Size(53, 20)
-        Me.HausNr.TabIndex = 6
         '
         'Zusatz
         '
-        Me.Zusatz.Location = New System.Drawing.Point(344, 54)
-        Me.Zusatz.MaxLength = 10
+        resources.ApplyResources(Me.Zusatz, "Zusatz")
         Me.Zusatz.Name = "Zusatz"
         Me.Zusatz.ReadOnly = True
-        Me.Zusatz.Size = New System.Drawing.Size(43, 20)
-        Me.Zusatz.TabIndex = 7
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(326, 57)
+        resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(12, 13)
-        Me.Label1.TabIndex = 10
-        Me.Label1.Text = "/"
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 28)
+        resources.ApplyResources(Me.Label2, "Label2")
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(107, 13)
-        Me.Label2.TabIndex = 11
-        Me.Label2.Text = "Vorname, Nachname"
         '
         'Label3
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 57)
+        resources.ApplyResources(Me.Label3, "Label3")
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(106, 13)
-        Me.Label3.TabIndex = 12
-        Me.Label3.Text = "Straße, Hausnummer"
         '
         'Label4
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(12, 83)
+        resources.ApplyResources(Me.Label4, "Label4")
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(47, 13)
-        Me.Label4.TabIndex = 13
-        Me.Label4.Text = "PLZ, Ort"
         '
         'BindingNavigator1
         '
+        resources.ApplyResources(Me.BindingNavigator1, "BindingNavigator1")
         Me.BindingNavigator1.AddNewItem = Nothing
         Me.BindingNavigator1.CountItem = Me.BindingNavigatorCountItem
         Me.BindingNavigator1.DeleteItem = Nothing
+        Me.BindingNavigator1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.TSBBack, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.TSBNext, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorDeleteItem, Me.ToolStripButton1, Me.ToolStripSeparator1, Me.ToolStripButton2, Me.ToolStripSeparator2, Me.ToolStripProgressBar1})
-        Me.BindingNavigator1.Location = New System.Drawing.Point(0, 0)
         Me.BindingNavigator1.MoveFirstItem = Nothing
         Me.BindingNavigator1.MoveLastItem = Nothing
         Me.BindingNavigator1.MoveNextItem = Nothing
         Me.BindingNavigator1.MovePreviousItem = Nothing
         Me.BindingNavigator1.Name = "BindingNavigator1"
         Me.BindingNavigator1.PositionItem = Me.BindingNavigatorPositionItem
-        Me.BindingNavigator1.Size = New System.Drawing.Size(434, 25)
-        Me.BindingNavigator1.TabIndex = 20
-        Me.BindingNavigator1.Text = "BindingNavigator1"
         '
         'BindingNavigatorCountItem
         '
+        resources.ApplyResources(Me.BindingNavigatorCountItem, "BindingNavigatorCountItem")
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
-        Me.BindingNavigatorCountItem.Size = New System.Drawing.Size(44, 22)
-        Me.BindingNavigatorCountItem.Text = "von {0}"
-        Me.BindingNavigatorCountItem.ToolTipText = "Die Gesamtanzahl der Elemente."
         '
         'BindingNavigatorMoveFirstItem
         '
+        resources.ApplyResources(Me.BindingNavigatorMoveFirstItem, "BindingNavigatorMoveFirstItem")
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveFirstItem.Image = CType(resources.GetObject("BindingNavigatorMoveFirstItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveFirstItem.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
-        Me.BindingNavigatorMoveFirstItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveFirstItem.Text = "ToolStripButton3"
-        Me.BindingNavigatorMoveFirstItem.ToolTipText = "Erstes Element"
         '
         'TSBBack
         '
+        resources.ApplyResources(Me.TSBBack, "TSBBack")
         Me.TSBBack.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.TSBBack.Image = CType(resources.GetObject("TSBBack.Image"), System.Drawing.Image)
-        Me.TSBBack.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.TSBBack.Name = "TSBBack"
-        Me.TSBBack.Size = New System.Drawing.Size(23, 22)
-        Me.TSBBack.Text = "ToolStripButton4"
-        Me.TSBBack.ToolTipText = "Vorheriges Element"
         '
         'BindingNavigatorSeparator
         '
+        resources.ApplyResources(Me.BindingNavigatorSeparator, "BindingNavigatorSeparator")
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
-        Me.BindingNavigatorSeparator.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorPositionItem
         '
-        Me.BindingNavigatorPositionItem.AccessibleName = "Position"
-        Me.BindingNavigatorPositionItem.AutoSize = False
+        resources.ApplyResources(Me.BindingNavigatorPositionItem, "BindingNavigatorPositionItem")
         Me.BindingNavigatorPositionItem.HideSelection = False
         Me.BindingNavigatorPositionItem.Name = "BindingNavigatorPositionItem"
-        Me.BindingNavigatorPositionItem.Size = New System.Drawing.Size(50, 23)
-        Me.BindingNavigatorPositionItem.Text = "0"
-        Me.BindingNavigatorPositionItem.ToolTipText = "Aktuelle Position"
         '
         'BindingNavigatorSeparator1
         '
+        resources.ApplyResources(Me.BindingNavigatorSeparator1, "BindingNavigatorSeparator1")
         Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
-        Me.BindingNavigatorSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'TSBNext
         '
+        resources.ApplyResources(Me.TSBNext, "TSBNext")
         Me.TSBNext.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.TSBNext.Image = CType(resources.GetObject("TSBNext.Image"), System.Drawing.Image)
-        Me.TSBNext.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.TSBNext.Name = "TSBNext"
-        Me.TSBNext.Size = New System.Drawing.Size(23, 22)
-        Me.TSBNext.Text = "TSBNext"
-        Me.TSBNext.ToolTipText = "Nächstes Element"
         '
         'BindingNavigatorMoveLastItem
         '
+        resources.ApplyResources(Me.BindingNavigatorMoveLastItem, "BindingNavigatorMoveLastItem")
         Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorMoveLastItem.Image = CType(resources.GetObject("BindingNavigatorMoveLastItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorMoveLastItem.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
-        Me.BindingNavigatorMoveLastItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorMoveLastItem.Text = "ToolStripButton6"
-        Me.BindingNavigatorMoveLastItem.ToolTipText = "letztes Element"
         '
         'BindingNavigatorSeparator2
         '
+        resources.ApplyResources(Me.BindingNavigatorSeparator2, "BindingNavigatorSeparator2")
         Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        Me.BindingNavigatorSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'BindingNavigatorDeleteItem
         '
+        resources.ApplyResources(Me.BindingNavigatorDeleteItem, "BindingNavigatorDeleteItem")
         Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.BindingNavigatorDeleteItem.Image = CType(resources.GetObject("BindingNavigatorDeleteItem.Image"), System.Drawing.Image)
-        Me.BindingNavigatorDeleteItem.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        Me.BindingNavigatorDeleteItem.Size = New System.Drawing.Size(23, 22)
-        Me.BindingNavigatorDeleteItem.Text = "ToolStripButton3"
-        Me.BindingNavigatorDeleteItem.ToolTipText = "Löschen"
         '
         'ToolStripButton1
         '
+        resources.ApplyResources(Me.ToolStripButton1, "ToolStripButton1")
         Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton1.Text = "ToolStripButton1"
-        Me.ToolStripButton1.ToolTipText = "Neuen Eintrag hinzufügen"
         '
         'ToolStripSeparator1
         '
+        resources.ApplyResources(Me.ToolStripSeparator1, "ToolStripSeparator1")
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
         '
         'ToolStripButton2
         '
+        resources.ApplyResources(Me.ToolStripButton2, "ToolStripButton2")
         Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
-        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton2.Text = "ToolStripButton2"
-        Me.ToolStripButton2.ToolTipText = "Sortierung einstellen"
         '
         'ToolStripSeparator2
         '
+        resources.ApplyResources(Me.ToolStripSeparator2, "ToolStripSeparator2")
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
         '
         'ToolStripProgressBar1
         '
+        resources.ApplyResources(Me.ToolStripProgressBar1, "ToolStripProgressBar1")
         Me.ToolStripProgressBar1.Name = "ToolStripProgressBar1"
-        Me.ToolStripProgressBar1.Size = New System.Drawing.Size(100, 22)
         Me.ToolStripProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous
         '
         'PLZ
         '
-        Me.PLZ.Location = New System.Drawing.Point(129, 80)
-        Me.PLZ.MaxLength = 5
+        resources.ApplyResources(Me.PLZ, "PLZ")
         Me.PLZ.Name = "PLZ"
         Me.PLZ.ReadOnly = True
-        Me.PLZ.Size = New System.Drawing.Size(100, 20)
-        Me.PLZ.TabIndex = 21
         '
         'Ort
         '
-        Me.Ort.Location = New System.Drawing.Point(270, 80)
+        resources.ApplyResources(Me.Ort, "Ort")
         Me.Ort.Name = "Ort"
         Me.Ort.ReadOnly = True
-        Me.Ort.Size = New System.Drawing.Size(141, 20)
-        Me.Ort.TabIndex = 22
         '
         'ButtonDelete
         '
-        Me.ButtonDelete.Location = New System.Drawing.Point(266, 165)
+        resources.ApplyResources(Me.ButtonDelete, "ButtonDelete")
         Me.ButtonDelete.Name = "ButtonDelete"
-        Me.ButtonDelete.Size = New System.Drawing.Size(75, 23)
-        Me.ButtonDelete.TabIndex = 24
-        Me.ButtonDelete.Text = "Löschen"
         Me.ButtonDelete.UseVisualStyleBackColor = True
         '
         'ButtonMenu
         '
-        Me.ButtonMenu.Location = New System.Drawing.Point(108, 165)
+        resources.ApplyResources(Me.ButtonMenu, "ButtonMenu")
         Me.ButtonMenu.Name = "ButtonMenu"
-        Me.ButtonMenu.Size = New System.Drawing.Size(71, 23)
-        Me.ButtonMenu.TabIndex = 23
-        Me.ButtonMenu.Text = "Menü"
         Me.ButtonMenu.UseVisualStyleBackColor = True
         '
         'ButtonNext
         '
-        Me.ButtonNext.Location = New System.Drawing.Point(347, 165)
+        resources.ApplyResources(Me.ButtonNext, "ButtonNext")
         Me.ButtonNext.Name = "ButtonNext"
-        Me.ButtonNext.Size = New System.Drawing.Size(75, 23)
-        Me.ButtonNext.TabIndex = 25
-        Me.ButtonNext.Text = "Weiter"
         Me.ButtonNext.UseVisualStyleBackColor = True
         '
         'ButtonBack
         '
-        Me.ButtonBack.Location = New System.Drawing.Point(185, 165)
+        resources.ApplyResources(Me.ButtonBack, "ButtonBack")
         Me.ButtonBack.Name = "ButtonBack"
-        Me.ButtonBack.Size = New System.Drawing.Size(75, 23)
-        Me.ButtonBack.TabIndex = 26
-        Me.ButtonBack.Text = "Zurück"
         Me.ButtonBack.UseVisualStyleBackColor = True
         '
         'AVSIB_PersonCheck
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(434, 200)
         Me.Controls.Add(Me.ButtonBack)
         Me.Controls.Add(Me.ButtonNext)
         Me.Controls.Add(Me.ButtonDelete)
@@ -346,11 +264,7 @@ Partial Class AVSIB_PersonCheck
         Me.Controls.Add(Me.Straße)
         Me.Controls.Add(Me.Nachname)
         Me.Controls.Add(Me.Vorname)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MaximumSize = New System.Drawing.Size(450, 239)
-        Me.MinimumSize = New System.Drawing.Size(450, 239)
         Me.Name = "AVSIB_PersonCheck"
-        Me.Text = "AVSIB_Person"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BindingNavigator1.ResumeLayout(False)

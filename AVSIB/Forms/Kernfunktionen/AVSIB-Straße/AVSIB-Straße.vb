@@ -17,8 +17,10 @@
 
 '____________________________________________________________________________
 
+Imports System.Resources
 Public Class AVSIB_Straße
     'This form is used to add another street to the database.
+    Dim LocRm As New ResourceManager("AVSIB.WinFormStrings", GetType(AVSIB_Straße).Assembly)
     Dim ortcount As Long
     Dim ortselected As String
     Dim plzselected As Integer
@@ -35,7 +37,7 @@ Public Class AVSIB_Straße
                 CBOrt.Items.Add(Orte.GetOrtabc(i))
             Next
         Else
-            MsgBox("Keine Orte gefunden! Bitte fügen Sie zunächst einen Ort über 'Menü' -> 'Orte' hinzu!", MsgBoxStyle.Critical, "Fehler!")
+            MsgBox(LocRm.GetString("strNoCities"), MsgBoxStyle.Critical, LocRm.GetString("titError"))
             AVSIB_Main.Show()
             Me.Close()
         End If
@@ -85,7 +87,7 @@ Public Class AVSIB_Straße
         ' When the user clicks on delete, the function checks if a street is selected in the ListBox. If so, the street and all persons 
         ' living in this street will be deleted and the list will be refreshed.
         If ListBox1.SelectedItem = Nothing Then
-            MsgBox("Keine Straße zum löschen ausgewählt!", MsgBoxStyle.Critical)
+            MsgBox(LocRm.GetString("strNothingSelectedDelete"), MsgBoxStyle.Critical, LocRm.GetString("titError"))
         Else
             ID = Straße.GetIDbyStreet(ListBox1.SelectedItem.ToString, plzselected, ortselected)
             Bezirke.DeleteStraßeByID(ID)
@@ -122,7 +124,7 @@ Public Class AVSIB_Straße
                 Next
             End If
         Else
-            MsgBox("Es scheint als wäre keine Straße zum hinzufügen eingetragen.", MsgBoxStyle.Critical, "Kein Straßennamen eingetragen")
+            MsgBox(LocRm.GetString("strInsertStreet"), MsgBoxStyle.Critical, LocRm.GetString("titError"))
         End If
     End Sub
 

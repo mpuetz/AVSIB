@@ -33,77 +33,47 @@ Partial Class AVSIB_Configuration2
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(20, 20)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(491, 20)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Für welche Organisation arbeiten Sie? (Bsp.: Kirchengemeinde XYZ)"
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(24, 45)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        resources.ApplyResources(Me.TextBox1, "TextBox1")
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(529, 26)
-        Me.TextBox1.TabIndex = 0
         '
         'Config2ButtonNext
         '
-        Me.Config2ButtonNext.Location = New System.Drawing.Point(663, 268)
-        Me.Config2ButtonNext.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        resources.ApplyResources(Me.Config2ButtonNext, "Config2ButtonNext")
         Me.Config2ButtonNext.Name = "Config2ButtonNext"
-        Me.Config2ButtonNext.Size = New System.Drawing.Size(112, 35)
-        Me.Config2ButtonNext.TabIndex = 2
-        Me.Config2ButtonNext.Text = "Weiter"
         Me.Config2ButtonNext.UseVisualStyleBackColor = True
         '
         'ButtonBack
         '
-        Me.ButtonBack.Location = New System.Drawing.Point(542, 268)
-        Me.ButtonBack.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        resources.ApplyResources(Me.ButtonBack, "ButtonBack")
         Me.ButtonBack.Name = "ButtonBack"
-        Me.ButtonBack.Size = New System.Drawing.Size(112, 35)
-        Me.ButtonBack.TabIndex = 3
-        Me.ButtonBack.Text = "Zurück"
         Me.ButtonBack.UseVisualStyleBackColor = True
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(24, 86)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        resources.ApplyResources(Me.Label2, "Label2")
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(558, 20)
-        Me.Label2.TabIndex = 10
-        Me.Label2.Text = "Welche Informationsbroschüre möchten Sie verwalten? (Bsp.: Gemeindebrief)"
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(28, 112)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        resources.ApplyResources(Me.TextBox2, "TextBox2")
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(524, 26)
-        Me.TextBox2.TabIndex = 1
         '
         'AVSIB_Configuration2
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(784, 295)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.ButtonBack)
         Me.Controls.Add(Me.Config2ButtonNext)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.MaximumSize = New System.Drawing.Size(806, 351)
-        Me.MinimumSize = New System.Drawing.Size(806, 351)
         Me.Name = "AVSIB_Configuration2"
-        Me.Text = "AVSIB_Configuration"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
         Me.PerformLayout()

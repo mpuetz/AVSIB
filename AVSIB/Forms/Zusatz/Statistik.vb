@@ -17,13 +17,15 @@
 
 '____________________________________________________________________________
 
+Imports System.Resources
 Public Class Statistik
     ' Adds the possibility to see some statistic about the databases.
+    Dim LocRM As New ResourceManager("AVSIB.WinFormStrings", GetType(Statistik).Assembly)
     Private Sub Statistik_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Label1.Text = "Orte in der Datenbank: " & Orte.GetCount
-        Label2.Text = "Straßen in der Datenbank: " & Straße.CountAll
-        Label3.Text = "Personen in der Datenbank: " & Personen.GetCount
-        Label4.Text = "Es sind " & Austräger.GetCount & " Bezirke in der Datenbank erfasst."
+        Label1.Text = LocRM.GetString("strCitiesInDatabase") & Orte.GetCount
+        Label2.Text = LocRM.GetString("strStreetsInDatabase") & Straße.CountAll
+        Label3.Text = LocRM.GetString("strAddresseesInDatabase") & Personen.GetCount
+        Label4.Text = LocRM.GetString("strThereAre") & Austräger.GetCount & LocRM.GetString("strDistrictsInDatabase")
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

@@ -17,10 +17,12 @@
 
 '____________________________________________________________________________
 
+Imports System.Resources
 Imports System.Data.SqlClient
 
 Public Class AVSIB_PersonCheck
     ' This form is used to make the user able to check already added persons.
+    Dim LocRM As New ResourceManager("AVSIB.WinFormStrings", GetType(AVSIB_PersonCheck).Assembly)
     Dim count As Long = Personen.GetCount
     Dim PersonenCount As Long = 0
     Dim ID As Long
@@ -43,7 +45,7 @@ Public Class AVSIB_PersonCheck
     Private Sub AVSIB_Person_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' On load the form checks if there are persons in the database and how much. After that the form gets filled with the data of the first person
         ' or alternatively a messagebox will be shown.
-        BindingNavigatorCountItem.Text = "von " & count
+        BindingNavigatorCountItem.Text = LocRM.GetString("strOF") & " " & count
         If count <> 0 Then
             ID = Personen.GetID(PersonenCount, SelectedOrder)
             UpdateText(ID)
@@ -54,7 +56,7 @@ Public Class AVSIB_PersonCheck
             TSBBack.Enabled = False
         Else
             BindingNavigatorPositionItem.Text = 0
-            MsgBox("Keine Daten in der Datenbank!", MsgBoxStyle.Information, "Keine Daten")
+            MsgBox(LocRM.GetString("strNoData"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
             BindingNavigatorMoveFirstItem.Enabled = False
             TSBBack.Enabled = False
             BindingNavigatorMoveLastItem.Enabled = False
@@ -79,7 +81,7 @@ Public Class AVSIB_PersonCheck
         ElseIf PersonenCount = 0 And count = 1 Then
             ID = Personen.GetID(PersonenCount, SelectedOrder)
             UpdateText(ID)
-            MsgBox("Sie haben das Ende der Datenbank erreicht!", MsgBoxStyle.Information, "Ende der Datenbank")
+            MsgBox(LocRM.GetString("strEndDatabase"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
             BindingNavigatorMoveLastItem.Enabled = False
             TSBNext.Enabled = False
         Else
@@ -90,13 +92,13 @@ Public Class AVSIB_PersonCheck
             Zusatz.Text = Nothing
             PLZ.Text = Nothing
             Ort.Text = Nothing
-            MsgBox("Keine Datensätze in der Datenbank!", MsgBoxStyle.Information, "Leere Datenbank!")
+            MsgBox(LocRM.GetString("strNoData"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
             BindingNavigatorMoveFirstItem.Enabled = False
             TSBBack.Enabled = False
             BindingNavigatorMoveLastItem.Enabled = False
             TSBNext.Enabled = False
         End If
-        BindingNavigatorCountItem.Text = "von " & count
+        BindingNavigatorCountItem.Text = LocRM.GetString("strOF") & " " & count
         If count <> 0 Then
             ToolStripProgressBar1.Value = (PersonenCount + 1) / count * 100
         Else
@@ -120,7 +122,7 @@ Public Class AVSIB_PersonCheck
             BindingNavigatorMoveFirstItem.Enabled = True
             TSBBack.Enabled = True
         Else
-            MsgBox("Sie sind am Ende der Datenbank angelangt!", MsgBoxStyle.Information, "Ende der Datenbank erreicht")
+            MsgBox(LocRM.GetString("strEndDatabase"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
             BindingNavigatorMoveLastItem.Enabled = False
             TSBNext.Enabled = False
             BindingNavigatorMoveFirstItem.Enabled = True
@@ -164,7 +166,7 @@ Public Class AVSIB_PersonCheck
             BindingNavigatorMoveFirstItem.Enabled = True
             TSBBack.Enabled = True
         Else
-            MsgBox("Keine Daten in der Datenbank!", MsgBoxStyle.Information, "Keine Daten")
+            MsgBox(LocRM.GetString("strNoData"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
             BindingNavigatorMoveLastItem.Enabled = False
             TSBNext.Enabled = False
         End If
@@ -185,7 +187,7 @@ Public Class AVSIB_PersonCheck
             BindingNavigatorMoveLastItem.Enabled = True
             TSBNext.Enabled = True
         Else
-            MsgBox("Keine Daten in der Datenbank!", MsgBoxStyle.Information, "Keine Daten")
+            MsgBox(LocRM.GetString("strNoData"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
             BindingNavigatorMoveFirstItem.Enabled = False
             TSBBack.Enabled = False
         End If
@@ -247,7 +249,7 @@ Public Class AVSIB_PersonCheck
                 ToolStripProgressBar1.Value = (PersonenCount + 1) / count * 100
             Else
                 BindingNavigatorPositionItem.Text = 0
-                MsgBox("Keine Daten in der Datenbank!", MsgBoxStyle.Information, "Keine Daten")
+                MsgBox(LocRM.GetString("strNoData"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
             End If
         End If
     End Sub
@@ -255,7 +257,7 @@ Public Class AVSIB_PersonCheck
     Private Function Inserted_Persons()
         count = Personen.GetCount
         PersonenCount = 0
-        BindingNavigatorCountItem.Text = "von " & count
+        BindingNavigatorCountItem.Text = LocRM.GetString("strOF") & " " & count
         If count <> 0 Then
             ID = Personen.GetID(PersonenCount, SelectedOrder)
             UpdateText(ID)
@@ -269,7 +271,7 @@ Public Class AVSIB_PersonCheck
             BindingNavigatorDeleteItem.Enabled = True
         Else
             BindingNavigatorPositionItem.Text = 0
-            MsgBox("Keine Daten in der Datenbank!", MsgBoxStyle.Information, "Keine Daten")
+            MsgBox(LocRM.GetString("strNoData"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
             BindingNavigatorMoveFirstItem.Enabled = False
             TSBBack.Enabled = False
             BindingNavigatorMoveLastItem.Enabled = False

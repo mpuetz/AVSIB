@@ -17,8 +17,10 @@
 
 '____________________________________________________________________________
 
+Imports System.Resources
 Imports System.Deployment.Application
 Public Class Import_Export
+    Dim LocRM As New ResourceManager("AVSIB.WinFormStrings", GetType(Import_Export).Assembly)
     ' This form is used to ex- and import the database file to places the user selects, so a backup to an external drive becomes possible.
     Private Sub B_Export_Click(sender As Object, e As EventArgs) Handles B_Export.Click
         ' Whe Export is clicked, a FolderBrowser gets shown and the file will be saved at the location the user enters and with the name AVSIB_Data.
@@ -29,19 +31,19 @@ Public Class Import_Export
                 System.IO.Directory.CreateDirectory(path)
             End If
             If System.IO.File.Exists(path & "\AVSIB_Data.mdf") Or System.IO.File.Exists(path & "\AVSIB_Data_log.ldf") = True Then
-                If MsgBox("Am angegebenen Pfad existiert bereits diese Datei. Wenn Sie fortfahren wird diese Datei überschrieben. Sind Sie sicher?", MsgBoxStyle.YesNo, "Warnung") = MsgBoxResult.Yes Then
+                If MsgBox(LocRM.GetString("strFileExists"), MsgBoxStyle.YesNo, LocRM.GetString("titCaution")) = MsgBoxResult.Yes Then
                     System.IO.File.Delete(path & "\AVSIB_Data.mdf")
                     System.IO.File.Delete(path & "\AVSIB_Data_log.ldf")
                     System.IO.File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data.mdf", path & "\AVSIB_Data.mdf")
                     System.IO.File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data_log.ldf", path & "\AVSIB_Data_log.ldf")
-                    MsgBox("Erfolg!", MsgBoxStyle.Information, "Erfolg")
+                    MsgBox(LocRM.GetString("strSuccess"), MsgBoxStyle.Information, LocRM.GetString("titSuccess"))
                 Else
-                    MsgBox("Abgebrochen", MsgBoxStyle.Information, "Information")
+                    MsgBox(LocRM.GetString("strAborted"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
                 End If
             Else
                 System.IO.File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data.mdf", path & "\AVSIB_Data.mdf")
                 System.IO.File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data_log.ldf", path & "\AVSIB_Data_log.ldf")
-                MsgBox("Erfolg!", MsgBoxStyle.Information, "Erfolg")
+                MsgBox(LocRM.GetString("strSuccess"), MsgBoxStyle.Information, LocRM.GetString("titSuccess"))
             End If
         End If
     End Sub
@@ -54,16 +56,16 @@ Start:
             Dim path As String = OpenFileDialog1.FileName
             Dim directory As String = System.IO.Path.GetDirectoryName(path)
             If System.IO.File.Exists(path) = False Then
-                MsgBox("Die von Ihnen gewählte Datei scheint nicht zu existieren!", MsgBoxStyle.Critical)
+                MsgBox(LocRM.GetString("strFileDoesntExist"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
                 GoTo Start
             ElseIf System.IO.File.Exists(directory & "\AVSIB_Data.mdf") Or System.IO.File.Exists(directory & "\AVSIB_Data_log.ldf") = True Then
                 System.IO.File.Delete(ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data.mdf")
                 System.IO.File.Delete(ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data_log.ldf")
                 System.IO.File.Copy(directory & "\AVSIB_Data.mdf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data.mdf")
                 System.IO.File.Copy(directory & "\AVSIB_Data_log.ldf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data_log.ldf")
-                MsgBox("Erfolg!", MsgBoxStyle.Information, "Erfolg")
+                MsgBox(LocRM.GetString("strSuccess"), MsgBoxStyle.Information, LocRM.GetString("titSuccess"))
             Else
-                MsgBox("Die von Ihnen gewählte Datei scheint nicht zu existieren! Bitte überprüfen Sie, ob die Datei nicht umbenannt wurde.", MsgBoxStyle.Critical)
+                MsgBox(LocRM.GetString("strFileDoesntExist"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
                 GoTo Start
             End If
         End If

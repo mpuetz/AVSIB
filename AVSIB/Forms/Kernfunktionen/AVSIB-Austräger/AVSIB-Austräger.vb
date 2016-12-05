@@ -17,12 +17,15 @@
 
 '____________________________________________________________________________
 
+Imports System.Resources
+
 Public Class AVSIB_Austräger
     ' This form provides the possibility to add roundsmen. They get assigned to district numbers.
     Dim Count As Long
     Dim Nachname As String
     Dim Vorname As String
     Dim Bezirk As Long
+    Dim LocRM As New ResourceManager("AVSIB.WinFormStrings", GetType(AVSIB_Austräger).Assembly)
 
     Private Sub AVSIB_Austräger_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' When the form loads it asks for the number of roundsmen in the database and lists them
@@ -43,7 +46,7 @@ Public Class AVSIB_Austräger
             Next
             CBBezirk.SelectedIndex = "1"
         Else
-            MsgBox("Noch keine Austräger eingetragen", MsgBoxStyle.Information, "Keine Daten")
+            MsgBox(LocRM.GetString("strRoundsmenMissing"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
             TBNachname.Enabled = False
             TBVorname.Enabled = False
         End If
@@ -76,13 +79,15 @@ Public Class AVSIB_Austräger
                 ListView1.Items.Add(lvi)
             Next
         ElseIf CBBezirk.SelectedItem = Nothing Then
-            MsgBox("Bitte Wählen Sie eine Bezirk-Nr. aus!", MsgBoxStyle.Critical, "Fehler")
+            MsgBox(LocRM.GetString("strNoDistrictNo"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
         ElseIf TBNachname.Text = Nothing Then
-            MsgBox("Bitte geben Sie einen Nachnamen ein!", MsgBoxStyle.Critical, "Fehler")
-        ElseIf CBBezirk.SelectedIndex = "0" Then
-            MsgBox("Bitte Wählen Sie eine Bezirk-Nr. aus!", MsgBoxStyle.Critical, "Fehler")
+            MsgBox(LocRM.GetString("strNoLastName"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
+        ElseIf TBVorname.Text = Nothing Then
+            MsgBox(LocRM.GetString("strNoSurname"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
+        ElseIf CBBezirk.SelectedIndex = "0" Or CBBezirk.SelectedIndex = "-1" Then
+            MsgBox(LocRM.GetString("strNoDistrictNo"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
         Else
-            MsgBox("Bitte geben Sie einen Nachnamen ein!", MsgBoxStyle.Critical, "Fehler!")
+            MsgBox(LocRM.GetString("strNoLastName"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
         End If
     End Sub
 
@@ -100,7 +105,7 @@ Public Class AVSIB_Austräger
             Austräger.InsertNULL(Count)
             CBBezirk.Items.Clear()
             ListView1.Items.Clear()
-            CBBezirk.Items.Add("Neu")
+            CBBezirk.Items.Add(LocRM.GetString("strNew"))
             For i As Long = 1 To Count
                 Nachname = Austräger.GetNameByBezirk(i)
                 Vorname = Austräger.GetVornameByBezirk(i)
@@ -124,8 +129,8 @@ Public Class AVSIB_Austräger
         ' If the selected Item is not "New" the name and surname of the roundsmen of the selected
         ' district with NULL. That is because the district number acts as the ID in the database.
         ' after that the list gets updated.
-        If CBBezirk.SelectedIndex = "0" Then
-            MsgBox("Bitte Wählen Sie eine Bezirk-Nr. aus!", MsgBoxStyle.Critical, "Fehler")
+        If CBBezirk.SelectedIndex = "0" Or CBBezirk.SelectedIndex = "-1" Then
+            MsgBox(LocRM.GetString("strNoDistrictNo"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
         Else
             Bezirk = ListView1.FocusedItem.Text
             Austräger.Delete(Bezirk)

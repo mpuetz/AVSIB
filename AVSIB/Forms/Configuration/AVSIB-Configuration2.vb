@@ -16,9 +16,10 @@
 '    along with this program.  If Not, see < http: //www.gnu.org/licenses/>.
 
 '____________________________________________________________________________
-
+Imports System.Resources
 Public Class AVSIB_Configuration2
     ' asks for the company-name and the project-name
+    Dim LocRM As New ResourceManager("AVSIB.WinFormStrings", GetType(AVSIB_Configuration2).Assembly)
     Dim clicked As Integer = "0"
     Dim first As Integer = CSettings.Load("FirstRun", Application.StartupPath & "\settings.ini")
 
@@ -33,7 +34,7 @@ Public Class AVSIB_Configuration2
             first = CSettings.Load("FirstRun", Application.StartupPath & "\settings.ini")
             Me.Close()
         ElseIf TextBox2.Text = Nothing Or TextBox1.Text = Nothing Then
-            MsgBox("Bitte füllen Sie alle Felder aus!", MsgBoxStyle.Critical, "Fehler!")
+            MsgBox(LocRM.GetString("strFieldsMissing"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
         End If
 
     End Sub
@@ -43,7 +44,7 @@ Public Class AVSIB_Configuration2
         If first = "0" Then
             Me.Close()
         Else
-            Dim Auswahl As Integer = MsgBox("Dies beendet das Programm. Sind Sie sicher?", MsgBoxStyle.OkCancel, "Information")
+            Dim Auswahl As Integer = MsgBox(LocRM.GetString("strConf2Close"), MsgBoxStyle.OkCancel, LocRM.GetString("titInformartion"))
             If Auswahl = "1" Then
                 AVSIB_Main.Close()
                 Me.Dispose()

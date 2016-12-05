@@ -17,8 +17,10 @@
 
 '____________________________________________________________________________
 
+Imports System.Resources
 Public Class AVSIB_Ort
     ' Within this Form the user is able to add or remove places in which the brochure shall be delivered
+    Dim LocRM As New ResourceManager("AVSIB.WinFormStrings", GetType(AVSIB_Ort).Assembly)
     Dim PLZ As Long
     Dim Ort As String
     Dim PLZOrt As String
@@ -61,9 +63,9 @@ Public Class AVSIB_Ort
                 Next
             Next
         ElseIf TBOrt.Text = Nothing Then
-            MsgBox("Bitte tragen Sie einen Ort ein!", MsgBoxStyle.Critical, "Fehler")
+            MsgBox(LocRM.GetString("strInsertCity"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
         Else
-            MsgBox("Bitte tragen sie eine Postleitzahl ein!", MsgBoxStyle.Critical, "Fehler!")
+            MsgBox(LocRM.GetString("strInsertZIP"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
         End If
     End Sub
 
@@ -90,7 +92,7 @@ Public Class AVSIB_Ort
         ' When the delete button is clicked, it is checked whether there are any places selected.
         ' If not a msgBox is displayed.
         If ListView1.SelectedItems.Count = 0 Then
-            MsgBox("Nichts zum löschen ausgewählt!", MsgBoxStyle.Critical)
+            MsgBox(LocRM.GetString("strNothingSelectedDelete"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
         Else
             ' If there are streets located in this place or persons living in one of these streets
             ' these streets or persons get deleted from all databases.

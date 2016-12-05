@@ -42,146 +42,94 @@ Partial Class AVSIB_PersonInsert
         '
         'Vorname
         '
-        Me.Vorname.Location = New System.Drawing.Point(129, 25)
-        Me.Vorname.MaxLength = 20
+        resources.ApplyResources(Me.Vorname, "Vorname")
         Me.Vorname.Name = "Vorname"
-        Me.Vorname.Size = New System.Drawing.Size(132, 20)
-        Me.Vorname.TabIndex = 1
         '
         'Nachname
         '
-        Me.Nachname.Location = New System.Drawing.Point(267, 25)
-        Me.Nachname.MaxLength = 20
+        resources.ApplyResources(Me.Nachname, "Nachname")
         Me.Nachname.Name = "Nachname"
-        Me.Nachname.Size = New System.Drawing.Size(144, 20)
-        Me.Nachname.TabIndex = 2
         '
         'HausNr
         '
-        Me.HausNr.Location = New System.Drawing.Point(267, 105)
-        Me.HausNr.MaxLength = 5
+        resources.ApplyResources(Me.HausNr, "HausNr")
         Me.HausNr.Name = "HausNr"
-        Me.HausNr.Size = New System.Drawing.Size(53, 20)
-        Me.HausNr.TabIndex = 6
         '
         'Zusatz
         '
-        Me.Zusatz.Location = New System.Drawing.Point(344, 105)
-        Me.Zusatz.MaxLength = 10
+        resources.ApplyResources(Me.Zusatz, "Zusatz")
         Me.Zusatz.Name = "Zusatz"
-        Me.Zusatz.Size = New System.Drawing.Size(43, 20)
-        Me.Zusatz.TabIndex = 7
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(326, 108)
+        resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(12, 13)
-        Me.Label1.TabIndex = 10
-        Me.Label1.Text = "/"
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 28)
+        resources.ApplyResources(Me.Label2, "Label2")
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(107, 13)
-        Me.Label2.TabIndex = 11
-        Me.Label2.Text = "Vorname, Nachname"
         '
         'Label3
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 108)
+        resources.ApplyResources(Me.Label3, "Label3")
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(106, 13)
-        Me.Label3.TabIndex = 12
-        Me.Label3.Text = "Straße, Hausnummer"
         '
         'ButtonBack
         '
-        Me.ButtonBack.Location = New System.Drawing.Point(270, 165)
+        resources.ApplyResources(Me.ButtonBack, "ButtonBack")
         Me.ButtonBack.Name = "ButtonBack"
-        Me.ButtonBack.Size = New System.Drawing.Size(71, 23)
-        Me.ButtonBack.TabIndex = 15
-        Me.ButtonBack.Text = "Zurück"
         Me.ButtonBack.UseVisualStyleBackColor = True
         '
         'ButtonInsert
         '
-        Me.ButtonInsert.Location = New System.Drawing.Point(347, 165)
+        resources.ApplyResources(Me.ButtonInsert, "ButtonInsert")
         Me.ButtonInsert.Name = "ButtonInsert"
-        Me.ButtonInsert.Size = New System.Drawing.Size(75, 23)
-        Me.ButtonInsert.TabIndex = 16
-        Me.ButtonInsert.Text = "Einfügen"
         Me.ButtonInsert.UseVisualStyleBackColor = True
         '
         'LabelErfolg
         '
-        Me.LabelErfolg.AutoSize = True
-        Me.LabelErfolg.Location = New System.Drawing.Point(377, 142)
+        resources.ApplyResources(Me.LabelErfolg, "LabelErfolg")
         Me.LabelErfolg.Name = "LabelErfolg"
-        Me.LabelErfolg.Size = New System.Drawing.Size(34, 13)
-        Me.LabelErfolg.TabIndex = 17
-        Me.LabelErfolg.Text = "Erfolg"
-        Me.LabelErfolg.Visible = False
         '
         'OrtAuswahl
         '
+        resources.ApplyResources(Me.OrtAuswahl, "OrtAuswahl")
         Me.OrtAuswahl.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.OrtAuswahl.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.OrtAuswahl.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.OrtAuswahl.FormattingEnabled = True
-        Me.OrtAuswahl.Location = New System.Drawing.Point(129, 51)
         Me.OrtAuswahl.Name = "OrtAuswahl"
-        Me.OrtAuswahl.Size = New System.Drawing.Size(144, 21)
-        Me.OrtAuswahl.TabIndex = 3
         '
         'PLZAuswahl
         '
+        resources.ApplyResources(Me.PLZAuswahl, "PLZAuswahl")
         Me.PLZAuswahl.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.PLZAuswahl.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.PLZAuswahl.Enabled = False
         Me.PLZAuswahl.FormattingEnabled = True
-        Me.PLZAuswahl.Location = New System.Drawing.Point(129, 78)
         Me.PLZAuswahl.Name = "PLZAuswahl"
-        Me.PLZAuswahl.Size = New System.Drawing.Size(86, 21)
-        Me.PLZAuswahl.TabIndex = 4
         '
         'Label4
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(12, 54)
+        resources.ApplyResources(Me.Label4, "Label4")
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(21, 13)
-        Me.Label4.TabIndex = 20
-        Me.Label4.Text = "Ort"
         '
         'Label5
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(12, 81)
+        resources.ApplyResources(Me.Label5, "Label5")
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(27, 13)
-        Me.Label5.TabIndex = 21
-        Me.Label5.Text = "PLZ"
         '
         'CBStraße
         '
+        resources.ApplyResources(Me.CBStraße, "CBStraße")
         Me.CBStraße.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CBStraße.Enabled = False
         Me.CBStraße.FormattingEnabled = True
-        Me.CBStraße.Location = New System.Drawing.Point(129, 105)
         Me.CBStraße.Name = "CBStraße"
-        Me.CBStraße.Size = New System.Drawing.Size(132, 21)
-        Me.CBStraße.TabIndex = 5
         '
         'AVSIB_PersonInsert
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(434, 200)
         Me.Controls.Add(Me.CBStraße)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
@@ -197,11 +145,7 @@ Partial Class AVSIB_PersonInsert
         Me.Controls.Add(Me.HausNr)
         Me.Controls.Add(Me.Nachname)
         Me.Controls.Add(Me.Vorname)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MaximumSize = New System.Drawing.Size(450, 239)
-        Me.MinimumSize = New System.Drawing.Size(450, 239)
         Me.Name = "AVSIB_PersonInsert"
-        Me.Text = "AVSIB_Person"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
         Me.PerformLayout()

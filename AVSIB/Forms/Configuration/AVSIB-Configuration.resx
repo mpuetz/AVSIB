@@ -120,14 +120,109 @@
   <metadata name="RichTextBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="RichTextBox1.Text" xml:space="preserve">
-    <value>Hallo und Herzlich Willkommen zu AVSIB, dem Adressverwaltungssystem für Informationsblätter. An dieser Stelle sei Ihnen herzlich gedankt, dass Sie sich für AVSIB entschieden haben. 
-Bevor Sie anfangen können benötigen wir von Ihnen noch einige Informationen, um das Programm auf Sie einzustellen. 
-Die Konfiguration kann etwas Zeit in Anspruch nehmen, diese Konfiguration ist jedoch lediglich bei der ersten Verwendung notwendig. 
-Nachdem Sie auf den Hauptbildschirm weitergeleitet wurden arbeiten Sie bitte die Punkte Orte, Straßen, Personen, Bezirke und Austräger in dieser Reihenfolge durch.
-Vielen Dank für Ihre Geduld!</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RichTextBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="RichTextBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="RichTextBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="RichTextBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1343, 896</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RichTextBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="RichTextBox1.Text" xml:space="preserve">
+    <value>Hello and welcome to AVSIB.
+AVSIB is a program which lets you organize your roundsmen, districts and addressees and print lists for your roundsmen, containing the addresses they have to deliver to.
+Before we start, this program needs some informations from you about your organization and the brochure you want to deliver. These informations will be on top of the printed lists.
+After setting these informations, please enter the cities, streets, persons, districts and roundsmen in this order. The first setup will take some time, but it is only needed once if you do not reset this program.
+Thak you for your understanding and for choosing this program!</value>
+  </data>
+  <data name="&gt;&gt;RichTextBox1.Name" xml:space="preserve">
+    <value>RichTextBox1</value>
+  </data>
+  <data name="&gt;&gt;RichTextBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RichTextBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;RichTextBox1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ConfigButtonForward.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1228, 292</value>
+  </data>
+  <data name="ConfigButtonForward.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="ConfigButtonForward.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 28</value>
+  </data>
+  <data name="ConfigButtonForward.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="ConfigButtonForward.Text" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="&gt;&gt;ConfigButtonForward.Name" xml:space="preserve">
+    <value>ConfigButtonForward</value>
+  </data>
+  <data name="&gt;&gt;ConfigButtonForward.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ConfigButtonForward.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ConfigButtonForward.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ConfigButtonBack.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ConfigButtonBack.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1120, 292</value>
+  </data>
+  <data name="ConfigButtonBack.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="ConfigButtonBack.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 28</value>
+  </data>
+  <data name="ConfigButtonBack.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="ConfigButtonBack.Text" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="&gt;&gt;ConfigButtonBack.Name" xml:space="preserve">
+    <value>ConfigButtonBack</value>
+  </data>
+  <data name="&gt;&gt;ConfigButtonBack.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ConfigButtonBack.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ConfigButtonBack.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1344, 897</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAUAAAAAAAEAIABpCgAAVgAAADAwAAABACAAqCUAAL8KAAAgIAAAAQAgAKgQAABnMAAAGBgAAAEA
@@ -469,5 +564,20 @@ Vielen Dank für Ihre Geduld!</value>
         /6xB//+sQQAArEEAAKxBAACsQQAArEEAAKxBAACsQQAArEEAAKxBAACsQQAArEEAAKxBAACsQf//rEH/
         /6xB
 </value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1359, 934</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>AVSIB - Configuration</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>AVSIB_Configuration</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

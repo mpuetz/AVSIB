@@ -53,141 +53,106 @@ Partial Class AVSIB_Drucken
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(1635, 672)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        resources.ApplyResources(Me.Button2, "Button2")
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 43)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "Menü"
-        Me.ToolTip1.SetToolTip(Me.Button2, "Zurück zum Hauptmenü")
+        Me.ToolTip1.SetToolTip(Me.Button2, resources.GetString("Button2.ToolTip"))
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(1424, 51)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(295, 20)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Welche Bezirke sollen gedruckt werden?"
+        Me.ToolTip1.SetToolTip(Me.Label1, resources.GetString("Label1.ToolTip"))
         '
         'ListView1
         '
+        resources.ApplyResources(Me.ListView1, "ListView1")
         Me.ListView1.AutoArrange = False
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.CNachname, Me.CVorname, Me.CStraße, Me.CHaus, Me.CZusatz})
         Me.ListView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None
-        Me.ListView1.LabelWrap = False
-        Me.ListView1.Location = New System.Drawing.Point(18, 49)
-        Me.ListView1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.ListView1.MaximumSize = New System.Drawing.Size(1398, 666)
-        Me.ListView1.MinimumSize = New System.Drawing.Size(1398, 666)
         Me.ListView1.MultiSelect = False
         Me.ListView1.Name = "ListView1"
         Me.ListView1.ShowGroups = False
-        Me.ListView1.Size = New System.Drawing.Size(1398, 666)
-        Me.ListView1.TabIndex = 6
+        Me.ToolTip1.SetToolTip(Me.ListView1, resources.GetString("ListView1.ToolTip"))
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
         '
         'CNachname
         '
-        Me.CNachname.Text = "Nachname"
-        Me.CNachname.Width = 200
+        resources.ApplyResources(Me.CNachname, "CNachname")
         '
         'CVorname
         '
-        Me.CVorname.Text = "Vorname"
-        Me.CVorname.Width = 200
+        resources.ApplyResources(Me.CVorname, "CVorname")
         '
         'CStraße
         '
-        Me.CStraße.Text = "Straße"
-        Me.CStraße.Width = 200
+        resources.ApplyResources(Me.CStraße, "CStraße")
         '
         'CHaus
         '
-        Me.CHaus.Text = "Hausnummer"
-        Me.CHaus.Width = 80
+        resources.ApplyResources(Me.CHaus, "CHaus")
         '
         'CZusatz
         '
-        Me.CZusatz.Text = "Zusatz"
-        Me.CZusatz.Width = 100
+        resources.ApplyResources(Me.CZusatz, "CZusatz")
         '
         'B_Next
         '
+        resources.ApplyResources(Me.B_Next, "B_Next")
         Me.B_Next.Image = Global.AVSIB.My.Resources.Resources.arrow_Next_16xLG_color
-        Me.B_Next.Location = New System.Drawing.Point(1532, 672)
         Me.B_Next.Name = "B_Next"
-        Me.B_Next.Size = New System.Drawing.Size(45, 43)
-        Me.B_Next.TabIndex = 4
-        Me.ToolTip1.SetToolTip(Me.B_Next, "Nächste Seite")
+        Me.ToolTip1.SetToolTip(Me.B_Next, resources.GetString("B_Next.ToolTip"))
         Me.B_Next.UseVisualStyleBackColor = True
         '
         'B_Previous
         '
+        resources.ApplyResources(Me.B_Previous, "B_Previous")
         Me.B_Previous.Image = Global.AVSIB.My.Resources.Resources.arrow_Previous_16xLG_color
-        Me.B_Previous.Location = New System.Drawing.Point(1480, 672)
         Me.B_Previous.Name = "B_Previous"
-        Me.B_Previous.Size = New System.Drawing.Size(45, 43)
-        Me.B_Previous.TabIndex = 3
-        Me.ToolTip1.SetToolTip(Me.B_Previous, "Vorherige Seite")
+        Me.ToolTip1.SetToolTip(Me.B_Previous, resources.GetString("B_Previous.ToolTip"))
         Me.B_Previous.UseVisualStyleBackColor = True
         '
         'Button1
         '
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(1428, 672)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        resources.ApplyResources(Me.Button1, "Button1")
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(45, 43)
-        Me.Button1.TabIndex = 2
-        Me.ToolTip1.SetToolTip(Me.Button1, "Druckt den/die ausgewählten Bezirk(e) aus.")
+        Me.ToolTip1.SetToolTip(Me.Button1, resources.GetString("Button1.ToolTip"))
         Me.Button1.UseVisualStyleBackColor = True
         '
         'ListBox1
         '
+        resources.ApplyResources(Me.ListBox1, "ListBox1")
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 20
-        Me.ListBox1.Location = New System.Drawing.Point(1550, 228)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(8, 4)
-        Me.ListBox1.TabIndex = 7
+        Me.ToolTip1.SetToolTip(Me.ListBox1, resources.GetString("ListBox1.ToolTip"))
         '
         'ListBox2
         '
+        resources.ApplyResources(Me.ListBox2, "ListBox2")
         Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.ItemHeight = 20
-        Me.ListBox2.Location = New System.Drawing.Point(1429, 74)
         Me.ListBox2.Name = "ListBox2"
         Me.ListBox2.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended
-        Me.ListBox2.Size = New System.Drawing.Size(290, 584)
-        Me.ListBox2.TabIndex = 1
+        Me.ToolTip1.SetToolTip(Me.ListBox2, resources.GetString("ListBox2.ToolTip"))
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(18, 22)
+        resources.ApplyResources(Me.Label2, "Label2")
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(81, 20)
-        Me.Label2.TabIndex = 8
-        Me.Label2.Text = "Vorschau:"
+        Me.ToolTip1.SetToolTip(Me.Label2, resources.GetString("Label2.ToolTip"))
         '
         'Button3
         '
+        resources.ApplyResources(Me.Button3, "Button3")
         Me.Button3.Image = Global.AVSIB.My.Resources.Resources.pdf32
-        Me.Button3.Location = New System.Drawing.Point(1583, 672)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(45, 43)
-        Me.Button3.TabIndex = 9
+        Me.ToolTip1.SetToolTip(Me.Button3, resources.GetString("Button3.ToolTip"))
         Me.Button3.UseVisualStyleBackColor = True
         '
         'AVSIB_Drucken
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1724, 732)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.B_Previous)
@@ -198,12 +163,8 @@ Partial Class AVSIB_Drucken
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.MaximumSize = New System.Drawing.Size(1746, 791)
-        Me.MinimumSize = New System.Drawing.Size(1746, 750)
         Me.Name = "AVSIB_Drucken"
-        Me.Text = "AVSIB_Drucken"
+        Me.ToolTip1.SetToolTip(Me, resources.GetString("$this.ToolTip"))
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
         Me.PerformLayout()

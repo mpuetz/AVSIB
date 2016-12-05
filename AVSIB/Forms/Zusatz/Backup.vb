@@ -19,9 +19,12 @@
 
 Imports System.IO
 Imports System.Deployment.Application
+Imports System.Resources
+
 
 Public Class Backup
     ' adds the possibility to backup/restore the database in/from the program-folder.
+    Dim LocRM As New ResourceManager("AVSIB.WinFormStrings", GetType(Backup).Assembly)
     Dim count As Integer
     Dim changed As Boolean = False
 
@@ -47,16 +50,16 @@ Public Class Backup
                 count = 1
                 CSettings.Save("Anzahl", count, Application.StartupPath & "\Data\Backup\Backups.ini")
                 CSettings.Save(count, name, Application.StartupPath & "\Data\Backup\Backups.ini")
-                MsgBox("Backup erfolgreich erstellt", MsgBoxStyle.Information, "Erfolg")
+                MsgBox(LocRM.GetString("strBackupSave"), MsgBoxStyle.Information, LocRM.GetString("titSuccess"))
             Else
                 count = CSettings.Load("Anzahl", Application.StartupPath & "\Data\Backup\Backups.ini") + 1
                 CSettings.Remove("Anzahl", Application.StartupPath & "\Data\Backup\Backups.ini")
                 CSettings.Save("Anzahl", count, Application.StartupPath & "\Data\Backup\Backups.ini")
                 CSettings.Save(count, name, Application.StartupPath & "\Data\Backup\Backups.ini")
-                MsgBox("Backup erfolgreich erstellt", MsgBoxStyle.Information, "Erfolg")
+                MsgBox(LocRM.GetString("strBackupSave"), MsgBoxStyle.Information, LocRM.GetString("titSuccess"))
             End If
         Catch ex As Exception
-            MsgBox(ex.ToString, MsgBoxStyle.Critical, "Fehler")
+            MsgBox(ex.ToString, MsgBoxStyle.Critical, LocRM.GetString("titError"))
         End Try
     End Sub
 
@@ -79,7 +82,7 @@ Public Class Backup
             Try
                 count = CSettings.Load("Anzahl", Application.StartupPath & "\Data\Backup\Backups.ini")
             Catch ex As Exception
-                MsgBox("Keine Backups gefunden", MsgBoxStyle.Critical, "Fehler")
+                MsgBox(LocRM.GetString("strNoBackupsFound"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
                 BRestore.Enabled = False
             End Try
             For i As Integer = 1 To count
@@ -117,9 +120,9 @@ Public Class Backup
             File.Delete(ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data_log.ldf")
             File.Copy(Application.StartupPath & "\Data\Backup\" & name & ".mdf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data.mdf")
             File.Copy(Application.StartupPath & "\Data\Backup\" & name & ".ldf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data_log.ldf")
-            MsgBox("Backup erfolgreich widerhergestellt!", MsgBoxStyle.Information, "Erfolg")
+            MsgBox(LocRM.GetString("strBackupRestore"), MsgBoxStyle.Information, LocRM.GetString("titSuccess"))
         Else
-            MsgBox("Kein Backup ausgewählt", MsgBoxStyle.Critical)
+            MsgBox(LocRM.GetString("strNoBackupsSelected"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
         End If
     End Sub
 
@@ -152,7 +155,7 @@ Public Class Backup
             ListBox1.Items.Clear()
             count = count - 1
             If count = 0 Then
-                MsgBox("Keine Backups gefunden", MsgBoxStyle.Critical, "Fehler")
+                MsgBox(LocRM.GetString("strNoBackupsFound"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
                 BRestore.Enabled = False
                 BDelete.Enabled = False
             Else
@@ -163,7 +166,7 @@ Public Class Backup
             CSettings.Remove("Anzahl", Application.StartupPath & "\Data\Backup\Backups.ini")
             CSettings.Save("Anzahl", count, Application.StartupPath & "\Data\Backup\Backups.ini")
         Else
-            MsgBox("Kein Backup zum löschen ausgewählt!", MsgBoxStyle.Exclamation, "Warnung")
+            MsgBox(LocRM.GetString("strNoBackupDelete"), MsgBoxStyle.Exclamation, LocRM.GetString("titCaution"))
         End If
     End Sub
 End Class
