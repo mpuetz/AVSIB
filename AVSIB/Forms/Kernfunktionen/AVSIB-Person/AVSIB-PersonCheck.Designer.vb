@@ -111,12 +111,12 @@ Partial Class AVSIB_PersonCheck
         '
         'BindingNavigator1
         '
-        resources.ApplyResources(Me.BindingNavigator1, "BindingNavigator1")
         Me.BindingNavigator1.AddNewItem = Nothing
         Me.BindingNavigator1.CountItem = Me.BindingNavigatorCountItem
         Me.BindingNavigator1.DeleteItem = Nothing
         Me.BindingNavigator1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.TSBBack, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.TSBNext, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorDeleteItem, Me.ToolStripButton1, Me.ToolStripSeparator1, Me.ToolStripButton2, Me.ToolStripSeparator2, Me.ToolStripProgressBar1})
+        resources.ApplyResources(Me.BindingNavigator1, "BindingNavigator1")
         Me.BindingNavigator1.MoveFirstItem = Nothing
         Me.BindingNavigator1.MoveLastItem = Nothing
         Me.BindingNavigator1.MoveNextItem = Nothing
@@ -126,25 +126,25 @@ Partial Class AVSIB_PersonCheck
         '
         'BindingNavigatorCountItem
         '
-        resources.ApplyResources(Me.BindingNavigatorCountItem, "BindingNavigatorCountItem")
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
+        resources.ApplyResources(Me.BindingNavigatorCountItem, "BindingNavigatorCountItem")
         '
         'BindingNavigatorMoveFirstItem
         '
-        resources.ApplyResources(Me.BindingNavigatorMoveFirstItem, "BindingNavigatorMoveFirstItem")
         Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        resources.ApplyResources(Me.BindingNavigatorMoveFirstItem, "BindingNavigatorMoveFirstItem")
         Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
         '
         'TSBBack
         '
-        resources.ApplyResources(Me.TSBBack, "TSBBack")
         Me.TSBBack.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        resources.ApplyResources(Me.TSBBack, "TSBBack")
         Me.TSBBack.Name = "TSBBack"
         '
         'BindingNavigatorSeparator
         '
-        resources.ApplyResources(Me.BindingNavigatorSeparator, "BindingNavigatorSeparator")
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
+        resources.ApplyResources(Me.BindingNavigatorSeparator, "BindingNavigatorSeparator")
         '
         'BindingNavigatorPositionItem
         '
@@ -154,58 +154,58 @@ Partial Class AVSIB_PersonCheck
         '
         'BindingNavigatorSeparator1
         '
-        resources.ApplyResources(Me.BindingNavigatorSeparator1, "BindingNavigatorSeparator1")
         Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
+        resources.ApplyResources(Me.BindingNavigatorSeparator1, "BindingNavigatorSeparator1")
         '
         'TSBNext
         '
-        resources.ApplyResources(Me.TSBNext, "TSBNext")
         Me.TSBNext.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        resources.ApplyResources(Me.TSBNext, "TSBNext")
         Me.TSBNext.Name = "TSBNext"
         '
         'BindingNavigatorMoveLastItem
         '
-        resources.ApplyResources(Me.BindingNavigatorMoveLastItem, "BindingNavigatorMoveLastItem")
         Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        resources.ApplyResources(Me.BindingNavigatorMoveLastItem, "BindingNavigatorMoveLastItem")
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
         '
         'BindingNavigatorSeparator2
         '
-        resources.ApplyResources(Me.BindingNavigatorSeparator2, "BindingNavigatorSeparator2")
         Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        resources.ApplyResources(Me.BindingNavigatorSeparator2, "BindingNavigatorSeparator2")
         '
         'BindingNavigatorDeleteItem
         '
-        resources.ApplyResources(Me.BindingNavigatorDeleteItem, "BindingNavigatorDeleteItem")
         Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        resources.ApplyResources(Me.BindingNavigatorDeleteItem, "BindingNavigatorDeleteItem")
         Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
         '
         'ToolStripButton1
         '
-        resources.ApplyResources(Me.ToolStripButton1, "ToolStripButton1")
         Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        resources.ApplyResources(Me.ToolStripButton1, "ToolStripButton1")
         Me.ToolStripButton1.Name = "ToolStripButton1"
         '
         'ToolStripSeparator1
         '
-        resources.ApplyResources(Me.ToolStripSeparator1, "ToolStripSeparator1")
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        resources.ApplyResources(Me.ToolStripSeparator1, "ToolStripSeparator1")
         '
         'ToolStripButton2
         '
-        resources.ApplyResources(Me.ToolStripButton2, "ToolStripButton2")
         Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        resources.ApplyResources(Me.ToolStripButton2, "ToolStripButton2")
         Me.ToolStripButton2.Name = "ToolStripButton2"
         '
         'ToolStripSeparator2
         '
-        resources.ApplyResources(Me.ToolStripSeparator2, "ToolStripSeparator2")
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        resources.ApplyResources(Me.ToolStripSeparator2, "ToolStripSeparator2")
         '
         'ToolStripProgressBar1
         '
-        resources.ApplyResources(Me.ToolStripProgressBar1, "ToolStripProgressBar1")
         Me.ToolStripProgressBar1.Name = "ToolStripProgressBar1"
+        resources.ApplyResources(Me.ToolStripProgressBar1, "ToolStripProgressBar1")
         Me.ToolStripProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous
         '
         'PLZ

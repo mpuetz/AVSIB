@@ -189,6 +189,9 @@
   <data name="strNoCities" xml:space="preserve">
     <value>Keine Orte gefunden! Bitte fügen Sie zunächst einen Ort über 'Menü' -&gt; 'Orte' hinzu!</value>
   </data>
+  <data name="strNoCitySelected" xml:space="preserve">
+    <value>Bitte wählen Sie eine Stadt aus!</value>
+  </data>
   <data name="strNoData" xml:space="preserve">
     <value>Es wurden noch keine Daten erfasst!</value>
   </data>
@@ -201,11 +204,17 @@
   <data name="strNoLastName" xml:space="preserve">
     <value>Bitte geben Sie den Nachnamen ein!</value>
   </data>
+  <data name="strNoStreetSelected" xml:space="preserve">
+    <value>Bitte wählen Sie eine Straße aus!</value>
+  </data>
   <data name="strNoSurname" xml:space="preserve">
     <value>Bitte geben Sie den Vornamen ein!</value>
   </data>
   <data name="strNothingSelectedDelete" xml:space="preserve">
-    <value>Nichts zum löschen ausgewählt!</value>
+    <value>Nichts zum Löschen ausgewählt!</value>
+  </data>
+  <data name="strNoZIPSelected" xml:space="preserve">
+    <value>Bitte wählen Sie eine Postleitzahl aus!</value>
   </data>
   <data name="strOF" xml:space="preserve">
     <value>von</value>

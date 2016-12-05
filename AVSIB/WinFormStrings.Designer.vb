@@ -281,6 +281,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Please choose a city! ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property strNoCitySelected() As String
+            Get
+                Return ResourceManager.GetString("strNoCitySelected", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die There is no data in the database, yet ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property strNoData() As String
@@ -317,6 +326,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Please choose a street! ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property strNoStreetSelected() As String
+            Get
+                Return ResourceManager.GetString("strNoStreetSelected", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Please enter the Surname! ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property strNoSurname() As String
@@ -331,6 +349,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property strNothingSelectedDelete() As String
             Get
                 Return ResourceManager.GetString("strNothingSelectedDelete", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Please choose a zip-code! ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property strNoZIPSelected() As String
+            Get
+                Return ResourceManager.GetString("strNoZIPSelected", resourceCulture)
             End Get
         End Property
         

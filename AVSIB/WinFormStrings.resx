@@ -189,6 +189,9 @@
   <data name="strNoCities" xml:space="preserve">
     <value>No Cities found in database. Please enter the cities first. Go to Main Menu -&gt; Cities</value>
   </data>
+  <data name="strNoCitySelected" xml:space="preserve">
+    <value>Please choose a city!</value>
+  </data>
   <data name="strNoData" xml:space="preserve">
     <value>There is no data in the database, yet</value>
   </data>
@@ -201,11 +204,17 @@
   <data name="strNoLastName" xml:space="preserve">
     <value>Please enter the last name!</value>
   </data>
+  <data name="strNoStreetSelected" xml:space="preserve">
+    <value>Please choose a street!</value>
+  </data>
   <data name="strNoSurname" xml:space="preserve">
     <value>Please enter the Surname!</value>
   </data>
   <data name="strNothingSelectedDelete" xml:space="preserve">
     <value>Nothing selected for deletion</value>
+  </data>
+  <data name="strNoZIPSelected" xml:space="preserve">
+    <value>Please choose a zip-code!</value>
   </data>
   <data name="strOF" xml:space="preserve">
     <value>of</value>

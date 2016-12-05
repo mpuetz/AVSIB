@@ -17,8 +17,10 @@
 
 '____________________________________________________________________________
 
+Imports System.Resources
 Public Class AVSIB_Bezirke
     ' This form is used to combine the places and streets with the district numbers.
+    Dim LocRM As New ResourceManager("AVSIB.WinFormStrings", GetType(AVSIB_Bezirke).Assembly)
     Dim Straßen As String
     Dim Ort As String
     Dim PLZ As Integer
@@ -128,6 +130,14 @@ Public Class AVSIB_Bezirke
             For i As Long = 0 To countort - 1
                 CBOrt.Items.Add(Orte.GetOrtabc(i))
             Next
+        ElseIf CBBezirk.SelectedItem = Nothing Then
+            MsgBox(LocRM.GetString("strNoDistrictNo"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
+        ElseIf CBOrt.SelectedItem = Nothing Then
+            MsgBox(LocRM.GetString("strNoCitySelected"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
+        ElseIf CBPLZ.SelectedItem = Nothing Then
+            MsgBox(LocRM.GetString("strNoZIPSelected"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
+        ElseIf CBStraße.SelectedItem = Nothing Then
+            MsgBox(LocRM.GetString("strNoStreetSelected"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
         End If
     End Sub
 
