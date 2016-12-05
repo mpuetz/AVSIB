@@ -133,7 +133,7 @@ Public Class AVSIB_Drucken
             Try
                 SelectedBezirk = SelectedObjects.Item(0)
             Catch ex As Exception
-                MsgBox(LocRm.GetString("strNoDistricts"), MsgBoxStyle.Critical, LocRm.GetString("titError"))
+                MsgBox(LocRm.GetString("strNoDistrict"), MsgBoxStyle.Critical, LocRm.GetString("titError"))
                 Me.Close()
                 GoTo EndLine
             End Try

@@ -93,8 +93,7 @@ Public Class AVSIB_Main
     Private Sub MainButtonReset_Click(sender As Object, e As EventArgs) Handles MainButtonReset.Click
         ' When the reset-Button is clicked the database gets deleted and replaced by a new one.
         ' The settings.txt will be reset, too, and the configuration-form will be loaded.
-        MsgBox("strCautionDelete", MsgBoxStyle.YesNo, "titCaution")
-        If MsgBoxResult.Yes Then
+        If MsgBox(LocRM.GetString("strCautionDelete"), MsgBoxStyle.YesNo, LocRM.GetString("titCaution")).ToString = "Yes" Then
             For Each proc In System.Diagnostics.Process.GetProcessesByName("sqlservr")
                 proc.Kill()
             Next
