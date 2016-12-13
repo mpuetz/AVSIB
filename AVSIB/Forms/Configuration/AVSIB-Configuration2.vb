@@ -21,17 +21,16 @@ Public Class AVSIB_Configuration2
     ' asks for the company-name and the project-name
     Dim LocRM As New ResourceManager("AVSIB.WinFormStrings", GetType(AVSIB_Configuration2).Assembly)
     Dim clicked As Integer = "0"
-    Dim first As Integer = CSettings.Load("FirstRun", Application.StartupPath & "\settings.ini")
+    Dim first As Integer = FileOperator.Load(Application.StartupPath + "\settings.ini", "FirstRun")
 
     Private Sub Config2ButtonNext_Click(sender As Object, e As EventArgs) Handles Config2ButtonNext.Click
         ' checks whether all required informations were entered and saves them to settings.ini, else displays a message to the user
         ' and tells him to enter all required informations.
         If TextBox2.Text <> Nothing And TextBox1.Text <> Nothing Then
-            CSettings.Save("Organisation", TextBox1.Text, Application.StartupPath & "\settings.ini")
-            CSettings.Save("Projekt", TextBox2.Text, Application.StartupPath & "\settings.ini")
-            CSettings.Remove("FirstRun", Application.StartupPath & "\settings.ini")
-            CSettings.Save("FirstRun", "0", Application.StartupPath & "\settings.ini")
-            first = CSettings.Load("FirstRun", Application.StartupPath & "\settings.ini")
+            FileOperator.Save(Application.StartupPath + "\settings.ini", "Organisation", TextBox1.Text)
+            FileOperator.Save(Application.StartupPath + "\settings.ini", "Projekt", TextBox2.Text)
+            FileOperator.Save(Application.StartupPath + "\settings.ini", "FirstRun", "0")
+            first = FileOperator.Load(Application.StartupPath + "\settings.ini", "FirstRun")
             Me.Close()
         ElseIf TextBox2.Text = Nothing Or TextBox1.Text = Nothing Then
             MsgBox(LocRM.GetString("strFieldsMissing"), MsgBoxStyle.Critical, LocRM.GetString("titError"))

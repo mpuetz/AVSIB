@@ -23,13 +23,13 @@ Public Class AVSIB_Configuration
     Dim FirstRun As Integer
     Private Sub AVSIB_Configuration_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            FirstRun = CSettings.Load("FirstRun", Application.StartupPath + "\settings.ini")
+            FirstRun = FileOperator.Load(Application.StartupPath + "\settings.ini", "FirstRun")
         Catch ex As Exception
             FirstRun = 1
         End Try
     End Sub
     Private Sub ConfigButtonBack_Click(sender As Object, e As EventArgs) Handles ConfigButtonBack.Click
-        Dim Running As Integer = CSettings.Load("ConfigRunning", Application.StartupPath + "\settings.ini")
+        Dim Running As Integer = FileOperator.Load(Application.StartupPath + "\settings.ini", "ConfigRunning")
         If FirstRun = "1" And Running = "1" Then
             Me.Close()
         Else
@@ -46,10 +46,9 @@ Public Class AVSIB_Configuration
     Private Sub AVSIB_Configuration_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         ' If the configuration is started for the first time the variables are reset and the whole program gets closed.
         ' Else the main menu will be shown
-        Dim Running As Integer = CSettings.Load("ConfigRunning", Application.StartupPath + "\settings.ini")
+        Dim Running As Integer = FileOperator.Load(Application.StartupPath + "\settings.ini", "ConfigRunning")
         If FirstRun = "1" And Running = "1" Then
-            CSettings.Remove("ConfigRunning", Application.StartupPath + "\settings.ini")
-            CSettings.Save("ConfigRunning", "0", Application.StartupPath + "\settings.ini")
+            FileOperator.Save(Application.StartupPath + "\settings.ini", "ConfigRunning", "0")
             AVSIB_Main.Close()
         ElseIf FirstRun = "0" Then
             AVSIB_Main.Show()

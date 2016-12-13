@@ -48,14 +48,13 @@ Public Class Backup
                 Using File.Create(Application.StartupPath & "\Data\Backup\Backups.ini")
                 End Using
                 count = 1
-                CSettings.Save("Anzahl", count, Application.StartupPath & "\Data\Backup\Backups.ini")
-                CSettings.Save(count, name, Application.StartupPath & "\Data\Backup\Backups.ini")
+                FileOperator.Save(Application.StartupPath & "\Data\Backup\Backups.ini", "Anzahl", count)
+                FileOperator.Save(Application.StartupPath & "\Data\Backup\Backups.ini", count, name)
                 MsgBox(LocRM.GetString("strBackupSave"), MsgBoxStyle.Information, LocRM.GetString("titSuccess"))
             Else
-                count = CSettings.Load("Anzahl", Application.StartupPath & "\Data\Backup\Backups.ini") + 1
-                CSettings.Remove("Anzahl", Application.StartupPath & "\Data\Backup\Backups.ini")
-                CSettings.Save("Anzahl", count, Application.StartupPath & "\Data\Backup\Backups.ini")
-                CSettings.Save(count, name, Application.StartupPath & "\Data\Backup\Backups.ini")
+                count = FileOperator.Load(Application.StartupPath & "\Data\Backup\Backups.ini", "Anzahl") + 1
+                FileOperator.Save(Application.StartupPath & "\Data\Backup\Backups.ini", "Anzahl", count)
+                FileOperator.Save(Application.StartupPath & "\Data\Backup\Backups.ini", count, name)
                 MsgBox(LocRM.GetString("strBackupSave"), MsgBoxStyle.Information, LocRM.GetString("titSuccess"))
             End If
         Catch ex As Exception
@@ -80,13 +79,13 @@ Public Class Backup
             BDelete.Visible = True
             BDelete.Enabled = True
             Try
-                count = CSettings.Load("Anzahl", Application.StartupPath & "\Data\Backup\Backups.ini")
+                count = FileOperator.Load(Application.StartupPath & "\Data\Backup\Backups.ini", "Anzahl")
             Catch ex As Exception
                 MsgBox(LocRM.GetString("strNoBackupsFound"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
                 BRestore.Enabled = False
             End Try
             For i As Integer = 1 To count
-                ListBox1.Items.Add(CSettings.Load(i, Application.StartupPath & "\Data\Backup\Backups.ini"))
+                ListBox1.Items.Add(FileOperator.Load(Application.StartupPath & "\Data\Backup\Backups.ini", i))
             Next
             changed = False
         End If
@@ -115,7 +114,7 @@ Public Class Backup
     Private Sub BRestore_Click(sender As Object, e As EventArgs) Handles BRestore.Click
         ' gets the name of the selected backup and replaces the existing database-file with it.
         If ListBox1.SelectedItem <> Nothing Then
-            Dim name As String = CSettings.Load(ListBox1.SelectedIndex + 1, Application.StartupPath & "\Data\Backup\Backups.ini")
+            Dim name As String = FileOperator.Load(Application.StartupPath & "\Data\Backup\Backups.ini", ListBox1.SelectedIndex + 1)
             File.Delete(ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data.mdf")
             File.Delete(ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data_log.ldf")
             File.Copy(Application.StartupPath & "\Data\Backup\" & name & ".mdf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data.mdf")
@@ -140,16 +139,16 @@ Public Class Backup
     Private Sub BDelete_Click(sender As Object, e As EventArgs) Handles BDelete.Click
         ' Deletes the selected backup.
         If ListBox1.SelectedItem <> Nothing Then
-            Dim name As String = CSettings.Load(ListBox1.SelectedIndex + 1, Application.StartupPath & "\Data\Backup\Backups.ini")
+            Dim name As String = FileOperator.Load(Application.StartupPath & "\Data\Backup\Backups.ini", ListBox1.SelectedIndex + 1)
             File.Delete(Application.StartupPath & "\Data\Backup\" & name & ".mdf")
             File.Delete(Application.StartupPath & "\Data\Backup\" & name & ".ldf")
-            count = CSettings.Load("Anzahl", Application.StartupPath & "\Data\Backup\Backups.ini")
+            count = FileOperator.Load(Application.StartupPath & "\Data\Backup\Backups.ini", "Anzahl")
             Dim copy As String
             For i As Integer = ListBox1.SelectedIndex + 1 To count
-                CSettings.Remove(i, Application.StartupPath & "\Data\Backup\Backups.ini")
+                FileOperator.Delete(Application.StartupPath & "\Data\Backup\Backups.ini", i)
                 If count - 1 <> 0 And count <> i Then
-                    copy = CSettings.Load(i + 1, Application.StartupPath & "\Data\Backup\Backups.ini")
-                    CSettings.Save(i, copy, Application.StartupPath & "\Data\Backup\Backups.ini")
+                    copy = FileOperator.Load(Application.StartupPath & "\Data\Backup\Backups.ini", i + 1)
+                    FileOperator.Save(Application.StartupPath & "\Data\Backup\Backups.ini", i, copy)
                 End If
             Next
             ListBox1.Items.Clear()
@@ -160,11 +159,10 @@ Public Class Backup
                 BDelete.Enabled = False
             Else
                 For i As Integer = 1 To count
-                    ListBox1.Items.Add(CSettings.Load(i, Application.StartupPath & "\Data\Backup\Backups.ini"))
+                    ListBox1.Items.Add(FileOperator.Load(Application.StartupPath & "\Data\Backup\Backups.ini", i))
                 Next
             End If
-            CSettings.Remove("Anzahl", Application.StartupPath & "\Data\Backup\Backups.ini")
-            CSettings.Save("Anzahl", count, Application.StartupPath & "\Data\Backup\Backups.ini")
+            FileOperator.Save(Application.StartupPath & "\Data\Backup\Backups.ini", "Anzahl", count)
         Else
             MsgBox(LocRM.GetString("strNoBackupDelete"), MsgBoxStyle.Exclamation, LocRM.GetString("titCaution"))
         End If

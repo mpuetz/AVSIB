@@ -48,8 +48,8 @@ Public Class AVSIB_Drucken
     Dim AusträgerNachnameStr As String
     Dim combined As String
     Dim myTab As String
-    Dim Organisation As String = CSettings.Load("Organisation", Application.StartupPath & "\settings.ini")
-    Dim Projekt As String = CSettings.Load("Projekt", Application.StartupPath & "\settings.ini")
+    Dim Organisation As String = FileOperator.Load(Application.StartupPath + "\settings.ini", "Organisation")
+    Dim Projekt As String = FileOperator.Load(Application.StartupPath + "\settings.ini", "Projekt")
 
     Private PrintLV As New CPrintListView
 

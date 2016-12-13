@@ -30,11 +30,11 @@ Public Class AVSIB_Main
         Me.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedSingle
         Me.WindowState = FormWindowState.Maximized
         If IO.File.Exists(Application.StartupPath + "\settings.ini") = False Then
-            CSettings.Save("FirstRun", "1", Application.StartupPath + "\settings.ini")
-            CSettings.Save("ConfigRunning", "0", Application.StartupPath + "\settings.ini")
+            FileOperator.Save(Application.StartupPath + "\settings.ini", "FirstRun", "1")
+            FileOperator.Save(Application.StartupPath + "\settings.ini", "ConfigRunning", "0")
             AVSIB_Configuration.Show()
             Me.Hide()
-        ElseIf CSettings.Load("FirstRun", Application.StartupPath + "\settings.ini") = "1" Then
+        ElseIf FileOperator.Load(Application.StartupPath + "\settings.ini", "FirstRun") = "1" Then
             For Each proc In System.Diagnostics.Process.GetProcessesByName("sqlservr")
                 proc.Kill()
             Next
@@ -45,12 +45,12 @@ Public Class AVSIB_Main
             System.IO.File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\Data\Reset\AVSIB_Data.mdf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data.mdf")
             System.IO.File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\Data\Reset\AVSIB_Data_log.ldf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data_log.ldf")
             MsgBox(LocRM.GetString("strSuccess"), MsgBoxStyle.Information, LocRM.GetString("titSuccess"))
-            CSettings.Save("FirstRun", "1", Application.StartupPath + "\settings.ini")
-            CSettings.Save("ConfigRunning", "0", Application.StartupPath + "\settings.ini")
+            FileOperator.Save(Application.StartupPath + "\settings.ini", "FirstRun", "1")
+            FileOperator.Save(Application.StartupPath + "\settings.ini", "ConfigRunning", "0")
             AVSIB_Configuration.Show()
             Me.Hide()
         Else
-            FirstRun = CSettings.Load("FirstRun", Application.StartupPath + "\settings.ini")
+            FirstRun = FileOperator.Load(Application.StartupPath + "\settings.ini", "FirstRun")
         End If
     End Sub
 
@@ -104,8 +104,8 @@ Public Class AVSIB_Main
             System.IO.File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\Data\Reset\AVSIB_Data.mdf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data.mdf")
             System.IO.File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\Data\Reset\AVSIB_Data_log.ldf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data_log.ldf")
             MsgBox(LocRM.GetString("strSuccess"), MsgBoxStyle.Information, LocRM.GetString("titSuccess"))
-            CSettings.Save("FirstRun", "1", Application.StartupPath + "\settings.ini")
-            CSettings.Save("ConfigRunning", "0", Application.StartupPath + "\settings.ini")
+            FileOperator.Save(Application.StartupPath + "\settings.ini", "FirstRun", "1")
+            FileOperator.Save(Application.StartupPath + "\settings.ini", "ConfigRunning", "0")
             AVSIB_Configuration.Show()
             Me.Hide()
         End If
@@ -115,15 +115,15 @@ Public Class AVSIB_Main
         ' If the file settings.txt does not exist or FirstRun is set to 1 it starts the configuration-form, which displays
         ' a quick introduction. Else, the configuration2-from is shown, which asks for the settings needed.
         If IO.File.Exists(Application.StartupPath + "\settings.ini") = False Then
-            CSettings.Save("FirstRun", "1", Application.StartupPath + "\settings.ini")
-            CSettings.Save("ConfigRunning", "0", Application.StartupPath + "\settings.ini")
+            FileOperator.Save(Application.StartupPath + "\settings.ini", "FirstRun", "1")
+            FileOperator.Save(Application.StartupPath + "\settings.ini", "ConfigRunning", "0")
             AVSIB_Configuration.Show()
             Me.Hide()
-        ElseIf CSettings.Load("FirstRun", Application.StartupPath + "\settings.ini") = "1" Then
+        ElseIf FileOperator.Load(Application.StartupPath + "\settings.ini", "FirstRun") = "1" Then
             AVSIB_Configuration.Show()
             Me.Hide()
         Else
-            FirstRun = CSettings.Load("FirstRun", Application.StartupPath + "\settings.ini")
+            FirstRun = FileOperator.Load(Application.StartupPath + "\settings.ini", "FirstRun")
             AVSIB_Configuration2.ShowDialog()
         End If
     End Sub
