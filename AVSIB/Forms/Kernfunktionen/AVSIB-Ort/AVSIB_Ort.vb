@@ -62,6 +62,7 @@ Public Class AVSIB_Ort
                     ListView1.Items.Add(lvi)
                 Next
             Next
+            TBOrt.Focus()
         ElseIf TBOrt.Text = Nothing Then
             MsgBox(LocRM.GetString("strInsertCity"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
         Else

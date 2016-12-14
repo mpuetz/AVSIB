@@ -123,6 +123,7 @@ Public Class AVSIB_Straße
                     ListBox1.Items.Add(Straße.GetStraßebyID(ID))
                 Next
             End If
+            CBOrt.Focus()
         Else
             MsgBox(LocRm.GetString("strInsertStreet"), MsgBoxStyle.Critical, LocRm.GetString("titError"))
         End If

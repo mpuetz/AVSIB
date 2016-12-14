@@ -78,6 +78,7 @@ Public Class AVSIB_Austräger
                 lvi.SubItems.Add(Nachname)
                 ListView1.Items.Add(lvi)
             Next
+            CBBezirk.Focus()
         ElseIf CBBezirk.SelectedItem = Nothing Then
             MsgBox(LocRM.GetString("strNoDistrictNo"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
         ElseIf TBNachname.Text = Nothing Then

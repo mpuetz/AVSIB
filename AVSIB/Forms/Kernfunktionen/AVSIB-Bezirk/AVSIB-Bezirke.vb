@@ -130,6 +130,7 @@ Public Class AVSIB_Bezirke
             For i As Long = 0 To countort - 1
                 CBOrt.Items.Add(Orte.GetOrtabc(i))
             Next
+            CBBezirk.Focus()
         ElseIf CBBezirk.SelectedItem = Nothing Then
             MsgBox(LocRM.GetString("strNoDistrictNo"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
         ElseIf CBOrt.SelectedItem = Nothing Then

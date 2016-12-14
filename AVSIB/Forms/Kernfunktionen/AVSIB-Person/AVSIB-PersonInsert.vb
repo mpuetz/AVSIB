@@ -50,6 +50,7 @@ Public Class AVSIB_PersonInsert
             CBStraße.Enabled = False
             LabelErfolg.Visible = True
             count = count + 1
+            Vorname.Focus()
         Else
             MsgBox(LocRM.GetString("strFieldsMissing"), MsgBoxStyle.Exclamation, LocRM.GetString("titCaution"))
         End If
