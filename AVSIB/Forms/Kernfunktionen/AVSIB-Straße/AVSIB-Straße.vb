@@ -126,6 +126,7 @@ Public Class AVSIB_Straße
             CBOrt.Focus()
         Else
             MsgBox(LocRm.GetString("strInsertStreet"), MsgBoxStyle.Critical, LocRm.GetString("titError"))
+            TextBox1.Focus()
         End If
     End Sub
 

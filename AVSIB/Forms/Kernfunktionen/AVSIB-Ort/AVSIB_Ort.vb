@@ -65,8 +65,10 @@ Public Class AVSIB_Ort
             TBOrt.Focus()
         ElseIf TBOrt.Text = Nothing Then
             MsgBox(LocRM.GetString("strInsertCity"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
+            TBOrt.Focus()
         Else
             MsgBox(LocRM.GetString("strInsertZIP"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
+            TBPLZ.Focus()
         End If
     End Sub
 

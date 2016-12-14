@@ -264,4 +264,10 @@
   <data name="titSuccess" xml:space="preserve">
     <value>Success</value>
   </data>
+  <data name="strBroMissing" xml:space="preserve">
+    <value>Please enter the title of the Project you need the address-lists for</value>
+  </data>
+  <data name="strOrgMissing" xml:space="preserve">
+    <value>Please enter the organization you are working for</value>
+  </data>
 </root>

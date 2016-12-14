@@ -79,14 +79,15 @@ Public Class AVSIB_Austräger
                 ListView1.Items.Add(lvi)
             Next
             CBBezirk.Focus()
-        ElseIf CBBezirk.SelectedItem = Nothing Then
+        ElseIf CBBezirk.SelectedItem = Nothing Or CBBezirk.SelectedIndex = "0" Or CBBezirk.SelectedIndex = "-1" Then
             MsgBox(LocRM.GetString("strNoDistrictNo"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
-        ElseIf TBNachname.Text = Nothing Then
-            MsgBox(LocRM.GetString("strNoLastName"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
+            CBBezirk.Focus()
         ElseIf TBVorname.Text = Nothing Then
             MsgBox(LocRM.GetString("strNoSurname"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
-        ElseIf CBBezirk.SelectedIndex = "0" Or CBBezirk.SelectedIndex = "-1" Then
-            MsgBox(LocRM.GetString("strNoDistrictNo"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
+            TBVorname.Focus()
+        ElseIf TBNachname.Text = Nothing Then
+            MsgBox(LocRM.GetString("strNoLastName"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
+            TBNachname.Focus()
         Else
             MsgBox(LocRM.GetString("strNoLastName"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
         End If

@@ -110,6 +110,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Please enter the title of the Project you need the address-lists for ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property strBroMissing() As String
+            Get
+                Return ResourceManager.GetString("strBroMissing", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Warning! This will delete ALL data! are you sure you want to continue? ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property strCautionDelete() As String
@@ -367,6 +376,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property strOF() As String
             Get
                 Return ResourceManager.GetString("strOF", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Please enter the organization you are working for ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property strOrgMissing() As String
+            Get
+                Return ResourceManager.GetString("strOrgMissing", resourceCulture)
             End Get
         End Property
         

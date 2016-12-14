@@ -32,7 +32,13 @@ Public Class AVSIB_Configuration2
             FileOperator.Save(Application.StartupPath + "\settings.ini", "FirstRun", "0")
             first = FileOperator.Load(Application.StartupPath + "\settings.ini", "FirstRun")
             Me.Close()
-        ElseIf TextBox2.Text = Nothing Or TextBox1.Text = Nothing Then
+        ElseIf TextBox1.Text = Nothing Then
+            MsgBox(LocRM.GetString("strOrgMissing"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
+            TextBox1.Focus()
+        ElseIf TextBox2.Text = Nothing Then
+            MsgBox(LocRM.GetString("strBroMissing"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
+            TextBox2.Focus()
+        Else
             MsgBox(LocRM.GetString("strFieldsMissing"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
         End If
 

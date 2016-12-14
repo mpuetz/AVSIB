@@ -133,12 +133,16 @@ Public Class AVSIB_Bezirke
             CBBezirk.Focus()
         ElseIf CBBezirk.SelectedItem = Nothing Then
             MsgBox(LocRM.GetString("strNoDistrictNo"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
+            CBBezirk.Focus()
         ElseIf CBOrt.SelectedItem = Nothing Then
             MsgBox(LocRM.GetString("strNoCitySelected"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
+            CBOrt.Focus()
         ElseIf CBPLZ.SelectedItem = Nothing Then
             MsgBox(LocRM.GetString("strNoZIPSelected"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
+            CBPLZ.Focus()
         ElseIf CBStraße.SelectedItem = Nothing Then
             MsgBox(LocRM.GetString("strNoStreetSelected"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
+            CBStraße.Focus()
         End If
     End Sub
 

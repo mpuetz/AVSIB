@@ -264,4 +264,10 @@
   <data name="titSuccess" xml:space="preserve">
     <value>Erfolg</value>
   </data>
+  <data name="strBroMissing" xml:space="preserve">
+    <value>Bitte geben Sie den Projekttitel ein</value>
+  </data>
+  <data name="strOrgMissing" xml:space="preserve">
+    <value>Bitte geben Sie den Namen der Organisation ein, für die Sie arbeiten</value>
+  </data>
 </root>
