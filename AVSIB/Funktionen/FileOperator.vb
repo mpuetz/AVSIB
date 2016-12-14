@@ -9,6 +9,7 @@ Public Class FileOperator
             Dim id As String
 
             If File.Exists(filePath) = False Then
+                Err.Raise("513", "AVSIB.FileOperator", "File not found")
                 Exit Function
             End If
 
@@ -27,9 +28,13 @@ Public Class FileOperator
             strR.Close()
         Catch ex As Exception
             MsgBox(ex.ToString, MsgBoxStyle.Critical, "Error")
+            Err.Raise("515", "AVSIB.FileOperator", ex.ToString)
             Exit Function
         End Try
+        Err.Raise("514", "AVSIB.FileOperator", "String not found")
+#Disable Warning BC42105 ' Die Funktion gibt nicht für alle Codepfade einen Wert zurück.
     End Function
+#Enable Warning BC42105 ' Die Funktion gibt nicht für alle Codepfade einen Wert zurück.
 
     Public Shared Function Delete(ByVal filePath As String, ByVal searchString As String, Optional ByVal FileExists As Boolean = False)
         Try
@@ -41,31 +46,33 @@ Public Class FileOperator
             Dim keyfound As Boolean
 
             If File.Exists(filePath) = False Then
+                Return 1
                 Exit Function
             End If
 
             If FileExists = False Then
 
                 Try
-                Dim strR As StreamReader = New StreamReader(filePath)
+                    Dim strR As StreamReader = New StreamReader(filePath)
 
-                Do
-                    deleteline = strR.ReadLine
-                    deleteID = Mid(deleteline, 1, deletelength)
-                    If deleteID = searchString Then
-                        keyfound = True
-                        Exit Do
-                    End If
-                Loop Until deleteline = Nothing
+                    Do
+                        deleteline = strR.ReadLine
+                        deleteID = Mid(deleteline, 1, deletelength)
+                        If deleteID = searchString Then
+                            keyfound = True
+                            Exit Do
+                        End If
+                    Loop Until deleteline = Nothing
 
-                strR.Dispose()
-                strR.Close()
+                    strR.Dispose()
+                    strR.Close()
 
-            Catch ex As Exception
-                MsgBox(ex.ToString, MsgBoxStyle.Critical, "Error")
-                Exit Function
+                Catch ex As Exception
+                    MsgBox(ex.ToString, MsgBoxStyle.Critical, "Error")
+                    Return 1
+                    Exit Function
 
-            End Try
+                End Try
 
             End If
 
@@ -96,7 +103,7 @@ Public Class FileOperator
             MsgBox(ex.ToString, MsgBoxStyle.Critical, "Error")
             Return 1
         End Try
-
+        Return 0
     End Function
 
     Public Shared Function Save(ByVal filePath As String, ByVal id As String, ByVal StoreString As String)
@@ -129,6 +136,7 @@ Public Class FileOperator
 
         Catch ex As Exception
             MsgBox(ex.ToString, MsgBoxStyle.Critical, "Error")
+            Return 1
             Exit Function
 
         End Try
@@ -147,5 +155,6 @@ Public Class FileOperator
             strw.Dispose()
             strw.Close()
         End If
+        Return 0
     End Function
 End Class
