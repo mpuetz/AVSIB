@@ -384,4 +384,8 @@ Public Class AVSIB_PersonCheck
             Timer1.Start()
         End If
     End Sub
+
+    Private Sub Filter_Click(sender As Object, e As EventArgs) Handles Filter.Click
+        AVSIB_PersonFilter.ShowDialog()
+    End Sub
 End Class

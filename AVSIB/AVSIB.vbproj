@@ -208,6 +208,12 @@
     <Compile Include="Data\StraßenDataSet.vb">
       <DependentUpon>StraßenDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Kernfunktionen\AVSIB-Person\AVSIB-PersonFilter.Designer.vb">
+      <DependentUpon>AVSIB-PersonFilter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Kernfunktionen\AVSIB-Person\AVSIB-PersonFilter.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\Zusatz\AboutBox.Designer.vb">
       <DependentUpon>AboutBox.vb</DependentUpon>
     </Compile>
@@ -387,6 +393,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Kernfunktionen\AVSIB-Person\AVSIB-PersonCheck.de-DE.resx">
       <DependentUpon>AVSIB-PersonCheck.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Kernfunktionen\AVSIB-Person\AVSIB-PersonFilter.de-DE.resx">
+      <DependentUpon>AVSIB-PersonFilter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Kernfunktionen\AVSIB-Person\AVSIB-PersonFilter.resx">
+      <DependentUpon>AVSIB-PersonFilter.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Kernfunktionen\AVSIB-Person\AVSIB-PersonInsert.de-DE.resx">
       <DependentUpon>AVSIB-PersonInsert.vb</DependentUpon>
@@ -581,6 +593,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>AVSIB_Data.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Filter_64x.png" />
     <None Include="Resources\StartPause_16x.png" />
     <None Include="Resources\Timer_709.png" />
     <None Include="Resources\Timer.bmp" />

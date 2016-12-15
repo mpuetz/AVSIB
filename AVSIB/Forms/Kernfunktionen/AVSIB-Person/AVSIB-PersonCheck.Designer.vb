@@ -63,6 +63,7 @@ Partial Class AVSIB_PersonCheck
         Me.tenSecButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.udSecButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.PauseButton = New System.Windows.Forms.ToolStripButton()
+        Me.Filter = New System.Windows.Forms.ToolStripButton()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
         Me.SuspendLayout()
@@ -123,7 +124,7 @@ Partial Class AVSIB_PersonCheck
         Me.BindingNavigator1.CountItem = Me.BindingNavigatorCountItem
         Me.BindingNavigator1.DeleteItem = Nothing
         Me.BindingNavigator1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.TSBBack, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.TSBNext, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorDeleteItem, Me.ToolStripButton1, Me.ToolStripSeparator1, Me.ToolStripButton2, Me.ToolStripSeparator2, Me.ToolStripProgressBar1, Me.ToolStripDropDownButton1, Me.PauseButton})
+        Me.BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.TSBBack, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.TSBNext, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorDeleteItem, Me.ToolStripButton1, Me.ToolStripSeparator1, Me.ToolStripButton2, Me.Filter, Me.ToolStripSeparator2, Me.ToolStripProgressBar1, Me.ToolStripDropDownButton1, Me.PauseButton})
         resources.ApplyResources(Me.BindingNavigator1, "BindingNavigator1")
         Me.BindingNavigator1.MoveFirstItem = Nothing
         Me.BindingNavigator1.MoveLastItem = Nothing
@@ -303,6 +304,13 @@ Partial Class AVSIB_PersonCheck
         resources.ApplyResources(Me.PauseButton, "PauseButton")
         Me.PauseButton.Name = "PauseButton"
         '
+        'Filter
+        '
+        Me.Filter.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.Filter.Image = Global.AVSIB.My.Resources.Resources.Filter_64x
+        resources.ApplyResources(Me.Filter, "Filter")
+        Me.Filter.Name = "Filter"
+        '
         'AVSIB_PersonCheck
         '
         resources.ApplyResources(Me, "$this")
@@ -371,4 +379,5 @@ Partial Class AVSIB_PersonCheck
     Friend WithEvents tenSecButton As ToolStripMenuItem
     Friend WithEvents udSecButton As ToolStripMenuItem
     Friend WithEvents PauseButton As ToolStripButton
+    Friend WithEvents Filter As ToolStripButton
 End Class
