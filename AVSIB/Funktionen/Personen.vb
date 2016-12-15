@@ -223,7 +223,7 @@ Public Class Personen
         Dim DataS As New DataSet
         SQLCon.Open()
         Try
-            cmd = New SqlCommand("SELECT Id FROM Personen WHERE " & Searchstring & ") ORDER BY Straße, Hausnummer, Zusatz, Nachname, Vorname;", SQLCon)
+            cmd = New SqlCommand("SELECT Id FROM Personen WHERE " & Searchstring & " ORDER BY Straße, Hausnummer, Zusatz, Nachname, Vorname;", SQLCon)
             DAdapter = New SqlDataAdapter(cmd)
             DAdapter.Fill(DataS, "Personen")
             SQLCon.Close()

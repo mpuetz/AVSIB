@@ -1,10 +1,12 @@
-﻿Public Class AVSIB_PersonFilter
+﻿Imports System.Resources
+Public Class AVSIB_PersonFilter
     Dim count As Long
     Dim place As String
     Dim zip As Integer
     Dim street As String
     Dim firstn As String
     Dim lastn As String
+    Dim LocRM As New ResourceManager("AVSIB.WinFormStrings", GetType(AVSIB_PersonFilter).Assembly)
 
     Private Sub AVSIB_PersonFilter_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ComboBox1.Items.Clear()
@@ -36,6 +38,7 @@
                 id = Personen.GetID(i, "Nachname, Vorname, Straße, Hausnummer, Zusatz")
                 ComboBox1.Items.Add(Personen.GetNachname(id))
             Next
+            ComboBox1.Focus()
         End If
     End Sub
 
@@ -59,18 +62,38 @@
             For i As Long = 0 To count
                 ComboBox1.Items.Add(Orte.GetOrtabc(i))
             Next
+            ComboBox1.Focus()
         End If
     End Sub
 
     Private Sub BFilter_Click(sender As Object, e As EventArgs) Handles BFilter.Click
         AVSIB_PersonCheck.filtered = True
         If CBAdress.CheckState = CheckState.Checked Then
-            AVSIB_PersonCheck.filterby = "(Straße =  " & "'" & street & "'" & ") AND (Ort = " & "'" & place & "'" & ") AND (PLZ = " & "'" & zip & "'" & ")"
+            If ComboBox1.Text = Nothing Then
+                MsgBox(LocRM.GetString("strNoCitySelected"), MsgBoxStyle.Exclamation, LocRM.GetString("titCaution"))
+                ComboBox1.Focus()
+            ElseIf ComboBox2.Text = Nothing Then
+                AVSIB_PersonCheck.filterby = "(Ort = " & "'" & place & "'" & ")"
+                Close()
+            ElseIf ComboBox3.Text = Nothing Then
+                AVSIB_PersonCheck.filterby = "(Ort = " & "'" & place & "'" & ") AND (PLZ = " & "'" & zip & "'" & ")"
+                Close()
+            Else
+                AVSIB_PersonCheck.filterby = "(Straße =  " & "'" & street & "'" & ") AND (Ort = " & "'" & place & "'" & ") AND (PLZ = " & "'" & zip & "'" & ")"
+                Close()
+            End If
         Else
-            AVSIB_PersonCheck.filterby = "(Nachname =  " & "'" & lastn & "'" & ") AND (Vorname = " & "'" & firstn & "'" & ")"
+            If ComboBox1.Text = Nothing Then
+                AVSIB_PersonCheck.filterby = "(Vorname = " & "'" & firstn & "'" & ")"
+                Close()
+            ElseIf ComboBox2.Text = Nothing Then
+                AVSIB_PersonCheck.filterby = "(Nachname =  " & "'" & lastn & "'" & ")"
+                Close()
+            Else
+                AVSIB_PersonCheck.filterby = "(Nachname =  " & "'" & lastn & "'" & ") AND (Vorname = " & "'" & firstn & "'" & ")"
+                Close()
+            End If
         End If
-        MsgBox(AVSIB_PersonCheck.filterby)
-        Close()
     End Sub
 
     Private Sub AVSIB_PersonFilter_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
@@ -86,6 +109,7 @@
                 ComboBox2.Items.Add(Orte.GetPLZabc(i, place))
             Next
             ComboBox2.Enabled = True
+            ComboBox2.Focus()
         Else
             lastn = ComboBox1.Text.ToString
             count = Personen.GetCountByLastName(lastn) - 1
@@ -95,6 +119,7 @@
                 ComboBox2.Items.Add(Personen.GetVorname(id))
             Next
             ComboBox2.Enabled = True
+            ComboBox2.Focus()
         End If
     End Sub
 
@@ -109,6 +134,7 @@
                 ComboBox3.Items.Add(Straße.GetStraßebyID(id))
             Next
             ComboBox3.Enabled = True
+            ComboBox3.Focus()
         Else
             firstn = ComboBox2.Text
         End If

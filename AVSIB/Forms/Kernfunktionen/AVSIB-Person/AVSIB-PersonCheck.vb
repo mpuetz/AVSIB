@@ -18,7 +18,6 @@
 '____________________________________________________________________________
 
 Imports System.Resources
-Imports System.Data.SqlClient
 
 Public Class AVSIB_PersonCheck
     ' This form is used to make the user able to check already added persons.
@@ -106,16 +105,6 @@ Public Class AVSIB_PersonCheck
                 TSBNext.Enabled = False
             End If
             BindingNavigatorCountItem.Text = LocRM.GetString("strOF") & " " & count
-            If count <> 0 Then
-                ToolStripProgressBar1.Value = (PersonenCount + 1) / count * 100
-            Else
-                ToolStripProgressBar1.Value = 0
-                BindingNavigatorDeleteItem.Enabled = False
-                BindingNavigatorMoveFirstItem.Enabled = False
-                TSBBack.Enabled = False
-                BindingNavigatorMoveLastItem.Enabled = False
-                TSBNext.Enabled = False
-            End If
         ElseIf filtered = True Then
             ID = Personen.GetIDByString(PersonenCount, filterby, SelectedOrder)
             Personen.Delete(ID)
@@ -148,17 +137,17 @@ Public Class AVSIB_PersonCheck
                 BindingNavigatorMoveLastItem.Enabled = False
                 TSBNext.Enabled = False
             End If
-            BindingNavigatorCountItem.Text = LocRM.GetString("strOF") & " " & count
-            If count <> 0 Then
-                ToolStripProgressBar1.Value = (PersonenCount + 1) / count * 100
-            Else
-                ToolStripProgressBar1.Value = 0
-                BindingNavigatorDeleteItem.Enabled = False
-                BindingNavigatorMoveFirstItem.Enabled = False
-                TSBBack.Enabled = False
-                BindingNavigatorMoveLastItem.Enabled = False
-                TSBNext.Enabled = False
-            End If
+        End If
+        BindingNavigatorCountItem.Text = LocRM.GetString("strOF") & " " & count
+        If count <> 0 Then
+            ToolStripProgressBar1.Value = (PersonenCount + 1) / count * 100
+        Else
+            ToolStripProgressBar1.Value = 0
+            BindingNavigatorDeleteItem.Enabled = False
+            BindingNavigatorMoveFirstItem.Enabled = False
+            TSBBack.Enabled = False
+            BindingNavigatorMoveLastItem.Enabled = False
+            TSBNext.Enabled = False
         End If
     End Sub
 
@@ -182,7 +171,21 @@ Public Class AVSIB_PersonCheck
                 PauseButton.Checked = True
             End If
         ElseIf filtered = True Then
-
+            If PersonenCount + 1 < count Then
+                PersonenCount = PersonenCount + 1
+                ID = Personen.GetIDByString(PersonenCount, filterby, SelectedOrder)
+                UpdateText(ID)
+                BindingNavigatorPositionItem.TextBox.Text = PersonenCount + 1
+                BindingNavigatorMoveFirstItem.Enabled = True
+                TSBBack.Enabled = True
+            Else
+                MsgBox(LocRM.GetString("strEndDatabase"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
+                BindingNavigatorMoveLastItem.Enabled = False
+                TSBNext.Enabled = False
+                BindingNavigatorMoveFirstItem.Enabled = True
+                TSBBack.Enabled = True
+                PauseButton.Checked = True
+            End If
         End If
         If count <> 0 Then
             ToolStripProgressBar1.Value = (PersonenCount + 1) / count * 100
@@ -207,7 +210,19 @@ Public Class AVSIB_PersonCheck
                 TSBBack.Enabled = False
             End If
         ElseIf filtered = True Then
-
+            If PersonenCount <> 0 Then
+                PersonenCount = PersonenCount - 1
+                ID = Personen.GetIDByString(PersonenCount, filterby, SelectedOrder)
+                UpdateText(ID)
+                BindingNavigatorPositionItem.TextBox.Text = PersonenCount + 1
+                BindingNavigatorMoveLastItem.Enabled = True
+                TSBNext.Enabled = True
+            Else
+                BindingNavigatorMoveLastItem.Enabled = True
+                TSBNext.Enabled = True
+                BindingNavigatorMoveFirstItem.Enabled = False
+                TSBBack.Enabled = False
+            End If
         End If
         If count <> 0 Then
             ToolStripProgressBar1.Value = (PersonenCount + 1) / count * 100
@@ -232,7 +247,20 @@ Public Class AVSIB_PersonCheck
                 TSBNext.Enabled = False
             End If
         ElseIf filtered = True Then
-
+            If count <> 0 Then
+                PersonenCount = count - 1
+                ID = Personen.GetIDByString(PersonenCount, filterby, SelectedOrder)
+                UpdateText(ID)
+                BindingNavigatorPositionItem.TextBox.Text = PersonenCount + 1
+                BindingNavigatorMoveLastItem.Enabled = False
+                TSBNext.Enabled = False
+                BindingNavigatorMoveFirstItem.Enabled = True
+                TSBBack.Enabled = True
+            Else
+                MsgBox(LocRM.GetString("strNoData"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
+                BindingNavigatorMoveLastItem.Enabled = False
+                TSBNext.Enabled = False
+            End If
         End If
         If count <> 0 Then
             ToolStripProgressBar1.Value = (PersonenCount + 1) / count * 100
@@ -257,7 +285,20 @@ Public Class AVSIB_PersonCheck
                 TSBBack.Enabled = False
             End If
         ElseIf filtered = True Then
-
+            If count <> 0 Then
+                PersonenCount = 0
+                ID = Personen.GetIDByString(PersonenCount, filterby, SelectedOrder)
+                UpdateText(ID)
+                BindingNavigatorPositionItem.TextBox.Text = PersonenCount + 1
+                BindingNavigatorMoveFirstItem.Enabled = False
+                TSBBack.Enabled = False
+                BindingNavigatorMoveLastItem.Enabled = True
+                TSBNext.Enabled = True
+            Else
+                MsgBox(LocRM.GetString("strNoData"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
+                BindingNavigatorMoveFirstItem.Enabled = False
+                TSBBack.Enabled = False
+            End If
         End If
         If count <> 0 Then
             ToolStripProgressBar1.Value = (PersonenCount + 1) / count * 100
@@ -268,7 +309,6 @@ Public Class AVSIB_PersonCheck
         ' Updates the form with the data from the person at the position entered by the user
         If nochange = False Then
             If filtered = False Then
-
                 If count <> 0 And BindingNavigatorPositionItem.TextBox.Text < count - 1 Then
                     Dim BNPI As Long = BindingNavigatorPositionItem.TextBox.Text
                     PersonenCount = BNPI - 1
@@ -277,10 +317,15 @@ Public Class AVSIB_PersonCheck
                 End If
 
             ElseIf filtered = True Then
-
+                If count <> 0 And BindingNavigatorPositionItem.TextBox.Text < count - 1 Then
+                    Dim BNPI As Long = BindingNavigatorPositionItem.TextBox.Text
+                    PersonenCount = BNPI - 1
+                    ID = Personen.GetIDByString(PersonenCount, filterby, SelectedOrder)
+                    UpdateText(ID)
+                End If
             End If
         Else
-            End If
+        End If
     End Sub
 
     Private Sub BindingNavigatorPositionItem_KeyPress(sender As Object, e As KeyPressEventArgs) Handles BindingNavigatorPositionItem.KeyPress
@@ -327,7 +372,17 @@ Public Class AVSIB_PersonCheck
                     MsgBox(LocRM.GetString("strNoData"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
                 End If
             ElseIf filtered = True Then
-
+                If count <> 0 Then
+                    PersonenCount = 0
+                    ID = Personen.GetIDByString(PersonenCount, filterby, SelectedOrder)
+                    UpdateText(ID)
+                    sortchanged = False
+                    BindingNavigatorPositionItem.Text = 1
+                    ToolStripProgressBar1.Value = (PersonenCount + 1) / count * 100
+                Else
+                    BindingNavigatorPositionItem.Text = 0
+                    MsgBox(LocRM.GetString("strNoData"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
+                End If
             End If
         End If
     End Sub
@@ -364,7 +419,35 @@ Public Class AVSIB_PersonCheck
                 TSBNext.Enabled = False
             End If
         ElseIf filtered = True Then
-
+            count = Personen.GetCountByString(filterby)
+            PersonenCount = 0
+            BindingNavigatorCountItem.Text = LocRM.GetString("strOF") & " " & count
+            If count <> 0 Then
+                ID = Personen.GetIDByString(PersonenCount, filterby, SelectedOrder)
+                UpdateText(ID)
+                BindingNavigatorPositionItem.Text = 1
+                nochange = False
+                ToolStripProgressBar1.Value = (PersonenCount + 1) / count * 100
+                BindingNavigatorMoveFirstItem.Enabled = False
+                TSBBack.Enabled = False
+                BindingNavigatorMoveLastItem.Enabled = True
+                TSBNext.Enabled = True
+                BindingNavigatorDeleteItem.Enabled = True
+            Else
+                BindingNavigatorPositionItem.Text = 0
+                MsgBox(LocRM.GetString("strNoData"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
+                BindingNavigatorMoveFirstItem.Enabled = False
+                TSBBack.Enabled = False
+                BindingNavigatorMoveLastItem.Enabled = False
+                TSBNext.Enabled = False
+                BindingNavigatorDeleteItem.Enabled = False
+            End If
+            If count = 1 Then
+                BindingNavigatorMoveFirstItem.Enabled = False
+                TSBBack.Enabled = False
+                BindingNavigatorMoveLastItem.Enabled = False
+                TSBNext.Enabled = False
+            End If
         End If
         Return 0
     End Function
@@ -454,7 +537,24 @@ Public Class AVSIB_PersonCheck
                 ToolStripProgressBar1.Value = (PersonenCount + 1) / count * 100
             End If
         ElseIf filtered = True Then
-
+            If PersonenCount + 1 < count Then
+                PersonenCount = PersonenCount + 1
+                ID = Personen.GetIDByString(PersonenCount, filterby, SelectedOrder)
+                UpdateText(ID)
+                BindingNavigatorPositionItem.TextBox.Text = PersonenCount + 1
+                BindingNavigatorMoveFirstItem.Enabled = True
+                TSBBack.Enabled = True
+            Else
+                PauseButton.Checked = True
+                MsgBox(LocRM.GetString("strEndDatabase"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
+                BindingNavigatorMoveLastItem.Enabled = False
+                TSBNext.Enabled = False
+                BindingNavigatorMoveFirstItem.Enabled = True
+                TSBBack.Enabled = True
+            End If
+            If count <> 0 Then
+                ToolStripProgressBar1.Value = (PersonenCount + 1) / count * 100
+            End If
         End If
     End Sub
 
@@ -470,6 +570,35 @@ Public Class AVSIB_PersonCheck
         AVSIB_PersonFilter.ShowDialog()
         If filtered = True Then
             BStopFilter.Enabled = True
+            count = Personen.GetCountByString(filterby)
+            PersonenCount = 0
+            BindingNavigatorCountItem.Text = LocRM.GetString("strOF") & " " & count
+            If count <> 0 Then
+                ID = Personen.GetIDByString(PersonenCount, filterby, SelectedOrder)
+                UpdateText(ID)
+                BindingNavigatorPositionItem.Text = 1
+                nochange = False
+                ToolStripProgressBar1.Value = (PersonenCount + 1) / count * 100
+                BindingNavigatorMoveFirstItem.Enabled = False
+                TSBBack.Enabled = False
+                BindingNavigatorMoveLastItem.Enabled = True
+                TSBNext.Enabled = True
+                BindingNavigatorDeleteItem.Enabled = True
+            Else
+                BindingNavigatorPositionItem.Text = 0
+                MsgBox(LocRM.GetString("strNoData"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
+                BindingNavigatorMoveFirstItem.Enabled = False
+                TSBBack.Enabled = False
+                BindingNavigatorMoveLastItem.Enabled = False
+                TSBNext.Enabled = False
+                BindingNavigatorDeleteItem.Enabled = False
+                If count = 1 Then
+                    BindingNavigatorMoveFirstItem.Enabled = False
+                    TSBBack.Enabled = False
+                    BindingNavigatorMoveLastItem.Enabled = False
+                    TSBNext.Enabled = False
+                End If
+            End If
         End If
     End Sub
 
@@ -477,23 +606,34 @@ Public Class AVSIB_PersonCheck
         filtered = False
         BStopFilter.Enabled = False
         filterby = ""
-        ' Updates the form with the data of the first person in the database or shows a messagebox
+        count = Personen.GetCount
+        PersonenCount = 0
+        BindingNavigatorCountItem.Text = LocRM.GetString("strOF") & " " & count
         If count <> 0 Then
-            PersonenCount = 0
             ID = Personen.GetID(PersonenCount, SelectedOrder)
             UpdateText(ID)
-            BindingNavigatorPositionItem.TextBox.Text = PersonenCount + 1
+            BindingNavigatorPositionItem.Text = 1
+            nochange = False
+            ToolStripProgressBar1.Value = (PersonenCount + 1) / count * 100
             BindingNavigatorMoveFirstItem.Enabled = False
             TSBBack.Enabled = False
             BindingNavigatorMoveLastItem.Enabled = True
             TSBNext.Enabled = True
+            BindingNavigatorDeleteItem.Enabled = True
         Else
+            BindingNavigatorPositionItem.Text = 0
             MsgBox(LocRM.GetString("strNoData"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
             BindingNavigatorMoveFirstItem.Enabled = False
             TSBBack.Enabled = False
+            BindingNavigatorMoveLastItem.Enabled = False
+            TSBNext.Enabled = False
+            BindingNavigatorDeleteItem.Enabled = False
         End If
-        If count <> 0 Then
-            ToolStripProgressBar1.Value = (PersonenCount + 1) / count * 100
+        If count = 1 Then
+            BindingNavigatorMoveFirstItem.Enabled = False
+            TSBBack.Enabled = False
+            BindingNavigatorMoveLastItem.Enabled = False
+            TSBNext.Enabled = False
         End If
     End Sub
 End Class
