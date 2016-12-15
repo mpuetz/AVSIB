@@ -35,27 +35,22 @@ Partial Class AVSIB_PersonCheck
         Me.Label4 = New System.Windows.Forms.Label()
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
+        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
+        Me.TSBBack = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripProgressBar1 = New System.Windows.Forms.ToolStripProgressBar()
-        Me.PLZ = New System.Windows.Forms.TextBox()
-        Me.Ort = New System.Windows.Forms.TextBox()
-        Me.ButtonDelete = New System.Windows.Forms.Button()
-        Me.ButtonMenu = New System.Windows.Forms.Button()
-        Me.ButtonNext = New System.Windows.Forms.Button()
-        Me.ButtonBack = New System.Windows.Forms.Button()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
-        Me.TSBBack = New System.Windows.Forms.ToolStripButton()
         Me.TSBNext = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
+        Me.Filter = New System.Windows.Forms.ToolStripButton()
+        Me.BStopFilter = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripProgressBar1 = New System.Windows.Forms.ToolStripProgressBar()
         Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
         Me.oneSecButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.threeSecButton = New System.Windows.Forms.ToolStripMenuItem()
@@ -63,7 +58,13 @@ Partial Class AVSIB_PersonCheck
         Me.tenSecButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.udSecButton = New System.Windows.Forms.ToolStripMenuItem()
         Me.PauseButton = New System.Windows.Forms.ToolStripButton()
-        Me.Filter = New System.Windows.Forms.ToolStripButton()
+        Me.PLZ = New System.Windows.Forms.TextBox()
+        Me.Ort = New System.Windows.Forms.TextBox()
+        Me.ButtonDelete = New System.Windows.Forms.Button()
+        Me.ButtonMenu = New System.Windows.Forms.Button()
+        Me.ButtonNext = New System.Windows.Forms.Button()
+        Me.ButtonBack = New System.Windows.Forms.Button()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
         Me.SuspendLayout()
@@ -124,7 +125,7 @@ Partial Class AVSIB_PersonCheck
         Me.BindingNavigator1.CountItem = Me.BindingNavigatorCountItem
         Me.BindingNavigator1.DeleteItem = Nothing
         Me.BindingNavigator1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.TSBBack, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.TSBNext, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorDeleteItem, Me.ToolStripButton1, Me.ToolStripSeparator1, Me.ToolStripButton2, Me.Filter, Me.ToolStripSeparator2, Me.ToolStripProgressBar1, Me.ToolStripDropDownButton1, Me.PauseButton})
+        Me.BindingNavigator1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.TSBBack, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.TSBNext, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorDeleteItem, Me.ToolStripButton1, Me.ToolStripSeparator1, Me.ToolStripButton2, Me.Filter, Me.BStopFilter, Me.ToolStripSeparator2, Me.ToolStripProgressBar1, Me.ToolStripDropDownButton1, Me.PauseButton})
         resources.ApplyResources(Me.BindingNavigator1, "BindingNavigator1")
         Me.BindingNavigator1.MoveFirstItem = Nothing
         Me.BindingNavigator1.MoveLastItem = Nothing
@@ -137,6 +138,18 @@ Partial Class AVSIB_PersonCheck
         '
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
         resources.ApplyResources(Me.BindingNavigatorCountItem, "BindingNavigatorCountItem")
+        '
+        'BindingNavigatorMoveFirstItem
+        '
+        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        resources.ApplyResources(Me.BindingNavigatorMoveFirstItem, "BindingNavigatorMoveFirstItem")
+        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
+        '
+        'TSBBack
+        '
+        Me.TSBBack.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        resources.ApplyResources(Me.TSBBack, "TSBBack")
+        Me.TSBBack.Name = "TSBBack"
         '
         'BindingNavigatorSeparator
         '
@@ -154,78 +167,6 @@ Partial Class AVSIB_PersonCheck
         Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
         resources.ApplyResources(Me.BindingNavigatorSeparator1, "BindingNavigatorSeparator1")
         '
-        'BindingNavigatorSeparator2
-        '
-        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
-        resources.ApplyResources(Me.BindingNavigatorSeparator2, "BindingNavigatorSeparator2")
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        resources.ApplyResources(Me.ToolStripSeparator1, "ToolStripSeparator1")
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        resources.ApplyResources(Me.ToolStripSeparator2, "ToolStripSeparator2")
-        '
-        'ToolStripProgressBar1
-        '
-        Me.ToolStripProgressBar1.Name = "ToolStripProgressBar1"
-        resources.ApplyResources(Me.ToolStripProgressBar1, "ToolStripProgressBar1")
-        Me.ToolStripProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous
-        '
-        'PLZ
-        '
-        resources.ApplyResources(Me.PLZ, "PLZ")
-        Me.PLZ.Name = "PLZ"
-        Me.PLZ.ReadOnly = True
-        '
-        'Ort
-        '
-        resources.ApplyResources(Me.Ort, "Ort")
-        Me.Ort.Name = "Ort"
-        Me.Ort.ReadOnly = True
-        '
-        'ButtonDelete
-        '
-        resources.ApplyResources(Me.ButtonDelete, "ButtonDelete")
-        Me.ButtonDelete.Name = "ButtonDelete"
-        Me.ButtonDelete.UseVisualStyleBackColor = True
-        '
-        'ButtonMenu
-        '
-        resources.ApplyResources(Me.ButtonMenu, "ButtonMenu")
-        Me.ButtonMenu.Name = "ButtonMenu"
-        Me.ButtonMenu.UseVisualStyleBackColor = True
-        '
-        'ButtonNext
-        '
-        resources.ApplyResources(Me.ButtonNext, "ButtonNext")
-        Me.ButtonNext.Name = "ButtonNext"
-        Me.ButtonNext.UseVisualStyleBackColor = True
-        '
-        'ButtonBack
-        '
-        resources.ApplyResources(Me.ButtonBack, "ButtonBack")
-        Me.ButtonBack.Name = "ButtonBack"
-        Me.ButtonBack.UseVisualStyleBackColor = True
-        '
-        'Timer1
-        '
-        '
-        'BindingNavigatorMoveFirstItem
-        '
-        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        resources.ApplyResources(Me.BindingNavigatorMoveFirstItem, "BindingNavigatorMoveFirstItem")
-        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
-        '
-        'TSBBack
-        '
-        Me.TSBBack.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        resources.ApplyResources(Me.TSBBack, "TSBBack")
-        Me.TSBBack.Name = "TSBBack"
-        '
         'TSBNext
         '
         Me.TSBNext.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
@@ -237,6 +178,11 @@ Partial Class AVSIB_PersonCheck
         Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         resources.ApplyResources(Me.BindingNavigatorMoveLastItem, "BindingNavigatorMoveLastItem")
         Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
+        '
+        'BindingNavigatorSeparator2
+        '
+        Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
+        resources.ApplyResources(Me.BindingNavigatorSeparator2, "BindingNavigatorSeparator2")
         '
         'BindingNavigatorDeleteItem
         '
@@ -250,11 +196,41 @@ Partial Class AVSIB_PersonCheck
         resources.ApplyResources(Me.ToolStripButton1, "ToolStripButton1")
         Me.ToolStripButton1.Name = "ToolStripButton1"
         '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        resources.ApplyResources(Me.ToolStripSeparator1, "ToolStripSeparator1")
+        '
         'ToolStripButton2
         '
         Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
         resources.ApplyResources(Me.ToolStripButton2, "ToolStripButton2")
         Me.ToolStripButton2.Name = "ToolStripButton2"
+        '
+        'Filter
+        '
+        Me.Filter.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.Filter.Image = Global.AVSIB.My.Resources.Resources.Filter_64x
+        resources.ApplyResources(Me.Filter, "Filter")
+        Me.Filter.Name = "Filter"
+        '
+        'BStopFilter
+        '
+        Me.BStopFilter.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        resources.ApplyResources(Me.BStopFilter, "BStopFilter")
+        Me.BStopFilter.Image = Global.AVSIB.My.Resources.Resources.StopFilter_16x
+        Me.BStopFilter.Name = "BStopFilter"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        resources.ApplyResources(Me.ToolStripSeparator2, "ToolStripSeparator2")
+        '
+        'ToolStripProgressBar1
+        '
+        Me.ToolStripProgressBar1.Name = "ToolStripProgressBar1"
+        resources.ApplyResources(Me.ToolStripProgressBar1, "ToolStripProgressBar1")
+        Me.ToolStripProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous
         '
         'ToolStripDropDownButton1
         '
@@ -304,12 +280,44 @@ Partial Class AVSIB_PersonCheck
         resources.ApplyResources(Me.PauseButton, "PauseButton")
         Me.PauseButton.Name = "PauseButton"
         '
-        'Filter
+        'PLZ
         '
-        Me.Filter.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.Filter.Image = Global.AVSIB.My.Resources.Resources.Filter_64x
-        resources.ApplyResources(Me.Filter, "Filter")
-        Me.Filter.Name = "Filter"
+        resources.ApplyResources(Me.PLZ, "PLZ")
+        Me.PLZ.Name = "PLZ"
+        Me.PLZ.ReadOnly = True
+        '
+        'Ort
+        '
+        resources.ApplyResources(Me.Ort, "Ort")
+        Me.Ort.Name = "Ort"
+        Me.Ort.ReadOnly = True
+        '
+        'ButtonDelete
+        '
+        resources.ApplyResources(Me.ButtonDelete, "ButtonDelete")
+        Me.ButtonDelete.Name = "ButtonDelete"
+        Me.ButtonDelete.UseVisualStyleBackColor = True
+        '
+        'ButtonMenu
+        '
+        resources.ApplyResources(Me.ButtonMenu, "ButtonMenu")
+        Me.ButtonMenu.Name = "ButtonMenu"
+        Me.ButtonMenu.UseVisualStyleBackColor = True
+        '
+        'ButtonNext
+        '
+        resources.ApplyResources(Me.ButtonNext, "ButtonNext")
+        Me.ButtonNext.Name = "ButtonNext"
+        Me.ButtonNext.UseVisualStyleBackColor = True
+        '
+        'ButtonBack
+        '
+        resources.ApplyResources(Me.ButtonBack, "ButtonBack")
+        Me.ButtonBack.Name = "ButtonBack"
+        Me.ButtonBack.UseVisualStyleBackColor = True
+        '
+        'Timer1
+        '
         '
         'AVSIB_PersonCheck
         '
@@ -380,4 +388,5 @@ Partial Class AVSIB_PersonCheck
     Friend WithEvents udSecButton As ToolStripMenuItem
     Friend WithEvents PauseButton As ToolStripButton
     Friend WithEvents Filter As ToolStripButton
+    Friend WithEvents BStopFilter As ToolStripButton
 End Class

@@ -32,26 +32,32 @@ Partial Class AVSIB_PersonFilter
         Me.LStreet = New System.Windows.Forms.Label()
         Me.CBAdress = New System.Windows.Forms.CheckBox()
         Me.CBName = New System.Windows.Forms.CheckBox()
-        Me.LFirstName = New System.Windows.Forms.Label()
         Me.LLastName = New System.Windows.Forms.Label()
+        Me.LFirstName = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'ComboBox1
         '
-        Me.ComboBox1.FormattingEnabled = True
         resources.ApplyResources(Me.ComboBox1, "ComboBox1")
+        Me.ComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.ComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Name = "ComboBox1"
         '
         'ComboBox2
         '
-        Me.ComboBox2.FormattingEnabled = True
         resources.ApplyResources(Me.ComboBox2, "ComboBox2")
+        Me.ComboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.ComboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Name = "ComboBox2"
         '
         'ComboBox3
         '
-        Me.ComboBox3.FormattingEnabled = True
         resources.ApplyResources(Me.ComboBox3, "ComboBox3")
+        Me.ComboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.ComboBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.ComboBox3.FormattingEnabled = True
         Me.ComboBox3.Name = "ComboBox3"
         '
         'BFilter
@@ -89,22 +95,22 @@ Partial Class AVSIB_PersonFilter
         Me.CBName.Name = "CBName"
         Me.CBName.UseVisualStyleBackColor = True
         '
-        'LFirstName
-        '
-        resources.ApplyResources(Me.LFirstName, "LFirstName")
-        Me.LFirstName.Name = "LFirstName"
-        '
         'LLastName
         '
         resources.ApplyResources(Me.LLastName, "LLastName")
         Me.LLastName.Name = "LLastName"
         '
+        'LFirstName
+        '
+        resources.ApplyResources(Me.LFirstName, "LFirstName")
+        Me.LFirstName.Name = "LFirstName"
+        '
         'AVSIB_PersonFilter
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.LLastName)
         Me.Controls.Add(Me.LFirstName)
+        Me.Controls.Add(Me.LLastName)
         Me.Controls.Add(Me.CBName)
         Me.Controls.Add(Me.CBAdress)
         Me.Controls.Add(Me.LStreet)
@@ -128,6 +134,6 @@ Partial Class AVSIB_PersonFilter
     Friend WithEvents LStreet As Label
     Friend WithEvents CBAdress As CheckBox
     Friend WithEvents CBName As CheckBox
-    Friend WithEvents LFirstName As Label
     Friend WithEvents LLastName As Label
+    Friend WithEvents LFirstName As Label
 End Class

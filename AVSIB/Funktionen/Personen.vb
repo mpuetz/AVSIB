@@ -162,4 +162,75 @@ Public Class Personen
         Return 0
     End Function
 
+    Public Shared Function GetCountByLastName(ByVal LastName As String)
+        Dim SQLCon As New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\AVSIB_Data.mdf;Integrated Security=True")
+        Dim cmd As New SqlCommand
+        Dim DAdapter As New SqlDataAdapter
+        Dim DataS As New DataSet
+        SQLCon.Open()
+        Try
+            cmd = New SqlCommand("SELECT Id FROM Personen WHERE (Nachname =  " & "'" & LastName & "'" & ") ORDER BY Straße, Hausnummer, Zusatz, Nachname, Vorname;", SQLCon)
+            DAdapter = New SqlDataAdapter(cmd)
+            DAdapter.Fill(DataS, "Personen")
+            SQLCon.Close()
+            Return DataS.Tables(0).Rows.Count
+        Catch ex As Exception
+            MsgBox(ex, MsgBoxStyle.Critical, "Fehler")
+        End Try
+        Return 0
+    End Function
+
+    Public Shared Function GetIDByLastName(ByVal LastName As String, ByVal Row As Long)
+        Dim SQLCon As New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\AVSIB_Data.mdf;Integrated Security=True")
+        Dim cmd As New SqlCommand
+        Dim DAdapter As New SqlDataAdapter
+        Dim DataS As New DataSet
+        SQLCon.Open()
+        Try
+            cmd = New SqlCommand("SELECT Id FROM Personen WHERE (Nachname =  " & "'" & LastName & "'" & ") ORDER BY Straße, Hausnummer, Zusatz, Nachname, Vorname;", SQLCon)
+            DAdapter = New SqlDataAdapter(cmd)
+            DAdapter.Fill(DataS, "Personen")
+            SQLCon.Close()
+            Return DataS.Tables(0).Rows(Row).Item(0)
+        Catch ex As Exception
+            MsgBox(ex, MsgBoxStyle.Critical, "Fehler")
+        End Try
+        Return 0
+    End Function
+
+    Public Shared Function GetIDByString(ByVal Row As Long, ByVal Searchstring As String, ByVal Order As String)
+        Dim SQLCon As New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\AVSIB_Data.mdf;Integrated Security=True")
+        Dim cmd As New SqlCommand
+        Dim DAdapter As New SqlDataAdapter
+        Dim DataS As New DataSet
+        SQLCon.Open()
+        Try
+            cmd = New SqlCommand("SELECT Id FROM Personen WHERE " & Searchstring & " ORDER BY " & Order & ";", SQLCon)
+            DAdapter = New SqlDataAdapter(cmd)
+            DAdapter.Fill(DataS, "Personen")
+            SQLCon.Close()
+            Return DataS.Tables(0).Rows(Row).Item(0)
+        Catch ex As Exception
+            MsgBox(ex, MsgBoxStyle.Critical, "Fehler")
+        End Try
+        Return 0
+    End Function
+
+    Public Shared Function GetCountByString(ByVal Searchstring As String)
+        Dim SQLCon As New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\AVSIB_Data.mdf;Integrated Security=True")
+        Dim cmd As New SqlCommand
+        Dim DAdapter As New SqlDataAdapter
+        Dim DataS As New DataSet
+        SQLCon.Open()
+        Try
+            cmd = New SqlCommand("SELECT Id FROM Personen WHERE " & Searchstring & ") ORDER BY Straße, Hausnummer, Zusatz, Nachname, Vorname;", SQLCon)
+            DAdapter = New SqlDataAdapter(cmd)
+            DAdapter.Fill(DataS, "Personen")
+            SQLCon.Close()
+            Return DataS.Tables(0).Rows.Count
+        Catch ex As Exception
+            MsgBox(ex, MsgBoxStyle.Critical, "Fehler")
+        End Try
+        Return 0
+    End Function
 End Class
