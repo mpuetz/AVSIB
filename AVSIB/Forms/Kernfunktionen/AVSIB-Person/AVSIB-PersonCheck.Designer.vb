@@ -35,27 +35,13 @@ Partial Class AVSIB_PersonCheck
         Me.Label4 = New System.Windows.Forms.Label()
         Me.BindingNavigator1 = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
-        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
-        Me.TSBBack = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator = New System.Windows.Forms.ToolStripSeparator()
         Me.BindingNavigatorPositionItem = New System.Windows.Forms.ToolStripTextBox()
         Me.BindingNavigatorSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.TSBNext = New System.Windows.Forms.ToolStripButton()
-        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripProgressBar1 = New System.Windows.Forms.ToolStripProgressBar()
-        Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
-        Me.oneSecButton = New System.Windows.Forms.ToolStripMenuItem()
-        Me.threeSecButton = New System.Windows.Forms.ToolStripMenuItem()
-        Me.fiveSecButton = New System.Windows.Forms.ToolStripMenuItem()
-        Me.tenSecButton = New System.Windows.Forms.ToolStripMenuItem()
-        Me.udSecButton = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PauseButton = New System.Windows.Forms.ToolStripButton()
         Me.PLZ = New System.Windows.Forms.TextBox()
         Me.Ort = New System.Windows.Forms.TextBox()
         Me.ButtonDelete = New System.Windows.Forms.Button()
@@ -63,6 +49,20 @@ Partial Class AVSIB_PersonCheck
         Me.ButtonNext = New System.Windows.Forms.Button()
         Me.ButtonBack = New System.Windows.Forms.Button()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
+        Me.TSBBack = New System.Windows.Forms.ToolStripButton()
+        Me.TSBNext = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorMoveLastItem = New System.Windows.Forms.ToolStripButton()
+        Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.oneSecButton = New System.Windows.Forms.ToolStripMenuItem()
+        Me.threeSecButton = New System.Windows.Forms.ToolStripMenuItem()
+        Me.fiveSecButton = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tenSecButton = New System.Windows.Forms.ToolStripMenuItem()
+        Me.udSecButton = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PauseButton = New System.Windows.Forms.ToolStripButton()
         CType(Me.BindingNavigator1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BindingNavigator1.SuspendLayout()
         Me.SuspendLayout()
@@ -137,18 +137,6 @@ Partial Class AVSIB_PersonCheck
         Me.BindingNavigatorCountItem.Name = "BindingNavigatorCountItem"
         resources.ApplyResources(Me.BindingNavigatorCountItem, "BindingNavigatorCountItem")
         '
-        'BindingNavigatorMoveFirstItem
-        '
-        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        resources.ApplyResources(Me.BindingNavigatorMoveFirstItem, "BindingNavigatorMoveFirstItem")
-        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
-        '
-        'TSBBack
-        '
-        Me.TSBBack.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        resources.ApplyResources(Me.TSBBack, "TSBBack")
-        Me.TSBBack.Name = "TSBBack"
-        '
         'BindingNavigatorSeparator
         '
         Me.BindingNavigatorSeparator.Name = "BindingNavigatorSeparator"
@@ -165,45 +153,15 @@ Partial Class AVSIB_PersonCheck
         Me.BindingNavigatorSeparator1.Name = "BindingNavigatorSeparator1"
         resources.ApplyResources(Me.BindingNavigatorSeparator1, "BindingNavigatorSeparator1")
         '
-        'TSBNext
-        '
-        Me.TSBNext.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        resources.ApplyResources(Me.TSBNext, "TSBNext")
-        Me.TSBNext.Name = "TSBNext"
-        '
-        'BindingNavigatorMoveLastItem
-        '
-        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        resources.ApplyResources(Me.BindingNavigatorMoveLastItem, "BindingNavigatorMoveLastItem")
-        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
-        '
         'BindingNavigatorSeparator2
         '
         Me.BindingNavigatorSeparator2.Name = "BindingNavigatorSeparator2"
         resources.ApplyResources(Me.BindingNavigatorSeparator2, "BindingNavigatorSeparator2")
         '
-        'BindingNavigatorDeleteItem
-        '
-        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        resources.ApplyResources(Me.BindingNavigatorDeleteItem, "BindingNavigatorDeleteItem")
-        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        resources.ApplyResources(Me.ToolStripButton1, "ToolStripButton1")
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         resources.ApplyResources(Me.ToolStripSeparator1, "ToolStripSeparator1")
-        '
-        'ToolStripButton2
-        '
-        Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        resources.ApplyResources(Me.ToolStripButton2, "ToolStripButton2")
-        Me.ToolStripButton2.Name = "ToolStripButton2"
         '
         'ToolStripSeparator2
         '
@@ -215,49 +173,6 @@ Partial Class AVSIB_PersonCheck
         Me.ToolStripProgressBar1.Name = "ToolStripProgressBar1"
         resources.ApplyResources(Me.ToolStripProgressBar1, "ToolStripProgressBar1")
         Me.ToolStripProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous
-        '
-        'ToolStripDropDownButton1
-        '
-        Me.ToolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.oneSecButton, Me.threeSecButton, Me.fiveSecButton, Me.tenSecButton, Me.udSecButton})
-        resources.ApplyResources(Me.ToolStripDropDownButton1, "ToolStripDropDownButton1")
-        Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
-        '
-        'oneSecButton
-        '
-        Me.oneSecButton.CheckOnClick = True
-        Me.oneSecButton.Name = "oneSecButton"
-        resources.ApplyResources(Me.oneSecButton, "oneSecButton")
-        '
-        'threeSecButton
-        '
-        Me.threeSecButton.CheckOnClick = True
-        Me.threeSecButton.Name = "threeSecButton"
-        resources.ApplyResources(Me.threeSecButton, "threeSecButton")
-        '
-        'fiveSecButton
-        '
-        Me.fiveSecButton.CheckOnClick = True
-        Me.fiveSecButton.Name = "fiveSecButton"
-        resources.ApplyResources(Me.fiveSecButton, "fiveSecButton")
-        '
-        'tenSecButton
-        '
-        Me.tenSecButton.CheckOnClick = True
-        Me.tenSecButton.Name = "tenSecButton"
-        resources.ApplyResources(Me.tenSecButton, "tenSecButton")
-        '
-        'udSecButton
-        '
-        Me.udSecButton.CheckOnClick = True
-        Me.udSecButton.Name = "udSecButton"
-        resources.ApplyResources(Me.udSecButton, "udSecButton")
-        '
-        'PauseButton
-        '
-        Me.PauseButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        resources.ApplyResources(Me.PauseButton, "PauseButton")
-        Me.PauseButton.Name = "PauseButton"
         '
         'PLZ
         '
@@ -297,6 +212,96 @@ Partial Class AVSIB_PersonCheck
         '
         'Timer1
         '
+        '
+        'BindingNavigatorMoveFirstItem
+        '
+        Me.BindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        resources.ApplyResources(Me.BindingNavigatorMoveFirstItem, "BindingNavigatorMoveFirstItem")
+        Me.BindingNavigatorMoveFirstItem.Name = "BindingNavigatorMoveFirstItem"
+        '
+        'TSBBack
+        '
+        Me.TSBBack.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        resources.ApplyResources(Me.TSBBack, "TSBBack")
+        Me.TSBBack.Name = "TSBBack"
+        '
+        'TSBNext
+        '
+        Me.TSBNext.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        resources.ApplyResources(Me.TSBNext, "TSBNext")
+        Me.TSBNext.Name = "TSBNext"
+        '
+        'BindingNavigatorMoveLastItem
+        '
+        Me.BindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        resources.ApplyResources(Me.BindingNavigatorMoveLastItem, "BindingNavigatorMoveLastItem")
+        Me.BindingNavigatorMoveLastItem.Name = "BindingNavigatorMoveLastItem"
+        '
+        'BindingNavigatorDeleteItem
+        '
+        Me.BindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        resources.ApplyResources(Me.BindingNavigatorDeleteItem, "BindingNavigatorDeleteItem")
+        Me.BindingNavigatorDeleteItem.Name = "BindingNavigatorDeleteItem"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        resources.ApplyResources(Me.ToolStripButton1, "ToolStripButton1")
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        '
+        'ToolStripButton2
+        '
+        Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        resources.ApplyResources(Me.ToolStripButton2, "ToolStripButton2")
+        Me.ToolStripButton2.Name = "ToolStripButton2"
+        '
+        'ToolStripDropDownButton1
+        '
+        Me.ToolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.oneSecButton, Me.threeSecButton, Me.fiveSecButton, Me.tenSecButton, Me.udSecButton})
+        Me.ToolStripDropDownButton1.Image = Global.AVSIB.My.Resources.Resources.Timer_709
+        resources.ApplyResources(Me.ToolStripDropDownButton1, "ToolStripDropDownButton1")
+        Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
+        '
+        'oneSecButton
+        '
+        Me.oneSecButton.CheckOnClick = True
+        Me.oneSecButton.Name = "oneSecButton"
+        resources.ApplyResources(Me.oneSecButton, "oneSecButton")
+        '
+        'threeSecButton
+        '
+        Me.threeSecButton.CheckOnClick = True
+        Me.threeSecButton.Name = "threeSecButton"
+        resources.ApplyResources(Me.threeSecButton, "threeSecButton")
+        '
+        'fiveSecButton
+        '
+        Me.fiveSecButton.CheckOnClick = True
+        Me.fiveSecButton.Name = "fiveSecButton"
+        resources.ApplyResources(Me.fiveSecButton, "fiveSecButton")
+        '
+        'tenSecButton
+        '
+        Me.tenSecButton.CheckOnClick = True
+        Me.tenSecButton.Name = "tenSecButton"
+        resources.ApplyResources(Me.tenSecButton, "tenSecButton")
+        '
+        'udSecButton
+        '
+        Me.udSecButton.CheckOnClick = True
+        Me.udSecButton.Name = "udSecButton"
+        resources.ApplyResources(Me.udSecButton, "udSecButton")
+        '
+        'PauseButton
+        '
+        Me.PauseButton.Checked = True
+        Me.PauseButton.CheckOnClick = True
+        Me.PauseButton.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.PauseButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.PauseButton.Image = Global.AVSIB.My.Resources.Resources.StartPause_16x
+        resources.ApplyResources(Me.PauseButton, "PauseButton")
+        Me.PauseButton.Name = "PauseButton"
         '
         'AVSIB_PersonCheck
         '

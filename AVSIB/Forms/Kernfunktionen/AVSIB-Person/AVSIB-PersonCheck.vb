@@ -65,6 +65,8 @@ Public Class AVSIB_PersonCheck
             TSBNext.Enabled = False
             BindingNavigatorDeleteItem.Enabled = False
         End If
+        waitenabled = True
+        threeSecButton.Checked = True
     End Sub
 
     Private Sub ButtonDelete_Click(sender As Object, e As EventArgs) Handles ButtonDelete.Click, BindingNavigatorDeleteItem.Click
@@ -129,6 +131,7 @@ Public Class AVSIB_PersonCheck
             TSBNext.Enabled = False
             BindingNavigatorMoveFirstItem.Enabled = True
             TSBBack.Enabled = True
+            PauseButton.Checked = True
         End If
         If count <> 0 Then
             ToolStripProgressBar1.Value = (PersonenCount + 1) / count * 100
@@ -289,7 +292,7 @@ Public Class AVSIB_PersonCheck
         Return 0
     End Function
 
-    Private Sub oneSecButton_Click(sender As Object, e As EventArgs) Handles oneSecButton.Click
+    Private Sub oneSecButton_Click(sender As Object, e As EventArgs) Handles oneSecButton.CheckStateChanged
         waittime = 1000
         Timer1.Interval = waittime
         If oneSecButton.Checked = True Then
@@ -298,24 +301,24 @@ Public Class AVSIB_PersonCheck
             tenSecButton.Checked = False
             udSecButton.Checked = False
             Timer1.Start()
-            waitenabled = True
         End If
     End Sub
 
-    Private Sub threeSecButton_Click(sender As Object, e As EventArgs) Handles threeSecButton.Click
+    Private Sub threeSecButton_Click(sender As Object, e As EventArgs) Handles threeSecButton.CheckStateChanged
         waittime = 3000
         Timer1.Interval = waittime
-        If threeSecButton.Checked = True Then
+        If threeSecButton.Checked = True And waitenabled = False Then
             oneSecButton.Checked = False
             fiveSecButton.Checked = False
             tenSecButton.Checked = False
             udSecButton.Checked = False
             Timer1.Start()
-            waitenabled = True
+        Else
+            waitenabled = False
         End If
     End Sub
 
-    Private Sub fiveSecButton_Click(sender As Object, e As EventArgs) Handles fiveSecButton.Click
+    Private Sub fiveSecButton_Click(sender As Object, e As EventArgs) Handles fiveSecButton.CheckStateChanged
         waittime = 5000
         Timer1.Interval = waittime
         If fiveSecButton.Checked = True Then
@@ -324,11 +327,10 @@ Public Class AVSIB_PersonCheck
             tenSecButton.Checked = False
             udSecButton.Checked = False
             Timer1.Start()
-            waitenabled = True
         End If
     End Sub
 
-    Private Sub tenSecButton_Click(sender As Object, e As EventArgs) Handles tenSecButton.Click
+    Private Sub tenSecButton_Click(sender As Object, e As EventArgs) Handles tenSecButton.CheckStateChanged
         waittime = 10000
         Timer1.Interval = waittime
         If tenSecButton.Checked = True Then
@@ -337,11 +339,10 @@ Public Class AVSIB_PersonCheck
             oneSecButton.Checked = False
             udSecButton.Checked = False
             Timer1.Start()
-            waitenabled = True
         End If
     End Sub
 
-    Private Sub udSecButton_Click(sender As Object, e As EventArgs) Handles udSecButton.Click
+    Private Sub udSecButton_Click(sender As Object, e As EventArgs) Handles udSecButton.CheckStateChanged
         waittime = InputBox(LocRM.GetString("strWaitInput"), LocRM.GetString("titInformation")).ToString * 1000
         Timer1.Interval = waittime
         If udSecButton.Checked = True Then
@@ -350,7 +351,6 @@ Public Class AVSIB_PersonCheck
             tenSecButton.Checked = False
             oneSecButton.Checked = False
             Timer1.Start()
-            waitenabled = True
         End If
     End Sub
 
@@ -365,8 +365,7 @@ Public Class AVSIB_PersonCheck
             BindingNavigatorMoveFirstItem.Enabled = True
             TSBBack.Enabled = True
         Else
-            Timer1.Stop()
-            waitenabled = False
+            PauseButton.Checked = True
             MsgBox(LocRM.GetString("strEndDatabase"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
             BindingNavigatorMoveLastItem.Enabled = False
             TSBNext.Enabled = False
@@ -378,13 +377,11 @@ Public Class AVSIB_PersonCheck
         End If
     End Sub
 
-    Private Sub PauseButton_Click(sender As Object, e As EventArgs) Handles PauseButton.Click
-        If waitenabled = True Then
+    Private Sub PauseButton_Click(sender As Object, e As EventArgs) Handles PauseButton.CheckStateChanged
+        If PauseButton.Checked = True Then
             Timer1.Stop()
-            waitenabled = False
         Else
             Timer1.Start()
-            waitenabled = True
         End If
     End Sub
 End Class

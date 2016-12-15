@@ -581,6 +581,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>AVSIB_Data.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\StartPause_16x.png" />
+    <None Include="Resources\Pause_grey_32xLG.png" />
+    <None Include="Resources\Timer_709.png" />
+    <None Include="Resources\Timer.bmp" />
     <None Include="Resources\pdf321.png" />
     <None Include="Resources\arrow_Previous_16xLG_color.png" />
     <None Include="Resources\arrow_Next_16xLG_color.png" />

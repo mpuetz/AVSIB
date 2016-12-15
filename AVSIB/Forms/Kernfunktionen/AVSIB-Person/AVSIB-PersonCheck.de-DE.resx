@@ -117,11 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 17</value>
+  </data>
   <data name="Label2.Text" xml:space="preserve">
     <value>Vorname, Nachname</value>
   </data>
+  <data name="Label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 17</value>
+  </data>
   <data name="Label3.Text" xml:space="preserve">
     <value>Straße, Hausnummer</value>
+  </data>
+  <data name="Label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 17</value>
   </data>
   <data name="Label4.Text" xml:space="preserve">
     <value>PLZ, Ort</value>
@@ -129,7 +152,6 @@
   <data name="BindingNavigatorCountItem.ToolTipText" xml:space="preserve">
     <value>Die Gesamtanzahl der Elemente.</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="BindingNavigatorMoveFirstItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -226,14 +248,62 @@
   <data name="ToolStripButton2.ToolTipText" xml:space="preserve">
     <value>Sortierung einstellen</value>
   </data>
+  <data name="oneSecButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 26</value>
+  </data>
+  <data name="oneSecButton.Text" xml:space="preserve">
+    <value>1 Sekunde</value>
+  </data>
+  <data name="threeSecButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 26</value>
+  </data>
+  <data name="threeSecButton.Text" xml:space="preserve">
+    <value>3 Sekunden</value>
+  </data>
+  <data name="fiveSecButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 26</value>
+  </data>
+  <data name="fiveSecButton.Text" xml:space="preserve">
+    <value>5 Sekunden</value>
+  </data>
+  <data name="tenSecButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 26</value>
+  </data>
+  <data name="tenSecButton.Text" xml:space="preserve">
+    <value>10 Sekunden</value>
+  </data>
+  <data name="udSecButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 26</value>
+  </data>
+  <data name="udSecButton.Text" xml:space="preserve">
+    <value>Benutzerdefiniert</value>
+  </data>
+  <data name="ToolStripDropDownButton1.ToolTipText" xml:space="preserve">
+    <value>Stellen Sie die Zeit für den automatischen Durchlauf ein</value>
+  </data>
+  <data name="PauseButton.ToolTipText" xml:space="preserve">
+    <value>Pausieren Sie den Timer oder setzen Sie ihn fort</value>
+  </data>
+  <data name="ButtonDelete.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="ButtonDelete.Text" xml:space="preserve">
     <value>Löschen</value>
+  </data>
+  <data name="ButtonMenu.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="ButtonMenu.Text" xml:space="preserve">
     <value>Menü</value>
   </data>
+  <data name="ButtonNext.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="ButtonNext.Text" xml:space="preserve">
     <value>Weiter</value>
+  </data>
+  <data name="ButtonBack.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="ButtonBack.Text" xml:space="preserve">
     <value>Zurück</value>
@@ -579,6 +649,9 @@
         /6xB//+sQQAArEEAAKxBAACsQQAArEEAAKxBAACsQQAArEEAAKxBAACsQQAArEEAAKxBAACsQf//rEH/
         /6xB
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>AVSIB - Person</value>
