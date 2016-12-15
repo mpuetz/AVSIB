@@ -270,4 +270,7 @@
   <data name="strOrgMissing" xml:space="preserve">
     <value>Bitte geben Sie den Namen der Organisation ein, für die Sie arbeiten</value>
   </data>
+  <data name="strWaitInput" xml:space="preserve">
+    <value>Bitte die Zeit in Sekunden eingeben, die das Prgramm warten soll bis der nächste Eintrag angezeigt wird.</value>
+  </data>
 </root>

@@ -27,6 +27,8 @@ Public Class AVSIB_PersonCheck
     Dim PersonenCount As Long = 0
     Dim ID As Long
     Dim nochange As Boolean = True
+    Dim waittime As Long
+    Dim waitenabled As Boolean
     Public SelectedOrder As String = "Nachname, Vorname, Straße, Hausnummer, Zusatz"
     Public sortchanged As Boolean = False
 
@@ -286,4 +288,103 @@ Public Class AVSIB_PersonCheck
         End If
         Return 0
     End Function
+
+    Private Sub oneSecButton_Click(sender As Object, e As EventArgs) Handles oneSecButton.Click
+        waittime = 1000
+        Timer1.Interval = waittime
+        If oneSecButton.Checked = True Then
+            threeSecButton.Checked = False
+            fiveSecButton.Checked = False
+            tenSecButton.Checked = False
+            udSecButton.Checked = False
+            Timer1.Start()
+            waitenabled = True
+        End If
+    End Sub
+
+    Private Sub threeSecButton_Click(sender As Object, e As EventArgs) Handles threeSecButton.Click
+        waittime = 3000
+        Timer1.Interval = waittime
+        If threeSecButton.Checked = True Then
+            oneSecButton.Checked = False
+            fiveSecButton.Checked = False
+            tenSecButton.Checked = False
+            udSecButton.Checked = False
+            Timer1.Start()
+            waitenabled = True
+        End If
+    End Sub
+
+    Private Sub fiveSecButton_Click(sender As Object, e As EventArgs) Handles fiveSecButton.Click
+        waittime = 5000
+        Timer1.Interval = waittime
+        If fiveSecButton.Checked = True Then
+            threeSecButton.Checked = False
+            oneSecButton.Checked = False
+            tenSecButton.Checked = False
+            udSecButton.Checked = False
+            Timer1.Start()
+            waitenabled = True
+        End If
+    End Sub
+
+    Private Sub tenSecButton_Click(sender As Object, e As EventArgs) Handles tenSecButton.Click
+        waittime = 10000
+        Timer1.Interval = waittime
+        If tenSecButton.Checked = True Then
+            threeSecButton.Checked = False
+            fiveSecButton.Checked = False
+            oneSecButton.Checked = False
+            udSecButton.Checked = False
+            Timer1.Start()
+            waitenabled = True
+        End If
+    End Sub
+
+    Private Sub udSecButton_Click(sender As Object, e As EventArgs) Handles udSecButton.Click
+        waittime = InputBox(LocRM.GetString("strWaitInput"), LocRM.GetString("titInformation")).ToString * 1000
+        Timer1.Interval = waittime
+        If udSecButton.Checked = True Then
+            threeSecButton.Checked = False
+            fiveSecButton.Checked = False
+            tenSecButton.Checked = False
+            oneSecButton.Checked = False
+            Timer1.Start()
+            waitenabled = True
+        End If
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        ' This person checks  if there are more persons in the database. If there are, the form will be updated with the data 
+        ' else, a messagebox is shown.
+        If PersonenCount + 1 < count Then
+            PersonenCount = PersonenCount + 1
+            ID = Personen.GetID(PersonenCount, SelectedOrder)
+            UpdateText(ID)
+            BindingNavigatorPositionItem.TextBox.Text = PersonenCount + 1
+            BindingNavigatorMoveFirstItem.Enabled = True
+            TSBBack.Enabled = True
+        Else
+            Timer1.Stop()
+            waitenabled = False
+            MsgBox(LocRM.GetString("strEndDatabase"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
+            BindingNavigatorMoveLastItem.Enabled = False
+            TSBNext.Enabled = False
+            BindingNavigatorMoveFirstItem.Enabled = True
+            TSBBack.Enabled = True
+        End If
+        If count <> 0 Then
+            ToolStripProgressBar1.Value = (PersonenCount + 1) / count * 100
+        End If
+    End Sub
+
+    Private Sub PauseButton_Click(sender As Object, e As EventArgs) Handles PauseButton.Click
+        If waitenabled = True Then
+            Timer1.Stop()
+            waitenabled = False
+        Else
+            Timer1.Start()
+            waitenabled = True
+        End If
+    End Sub
 End Class

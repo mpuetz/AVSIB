@@ -126,7 +126,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="Vorname.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 22</value>
+    <value>226, 22</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Vorname.TabIndex" type="System.Int32, mscorlib">
@@ -145,13 +145,13 @@
     <value>15</value>
   </data>
   <data name="Nachname.Location" type="System.Drawing.Point, System.Drawing">
-    <value>353, 40</value>
+    <value>404, 40</value>
   </data>
   <data name="Nachname.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="Nachname.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 22</value>
+    <value>240, 22</value>
   </data>
   <data name="Nachname.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -175,7 +175,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="Straße.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 22</value>
+    <value>227, 22</value>
   </data>
   <data name="Straße.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -193,7 +193,7 @@
     <value>13</value>
   </data>
   <data name="HausNr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>353, 70</value>
+    <value>404, 72</value>
   </data>
   <data name="HausNr.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -202,7 +202,7 @@
     <value>5</value>
   </data>
   <data name="HausNr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 22</value>
+    <value>105, 22</value>
   </data>
   <data name="HausNr.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -220,7 +220,7 @@
     <value>12</value>
   </data>
   <data name="Zusatz.Location" type="System.Drawing.Point, System.Drawing">
-    <value>456, 70</value>
+    <value>537, 70</value>
   </data>
   <data name="Zusatz.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -229,7 +229,7 @@
     <value>10</value>
   </data>
   <data name="Zusatz.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 22</value>
+    <value>107, 22</value>
   </data>
   <data name="Zusatz.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -250,7 +250,7 @@
     <value>True</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>432, 74</value>
+    <value>517, 73</value>
   </data>
   <data name="Label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
@@ -567,11 +567,59 @@
   <data name="ToolStripProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 27</value>
   </data>
+  <data name="ToolStripDropDownButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
+        YKxG6WBogkMZKgPNCEVJFBGdGETEvgwyO9DJE5syZw3PIlPEE9pgBCLZ5XvdMB8Ew8gXbl54nuf63dd9
+        0OGSnwCahxbPRNPAPMw9Xpg6ZmF46kZZ0xSKzJPIrhpDWsVnpBhGkKx3nAX8Pv7z1zg8OoY/cITdn4fw
+        bf/C0kYAN3Ma/w3gWfZL5kzTKBxjWyK2DftwI9tyMYCZKXbNHaD91bLYJrDXsYbrWfUKwJrPE9M2M1Oc
+        VzOOpHI7Jr376Hi9ogHqFIANO0/MmmmbmSmm9a8ze+I4MrNWAdjtoJgWcx+PSzg166yZZ8xM8XvXDix9
+        c4jIqFYAjoriBV9AhEPv1mH/sonogha0afbZMMZz+yreTGyhpusHwtNNCsA5U1zS4BLxzJIfg299qO32
+        Ir7UJtZfftyATqeT+8o2D8JSjQrAJblrncYL7ZJ2+bfaFnC/1S1NjL3diRat7qrO7wLRP3HjWsojBeCo
+        mDEo5mNjuweFGvjWg2EBhCbpkW78htSHHwRyNdmgAFzPEee2iFkzayy2OLXzT4gr6UdUnlXrullsxxQ+
+        kx0g8BTA3aZlButjSTyjODq/WcQcW/B/Je4OQhLvKQDnzN1mp0nnkvAhR8VuMzNrpm1mpjgkoVwB/v8D
+        TgDQASA1MVpwzwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="ToolStripDropDownButton1.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="ToolStripDropDownButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 27</value>
+  </data>
+  <data name="ToolStripDropDownButton1.Text" xml:space="preserve">
+    <value>ToolStripDropDownButton1</value>
+  </data>
+  <data name="PauseButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIDSURBVDhPpZLrS5NhGMb3j4SWh0oRQVExD4gonkDpg4hG
+        YKxG6WBogkMZKgPNCEVJFBGdGETEvgwyO9DJE5syZw3PIlPEE9pgBCLZ5XvdMB8Ew8gXbl54nuf63dd9
+        0OGSnwCahxbPRNPAPMw9Xpg6ZmF46kZZ0xSKzJPIrhpDWsVnpBhGkKx3nAX8Pv7z1zg8OoY/cITdn4fw
+        bf/C0kYAN3Ma/w3gWfZL5kzTKBxjWyK2DftwI9tyMYCZKXbNHaD91bLYJrDXsYbrWfUKwJrPE9M2M1Oc
+        VzOOpHI7Jr376Hi9ogHqFIANO0/MmmmbmSmm9a8ze+I4MrNWAdjtoJgWcx+PSzg166yZZ8xM8XvXDix9
+        c4jIqFYAjoriBV9AhEPv1mH/sonogha0afbZMMZz+yreTGyhpusHwtNNCsA5U1zS4BLxzJIfg299qO32
+        Ir7UJtZfftyATqeT+8o2D8JSjQrAJblrncYL7ZJ2+bfaFnC/1S1NjL3diRat7qrO7wLRP3HjWsojBeCo
+        mDEo5mNjuweFGvjWg2EBhCbpkW78htSHHwRyNdmgAFzPEee2iFkzayy2OLXzT4gr6UdUnlXrullsxxQ+
+        kx0g8BTA3aZlButjSTyjODq/WcQcW/B/Je4OQhLvKQDnzN1mp0nnkvAhR8VuMzNrpm1mpjgkoVwB/v8D
+        TgDQASA1MVpwzwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="PauseButton.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="PauseButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>24, 27</value>
+  </data>
+  <data name="PauseButton.Text" xml:space="preserve">
+    <value>ToolStripButton3</value>
+  </data>
   <data name="BindingNavigator1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <data name="BindingNavigator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>576, 30</value>
+    <value>657, 30</value>
   </data>
   <data name="BindingNavigator1.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -591,6 +639,36 @@
   <data name="&gt;&gt;BindingNavigator1.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="oneSecButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 26</value>
+  </data>
+  <data name="oneSecButton.Text" xml:space="preserve">
+    <value>1 second</value>
+  </data>
+  <data name="threeSecButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 26</value>
+  </data>
+  <data name="threeSecButton.Text" xml:space="preserve">
+    <value>3 seconds</value>
+  </data>
+  <data name="fiveSecButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 26</value>
+  </data>
+  <data name="fiveSecButton.Text" xml:space="preserve">
+    <value>5 seconds</value>
+  </data>
+  <data name="tenSecButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 26</value>
+  </data>
+  <data name="tenSecButton.Text" xml:space="preserve">
+    <value>10 seconds</value>
+  </data>
+  <data name="udSecButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 26</value>
+  </data>
+  <data name="udSecButton.Text" xml:space="preserve">
+    <value>user defined</value>
+  </data>
   <data name="PLZ.Location" type="System.Drawing.Point, System.Drawing">
     <value>169, 102</value>
   </data>
@@ -601,7 +679,7 @@
     <value>5</value>
   </data>
   <data name="PLZ.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 22</value>
+    <value>227, 22</value>
   </data>
   <data name="PLZ.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -619,13 +697,13 @@
     <value>5</value>
   </data>
   <data name="Ort.Location" type="System.Drawing.Point, System.Drawing">
-    <value>357, 102</value>
+    <value>404, 102</value>
   </data>
   <data name="Ort.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="Ort.Size" type="System.Drawing.Size, System.Drawing">
-    <value>187, 22</value>
+    <value>240, 22</value>
   </data>
   <data name="Ort.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -643,7 +721,7 @@
     <value>4</value>
   </data>
   <data name="ButtonDelete.Location" type="System.Drawing.Point, System.Drawing">
-    <value>355, 203</value>
+    <value>436, 162</value>
   </data>
   <data name="ButtonDelete.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -670,7 +748,7 @@
     <value>2</value>
   </data>
   <data name="ButtonMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 203</value>
+    <value>225, 162</value>
   </data>
   <data name="ButtonMenu.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -697,7 +775,7 @@
     <value>3</value>
   </data>
   <data name="ButtonNext.Location" type="System.Drawing.Point, System.Drawing">
-    <value>463, 203</value>
+    <value>544, 162</value>
   </data>
   <data name="ButtonNext.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -724,7 +802,7 @@
     <value>1</value>
   </data>
   <data name="ButtonBack.Location" type="System.Drawing.Point, System.Drawing">
-    <value>247, 203</value>
+    <value>328, 162</value>
   </data>
   <data name="ButtonBack.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -750,6 +828,9 @@
   <data name="&gt;&gt;ButtonBack.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="Timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>201, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -757,7 +838,7 @@
     <value>8, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>576, 236</value>
+    <value>657, 203</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1105,10 +1186,10 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>594, 283</value>
+    <value>675, 250</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>594, 283</value>
+    <value>675, 250</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>AVSIB - Addressees</value>
@@ -1202,6 +1283,54 @@
   </data>
   <data name="&gt;&gt;ToolStripProgressBar1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripDropDownButton1.Name" xml:space="preserve">
+    <value>ToolStripDropDownButton1</value>
+  </data>
+  <data name="&gt;&gt;ToolStripDropDownButton1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripDropDownButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;oneSecButton.Name" xml:space="preserve">
+    <value>oneSecButton</value>
+  </data>
+  <data name="&gt;&gt;oneSecButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;threeSecButton.Name" xml:space="preserve">
+    <value>threeSecButton</value>
+  </data>
+  <data name="&gt;&gt;threeSecButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fiveSecButton.Name" xml:space="preserve">
+    <value>fiveSecButton</value>
+  </data>
+  <data name="&gt;&gt;fiveSecButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tenSecButton.Name" xml:space="preserve">
+    <value>tenSecButton</value>
+  </data>
+  <data name="&gt;&gt;tenSecButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;udSecButton.Name" xml:space="preserve">
+    <value>udSecButton</value>
+  </data>
+  <data name="&gt;&gt;udSecButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;PauseButton.Name" xml:space="preserve">
+    <value>PauseButton</value>
+  </data>
+  <data name="&gt;&gt;PauseButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Timer1.Name" xml:space="preserve">
+    <value>Timer1</value>
+  </data>
+  <data name="&gt;&gt;Timer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>AVSIB_PersonCheck</value>

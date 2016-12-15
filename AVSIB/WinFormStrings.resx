@@ -270,4 +270,7 @@
   <data name="strOrgMissing" xml:space="preserve">
     <value>Please enter the organization you are working for</value>
   </data>
+  <data name="strWaitInput" xml:space="preserve">
+    <value>Please enter the time in seconds the program shall wait</value>
+  </data>
 </root>

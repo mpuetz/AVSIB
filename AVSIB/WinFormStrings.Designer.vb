@@ -488,6 +488,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Please enter the time in seconds the program shall wait ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property strWaitInput() As String
+            Get
+                Return ResourceManager.GetString("strWaitInput", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Warning ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property titCaution() As String
