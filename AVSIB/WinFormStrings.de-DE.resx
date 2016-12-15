@@ -207,7 +207,7 @@
   <data name="strNoStreetSelected" xml:space="preserve">
     <value>Bitte wählen Sie eine Straße aus!</value>
   </data>
-  <data name="strNoSurname" xml:space="preserve">
+  <data name="strNoFirstName" xml:space="preserve">
     <value>Bitte geben Sie den Vornamen ein!</value>
   </data>
   <data name="strNothingSelectedDelete" xml:space="preserve">
@@ -272,5 +272,8 @@
   </data>
   <data name="strWaitInput" xml:space="preserve">
     <value>Bitte die Zeit in Sekunden eingeben, die das Prgramm warten soll bis der nächste Eintrag angezeigt wird.</value>
+  </data>
+  <data name="strInsertHouseNumber" xml:space="preserve">
+    <value>Bitte geben Sie die Hausnummer ein!</value>
   </data>
 </root>

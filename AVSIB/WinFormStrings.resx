@@ -207,7 +207,7 @@
   <data name="strNoStreetSelected" xml:space="preserve">
     <value>Please choose a street!</value>
   </data>
-  <data name="strNoSurname" xml:space="preserve">
+  <data name="strNoFirstName" xml:space="preserve">
     <value>Please enter the Surname!</value>
   </data>
   <data name="strNothingSelectedDelete" xml:space="preserve">
@@ -272,5 +272,8 @@
   </data>
   <data name="strWaitInput" xml:space="preserve">
     <value>Please enter the time in seconds the program shall wait</value>
+  </data>
+  <data name="strInsertHouseNumber" xml:space="preserve">
+    <value>Please enter the house-number!</value>
   </data>
 </root>

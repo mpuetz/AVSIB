@@ -51,6 +51,24 @@ Public Class AVSIB_PersonInsert
             LabelErfolg.Visible = True
             count = count + 1
             Vorname.Focus()
+        ElseIf Vorname.Text = Nothing Then
+            Vorname.Focus()
+            MsgBox(LocRM.GetString("strNoFirstName"), MsgBoxStyle.Exclamation, LocRM.GetString("titCaution"))
+        ElseIf Nachname.Text = Nothing Then
+            Nachname.Focus()
+            MsgBox(LocRM.GetString("strNoLastName"), MsgBoxStyle.Exclamation, LocRM.GetString("titCaution"))
+        ElseIf OrtAuswahl.SelectedItem = Nothing Then
+            OrtAuswahl.Focus()
+            MsgBox(LocRM.GetString("strNoCitySelected"), MsgBoxStyle.Exclamation, LocRM.GetString("titCaution"))
+        ElseIf PLZAuswahl.SelectedItem = Nothing Then
+            PLZAuswahl.Focus()
+            MsgBox(LocRM.GetString("strNoZIPSelected"), MsgBoxStyle.Exclamation, LocRM.GetString("titCaution"))
+        ElseIf CBStraße.SelectedItem = Nothing Then
+            CBStraße.Focus()
+            MsgBox(LocRM.GetString("strNoStreetSelected"), MsgBoxStyle.Exclamation, LocRM.GetString("titCaution"))
+        ElseIf HausNr.Text = Nothing Then
+            HausNr.Focus()
+            MsgBox(LocRM.GetString("strInsertHouseNumber"), MsgBoxStyle.Exclamation, LocRM.GetString("titCaution"))
         Else
             MsgBox(LocRM.GetString("strFieldsMissing"), MsgBoxStyle.Exclamation, LocRM.GetString("titCaution"))
         End If

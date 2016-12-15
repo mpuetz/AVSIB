@@ -227,6 +227,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Please enter the house-number! ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property strInsertHouseNumber() As String
+            Get
+                Return ResourceManager.GetString("strInsertHouseNumber", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Please enter a street! ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property strInsertStreet() As String
@@ -326,6 +335,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Please enter the Surname! ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property strNoFirstName() As String
+            Get
+                Return ResourceManager.GetString("strNoFirstName", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Please enter the last name! ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property strNoLastName() As String
@@ -340,15 +358,6 @@ Namespace My.Resources
         Friend Shared ReadOnly Property strNoStreetSelected() As String
             Get
                 Return ResourceManager.GetString("strNoStreetSelected", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die Please enter the Surname! ähnelt.
-        '''</summary>
-        Friend Shared ReadOnly Property strNoSurname() As String
-            Get
-                Return ResourceManager.GetString("strNoSurname", resourceCulture)
             End Get
         End Property
         

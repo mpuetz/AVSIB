@@ -83,7 +83,7 @@ Public Class AVSIB_Austräger
             MsgBox(LocRM.GetString("strNoDistrictNo"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
             CBBezirk.Focus()
         ElseIf TBVorname.Text = Nothing Then
-            MsgBox(LocRM.GetString("strNoSurname"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
+            MsgBox(LocRM.GetString("strNoFirstName"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
             TBVorname.Focus()
         ElseIf TBNachname.Text = Nothing Then
             MsgBox(LocRM.GetString("strNoLastName"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
