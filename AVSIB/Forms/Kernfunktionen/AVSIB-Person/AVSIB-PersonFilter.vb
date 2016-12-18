@@ -68,7 +68,6 @@ Public Class AVSIB_PersonFilter
     End Sub
 
     Private Sub BFilter_Click(sender As Object, e As EventArgs) Handles BFilter.Click
-        AVSIB_PersonCheck.filtered = True
         If CBAdress.CheckState = CheckState.Checked Then
             If ComboBox1.Text = Nothing Then
                 MsgBox(LocRM.GetString("strNoCitySelected"), MsgBoxStyle.Exclamation, LocRM.GetString("titCaution"))
@@ -77,6 +76,7 @@ Public Class AVSIB_PersonFilter
                 testint = ComboBox1.FindStringExact(place)
                 If testint > -1 Then
                     AVSIB_PersonCheck.filterby = "Ort='" & place & "'"
+                    AVSIB_PersonCheck.filtered = True
                     Close()
                     testint = -1
                 Else
@@ -89,6 +89,7 @@ Public Class AVSIB_PersonFilter
                     testint = ComboBox2.FindStringExact(zip)
                     If testint > -1 Then
                         AVSIB_PersonCheck.filterby = "Ort='" & place & "' AND PLZ=" & zip
+                        AVSIB_PersonCheck.filtered = True
                         Close()
                         testint = -1
                     Else
@@ -109,6 +110,7 @@ Public Class AVSIB_PersonFilter
                             If testint > -1 Then
                                 street = ComboBox2.Text.ToString
                                 AVSIB_PersonCheck.filterby = "Straße='" & street & "' AND Ort='" & place & "' AND PLZ='" & zip & "'"
+                                AVSIB_PersonCheck.filtered = True
                                 Close()
                                 testint = -1
                             Else
@@ -118,6 +120,7 @@ Public Class AVSIB_PersonFilter
                             testint = ComboBox3.FindStringExact(street)
                             If testint > -1 Then
                                 AVSIB_PersonCheck.filterby = "Straße='" & street & "' AND Ort='" & place & "' AND PLZ='" & zip & "'"
+                                AVSIB_PersonCheck.filtered = True
                                 Close()
                                 testint = -1
                             Else
@@ -136,6 +139,7 @@ Public Class AVSIB_PersonFilter
                 testint = ComboBox1.FindStringExact(firstn)
                 If testint > -1 Then
                     AVSIB_PersonCheck.filterby = "Vorname='" & firstn & "'"
+                    AVSIB_PersonCheck.filtered = True
                     Close()
                     testint = -1
                 Else
@@ -145,6 +149,7 @@ Public Class AVSIB_PersonFilter
                 testint = ComboBox1.FindStringExact(lastn)
                 If testint > -1 Then
                     AVSIB_PersonCheck.filterby = "Nachname='" & lastn & "'"
+                    AVSIB_PersonCheck.filtered = True
                     Close()
                     testint = -1
                 Else
@@ -157,6 +162,7 @@ Public Class AVSIB_PersonFilter
                     testint = ComboBox2.FindStringExact(firstn)
                     If testint > -1 Then
                         AVSIB_PersonCheck.filterby = "Nachname='" & lastn & "' AND Vorname='" & firstn & "'"
+                        AVSIB_PersonCheck.filtered = True
                         Close()
                         testint = -1
                     Else
