@@ -37,8 +37,9 @@ Public Class Bezirke
         SQLCon.Open()
         Try
             ' This command selects cities, zip code and street in a specific district number, sorted ascending by 1. city, 2. zip code and 3. street
-            cmd = New SqlCommand("Select Straßen.Ort, Straßen.PLZ, Straßen.Straße  From Bezirke INNER JOIN Straßen ON Bezirke.StraßeID=Straßen.Id Where BezirkNr = " _
-                                 & BezirkNr & " Order By Straßen.Ort ASC, Straßen.PLZ ASC, Straßen.Straße ASC;", SQLCon)
+            cmd = New SqlCommand("Select Straßen.Ort, Straßen.PLZ, Straßen.Straße  From Bezirke INNER JOIN Straßen ON Bezirke.StraßeID=Straßen.Id Where BezirkNr=" _
+                                 & "@bezirknr Order By Straßen.Ort ASC, Straßen.PLZ ASC, Straßen.Straße ASC;", SQLCon)
+            cmd.Parameters.Add("@bezirknr", SqlDbType.BigInt).Value = BezirkNr
             DAdapter = New SqlDataAdapter(cmd)
             DAdapter.Fill(DataS, "Bezirke")
             SQLCon.Close()
@@ -58,7 +59,8 @@ Public Class Bezirke
         SQLCon.Open()
         Try
             cmd = New SqlCommand("Select Straßen.Ort, Straßen.PLZ, Straßen.Straße From Bezirke INNER JOIN Straßen ON Bezirke.StraßeID=Straßen.Id Where BezirkNr = " _
-                                 & BezirkNr & " Order By Straßen.Ort ASC, Straßen.PLZ ASC, Straßen.Straße ASC;", SQLCon)
+                                 & "@bezirknr Order By Straßen.Ort ASC, Straßen.PLZ ASC, Straßen.Straße ASC;", SQLCon)
+            cmd.Parameters.Add("@bezirknr", SqlDbType.BigInt).Value = BezirkNr
             DAdapter = New SqlDataAdapter(cmd)
             DAdapter.Fill(DataS, "Bezirke")
             SQLCon.Close()
@@ -78,7 +80,8 @@ Public Class Bezirke
         SQLCon.Open()
         Try
             cmd = New SqlCommand("Select Straßen.Ort, Straßen.PLZ, Straßen.Straße From Bezirke INNER JOIN Straßen ON Bezirke.StraßeID=Straßen.Id Where BezirkNr = " _
-                                 & BezirkNr & " Order By Straßen.Ort ASC, Straßen.PLZ ASC, Straßen.Straße ASC;", SQLCon)
+                                 & "@bezirknr Order By Straßen.Ort ASC, Straßen.PLZ ASC, Straßen.Straße ASC;", SQLCon)
+            cmd.Parameters.Add("@bezirknr", SqlDbType.BigInt).Value = BezirkNr
             DAdapter = New SqlDataAdapter(cmd)
             DAdapter.Fill(DataS, "Bezirke")
             SQLCon.Close()

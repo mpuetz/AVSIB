@@ -335,6 +335,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die No data matches the selected filter. ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property strNoFilterData() As String
+            Get
+                Return ResourceManager.GetString("strNoFilterData", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Please enter the Surname! ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property strNoFirstName() As String

@@ -276,4 +276,7 @@
   <data name="strInsertHouseNumber" xml:space="preserve">
     <value>Please enter the house-number!</value>
   </data>
+  <data name="strNoFilterData" xml:space="preserve">
+    <value>No data matches the selected filter.</value>
+  </data>
 </root>

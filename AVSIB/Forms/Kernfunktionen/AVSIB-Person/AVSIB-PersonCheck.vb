@@ -131,7 +131,7 @@ Public Class AVSIB_PersonCheck
                 Zusatz.Text = Nothing
                 PLZ.Text = Nothing
                 Ort.Text = Nothing
-                MsgBox(LocRM.GetString("strNoData"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
+                MsgBox(LocRM.GetString("strNoFilterData"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
                 BindingNavigatorMoveFirstItem.Enabled = False
                 TSBBack.Enabled = False
                 BindingNavigatorMoveLastItem.Enabled = False
@@ -257,7 +257,7 @@ Public Class AVSIB_PersonCheck
                 BindingNavigatorMoveFirstItem.Enabled = True
                 TSBBack.Enabled = True
             Else
-                MsgBox(LocRM.GetString("strNoData"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
+                MsgBox(LocRM.GetString("strNoFilterData"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
                 BindingNavigatorMoveLastItem.Enabled = False
                 TSBNext.Enabled = False
             End If
@@ -295,7 +295,7 @@ Public Class AVSIB_PersonCheck
                 BindingNavigatorMoveLastItem.Enabled = True
                 TSBNext.Enabled = True
             Else
-                MsgBox(LocRM.GetString("strNoData"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
+                MsgBox(LocRM.GetString("strNoFilterData"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
                 BindingNavigatorMoveFirstItem.Enabled = False
                 TSBBack.Enabled = False
             End If
@@ -381,7 +381,7 @@ Public Class AVSIB_PersonCheck
                     ToolStripProgressBar1.Value = (PersonenCount + 1) / count * 100
                 Else
                     BindingNavigatorPositionItem.Text = 0
-                    MsgBox(LocRM.GetString("strNoData"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
+                    MsgBox(LocRM.GetString("strNoFilterData"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
                 End If
             End If
         End If
@@ -435,7 +435,7 @@ Public Class AVSIB_PersonCheck
                 BindingNavigatorDeleteItem.Enabled = True
             Else
                 BindingNavigatorPositionItem.Text = 0
-                MsgBox(LocRM.GetString("strNoData"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
+                MsgBox(LocRM.GetString("strNoFilterData"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
                 BindingNavigatorMoveFirstItem.Enabled = False
                 TSBBack.Enabled = False
                 BindingNavigatorMoveLastItem.Enabled = False
@@ -585,8 +585,15 @@ Public Class AVSIB_PersonCheck
                 TSBNext.Enabled = True
                 BindingNavigatorDeleteItem.Enabled = True
             Else
+                Vorname.Text = Nothing
+                Nachname.Text = Nothing
+                Straße.Text = Nothing
+                HausNr.Text = Nothing
+                Zusatz.Text = Nothing
+                PLZ.Text = Nothing
+                Ort.Text = Nothing
                 BindingNavigatorPositionItem.Text = 0
-                MsgBox(LocRM.GetString("strNoData"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
+                MsgBox(LocRM.GetString("strNoFilterData"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
                 BindingNavigatorMoveFirstItem.Enabled = False
                 TSBBack.Enabled = False
                 BindingNavigatorMoveLastItem.Enabled = False

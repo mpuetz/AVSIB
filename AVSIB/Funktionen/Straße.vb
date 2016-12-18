@@ -100,7 +100,9 @@ Public Class Straße
         Dim DataS As New DataSet
         SQLCon.Open()
         Try
-            cmd = New SqlCommand("SELECT Id FROM Straßen Where Ort='" & Ort & "' AND PLZ='" & plz & "' ORDER BY Straße;", SQLCon)
+            cmd = New SqlCommand("SELECT Id FROM Straßen Where Ort=@ort AND PLZ=@plz ORDER BY Straße;", SQLCon)
+            cmd.Parameters.Add("@ort", SqlDbType.NChar).Value = Ort
+            cmd.Parameters.Add("@plz", SqlDbType.NChar).Value = plz
             DAdapter = New SqlDataAdapter(cmd)
             DAdapter.Fill(DataS, "Straßen")
             SQLCon.Close()

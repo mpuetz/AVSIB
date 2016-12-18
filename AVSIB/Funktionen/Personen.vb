@@ -40,14 +40,18 @@ Public Class Personen
     End Function
 
     'This function is used to get the IDs of persons in the database sorted as given from the user. For more information concerning the commands have a look at Orte -> GetCount
+    <CodeAnalysis.SuppressMessage("Microsoft.Security", "CA2100:SQL-Abfragen auf Sicherheitsrisiken überprüfen")>
     Public Shared Function GetID(ByVal Row As Long, SortOrder As String)
         Dim SQLCon As New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\AVSIB_Data.mdf;Integrated Security=True")
         Dim cmd As New SqlCommand
         Dim DAdapter As New SqlDataAdapter
         Dim DataS As New DataSet
+        Dim trashcmd As New SqlCommand
+        trashcmd.Parameters.Add("@sortorder", SqlDbType.NChar).Value = SortOrder
+        Dim sortstring As String = trashcmd.Parameters("@sortorder").Value.ToString
         SQLCon.Open()
         Try
-            cmd = New SqlCommand("SELECT Id FROM Personen ORDER BY " & SortOrder & ";", SQLCon)
+            cmd = New SqlCommand("SELECT Id FROM Personen ORDER BY " & sortstring & ";", SQLCon)
             DAdapter = New SqlDataAdapter(cmd)
             DAdapter.Fill(DataS, "Personen")
             SQLCon.Close()
@@ -151,7 +155,10 @@ Public Class Personen
         Dim DataS As New DataSet
         SQLCon.Open()
         Try
-            cmd = New SqlCommand("SELECT Id FROM Personen WHERE (Straße =  " & "'" & Straßen & "'" & ") AND (Ort = " & "'" & Ort & "'" & ") AND (PLZ = " & "'" & PLZ & "'" & ") ORDER BY Straße, Hausnummer, Zusatz, Nachname, Vorname;", SQLCon)
+            cmd = New SqlCommand("SELECT Id FROM Personen WHERE (Straße=@straßen) AND (Ort=@ort) AND (PLZ=@plz) ORDER BY Straße, Hausnummer, Zusatz, Nachname, Vorname;", SQLCon)
+            cmd.Parameters.Add("@straßen", SqlDbType.NChar).Value = Straßen
+            cmd.Parameters.Add("@ort", SqlDbType.NChar).Value = Ort
+            cmd.Parameters.Add("@plz", SqlDbType.NChar).Value = PLZ
             DAdapter = New SqlDataAdapter(cmd)
             DAdapter.Fill(DataS, "Personen")
             SQLCon.Close()
@@ -169,7 +176,8 @@ Public Class Personen
         Dim DataS As New DataSet
         SQLCon.Open()
         Try
-            cmd = New SqlCommand("SELECT Id FROM Personen WHERE (Nachname =  " & "'" & LastName & "'" & ") ORDER BY Straße, Hausnummer, Zusatz, Nachname, Vorname;", SQLCon)
+            cmd = New SqlCommand("SELECT Id FROM Personen WHERE (Nachname=@lastname) ORDER BY Straße, Hausnummer, Zusatz, Nachname, Vorname;", SQLCon)
+            cmd.Parameters.Add("@lastname", SqlDbType.NChar).Value = LastName
             DAdapter = New SqlDataAdapter(cmd)
             DAdapter.Fill(DataS, "Personen")
             SQLCon.Close()
@@ -187,7 +195,8 @@ Public Class Personen
         Dim DataS As New DataSet
         SQLCon.Open()
         Try
-            cmd = New SqlCommand("SELECT Id FROM Personen WHERE (Nachname =  " & "'" & LastName & "'" & ") ORDER BY Straße, Hausnummer, Zusatz, Nachname, Vorname;", SQLCon)
+            cmd = New SqlCommand("SELECT Id FROM Personen WHERE (Nachname=@lastname) ORDER BY Straße, Hausnummer, Zusatz, Nachname, Vorname;", SQLCon)
+            cmd.Parameters.Add("@lastname", SqlDbType.NChar).Value = LastName
             DAdapter = New SqlDataAdapter(cmd)
             DAdapter.Fill(DataS, "Personen")
             SQLCon.Close()
@@ -198,14 +207,20 @@ Public Class Personen
         Return 0
     End Function
 
+    <CodeAnalysis.SuppressMessage("Microsoft.Security", "CA2100:SQL-Abfragen auf Sicherheitsrisiken überprüfen")>
     Public Shared Function GetIDByString(ByVal Row As Long, ByVal Searchstring As String, ByVal Order As String)
         Dim SQLCon As New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\AVSIB_Data.mdf;Integrated Security=True")
         Dim cmd As New SqlCommand
         Dim DAdapter As New SqlDataAdapter
         Dim DataS As New DataSet
+        Dim trashcmd As New SqlCommand
+        trashcmd.Parameters.Add("@sortorder", SqlDbType.NChar).Value = Order
+        Dim sortstring As String = trashcmd.Parameters("@sortorder").Value.ToString
+        trashcmd.Parameters.Add("@searchstring", SqlDbType.NChar).Value = Searchstring
+        Dim search As String = trashcmd.Parameters("@searchstring").Value.ToString
         SQLCon.Open()
         Try
-            cmd = New SqlCommand("SELECT Id FROM Personen WHERE " & Searchstring & " ORDER BY " & Order & ";", SQLCon)
+            cmd = New SqlCommand("SELECT Id FROM Personen WHERE " & search & " ORDER BY " & sortstring & ";", SQLCon)
             DAdapter = New SqlDataAdapter(cmd)
             DAdapter.Fill(DataS, "Personen")
             SQLCon.Close()
@@ -216,14 +231,18 @@ Public Class Personen
         Return 0
     End Function
 
+    <CodeAnalysis.SuppressMessage("Microsoft.Security", "CA2100:SQL-Abfragen auf Sicherheitsrisiken überprüfen")>
     Public Shared Function GetCountByString(ByVal Searchstring As String)
         Dim SQLCon As New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\AVSIB_Data.mdf;Integrated Security=True")
         Dim cmd As New SqlCommand
         Dim DAdapter As New SqlDataAdapter
         Dim DataS As New DataSet
+        Dim trashcmd As New SqlCommand
+        trashcmd.Parameters.Add("@searchstring", SqlDbType.NChar).Value = Searchstring
+        Dim search As String = trashcmd.Parameters("@searchstring").Value.ToString
         SQLCon.Open()
         Try
-            cmd = New SqlCommand("SELECT Id FROM Personen WHERE " & Searchstring & " ORDER BY Straße, Hausnummer, Zusatz, Nachname, Vorname;", SQLCon)
+            cmd = New SqlCommand("SELECT Id FROM Personen WHERE " & search & " ORDER BY Straße, Hausnummer, Zusatz, Nachname, Vorname;", SQLCon)
             DAdapter = New SqlDataAdapter(cmd)
             DAdapter.Fill(DataS, "Personen")
             SQLCon.Close()

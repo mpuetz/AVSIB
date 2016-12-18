@@ -18,13 +18,11 @@ Public Class FileOperator
                 id = Mid(line, 1, length)
                 If id = searchString Then
                     Dim result As String = Mid(line, length + 1, line.Length)
-                    strR.Dispose()
                     strR.Close()
                     Return result
                     Exit Function
                 End If
             Loop Until line = Nothing
-            strR.Dispose()
             strR.Close()
         Catch ex As Exception
             MsgBox(ex.ToString, MsgBoxStyle.Critical, "Error")
@@ -64,7 +62,6 @@ Public Class FileOperator
                         End If
                     Loop Until deleteline = Nothing
 
-                    strR.Dispose()
                     strR.Close()
 
                 Catch ex As Exception
@@ -89,7 +86,6 @@ Public Class FileOperator
                     End If
 
                 Loop Until deleteline = Nothing
-                strR.Dispose()
                 strR.Close()
 
                 Dim arr2 As String() = lst.ToArray()
@@ -131,7 +127,6 @@ Public Class FileOperator
                 End If
             Loop Until line = Nothing
 
-            strR.Dispose()
             strR.Close()
 
         Catch ex As Exception
@@ -145,14 +140,12 @@ Public Class FileOperator
             Dim strw As StreamWriter
             strw = File.AppendText(filePath)
             strw.WriteLine(StoreString)
-            strw.Dispose()
             strw.Close()
         Else
             FileOperator.Delete(filePath, id, True)
             Dim strw As StreamWriter
             strw = File.AppendText(filePath)
             strw.WriteLine(StoreString)
-            strw.Dispose()
             strw.Close()
         End If
         Return 0

@@ -90,8 +90,8 @@ Public Class Orte
     ' Retrieves the number of entries in the datatable
     Public Shared Function GetCount()
         ' SQLCon = everything needed to connect to the database-file, cmd = the sql-command used, DataAdapter = adapter between database and dataset, DataSet stores the retrieved data
-        Using SQLCon As New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\AVSIB_Data.mdf;Integrated Security=True")
-            Dim cmd As New SqlCommand
+        Dim SQLCon As New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\AVSIB_Data.mdf;Integrated Security=True")
+        Dim cmd As New SqlCommand
             Dim DAdapter As New SqlDataAdapter
             Dim DataS As New DataSet
             Try
@@ -100,28 +100,27 @@ Public Class Orte
             Catch ex As Exception
                 MsgBox("Could not connect to the database", MsgBoxStyle.Critical)
             End Try
-            Try
-                ' sets the SQL-command
-                cmd = New SqlCommand("SELECT Distinct Ort FROM Orte ORDER BY Ort;", SQLCon)
-                ' opens a new adapter using the command
-                DAdapter = New SqlDataAdapter(cmd)
-                ' fills the DataSet using the data retrieved by the DataAdapter
-                DAdapter.Fill(DataS, "Orte")
-                ' SQL-Connection closed
-                SQLCon.Close()
-                ' returns the result
-                Return DataS.Tables(0).Rows.Count
-            Catch ex As Exception
-                MsgBox(ex, MsgBoxStyle.Critical, "Fehler")
-            End Try
-        End Using
+        Try
+            ' sets the SQL-command
+            cmd = New SqlCommand("SELECT Distinct Ort FROM Orte ORDER BY Ort;", SQLCon)
+            ' opens a new adapter using the command
+            DAdapter = New SqlDataAdapter(cmd)
+            ' fills the DataSet using the data retrieved by the DataAdapter
+            DAdapter.Fill(DataS, "Orte")
+            ' SQL-Connection closed
+            SQLCon.Close()
+            ' returns the result
+            Return DataS.Tables(0).Rows.Count
+        Catch ex As Exception
+            MsgBox(ex, MsgBoxStyle.Critical, "Fehler")
+        End Try
         Return 0
     End Function
 
     ' this function is used to get the cities sorted ascending alphabetically. For more Information have a look at GetCount
     Public Shared Function GetOrtabc(ByVal row As Long)
-        Using SQLCon As New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\AVSIB_Data.mdf;Integrated Security=True")
-            Dim cmd As New SqlCommand
+        Dim SQLCon As New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\AVSIB_Data.mdf;Integrated Security=True")
+        Dim cmd As New SqlCommand
             Dim DAdapter As New SqlDataAdapter
             Dim DataS As New DataSet
             Try
@@ -129,23 +128,22 @@ Public Class Orte
             Catch ex As Exception
                 MsgBox("Could not connect to the database", MsgBoxStyle.Critical)
             End Try
-            Try
-                cmd = New SqlCommand("SELECT Distinct Ort FROM Orte ORDER BY Ort;", SQLCon)
-                DAdapter = New SqlDataAdapter(cmd)
-                DAdapter.Fill(DataS, "Orte")
-                SQLCon.Close()
-                Return DataS.Tables(0).Rows(row).Item(0)
-            Catch ex As Exception
-                MsgBox(ex, MsgBoxStyle.Critical, "Fehler")
-            End Try
-        End Using
+        Try
+            cmd = New SqlCommand("SELECT Distinct Ort FROM Orte ORDER BY Ort;", SQLCon)
+            DAdapter = New SqlDataAdapter(cmd)
+            DAdapter.Fill(DataS, "Orte")
+            SQLCon.Close()
+            Return DataS.Tables(0).Rows(row).Item(0)
+        Catch ex As Exception
+            MsgBox(ex, MsgBoxStyle.Critical, "Fehler")
+        End Try
         Return 0
     End Function
 
     ' this function is used to get the number of zip-codes stored in the database. For more Information have a look at GetCount
     Public Shared Function GetPLZCount(ByVal Ort As String)
-        Using SQLCon As New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\AVSIB_Data.mdf;Integrated Security=True")
-            Dim cmd As New SqlCommand
+        Dim SQLCon As New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\AVSIB_Data.mdf;Integrated Security=True")
+        Dim cmd As New SqlCommand
             Dim DAdapter As New SqlDataAdapter
             Dim DataS As New DataSet
             Try
@@ -153,23 +151,23 @@ Public Class Orte
             Catch ex As Exception
                 MsgBox("Could not connect to the database", MsgBoxStyle.Critical)
             End Try
-            Try
-                cmd = New SqlCommand("SELECT PLZ FROM Orte Where Ort = " & "'" & Ort & "'" & " ;", SQLCon)
-                DAdapter = New SqlDataAdapter(cmd)
-                DAdapter.Fill(DataS, "Orte")
-                SQLCon.Close()
-                Return DataS.Tables(0).Rows.Count
-            Catch ex As Exception
-                MsgBox(ex, MsgBoxStyle.Critical, "Fehler")
-            End Try
-        End Using
+        Try
+            cmd = New SqlCommand("SELECT PLZ FROM Orte Where Ort=@ort;", SQLCon)
+            cmd.Parameters.Add("@ort", SqlDbType.NChar).Value = Ort
+            DAdapter = New SqlDataAdapter(cmd)
+            DAdapter.Fill(DataS, "Orte")
+            SQLCon.Close()
+            Return DataS.Tables(0).Rows.Count
+        Catch ex As Exception
+            MsgBox(ex, MsgBoxStyle.Critical, "Fehler")
+        End Try
         Return 0
     End Function
 
     ' this function is used to get the zip-codes for a specific city sorted ascending. For more Information have a look at GetCount
     Public Shared Function GetPLZabc(ByVal row As Long, Ort As String)
-        Using SQLCon As New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\AVSIB_Data.mdf;Integrated Security=True")
-            Dim cmd As New SqlCommand
+        Dim SQLCon As New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\AVSIB_Data.mdf;Integrated Security=True")
+        Dim cmd As New SqlCommand
             Dim DAdapter As New SqlDataAdapter
             Dim DataS As New DataSet
             Try
@@ -177,16 +175,16 @@ Public Class Orte
             Catch ex As Exception
                 MsgBox("Could not connect to the database", MsgBoxStyle.Critical)
             End Try
-            Try
-                cmd = New SqlCommand("SELECT PLZ FROM Orte Where Ort = " & "'" & Ort & "'" & " ORDER BY PLZ;", SQLCon)
-                DAdapter = New SqlDataAdapter(cmd)
-                DAdapter.Fill(DataS, "Orte")
-                SQLCon.Close()
-                Return DataS.Tables(0).Rows(row).Item(0)
-            Catch ex As Exception
-                MsgBox(ex, MsgBoxStyle.Critical, "Fehler")
-            End Try
-        End Using
+        Try
+            cmd = New SqlCommand("SELECT PLZ FROM Orte Where Ort=@ort ORDER BY PLZ;", SQLCon)
+            cmd.Parameters.Add("@ort", SqlDbType.NChar).Value = Ort
+            DAdapter = New SqlDataAdapter(cmd)
+            DAdapter.Fill(DataS, "Orte")
+            SQLCon.Close()
+            Return DataS.Tables(0).Rows(row).Item(0)
+        Catch ex As Exception
+            MsgBox(ex, MsgBoxStyle.Critical, "Fehler")
+        End Try
         Return 0
     End Function
 

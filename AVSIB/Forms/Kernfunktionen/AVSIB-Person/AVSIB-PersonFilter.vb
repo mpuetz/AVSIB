@@ -73,24 +73,24 @@ Public Class AVSIB_PersonFilter
                 MsgBox(LocRM.GetString("strNoCitySelected"), MsgBoxStyle.Exclamation, LocRM.GetString("titCaution"))
                 ComboBox1.Focus()
             ElseIf ComboBox2.Text = Nothing Then
-                AVSIB_PersonCheck.filterby = "(Ort = " & "'" & place & "'" & ")"
+                AVSIB_PersonCheck.filterby = "Ort='" & place & "'"
                 Close()
             ElseIf ComboBox3.Text = Nothing Then
-                AVSIB_PersonCheck.filterby = "(Ort = " & "'" & place & "'" & ") AND (PLZ = " & "'" & zip & "'" & ")"
+                AVSIB_PersonCheck.filterby = "Ort='" & place & "' AND PLZ=" & zip
                 Close()
             Else
-                AVSIB_PersonCheck.filterby = "(Straße =  " & "'" & street & "'" & ") AND (Ort = " & "'" & place & "'" & ") AND (PLZ = " & "'" & zip & "'" & ")"
+                AVSIB_PersonCheck.filterby = "Straße='" & street & "' AND Ort='" & place & "' AND PLZ='" & zip & "'"
                 Close()
             End If
         Else
             If ComboBox1.Text = Nothing Then
-                AVSIB_PersonCheck.filterby = "(Vorname = " & "'" & firstn & "'" & ")"
+                AVSIB_PersonCheck.filterby = "Vorname='" & firstn & "'"
                 Close()
             ElseIf ComboBox2.Text = Nothing Then
-                AVSIB_PersonCheck.filterby = "(Nachname =  " & "'" & lastn & "'" & ")"
+                AVSIB_PersonCheck.filterby = "Nachname='" & lastn & "'"
                 Close()
             Else
-                AVSIB_PersonCheck.filterby = "(Nachname =  " & "'" & lastn & "'" & ") AND (Vorname = " & "'" & firstn & "'" & ")"
+                AVSIB_PersonCheck.filterby = "Nachname='" & lastn & "' AND Vorname='" & firstn & "'"
                 Close()
             End If
         End If

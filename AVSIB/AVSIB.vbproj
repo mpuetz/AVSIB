@@ -340,6 +340,7 @@
     </Compile>
     <Compile Include="Funktionen\Personen.vb" />
     <Compile Include="Funktionen\Straße.vb" />
+    <Compile Include="GlobalSuppressions.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

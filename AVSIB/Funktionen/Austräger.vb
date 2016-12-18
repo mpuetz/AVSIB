@@ -17,6 +17,7 @@
 
 '____________________________________________________________________________
 
+<CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2240:ImplementISerializableCorrectly")>
 Public Class Austräger
     'This function allows to search for roundsmen by name and surname
     Public Shared Function GetBezirkByName(ByVal Nachname As String, Vorname As String)

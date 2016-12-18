@@ -33,7 +33,6 @@ Public Class CPrintListView
     Private MerkerZeile As Integer
     Public HeaderColor As System.Drawing.Color = Color.LightGray
     Private WithEvents PD As New System.Drawing.Printing.PrintDocument
-    Private PrintPrev As New System.Windows.Forms.PrintPreviewDialog
     Private asc As SizeColumn = SizeColumn.None
 
     Public Enum SizeColumn
@@ -112,11 +111,13 @@ Public Class CPrintListView
     End Sub
 
     Public Sub Preview()
+        Dim PrintPrev As New System.Windows.Forms.PrintPreviewDialog
         Dim PDial As New System.Drawing.Printing.PrinterSettings
         PrintPrev.Document = PD
         PDial.PrinterName = PD.PrinterSettings.PrinterName
         PrintPrev.WindowState = FormWindowState.Maximized
         PrintPrev.ShowDialog()
+        PrintPrev.Close()
     End Sub
 
     Private Sub PD_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PD.PrintPage
