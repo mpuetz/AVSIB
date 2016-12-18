@@ -28,23 +28,16 @@ Partial Class Changelog
         '
         'WebBrowser1
         '
-        Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.WebBrowser1.Location = New System.Drawing.Point(0, 0)
-        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
+        resources.ApplyResources(Me.WebBrowser1, "WebBrowser1")
         Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(282, 253)
-        Me.WebBrowser1.TabIndex = 0
         Me.WebBrowser1.Url = New System.Uri("https://bugs.mpts3.selfhost.eu/changelog_page.php?project=AVSIB", System.UriKind.Absolute)
         '
         'Changelog
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(282, 253)
         Me.Controls.Add(Me.WebBrowser1)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Changelog"
-        Me.Text = "Changelog"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
 

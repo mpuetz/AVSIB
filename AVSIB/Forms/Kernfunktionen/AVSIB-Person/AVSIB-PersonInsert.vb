@@ -18,8 +18,10 @@
 '____________________________________________________________________________
 
 Imports System.Data.SqlClient
+Imports System.Resources
 
 Public Class AVSIB_PersonInsert
+    Dim LocRM As New ResourceManager("AVSIB.WinFormStrings", GetType(AVSIB_PersonInsert).Assembly)
     Dim count As Integer = Personen.GetCount
     Dim ortCount As Integer
     Public PersCheck As Boolean
@@ -48,8 +50,27 @@ Public Class AVSIB_PersonInsert
             CBStraße.Enabled = False
             LabelErfolg.Visible = True
             count = count + 1
+            Vorname.Focus()
+        ElseIf Vorname.Text = Nothing Then
+            Vorname.Focus()
+            MsgBox(LocRM.GetString("strNoFirstName"), MsgBoxStyle.Exclamation, LocRM.GetString("titCaution"))
+        ElseIf Nachname.Text = Nothing Then
+            Nachname.Focus()
+            MsgBox(LocRM.GetString("strNoLastName"), MsgBoxStyle.Exclamation, LocRM.GetString("titCaution"))
+        ElseIf OrtAuswahl.SelectedItem = Nothing Then
+            OrtAuswahl.Focus()
+            MsgBox(LocRM.GetString("strNoCitySelected"), MsgBoxStyle.Exclamation, LocRM.GetString("titCaution"))
+        ElseIf PLZAuswahl.SelectedItem = Nothing Then
+            PLZAuswahl.Focus()
+            MsgBox(LocRM.GetString("strNoZIPSelected"), MsgBoxStyle.Exclamation, LocRM.GetString("titCaution"))
+        ElseIf CBStraße.SelectedItem = Nothing Then
+            CBStraße.Focus()
+            MsgBox(LocRM.GetString("strNoStreetSelected"), MsgBoxStyle.Exclamation, LocRM.GetString("titCaution"))
+        ElseIf HausNr.Text = Nothing Then
+            HausNr.Focus()
+            MsgBox(LocRM.GetString("strInsertHouseNumber"), MsgBoxStyle.Exclamation, LocRM.GetString("titCaution"))
         Else
-            MsgBox("Bitte füllen Sie alle Felder aus!", MsgBoxStyle.Exclamation, "Einige Daten fehlen")
+            MsgBox(LocRM.GetString("strFieldsMissing"), MsgBoxStyle.Exclamation, LocRM.GetString("titCaution"))
         End If
     End Sub
 

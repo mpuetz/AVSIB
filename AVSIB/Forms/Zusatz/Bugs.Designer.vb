@@ -28,26 +28,16 @@ Partial Class Bugs
         '
         'WebBrowser1
         '
-        Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.WebBrowser1.Location = New System.Drawing.Point(0, 0)
-        Me.WebBrowser1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(30, 31)
+        resources.ApplyResources(Me.WebBrowser1, "WebBrowser1")
         Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(1401, 863)
-        Me.WebBrowser1.TabIndex = 0
         Me.WebBrowser1.Url = New System.Uri("http://bugs.mpts3.selfhost.eu", System.UriKind.Absolute)
         '
         'Bugs
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1401, 863)
         Me.Controls.Add(Me.WebBrowser1)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.MinimumSize = New System.Drawing.Size(1414, 893)
         Me.Name = "Bugs"
-        Me.Text = "Bugs"
         Me.ResumeLayout(False)
 
     End Sub

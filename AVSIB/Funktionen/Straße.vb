@@ -18,7 +18,9 @@
 '____________________________________________________________________________
 
 Imports System.Data.SqlClient
+' handles everything concerning the streets-datatable
 Public Class Straße
+    ' inserts street, zip-code and place into the datatable using an DataSetTableAdapter
     Public Shared Function Insert(ByVal Straße As String, PLZ As Integer, Ort As String)
         Try
             Dim StraßenDataTable As New StraßenDataSetTableAdapters.StraßenTableAdapter
@@ -29,10 +31,11 @@ Public Class Straße
         Return 0
     End Function
 
+    ' retrieves street by zip-code and city-name from the datatable using an DataSetTableAdapter
     Public Shared Function GetStraßebyOrt(ByVal PLZ As Integer, Ort As String)
         Try
             Dim StraßenDataTable As New StraßenDataSetTableAdapters.StraßenTableAdapter
-            Dim Straße As String = StraßenDataTable.GetStraßeByOrtPLZ(PLZ, ORT)
+            Dim Straße As String = StraßenDataTable.GetStraßeByOrtPLZ(PLZ, Ort)
             Return Straße
         Catch ex As Exception
             MsgBox(ex, MsgBoxStyle.Critical, "Fehler")
@@ -40,6 +43,7 @@ Public Class Straße
         Return 0
     End Function
 
+    ' retrieves street by ID from the datatable using an DataSetTableAdapter
     Public Shared Function GetStraßebyID(ByVal ID As Long)
         Try
             Dim StraßenDataTable As New StraßenDataSetTableAdapters.StraßenTableAdapter
@@ -51,6 +55,7 @@ Public Class Straße
         Return 0
     End Function
 
+    ' retrieves ID by street, zip-code and city-name from the datatable using an DataSetTableAdapter
     Public Shared Function GetIDbyStreet(ByVal Straße As String, PLZ As Long, Ort As String)
         Try
             Dim StraßenDataTable As New StraßenDataSetTableAdapters.StraßenTableAdapter
@@ -62,6 +67,7 @@ Public Class Straße
         Return 0
     End Function
 
+    ' deletes a street by ID, zip-code and city-name from the datatable using an DataSetTableAdapter
     Public Shared Function Delete(ByVal ID As Long, PLZ As Long, Ort As String)
         Try
             Dim StraßeDataTable As New StraßenDataSetTableAdapters.StraßenTableAdapter
@@ -72,18 +78,21 @@ Public Class Straße
         Return 0
     End Function
 
+    ' gets the number of streets in a specific city with a specific zip-code in the datatable using an DataSetTableAdapter
     Public Shared Function getCount(ByVal Ort As String, PLZ As Long)
         Dim TableAdapter As New StraßenDataSetTableAdapters.StraßenTableAdapter
         Return TableAdapter.GetCount(Ort, PLZ)
         Return 0
     End Function
 
+    ' gets the number of streets in the datatable using an DataSetTableAdapter
     Public Shared Function CountAll()
         Dim TableAdapter As New StraßenDataSetTableAdapters.StraßenTableAdapter
         Return TableAdapter.CountAll()
         Return 0
     End Function
 
+    ' retrieves ID by city-name and zip-code from the datatable using an DataSetTableAdapter for more information have a look at Orte -> GetCount
     Public Shared Function getID(ByVal Ort As String, plz As Long, row As Long)
         Dim SQLCon As New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\AVSIB_Data.mdf;Integrated Security=True")
         Dim cmd As New SqlCommand
@@ -91,9 +100,12 @@ Public Class Straße
         Dim DataS As New DataSet
         SQLCon.Open()
         Try
-            cmd = New SqlCommand("SELECT Id FROM Straßen Where Ort='" & Ort & "' AND PLZ='" & plz & "' ORDER BY Straße;", SQLCon)
+            cmd = New SqlCommand("SELECT Id FROM Straßen Where Ort=@ort AND PLZ=@plz ORDER BY Straße;", SQLCon)
+            cmd.Parameters.Add("@ort", SqlDbType.NChar).Value = Ort
+            cmd.Parameters.Add("@plz", SqlDbType.NChar).Value = plz
             DAdapter = New SqlDataAdapter(cmd)
             DAdapter.Fill(DataS, "Straßen")
+            SQLCon.Close()
             Return DataS.Tables(0).Rows(row).Item(0)
         Catch ex As Exception
             MsgBox(ex, MsgBoxStyle.Critical, "Fehler")

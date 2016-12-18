@@ -41,92 +41,53 @@ Partial Class AVSIB_Ort
         '
         'TBOrt
         '
-        Me.TBOrt.Location = New System.Drawing.Point(530, 85)
-        Me.TBOrt.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        resources.ApplyResources(Me.TBOrt, "TBOrt")
         Me.TBOrt.Name = "TBOrt"
-        Me.TBOrt.Size = New System.Drawing.Size(199, 26)
-        Me.TBOrt.TabIndex = 0
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(15, 55)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(132, 20)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Vorhandene Orte"
         '
         'ButtonDelete
         '
-        Me.ButtonDelete.Image = CType(resources.GetObject("ButtonDelete.Image"), System.Drawing.Image)
-        Me.ButtonDelete.Location = New System.Drawing.Point(308, 80)
-        Me.ButtonDelete.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        resources.ApplyResources(Me.ButtonDelete, "ButtonDelete")
         Me.ButtonDelete.Name = "ButtonDelete"
-        Me.ButtonDelete.Size = New System.Drawing.Size(39, 35)
-        Me.ButtonDelete.TabIndex = 4
-        Me.ToolTip1.SetToolTip(Me.ButtonDelete, "Löscht den ausgewählten Eintrag")
+        Me.ToolTip1.SetToolTip(Me.ButtonDelete, resources.GetString("ButtonDelete.ToolTip"))
         Me.ButtonDelete.UseVisualStyleBackColor = True
         '
         'Label3
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(440, 55)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        resources.ApplyResources(Me.Label3, "Label3")
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(73, 20)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Einfügen"
         '
         'Label4
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(440, 88)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        resources.ApplyResources(Me.Label4, "Label4")
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(31, 20)
-        Me.Label4.TabIndex = 6
-        Me.Label4.Text = "Ort"
         '
         'Label5
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(440, 125)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        resources.ApplyResources(Me.Label5, "Label5")
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(38, 20)
-        Me.Label5.TabIndex = 7
-        Me.Label5.Text = "PLZ"
         '
         'TBPLZ
         '
-        Me.TBPLZ.Location = New System.Drawing.Point(530, 125)
-        Me.TBPLZ.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TBPLZ.MaxLength = 5
+        resources.ApplyResources(Me.TBPLZ, "TBPLZ")
         Me.TBPLZ.Name = "TBPLZ"
-        Me.TBPLZ.Size = New System.Drawing.Size(199, 26)
-        Me.TBPLZ.TabIndex = 1
         '
         'ButtonAdd
         '
-        Me.ButtonAdd.Image = CType(resources.GetObject("ButtonAdd.Image"), System.Drawing.Image)
-        Me.ButtonAdd.Location = New System.Drawing.Point(687, 166)
-        Me.ButtonAdd.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        resources.ApplyResources(Me.ButtonAdd, "ButtonAdd")
         Me.ButtonAdd.Name = "ButtonAdd"
-        Me.ButtonAdd.Size = New System.Drawing.Size(42, 35)
-        Me.ButtonAdd.TabIndex = 2
-        Me.ToolTip1.SetToolTip(Me.ButtonAdd, "Fügt die oben eingegebenen Daten der Datenbank hinzu")
+        Me.ToolTip1.SetToolTip(Me.ButtonAdd, resources.GetString("ButtonAdd.ToolTip"))
         Me.ButtonAdd.UseVisualStyleBackColor = True
         '
         'ButtonMenu
         '
-        Me.ButtonMenu.Location = New System.Drawing.Point(615, 529)
-        Me.ButtonMenu.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        resources.ApplyResources(Me.ButtonMenu, "ButtonMenu")
         Me.ButtonMenu.Name = "ButtonMenu"
-        Me.ButtonMenu.Size = New System.Drawing.Size(112, 35)
-        Me.ButtonMenu.TabIndex = 5
-        Me.ButtonMenu.Text = "Menü"
-        Me.ToolTip1.SetToolTip(Me.ButtonMenu, "Zurück zum Hauptmenü")
+        Me.ToolTip1.SetToolTip(Me.ButtonMenu, resources.GetString("ButtonMenu.ToolTip"))
         Me.ButtonMenu.UseVisualStyleBackColor = True
         '
         'ListView1
@@ -134,29 +95,24 @@ Partial Class AVSIB_Ort
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2})
         Me.ListView1.FullRowSelect = True
         Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(20, 78)
+        resources.ApplyResources(Me.ListView1, "ListView1")
         Me.ListView1.MultiSelect = False
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(277, 486)
-        Me.ListView1.TabIndex = 8
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
         '
         'ColumnHeader1
         '
-        Me.ColumnHeader1.Text = "PLZ"
-        Me.ColumnHeader1.Width = 45
+        resources.ApplyResources(Me.ColumnHeader1, "ColumnHeader1")
         '
         'ColumnHeader2
         '
-        Me.ColumnHeader2.Text = "Ort"
-        Me.ColumnHeader2.Width = 135
+        resources.ApplyResources(Me.ColumnHeader2, "ColumnHeader2")
         '
         'AVSIB_Ort
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(740, 568)
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.ButtonMenu)
         Me.Controls.Add(Me.ButtonAdd)
@@ -167,12 +123,7 @@ Partial Class AVSIB_Ort
         Me.Controls.Add(Me.ButtonDelete)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TBOrt)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.MaximumSize = New System.Drawing.Size(762, 624)
-        Me.MinimumSize = New System.Drawing.Size(762, 624)
         Me.Name = "AVSIB_Ort"
-        Me.Text = "AVSIB_Ort"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
         Me.PerformLayout()

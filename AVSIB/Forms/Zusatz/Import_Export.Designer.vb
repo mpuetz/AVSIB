@@ -32,52 +32,39 @@ Partial Class Import_Export
         '
         'B_Import
         '
-        Me.B_Import.Location = New System.Drawing.Point(12, 25)
+        resources.ApplyResources(Me.B_Import, "B_Import")
         Me.B_Import.Name = "B_Import"
-        Me.B_Import.Size = New System.Drawing.Size(75, 23)
-        Me.B_Import.TabIndex = 0
-        Me.B_Import.Text = "Importieren"
         Me.B_Import.UseVisualStyleBackColor = True
         '
         'B_Export
         '
-        Me.B_Export.Location = New System.Drawing.Point(93, 25)
+        resources.ApplyResources(Me.B_Export, "B_Export")
         Me.B_Export.Name = "B_Export"
-        Me.B_Export.Size = New System.Drawing.Size(75, 23)
-        Me.B_Export.TabIndex = 1
-        Me.B_Export.Text = "Exportieren"
         Me.B_Export.UseVisualStyleBackColor = True
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 9)
+        resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(60, 13)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Datenbank"
         '
         'FolderBrowserDialog
         '
-        Me.FolderBrowserDialog.Description = "Wählen Sie den Speicherort für die Datenbank aus. Diese wird in einem Ordner mit " & _
-    "dem heutigen Datum (jjjjmmtt) gespeichert."
+        resources.ApplyResources(Me.FolderBrowserDialog, "FolderBrowserDialog")
         Me.FolderBrowserDialog.ShowNewFolderButton = False
         '
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "AVSIB_Data.mdf"
+        resources.ApplyResources(Me.OpenFileDialog1, "OpenFileDialog1")
         '
         'Import_Export
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(181, 55)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.B_Export)
         Me.Controls.Add(Me.B_Import)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Import_Export"
-        Me.Text = "Im-Export"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

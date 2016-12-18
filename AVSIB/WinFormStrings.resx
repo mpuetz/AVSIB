@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="strAborted" xml:space="preserve">
+    <value>Aborted!</value>
+  </data>
+  <data name="strAddresseesInDatabase" xml:space="preserve">
+    <value>Addressees in database: </value>
+  </data>
+  <data name="strAll" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="strBackupRestore" xml:space="preserve">
+    <value>Backup successfully restored</value>
+  </data>
+  <data name="strBackupSave" xml:space="preserve">
+    <value>Backup successfully saved</value>
+  </data>
+  <data name="strCautionDelete" xml:space="preserve">
+    <value>Warning! This will delete ALL data! are you sure you want to continue?</value>
+  </data>
+  <data name="strChooseOnce" xml:space="preserve">
+    <value>Please make sure you select each option one time only!</value>
+  </data>
+  <data name="strCitiesInDatabase" xml:space="preserve">
+    <value>Cities in database: </value>
+  </data>
+  <data name="strConf2Close" xml:space="preserve">
+    <value>This will exit the program. Are you sure?</value>
+  </data>
+  <data name="strDate" xml:space="preserve">
+    <value>, Date: </value>
+  </data>
+  <data name="strDistrictNo" xml:space="preserve">
+    <value>Dristrict-No.: </value>
+  </data>
+  <data name="strDistrictsInDatabase" xml:space="preserve">
+    <value> districts in the database.</value>
+  </data>
+  <data name="strEndDatabase" xml:space="preserve">
+    <value>You have reached the end of the database</value>
+  </data>
+  <data name="strFieldsMissing" xml:space="preserve">
+    <value>Please fill in ALL fields</value>
+  </data>
+  <data name="strFileDoesntExist" xml:space="preserve">
+    <value>It seems the file you have chosen does not exist. Make sure you have not moved or renamed the file.</value>
+  </data>
+  <data name="strFileExists" xml:space="preserve">
+    <value>There already exists a file at this path. Going on will overwrite the old file. Continue?</value>
+  </data>
+  <data name="strInsertCity" xml:space="preserve">
+    <value>Please enter a city!</value>
+  </data>
+  <data name="strInsertStreet" xml:space="preserve">
+    <value>Please enter a street!</value>
+  </data>
+  <data name="strInsertZIP" xml:space="preserve">
+    <value>Please enter a ZIP-code!</value>
+  </data>
+  <data name="strNew" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="strNoBackupDelete" xml:space="preserve">
+    <value>You have not selected a backup to delete.</value>
+  </data>
+  <data name="strNoBackupsFound" xml:space="preserve">
+    <value>No Backups found. Create one first.</value>
+  </data>
+  <data name="strNoBackupsSelected" xml:space="preserve">
+    <value>You have not selected a backup to restore.</value>
+  </data>
+  <data name="strNoCities" xml:space="preserve">
+    <value>No Cities found in database. Please enter the cities first. Go to Main Menu -&gt; Cities</value>
+  </data>
+  <data name="strNoCitySelected" xml:space="preserve">
+    <value>Please choose a city!</value>
+  </data>
+  <data name="strNoData" xml:space="preserve">
+    <value>There is no data in the database, yet</value>
+  </data>
+  <data name="strNoDestrictNo" xml:space="preserve">
+    <value>Please choose a district</value>
+  </data>
+  <data name="strNoDistrict" xml:space="preserve">
+    <value>It seems you have not added a district yet. Please fill the database first before printing!</value>
+  </data>
+  <data name="strNoLastName" xml:space="preserve">
+    <value>Please enter the last name!</value>
+  </data>
+  <data name="strNoStreetSelected" xml:space="preserve">
+    <value>Please choose a street!</value>
+  </data>
+  <data name="strNoFirstName" xml:space="preserve">
+    <value>Please enter the Surname!</value>
+  </data>
+  <data name="strNothingSelectedDelete" xml:space="preserve">
+    <value>Nothing selected for deletion</value>
+  </data>
+  <data name="strNoZIPSelected" xml:space="preserve">
+    <value>Please choose a zip-code!</value>
+  </data>
+  <data name="strOF" xml:space="preserve">
+    <value>of</value>
+  </data>
+  <data name="strPreview" xml:space="preserve">
+    <value>Only the first page is shown in the preview, but all selected districts will be printed!</value>
+  </data>
+  <data name="strPrinterFailure" xml:space="preserve">
+    <value>Can not find the printer 'Microsoft Print to PDF'. Make sure this printer is installed!</value>
+  </data>
+  <data name="strRecipientList" xml:space="preserve">
+    <value>recipient list </value>
+  </data>
+  <data name="strRoundsemnMissing" xml:space="preserve">
+    <value>You have not entered any roundsmen yet</value>
+  </data>
+  <data name="strRoundsman" xml:space="preserve">
+    <value> Roundsman: </value>
+  </data>
+  <data name="strRoundsmanNull" xml:space="preserve">
+    <value>Name of the selected roundsman is NULL. Please change this before printing.</value>
+  </data>
+  <data name="strStreetCount" xml:space="preserve">
+    <value>addressees in </value>
+  </data>
+  <data name="strStreetsInDatabase" xml:space="preserve">
+    <value>Streets in database: </value>
+  </data>
+  <data name="strSuccess" xml:space="preserve">
+    <value>Success!</value>
+  </data>
+  <data name="strThereAre" xml:space="preserve">
+    <value>There are </value>
+  </data>
+  <data name="strTotal" xml:space="preserve">
+    <value>Total addressees: </value>
+  </data>
+  <data name="titCaution" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="titError" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="titInformation" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="titSuccess" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="strBroMissing" xml:space="preserve">
+    <value>Please enter the title of the Project you need the address-lists for</value>
+  </data>
+  <data name="strOrgMissing" xml:space="preserve">
+    <value>Please enter the organization you are working for</value>
+  </data>
+  <data name="strWaitInput" xml:space="preserve">
+    <value>Please enter the time in seconds the program shall wait</value>
+  </data>
+  <data name="strInsertHouseNumber" xml:space="preserve">
+    <value>Please enter the house-number!</value>
+  </data>
+  <data name="strNoFilterData" xml:space="preserve">
+    <value>No data matches the selected filter.</value>
+  </data>
+</root>

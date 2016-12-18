@@ -16,7 +16,8 @@
 '    along with this program.  If Not, see < http: //www.gnu.org/licenses/>.
 
 '____________________________________________________________________________
-'Das Drucken der ListBox basiert auf einer Klassen von Matthias Zürn
+'Das Drucken der ListBox basiert auf einer Klassen von Matthias Zürn. Für weitere Informationen wenden Sie sich bitte an den Autor der 
+'ursprünglichen Funktion
 'http://www.vbarchiv.net/tipps/tipp_1473-listview-inhalt-drucken-vb-2005.html
 
 Imports System.Drawing
@@ -32,7 +33,6 @@ Public Class CPrintListView
     Private MerkerZeile As Integer
     Public HeaderColor As System.Drawing.Color = Color.LightGray
     Private WithEvents PD As New System.Drawing.Printing.PrintDocument
-    Private PrintPrev As New System.Windows.Forms.PrintPreviewDialog
     Private asc As SizeColumn = SizeColumn.None
 
     Public Enum SizeColumn
@@ -111,11 +111,13 @@ Public Class CPrintListView
     End Sub
 
     Public Sub Preview()
+        Dim PrintPrev As New System.Windows.Forms.PrintPreviewDialog
         Dim PDial As New System.Drawing.Printing.PrinterSettings
         PrintPrev.Document = PD
         PDial.PrinterName = PD.PrinterSettings.PrinterName
         PrintPrev.WindowState = FormWindowState.Maximized
         PrintPrev.ShowDialog()
+        PrintPrev.Close()
     End Sub
 
     Private Sub PD_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PD.PrintPage

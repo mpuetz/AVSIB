@@ -17,8 +17,10 @@
 
 '____________________________________________________________________________
 
+Imports System.Resources
 Public Class AVSIB_PersonSort
     ' this form is used to set the order by which the persons in the database get sorted.
+    Dim LoccRM As New ResourceManager("AVSIB.WinFormStrings", GetType(AVSIB_PersonSort).Assembly)
     Dim SelectedOrder As String
     Dim Sort1 As String
     Dim Sort2 As String
@@ -103,7 +105,7 @@ Public Class AVSIB_PersonSort
             Or ComboBox4.SelectedItem.ToString = ComboBox12.SelectedItem.ToString Or ComboBox4.SelectedItem.ToString = ComboBox14.SelectedItem.ToString _
             Or ComboBox5.SelectedItem.ToString = ComboBox12.SelectedItem.ToString Or ComboBox5.SelectedItem.ToString = ComboBox14.SelectedItem.ToString _
             Or ComboBox12.SelectedItem.ToString = ComboBox14.SelectedItem.ToString Then
-            MsgBox("Bitte achten Sie darauf, das jede Option nur EINMAL ausgewählt ist!", MsgBoxStyle.Critical, "Fehler!")
+            MsgBox(LoccRM.GetString("strChooseOnce"), MsgBoxStyle.Critical, LoccRM.GetString("titError"))
         Else
             Me.Close()
         End If

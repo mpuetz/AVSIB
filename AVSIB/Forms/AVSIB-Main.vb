@@ -18,21 +18,23 @@
 '____________________________________________________________________________
 
 Imports System.Deployment.Application
+Imports System.Resources
 
 ' This class is mainly used to open the different forms and check, whether all settings are set.
 Public Class AVSIB_Main
     Dim FirstRun As Integer
+    Private LocRM As New ResourceManager("AVSIB.WinFormStrings", GetType(AVSIB_Main).Assembly)
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Checks if the settings.txt exists and whether the settings were entered by the user. If not, it starts the configuration form.
         ' If the settings were not done yet, it replaces the database with a blank one.
         Me.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedSingle
         Me.WindowState = FormWindowState.Maximized
         If IO.File.Exists(Application.StartupPath + "\settings.ini") = False Then
-            CSettings.Save("FirstRun", "1", Application.StartupPath + "\settings.ini")
-            CSettings.Save("ConfigRunning", "0", Application.StartupPath + "\settings.ini")
+            FileOperator.Save(Application.StartupPath + "\settings.ini", "FirstRun", "1")
+            FileOperator.Save(Application.StartupPath + "\settings.ini", "ConfigRunning", "0")
             AVSIB_Configuration.Show()
             Me.Hide()
-        ElseIf CSettings.Load("FirstRun", Application.StartupPath + "\settings.ini") = "1" Then
+        ElseIf FileOperator.Load(Application.StartupPath + "\settings.ini", "FirstRun") = "1" Then
             For Each proc In System.Diagnostics.Process.GetProcessesByName("sqlservr")
                 proc.Kill()
             Next
@@ -42,13 +44,13 @@ Public Class AVSIB_Main
             System.IO.File.Delete(Application.StartupPath & "\settings.ini")
             System.IO.File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\Data\Reset\AVSIB_Data.mdf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data.mdf")
             System.IO.File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\Data\Reset\AVSIB_Data_log.ldf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data_log.ldf")
-            MsgBox("Erfolg!", MsgBoxStyle.Information, "Erfolg")
-            CSettings.Save("FirstRun", "1", Application.StartupPath + "\settings.ini")
-            CSettings.Save("ConfigRunning", "0", Application.StartupPath + "\settings.ini")
+            MsgBox(LocRM.GetString("strSuccess"), MsgBoxStyle.Information, LocRM.GetString("titSuccess"))
+            FileOperator.Save(Application.StartupPath + "\settings.ini", "FirstRun", "1")
+            FileOperator.Save(Application.StartupPath + "\settings.ini", "ConfigRunning", "0")
             AVSIB_Configuration.Show()
             Me.Hide()
         Else
-            FirstRun = CSettings.Load("FirstRun", Application.StartupPath + "\settings.ini")
+            FirstRun = FileOperator.Load(Application.StartupPath + "\settings.ini", "FirstRun")
         End If
     End Sub
 
@@ -91,8 +93,7 @@ Public Class AVSIB_Main
     Private Sub MainButtonReset_Click(sender As Object, e As EventArgs) Handles MainButtonReset.Click
         ' When the reset-Button is clicked the database gets deleted and replaced by a new one.
         ' The settings.txt will be reset, too, and the configuration-form will be loaded.
-        MsgBox("Achtung, hierdurch werden alle Daten gelöscht! Wollen Sie fortfahren?", MsgBoxStyle.YesNo, "Warnung")
-        If MsgBoxResult.Yes Then
+        If MsgBox(LocRM.GetString("strCautionDelete"), MsgBoxStyle.YesNo, LocRM.GetString("titCaution")).ToString = "Yes" Then
             For Each proc In System.Diagnostics.Process.GetProcessesByName("sqlservr")
                 proc.Kill()
             Next
@@ -102,9 +103,9 @@ Public Class AVSIB_Main
             System.IO.File.Delete(Application.StartupPath & "\settings.ini")
             System.IO.File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\Data\Reset\AVSIB_Data.mdf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data.mdf")
             System.IO.File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\Data\Reset\AVSIB_Data_log.ldf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data_log.ldf")
-            MsgBox("Erfolg!", MsgBoxStyle.Information, "Erfolg")
-            CSettings.Save("FirstRun", "1", Application.StartupPath + "\settings.ini")
-            CSettings.Save("ConfigRunning", "0", Application.StartupPath + "\settings.ini")
+            MsgBox(LocRM.GetString("strSuccess"), MsgBoxStyle.Information, LocRM.GetString("titSuccess"))
+            FileOperator.Save(Application.StartupPath + "\settings.ini", "FirstRun", "1")
+            FileOperator.Save(Application.StartupPath + "\settings.ini", "ConfigRunning", "0")
             AVSIB_Configuration.Show()
             Me.Hide()
         End If
@@ -114,15 +115,15 @@ Public Class AVSIB_Main
         ' If the file settings.txt does not exist or FirstRun is set to 1 it starts the configuration-form, which displays
         ' a quick introduction. Else, the configuration2-from is shown, which asks for the settings needed.
         If IO.File.Exists(Application.StartupPath + "\settings.ini") = False Then
-            CSettings.Save("FirstRun", "1", Application.StartupPath + "\settings.ini")
-            CSettings.Save("ConfigRunning", "0", Application.StartupPath + "\settings.ini")
+            FileOperator.Save(Application.StartupPath + "\settings.ini", "FirstRun", "1")
+            FileOperator.Save(Application.StartupPath + "\settings.ini", "ConfigRunning", "0")
             AVSIB_Configuration.Show()
             Me.Hide()
-        ElseIf CSettings.Load("FirstRun", Application.StartupPath + "\settings.ini") = "1" Then
+        ElseIf FileOperator.Load(Application.StartupPath + "\settings.ini", "FirstRun") = "1" Then
             AVSIB_Configuration.Show()
             Me.Hide()
         Else
-            FirstRun = CSettings.Load("FirstRun", Application.StartupPath + "\settings.ini")
+            FirstRun = FileOperator.Load(Application.StartupPath + "\settings.ini", "FirstRun")
             AVSIB_Configuration2.ShowDialog()
         End If
     End Sub
@@ -149,5 +150,9 @@ Public Class AVSIB_Main
 
     Private Sub ToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem3.Click
         Statistik.ShowDialog()
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
     End Sub
 End Class

@@ -20,9 +20,10 @@
 'Das Drucken der ListBox basiert auf einer Klassen von Matthias Zürn
 'http://www.vbarchiv.net/tipps/tipp_1473-listview-inhalt-drucken-vb-2005.html
 
-
+Imports System.Resources
 Public Class AVSIB_Drucken
     ' This class is used for printing lists created from the added data.
+    Dim LocRm As New ResourceManager("AVSIB.WinFormStrings", GetType(AVSIB_Drucken).Assembly)
     Dim Start As Boolean
     Dim AutoSelectRunning As Boolean
     Dim SelectedCount As Long
@@ -47,8 +48,8 @@ Public Class AVSIB_Drucken
     Dim AusträgerNachnameStr As String
     Dim combined As String
     Dim myTab As String
-    Dim Organisation As String = CSettings.Load("Organisation", Application.StartupPath & "\settings.ini")
-    Dim Projekt As String = CSettings.Load("Projekt", Application.StartupPath & "\settings.ini")
+    Dim Organisation As String = FileOperator.Load(Application.StartupPath + "\settings.ini", "Organisation")
+    Dim Projekt As String = FileOperator.Load(Application.StartupPath + "\settings.ini", "Projekt")
 
     Private PrintLV As New CPrintListView
 
@@ -60,7 +61,7 @@ Public Class AVSIB_Drucken
         ' When the form is loaded, the districts are added to the ListBox. By changing the Index of the ListBox, another event is triggered, which 
         ' adds a preview to the listview.
         Start = True
-        ListBox2.Items.Add("Alle")
+        ListBox2.Items.Add(LocRm.GetString("strAll"))
         AusträgerCount = Austräger.GetCount
         For i As Long = 1 To AusträgerCount
             ListBox2.Items.Add(i)
@@ -110,10 +111,10 @@ Public Class AVSIB_Drucken
             Try
                 ChangeListView()
             Catch ex As Exception
-                MsgBox("Es scheint als wäre kein Bezirk angelegt worde. Bitte legen Sie zunächst die erforderlichen Daten an!", MsgBoxStyle.Critical)
+                MsgBox(LocRm.GetString("strNoDistricts"), MsgBoxStyle.Critical, LocRm.GetString("titError"))
                 GoTo EndLine
             End Try
-            MsgBox("Hier wird als Vorschau der Bezirk 1 angezeigt, es werden jedoch alle Bezirke gedruckt!", MsgBoxStyle.Information, "Information")
+            MsgBox(LocRm.GetString("strPreview"), MsgBoxStyle.Information, LocRm.GetString("titInformation"))
         End If
         If AutoSelectRunning = True Then
             GoTo EndLine
@@ -132,7 +133,7 @@ Public Class AVSIB_Drucken
             Try
                 SelectedBezirk = SelectedObjects.Item(0)
             Catch ex As Exception
-                MsgBox("Es scheint als wäre kein Bezirk angelegt worde. Bitte legen Sie zunächst die erforderlichen Daten an!", MsgBoxStyle.Critical)
+                MsgBox(LocRm.GetString("strNoDistrict"), MsgBoxStyle.Critical, LocRm.GetString("titError"))
                 Me.Close()
                 GoTo EndLine
             End Try
@@ -161,8 +162,8 @@ EndLine:
         AusträgerNachnameStr = Austräger.GetNameByBezirk(BezirkNr)
         If AusträgerNachnameStr <> "NULL" And AusträgerVornameStr <> "NULL" Then
             ListView1.Items.Clear()
-            ListView1.Items.Add(New ListViewItem({"Empfängerliste ", Organisation & " - ", Projekt, " vom ", Date.Today.ToShortDateString}))
-            ListView1.Items.Add(New ListViewItem({"Bezirk-Nr.: " & BezirkNr, "Austräger: ", AusträgerNachnameStr & ",", AusträgerVornameStr}))
+            ListView1.Items.Add(New ListViewItem({LocRm.GetString("strRecipientList") & Organisation & " - ", Projekt & LocRm.GetString("strDate") & Date.Today.ToShortDateString}))
+            ListView1.Items.Add(New ListViewItem({LocRm.GetString("strDistrictNo") & BezirkNr & LocRm.GetString("strRoundsman") & AusträgerNachnameStr & ",", AusträgerVornameStr}))
             ListView1.Items.Add("")
             BezirkeCount = Bezirke.GetCount(BezirkNr)
             For i As Long = 0 To BezirkeCount - 1
@@ -185,16 +186,16 @@ EndLine:
                     ListView1.Items.Add(lvi)
                 Next
                 ListView1.Items.Add("")
-                ListView1.Items.Add(New ListViewItem({"Anzahl ", StraßenStr & ": ", PersonenCount}))
+                ListView1.Items.Add(New ListViewItem({LocRm.GetString("strStreetCount") & StraßenStr & ": ", PersonenCount}))
                 ListView1.Items.Add("")
                 ListView1.Items.Add("")
                 count = count + PersonenCount
             Next
             ListView1.Items.Add("")
-            ListView1.Items.Add("Gesamt: " & count)
+            ListView1.Items.Add(LocRm.GetString("strTotal") & count)
             count = Nothing
         Else
-            MsgBox("Der Austräger ist NULL, bitte ändern Sie dies im Menü 'Austräger'", MsgBoxStyle.Exclamation, "Achtung")
+            MsgBox(LocRm.GetString("strRoundsmanNull"), MsgBoxStyle.Exclamation, LocRm.GetString("titCaution"))
         End If
         Return 0
     End Function
@@ -249,7 +250,7 @@ EndLine:
                 Try
                     PrintLV.Print(PrintDocument1.PrinterSettings.PrinterName.ToString)
                 Catch ex As Exception
-                    MsgBox("Da ist etwas schief gelaufen. Prüfen Sie bitte, ob der Drucker 'Microsoft Print to PDF' isntalliert ist.", MsgBoxStyle.Critical)
+                    MsgBox(LocRm.GetString("strPrinterFailure"), MsgBoxStyle.Critical, LocRm.GetString("titError"))
                 End Try
             Next
         End If
