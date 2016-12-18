@@ -279,4 +279,7 @@
   <data name="strNoFilterData" xml:space="preserve">
     <value>Kein Datensatz entspricht den ausgewählten Filtern!</value>
   </data>
+  <data name="strNoFilterMatch" xml:space="preserve">
+    <value>Die von Ihnen eingegebene Zeichenkette konnte nicht gefunden werden. Bitte prüfen Sie auf Rechtschreibfehler!</value>
+  </data>
 </root>
