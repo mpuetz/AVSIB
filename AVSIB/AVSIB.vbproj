@@ -192,6 +192,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AusträgerDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Data\BenutzerDataSet.vb">
+      <DependentUpon>BenutzerDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Data\BezirkDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -415,6 +418,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Kernfunktionen\AVSIB-Straße\AVSIB-Straße.de-DE.resx">
       <DependentUpon>AVSIB-Straße.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm.de-DE.resx">
+      <DependentUpon>LoginForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Zusatz\AboutBox.resx">
       <DependentUpon>AboutBox.vb</DependentUpon>

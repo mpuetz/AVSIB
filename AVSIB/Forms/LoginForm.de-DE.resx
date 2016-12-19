@@ -117,108 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;OK.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;CheckBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="CheckBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 21</value>
-  </data>
-  <data name="&gt;&gt;UsernameLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="OK.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;PasswordTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>LoginForm</value>
-  </data>
-  <data name="UsernameTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;LogoPictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LogoPictureBox.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;UsernameLabel.Name" xml:space="preserve">
-    <value>UsernameLabel</value>
-  </data>
-  <data name="UsernameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>172, 24</value>
-  </data>
-  <data name="Cancel.Text" xml:space="preserve">
-    <value>&amp;Cancel</value>
-  </data>
-  <data name="&gt;&gt;CheckBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;PasswordLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="PasswordTextBox.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
-    <value>*</value>
-  </data>
-  <data name="&gt;&gt;PasswordTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="UsernameTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 22</value>
-  </data>
-  <data name="OK.Text" xml:space="preserve">
-    <value>&amp;OK</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterParent</value>
-  </data>
-  <data name="PasswordTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 22</value>
-  </data>
-  <data name="UsernameLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;UsernameTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="PasswordLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="CheckBox1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="PasswordTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="UsernameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 23</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
-  </data>
-  <data name="UsernameTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>174, 44</value>
-  </data>
-  <data name="&gt;&gt;OK.Name" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="&gt;&gt;UsernameLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="LogoPictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 193</value>
-  </data>
-  <data name="CheckBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>175, 129</value>
-  </data>
   <data name="LogoPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAXIAAADBCAYAAADSDTtmAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
@@ -817,124 +716,26 @@
         RU5ErkJggg==
 </value>
   </data>
-  <data name="CheckBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="Cancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>300, 161</value>
-  </data>
-  <data name="PasswordTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>174, 101</value>
-  </data>
-  <data name="&gt;&gt;PasswordLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Cancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 23</value>
-  </data>
-  <data name="&gt;&gt;UsernameTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="CheckBox1.Text" xml:space="preserve">
-    <value>Save username</value>
-  </data>
-  <data name="&gt;&gt;CheckBox1.Name" xml:space="preserve">
-    <value>CheckBox1</value>
+  <data name="UsernameLabel.Text" xml:space="preserve">
+    <value>&amp;Benutzername</value>
   </data>
   <data name="PasswordLabel.Text" xml:space="preserve">
-    <value>&amp;Password</value>
+    <value>&amp;Passwort</value>
   </data>
-  <data name="&gt;&gt;LogoPictureBox.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="Cancel.Text" xml:space="preserve">
+    <value>&amp;Abbrechen</value>
   </data>
-  <data name="&gt;&gt;Cancel.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="CheckBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 21</value>
   </data>
-  <data name="PasswordLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>172, 81</value>
-  </data>
-  <data name="Cancel.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;LogoPictureBox.Name" xml:space="preserve">
-    <value>LogoPictureBox</value>
-  </data>
-  <data name="&gt;&gt;PasswordTextBox.Name" xml:space="preserve">
-    <value>PasswordTextBox</value>
-  </data>
-  <data name="&gt;&gt;PasswordLabel.Name" xml:space="preserve">
-    <value>PasswordLabel</value>
-  </data>
-  <data name="&gt;&gt;PasswordLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;OK.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>AVSIB - Login</value>
-  </data>
-  <data name="OK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>197, 161</value>
-  </data>
-  <data name="&gt;&gt;Cancel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;UsernameTextBox.Name" xml:space="preserve">
-    <value>UsernameTextBox</value>
-  </data>
-  <data name="PasswordLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;OK.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;UsernameTextBox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;CheckBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="LogoPictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="OK.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 23</value>
-  </data>
-  <data name="&gt;&gt;PasswordTextBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="UsernameLabel.Text" xml:space="preserve">
-    <value>&amp;Username</value>
-  </data>
-  <data name="UsernameLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;Cancel.Name" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="LogoPictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="CheckBox1.Text" xml:space="preserve">
+    <value>Benutzernamen speichern</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>401, 192</value>
+    <value>402, 197</value>
   </data>
-  <data name="&gt;&gt;Cancel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="PasswordLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 23</value>
-  </data>
-  <data name="&gt;&gt;UsernameLabel.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>de-DE</value>
-  </metadata>
 </root>

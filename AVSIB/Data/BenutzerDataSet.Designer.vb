@@ -289,6 +289,10 @@ Partial Public Class BenutzerDataSet
         
         Private columnpassword As Global.System.Data.DataColumn
         
+        Private columnsalt As Global.System.Data.DataColumn
+        
+        Private columnrole As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -349,6 +353,22 @@ Partial Public Class BenutzerDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property saltColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnsalt
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property roleColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnrole
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -385,9 +405,9 @@ Partial Public Class BenutzerDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddBenutzerRow(ByVal Id As Integer, ByVal username As String, ByVal password As String) As BenutzerRow
+        Public Overloads Function AddBenutzerRow(ByVal Id As Integer, ByVal username As String, ByVal password As String, ByVal salt() As Byte, ByVal role As String) As BenutzerRow
             Dim rowBenutzerRow As BenutzerRow = CType(Me.NewRow,BenutzerRow)
-            Dim columnValuesArray() As Object = New Object() {Id, username, password}
+            Dim columnValuesArray() As Object = New Object() {Id, username, password, salt, role}
             rowBenutzerRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowBenutzerRow)
             Return rowBenutzerRow
@@ -419,6 +439,8 @@ Partial Public Class BenutzerDataSet
             Me.columnId = MyBase.Columns("Id")
             Me.columnusername = MyBase.Columns("username")
             Me.columnpassword = MyBase.Columns("password")
+            Me.columnsalt = MyBase.Columns("salt")
+            Me.columnrole = MyBase.Columns("role")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -430,6 +452,10 @@ Partial Public Class BenutzerDataSet
             MyBase.Columns.Add(Me.columnusername)
             Me.columnpassword = New Global.System.Data.DataColumn("password", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnpassword)
+            Me.columnsalt = New Global.System.Data.DataColumn("salt", GetType(Byte()), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnsalt)
+            Me.columnrole = New Global.System.Data.DataColumn("role", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnrole)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnId}, true))
             Me.columnId.AllowDBNull = false
             Me.columnId.Unique = true
@@ -437,6 +463,9 @@ Partial Public Class BenutzerDataSet
             Me.columnusername.MaxLength = 50
             Me.columnpassword.AllowDBNull = false
             Me.columnpassword.MaxLength = 2147483647
+            Me.columnsalt.AllowDBNull = false
+            Me.columnrole.AllowDBNull = false
+            Me.columnrole.MaxLength = 50
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -613,6 +642,28 @@ Partial Public Class BenutzerDataSet
                 Me(Me.tableBenutzer.passwordColumn) = value
             End Set
         End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property salt() As Byte()
+            Get
+                Return CType(Me(Me.tableBenutzer.saltColumn),Byte())
+            End Get
+            Set
+                Me(Me.tableBenutzer.saltColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property role() As String
+            Get
+                Return CType(Me(Me.tableBenutzer.roleColumn),String)
+            End Get
+            Set
+                Me(Me.tableBenutzer.roleColumn) = value
+            End Set
+        End Property
     End Class
     
     '''<summary>
@@ -784,33 +835,43 @@ Namespace BenutzerDataSetTableAdapters
             tableMapping.ColumnMappings.Add("Id", "Id")
             tableMapping.ColumnMappings.Add("username", "username")
             tableMapping.ColumnMappings.Add("password", "password")
+            tableMapping.ColumnMappings.Add("salt", "salt")
+            tableMapping.ColumnMappings.Add("role", "role")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Benutzer] WHERE (([Id] = @Original_Id) AND ([username] = @Orig"& _ 
-                "inal_username))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM [Benutzer] WHERE (([Id] = @Original_Id) AND ([username] = @Original_u"& _ 
+                "sername) AND ([salt] = @Original_salt) AND ([role] = @Original_role))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Id", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Id", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_username", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "username", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_salt", Global.System.Data.SqlDbType.Binary, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "salt", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_role", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "role", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Benutzer] ([Id], [username], [password]) VALUES (@Id, @usernam"& _ 
-                "e, @password);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id, username, password FROM Benutzer WHERE (Id = @Id)"
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO [Benutzer] ([username], [password], [salt], [role]) VALUES (@username"& _ 
+                ", @password, @salt, @role);"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id, username, password, salt, role FROM Benu"& _ 
+                "tzer WHERE (username = @username)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Id", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Id", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@username", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "username", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@password", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "password", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@salt", Global.System.Data.SqlDbType.Binary, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "salt", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@role", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "role", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Benutzer] SET [Id] = @Id, [username] = @username, [password] = @pas"& _ 
-                "sword WHERE (([Id] = @Original_Id) AND ([username] = @Original_username));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELE"& _ 
-                "CT Id, username, password FROM Benutzer WHERE (Id = @Id)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE [Benutzer] SET [username] = @username, [password] = @password, [salt] = @s"& _ 
+                "alt, [role] = @role WHERE (([Id] = @Original_Id) AND ([username] = @Original_use"& _ 
+                "rname) AND ([salt] = @Original_salt) AND ([role] = @Original_role));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT Id,"& _ 
+                " username, password, salt, role FROM Benutzer WHERE (username = @username)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Id", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Id", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@username", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "username", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@password", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "password", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@salt", Global.System.Data.SqlDbType.Binary, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "salt", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@role", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "role", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Id", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Id", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_username", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "username", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_salt", Global.System.Data.SqlDbType.Binary, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "salt", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_role", Global.System.Data.SqlDbType.VarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "role", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -823,23 +884,16 @@ Namespace BenutzerDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(2) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT Id, username, password FROM dbo.Benutzer"
+            Me._commandCollection(0).CommandText = "SELECT Id, username, password, salt, role"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM     Benutzer"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(1).Connection = Me.Connection
             Me._commandCollection(1).CommandText = "dbo.Count"
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.StoredProcedure
             Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(2) = New Global.System.Data.SqlClient.SqlCommand()
-            Me._commandCollection(2).Connection = Me.Connection
-            Me._commandCollection(2).CommandText = "dbo.InsertOnly"
-            Me._commandCollection(2).CommandType = Global.System.Data.CommandType.StoredProcedure
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@username", Global.System.Data.SqlDbType.VarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@password", Global.System.Data.SqlDbType.VarChar, 2147483647, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -898,12 +952,22 @@ Namespace BenutzerDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_Id As Integer, ByVal Original_username As String) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_Id As Integer, ByVal Original_username As String, ByVal Original_salt() As Byte, ByVal Original_role As String) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Id,Integer)
             If (Original_username Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_username")
             Else
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(Original_username,String)
+            End If
+            If (Original_salt Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_salt")
+            Else
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_salt,Byte())
+            End If
+            If (Original_role Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_role")
+            Else
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(Original_role,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
             If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -924,17 +988,26 @@ Namespace BenutzerDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal Id As Integer, ByVal username As String, ByVal password As String) As Integer
-            Me.Adapter.InsertCommand.Parameters(0).Value = CType(Id,Integer)
+        Public Overloads Overridable Function Insert(ByVal username As String, ByVal password As String, ByVal salt() As Byte, ByVal role As String) As Integer
             If (username Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("username")
             Else
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(username,String)
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(username,String)
             End If
             If (password Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("password")
             Else
-                Me.Adapter.InsertCommand.Parameters(2).Value = CType(password,String)
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(password,String)
+            End If
+            If (salt Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("salt")
+            Else
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(salt,Byte())
+            End If
+            If (role Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("role")
+            Else
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(role,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -955,23 +1028,42 @@ Namespace BenutzerDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal Id As Integer, ByVal username As String, ByVal password As String, ByVal Original_Id As Integer, ByVal Original_username As String) As Integer
-            Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Id,Integer)
+        Public Overloads Overridable Function Update(ByVal username As String, ByVal password As String, ByVal salt() As Byte, ByVal role As String, ByVal Original_Id As Integer, ByVal Original_username As String, ByVal Original_salt() As Byte, ByVal Original_role As String) As Integer
             If (username Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("username")
             Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(username,String)
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(username,String)
             End If
             If (password Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("password")
             Else
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(password,String)
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(password,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Original_Id,Integer)
+            If (salt Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("salt")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(salt,Byte())
+            End If
+            If (role Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("role")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(role,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_Id,Integer)
             If (Original_username Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_username")
             Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_username,String)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_username,String)
+            End If
+            If (Original_salt Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_salt")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_salt,Byte())
+            End If
+            If (Original_role Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Original_role")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_role,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -986,14 +1078,6 @@ Namespace BenutzerDataSetTableAdapters
                     Me.Adapter.UpdateCommand.Connection.Close
                 End If
             End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal username As String, ByVal password As String, ByVal Original_Id As Integer, ByVal Original_username As String) As Integer
-            Return Me.Update(Original_Id, username, password, Original_Id, Original_username)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1020,38 +1104,6 @@ Namespace BenutzerDataSetTableAdapters
             Else
                 Return CType(returnValue,Object)
             End If
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
-        Public Overloads Overridable Function Insert1(ByVal username As String, ByVal password As String) As Integer
-            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(2)
-            If (username Is Nothing) Then
-                command.Parameters(1).Value = Global.System.DBNull.Value
-            Else
-                command.Parameters(1).Value = CType(username,String)
-            End If
-            If (password Is Nothing) Then
-                command.Parameters(2).Value = Global.System.DBNull.Value
-            Else
-                command.Parameters(2).Value = CType(password,String)
-            End If
-            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
-            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
-                        <> Global.System.Data.ConnectionState.Open) Then
-                command.Connection.Open
-            End If
-            Dim returnValue As Integer
-            Try 
-                returnValue = command.ExecuteNonQuery
-            Finally
-                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    command.Connection.Close
-                End If
-            End Try
-            Return returnValue
         End Function
     End Class
     

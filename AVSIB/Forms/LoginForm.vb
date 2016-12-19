@@ -1,34 +1,49 @@
 ﻿Imports System.Security.Cryptography
 Imports System.Resources
+
 Public Class LoginForm
     Dim LocRM As New ResourceManager("AVSIB.WinFormStrings", GetType(LoginForm).Assembly)
 
     Private Sub OK_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OK.Click
+        ' Checks if username and password were entered
         If UsernameTextBox.Text <> Nothing And PasswordTextBox.Text <> Nothing Then
+            ' tries to get the hash of the entered username from the database
             Dim dbHash As String = Benutzer.getHash(UsernameTextBox.Text)
-            If dbHash = HashString(PasswordTextBox.Text) Then
+            ' If the username was not found ít is checked if one user in exists in the database
+            If dbHash = "notFound" Then
+                If Benutzer.GetCount() = 0 Then
+                    ' If no user exists so far, a new user is added with the provided credentials after
+                    ' confirmation of the password by retyping it. The password can not be recovered!
+                    If InputBox(LocRM.GetString("strConfirmPassword"), LocRM.GetString("titConfirmPassword")).ToString = PasswordTextBox.Text Then
+                        Dim salt As Byte() = Benutzer.CreateSalt()
+                        Benutzer.Insert(UsernameTextBox.Text, Benutzer.HashString(PasswordTextBox.Text, salt), salt, "admin")
+                        MsgBox(LocRM.GetString("strAddedUser"), MsgBoxStyle.Information, LocRM.GetString("titAddedUser"))
+                    Else
+                        ' If the password is not entered correctly the second time a messagebox is shown and no user is created
+                        MsgBox(LocRM.GetString("strWrongPassword"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
+                    End If
+                Else
+                    MsgBox(LocRM.GetString("strUserNotFound"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
+                End If
+                'If a the user is found it checks if the hashes match. Each user has a individual salt which is retrieved from the database.
+            ElseIf dbHash = Benutzer.HashString(PasswordTextBox.Text, Benutzer.getSalt(UsernameTextBox.Text)) Then
                 dbHash = ""
                 MsgBox(LocRM.GetString("strSuccess"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
+                ' If the checkbox is checked, the user is saved in the settings.ini file, else the line contaiing Username gets deleted.
                 If CheckBox1.CheckState = CheckState.Checked Then
                     FileOperator.Save(Application.StartupPath + "\settings.ini", "Username", UsernameTextBox.Text)
                 Else
-                    FileOperator.Save(Application.StartupPath + "\settings.ini", "Username", "")
+                    Try
+                        FileOperator.Delete(Application.StartupPath + "\settings.ini", "Username")
+                    Catch ex As Exception
+                    End Try
                 End If
+                ' In the end, the Main Menu is shown and the login prompt closed.
                 AVSIB_Main.Show()
-                    Close()
-                ElseIf dbHash = "notFound" Then
-                    If Benutzer.GetCount() = 0 Then
-                        If InputBox(LocRM.GetString("strConfirmPassword"), LocRM.GetString("titConfirmPassword")).ToString = PasswordTextBox.Text Then
-                            Benutzer.Insert(UsernameTextBox.Text, HashString(PasswordTextBox.Text))
-                            MsgBox(LocRM.GetString("strAddedUser"), MsgBoxStyle.Information, LocRM.GetString("titAddedUser"))
-                        Else
-                            MsgBox(LocRM.GetString("strWrongPassword"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
-                        End If
-                    Else
-                        MsgBox(LocRM.GetString("strUserNotFound"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
-                    End If
-                Else
-                    dbHash = ""
+                Close()
+            Else
+                ' If none of the above matches the password has to be wrong.
+                dbHash = ""
                 MsgBox(LocRM.GetString("strWrongPassword"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
             End If
         ElseIf UsernameTextBox.Text = Nothing Then
@@ -44,22 +59,9 @@ Public Class LoginForm
         Me.Close()
     End Sub
 
-    Public Function HashString(ByVal inputString As String)
-        Dim md5 As New MD5CryptoServiceProvider
-        Dim md5input As Byte() = System.Text.Encoding.ASCII.GetBytes(inputString)
-        inputString = ""
-        Dim md5res As Byte() = md5.ComputeHash(md5input)
-        Dim tmpstr As String = ""
-        Dim Result As String = ""
-        For i As Integer = 0 To md5res.Length - 1
-            tmpstr = Hex(md5res(i))
-            If Len(tmpstr) = 1 Then tmpstr = "0" & tmpstr
-            Result += tmpstr
-        Next
-        Return Result
-    End Function
 
     Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' On load tries to load the latest username froms settings.ini
         Try
             UsernameTextBox.Text = FileOperator.Load(Application.StartupPath + "\settings.ini", "Username")
         Catch ex As Exception
