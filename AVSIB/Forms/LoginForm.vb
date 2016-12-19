@@ -9,21 +9,26 @@ Public Class LoginForm
             If dbHash = HashString(PasswordTextBox.Text) Then
                 dbHash = ""
                 MsgBox(LocRM.GetString("strSuccess"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
+                If CheckBox1.CheckState = CheckState.Checked Then
+                    FileOperator.Save(Application.StartupPath + "\settings.ini", "Username", UsernameTextBox.Text)
+                Else
+                    FileOperator.Save(Application.StartupPath + "\settings.ini", "Username", "")
+                End If
                 AVSIB_Main.Show()
-                Close()
-            ElseIf dbHash = "notFound" Then
-                If Benutzer.GetCount() = 0 Then
-                    If InputBox(LocRM.GetString("strConfirmPassword"), LocRM.GetString("titConfirmPassword")).ToString = PasswordTextBox.Text Then
-                        Benutzer.Insert(UsernameTextBox.Text, HashString(PasswordTextBox.Text))
-                        MsgBox(LocRM.GetString("strAddedUser"), MsgBoxStyle.Information, LocRM.GetString("titAddedUser"))
+                    Close()
+                ElseIf dbHash = "notFound" Then
+                    If Benutzer.GetCount() = 0 Then
+                        If InputBox(LocRM.GetString("strConfirmPassword"), LocRM.GetString("titConfirmPassword")).ToString = PasswordTextBox.Text Then
+                            Benutzer.Insert(UsernameTextBox.Text, HashString(PasswordTextBox.Text))
+                            MsgBox(LocRM.GetString("strAddedUser"), MsgBoxStyle.Information, LocRM.GetString("titAddedUser"))
+                        Else
+                            MsgBox(LocRM.GetString("strWrongPassword"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
+                        End If
                     Else
-                        MsgBox(LocRM.GetString("strWrongPassword"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
+                        MsgBox(LocRM.GetString("strUserNotFound"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
                     End If
                 Else
-                        MsgBox(LocRM.GetString("strUserNotFound"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
-                End If
-            Else
-                dbHash = ""
+                    dbHash = ""
                 MsgBox(LocRM.GetString("strWrongPassword"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
             End If
         ElseIf UsernameTextBox.Text = Nothing Then
@@ -54,4 +59,10 @@ Public Class LoginForm
         Return Result
     End Function
 
+    Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
+            UsernameTextBox.Text = FileOperator.Load(Application.StartupPath + "\settings.ini", "Username")
+        Catch ex As Exception
+        End Try
+    End Sub
 End Class

@@ -16,7 +16,7 @@ Public Class Benutzer
             If DataS.Tables(0).Rows.Count = 0 Then
                 Return "notFound"
             Else
-                Return DataS.Tables(0).Rows(0).ToString
+                Return DataS.Tables(0).Rows(0).Item(0)
             End If
         Catch ex As Exception
             MsgBox(ex, MsgBoxStyle.Critical, "Fehler")
