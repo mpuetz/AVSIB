@@ -3,7 +3,7 @@ Imports System.Resources
 
 Public Class LoginForm
     Dim LocRM As New ResourceManager("AVSIB.WinFormStrings", GetType(LoginForm).Assembly)
-
+    Public user As String
     Private Sub OK_Click(ByVal sender As Object, ByVal e As EventArgs) Handles OK.Click
         ' Checks if username and password were entered
         If UsernameTextBox.Text <> Nothing And PasswordTextBox.Text <> Nothing Then
@@ -39,6 +39,7 @@ Public Class LoginForm
                     End Try
                 End If
                 ' In the end, the Main Menu is shown and the login prompt closed.
+                user = UsernameTextBox.Text
                 AVSIB_Main.Show()
                 Close()
             Else

@@ -306,4 +306,19 @@
   <data name="titConfirmPassword" xml:space="preserve">
     <value>Confirm new password</value>
   </data>
+  <data name="strLastUser" xml:space="preserve">
+    <value>This is the last user in the database. You can not delete this user!</value>
+  </data>
+  <data name="strSure" xml:space="preserve">
+    <value>Are you sure you want to delete this user? Make sure at least one admin-User is left, otherwise you have to restore your database to get access to some parts of the program!</value>
+  </data>
+  <data name="strUpdatedUser" xml:space="preserve">
+    <value>User successfully updated!</value>
+  </data>
+  <data name="titSure" xml:space="preserve">
+    <value>Delete User?</value>
+  </data>
+  <data name="titUpdatedUser" xml:space="preserve">
+    <value>Update successful!</value>
+  </data>
 </root>

@@ -306,4 +306,19 @@
   <data name="titConfirmPassword" xml:space="preserve">
     <value>Passwort bestätigen</value>
   </data>
+  <data name="strLastUser" xml:space="preserve">
+    <value>Dies ist der letzte Benutzer in der Datenbank. Sie können diesen Benutzer nicht löschen!</value>
+  </data>
+  <data name="strSure" xml:space="preserve">
+    <value>Sind Sie sicher, dass sie diesen Benutzer löschen möchten? Stellen Sie sicher, dass mindestens ein Administrator-Account übrig bleibt, da Sie ansonsten die Datenbanken widerherstellen müssen um Zugriff auf einige Prorgammbestandteile zu erhalten.</value>
+  </data>
+  <data name="strUpdatedUser" xml:space="preserve">
+    <value>Benutzer erfolgreich geändert!</value>
+  </data>
+  <data name="titSure" xml:space="preserve">
+    <value>Benutzer löschen?</value>
+  </data>
+  <data name="titUpdatedUser" xml:space="preserve">
+    <value>Benutzer geändert</value>
+  </data>
 </root>

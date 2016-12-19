@@ -272,6 +272,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die This is the last user in the database. You can not delete this user! ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property strLastUser() As String
+            Get
+                Return ResourceManager.GetString("strLastUser", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die New ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property strNew() As String
@@ -533,6 +542,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Are you sure you want to delete this user? Make sure at least one admin-User is left, otherwise you have to restore your database to get access to some parts of the program! ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property strSure() As String
+            Get
+                Return ResourceManager.GetString("strSure", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die There are  ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property strThereAre() As String
@@ -547,6 +565,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property strTotal() As String
             Get
                 Return ResourceManager.GetString("strTotal", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die User successfully updated! ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property strUpdatedUser() As String
+            Get
+                Return ResourceManager.GetString("strUpdatedUser", resourceCulture)
             End Get
         End Property
         
@@ -628,6 +655,24 @@ Namespace My.Resources
         Friend Shared ReadOnly Property titSuccess() As String
             Get
                 Return ResourceManager.GetString("titSuccess", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Delete User? ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property titSure() As String
+            Get
+                Return ResourceManager.GetString("titSure", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Update successful! ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property titUpdatedUser() As String
+            Get
+                Return ResourceManager.GetString("titUpdatedUser", resourceCulture)
             End Get
         End Property
     End Class

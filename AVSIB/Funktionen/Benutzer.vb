@@ -48,11 +48,90 @@ Public Class Benutzer
         Return 0
     End Function
 
+    Public Shared Function GetRole(ByVal username As String)
+        Dim SQLCon As New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\AVSIB_Data.mdf;Integrated Security=True")
+        Dim cmd As New SqlCommand
+        Dim DAdapter As New SqlDataAdapter
+        Dim DataS As New DataSet
+        SQLCon.Open()
+        Try
+            cmd = New SqlCommand("SELECT role FROM Benutzer WHERE username=@username;", SQLCon)
+            cmd.Parameters.Add("@username", SqlDbType.VarChar).Value = username
+            DAdapter = New SqlDataAdapter(cmd)
+            DAdapter.Fill(DataS, "Benutzer")
+            SQLCon.Close()
+            Return DataS.Tables(0).Rows(0).Item(0)
+        Catch ex As Exception
+            MsgBox(ex, MsgBoxStyle.Critical, "Fehler")
+        End Try
+        Return 0
+    End Function
+
+    Public Shared Function GetUsers(ByVal row As Long)
+        Dim SQLCon As New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\AVSIB_Data.mdf;Integrated Security=True")
+        Dim cmd As New SqlCommand
+        Dim DAdapter As New SqlDataAdapter
+        Dim DataS As New DataSet
+        SQLCon.Open()
+        Try
+            cmd = New SqlCommand("SELECT username FROM Benutzer order by username;", SQLCon)
+            DAdapter = New SqlDataAdapter(cmd)
+            DAdapter.Fill(DataS, "Benutzer")
+            SQLCon.Close()
+            Return DataS.Tables(0).Rows(row).Item(0)
+        Catch ex As Exception
+            MsgBox(ex, MsgBoxStyle.Critical, "Fehler")
+        End Try
+        Return 0
+    End Function
+
     Public Shared Function GetCount()
         Try
             Dim BenutzerDataTable As New BenutzerDataSetTableAdapters.BenutzerTableAdapter
             Dim Count As Long = BenutzerDataTable.Count()
             Return Count
+        Catch ex As Exception
+            MsgBox(ex, MsgBoxStyle.Critical, "Fehler")
+        End Try
+        Return 0
+    End Function
+
+    Public Shared Function Update(ByVal username As String, ByVal password As String, ByVal salt As Byte(), ByVal role As String)
+        Try
+            Dim BenutzerDataTable As New BenutzerDataSetTableAdapters.BenutzerTableAdapter
+            BenutzerDataTable.Update1(username, password, salt, role, username)
+            Return 0
+        Catch ex As Exception
+            MsgBox(ex, MsgBoxStyle.Critical, "Fehler")
+        End Try
+        Return 0
+    End Function
+
+    Public Shared Function UserExists(ByVal username As String)
+        Dim SQLCon As New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\AVSIB_Data.mdf;Integrated Security=True")
+        Dim cmd As New SqlCommand
+        Dim DAdapter As New SqlDataAdapter
+        Dim DataS As New DataSet
+        SQLCon.Open()
+        Try
+            cmd = New SqlCommand("SELECT username FROM Benutzer WHERE username=@username;", SQLCon)
+            cmd.Parameters.Add("@username", SqlDbType.VarChar).Value = username
+            DAdapter = New SqlDataAdapter(cmd)
+            DAdapter.Fill(DataS, "Benutzer")
+            SQLCon.Close()
+            Return DataS.Tables(0).Rows.Count
+
+        Catch ex As Exception
+            MsgBox(ex, MsgBoxStyle.Critical, "Fehler")
+        End Try
+        Return 0
+    End Function
+
+    Public Shared Function Delete(ByVal username As String)
+        Try
+            Dim BenutzerDataTable As New BenutzerDataSetTableAdapters.BenutzerTableAdapter
+            BenutzerDataTable.DeleteUser(username)
+            Return 0
         Catch ex As Exception
             MsgBox(ex, MsgBoxStyle.Critical, "Fehler")
         End Try
@@ -68,6 +147,7 @@ Public Class Benutzer
         End Try
         Return 0
     End Function
+
 
     Public Shared Function CreateSalt()
         Dim salt As Byte()

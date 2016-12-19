@@ -24,9 +24,31 @@ Imports System.Resources
 Public Class AVSIB_Main
     Dim FirstRun As Integer
     Private LocRM As New ResourceManager("AVSIB.WinFormStrings", GetType(AVSIB_Main).Assembly)
+    Dim user As String = LoginForm.user
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Checks if the settings.txt exists and whether the settings were entered by the user. If not, it starts the configuration form.
         ' If the settings were not done yet, it replaces the database with a blank one.
+        If Benutzer.GetRole(user) = "user" Then
+            Label7.Visible = False
+            Label9.Visible = False
+            Label12.Visible = False
+            MainButtonReset.Enabled = False
+            MainButtonReset.Visible = False
+            ButtonUserManagement.Enabled = False
+            ButtonUserManagement.Visible = False
+            MainButtonConfiguration.Enabled = False
+            MainButtonConfiguration.Visible = False
+        ElseIf Benutzer.GetRole(user) = "admin" Then
+            Label7.Visible = True
+            Label9.Visible = True
+            Label12.Visible = True
+            MainButtonReset.Enabled = True
+            MainButtonReset.Visible = True
+            ButtonUserManagement.Enabled = True
+            ButtonUserManagement.Visible = True
+            MainButtonConfiguration.Enabled = True
+            MainButtonConfiguration.Visible = True
+        End If
         Me.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedSingle
         Me.WindowState = FormWindowState.Maximized
         If IO.File.Exists(Application.StartupPath + "\settings.ini") = False Then
@@ -154,5 +176,9 @@ Public Class AVSIB_Main
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
+    End Sub
+
+    Private Sub ButtonUserManagement_Click(sender As Object, e As EventArgs) Handles ButtonUserManagement.Click
+        UserManagement.ShowDialog()
     End Sub
 End Class

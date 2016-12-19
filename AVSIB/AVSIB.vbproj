@@ -331,6 +331,12 @@
     <Compile Include="Forms\Zusatz\Statistik.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\Zusatz\UserManagement.Designer.vb">
+      <DependentUpon>UserManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Zusatz\UserManagement.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Funktionen\Austräger.vb" />
     <Compile Include="Funktionen\Benutzer.vb" />
     <Compile Include="Funktionen\Bezirke.vb" />
@@ -499,6 +505,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Zusatz\UserManagement.resx">
+      <DependentUpon>UserManagement.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
