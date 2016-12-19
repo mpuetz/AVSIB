@@ -282,4 +282,28 @@
   <data name="strNoFilterMatch" xml:space="preserve">
     <value>Die von Ihnen eingegebene Zeichenkette konnte nicht gefunden werden. Bitte prüfen Sie auf Rechtschreibfehler!</value>
   </data>
+  <data name="strNoPassword" xml:space="preserve">
+    <value>Leere Passwörter sind nicht erlaubt!</value>
+  </data>
+  <data name="strNoUsername" xml:space="preserve">
+    <value>Sie müssen einen Benutzernamen eingeben!</value>
+  </data>
+  <data name="strUserNotFound" xml:space="preserve">
+    <value>Der Benutzer existiert nicht in der Datenbank!</value>
+  </data>
+  <data name="strWrongPassword" xml:space="preserve">
+    <value>Das Passwort ist falsch!</value>
+  </data>
+  <data name="strAddedUser" xml:space="preserve">
+    <value>Benutzer erfolgreich erstellt!</value>
+  </data>
+  <data name="strConfirmPassword" xml:space="preserve">
+    <value>Ein neuer Benutzer wird erstellt. Bitte geben Sie zur Bestätigung das Passwort erneut ein!</value>
+  </data>
+  <data name="titAddedUser" xml:space="preserve">
+    <value>Benutzer erstellt</value>
+  </data>
+  <data name="titConfirmPassword" xml:space="preserve">
+    <value>Passwort bestätigen</value>
+  </data>
 </root>

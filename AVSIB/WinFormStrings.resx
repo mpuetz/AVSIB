@@ -282,4 +282,28 @@
   <data name="strNoFilterMatch" xml:space="preserve">
     <value>The string you have entered could not be found in the database. Please check again for typos!</value>
   </data>
+  <data name="strNoPassword" xml:space="preserve">
+    <value>Empty passwords are not allowed!</value>
+  </data>
+  <data name="strNoUsername" xml:space="preserve">
+    <value>You must provide an username!</value>
+  </data>
+  <data name="strUserNotFound" xml:space="preserve">
+    <value>User does not exist!</value>
+  </data>
+  <data name="strWrongPassword" xml:space="preserve">
+    <value>Wrong Password!</value>
+  </data>
+  <data name="strAddedUser" xml:space="preserve">
+    <value>User was added successful!</value>
+  </data>
+  <data name="strConfirmPassword" xml:space="preserve">
+    <value>A new user will be added. Please confirm your password by reentering it.</value>
+  </data>
+  <data name="titAddedUser" xml:space="preserve">
+    <value>User added</value>
+  </data>
+  <data name="titConfirmPassword" xml:space="preserve">
+    <value>Confirm new password</value>
+  </data>
 </root>

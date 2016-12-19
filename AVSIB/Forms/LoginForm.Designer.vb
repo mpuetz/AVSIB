@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 <Global.System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Naming", "CA1726")> _
-Partial Class LoginForm1
+Partial Class LoginForm
     Inherits System.Windows.Forms.Form
 
     'Das Formular überschreibt den Löschvorgang, um die Komponentenliste zu bereinigen.
@@ -30,14 +30,15 @@ Partial Class LoginForm1
     'Das Bearbeiten mit dem Code-Editor ist nicht möglich.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginForm1))
-        Me.LogoPictureBox = New System.Windows.Forms.PictureBox
-        Me.UsernameLabel = New System.Windows.Forms.Label
-        Me.PasswordLabel = New System.Windows.Forms.Label
-        Me.UsernameTextBox = New System.Windows.Forms.TextBox
-        Me.PasswordTextBox = New System.Windows.Forms.TextBox
-        Me.OK = New System.Windows.Forms.Button
-        Me.Cancel = New System.Windows.Forms.Button
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginForm))
+        Me.LogoPictureBox = New System.Windows.Forms.PictureBox()
+        Me.UsernameLabel = New System.Windows.Forms.Label()
+        Me.PasswordLabel = New System.Windows.Forms.Label()
+        Me.UsernameTextBox = New System.Windows.Forms.TextBox()
+        Me.PasswordTextBox = New System.Windows.Forms.TextBox()
+        Me.OK = New System.Windows.Forms.Button()
+        Me.Cancel = New System.Windows.Forms.Button()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -72,15 +73,15 @@ Partial Class LoginForm1
         '
         Me.UsernameTextBox.Location = New System.Drawing.Point(174, 44)
         Me.UsernameTextBox.Name = "UsernameTextBox"
-        Me.UsernameTextBox.Size = New System.Drawing.Size(220, 20)
+        Me.UsernameTextBox.Size = New System.Drawing.Size(220, 22)
         Me.UsernameTextBox.TabIndex = 1
         '
         'PasswordTextBox
         '
         Me.PasswordTextBox.Location = New System.Drawing.Point(174, 101)
         Me.PasswordTextBox.Name = "PasswordTextBox"
-        Me.PasswordTextBox.PasswordChar = Microsoft.VisualBasic.ChrW(42)
-        Me.PasswordTextBox.Size = New System.Drawing.Size(220, 20)
+        Me.PasswordTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.PasswordTextBox.Size = New System.Drawing.Size(220, 22)
         Me.PasswordTextBox.TabIndex = 3
         '
         'OK
@@ -91,7 +92,7 @@ Partial Class LoginForm1
         Me.OK.TabIndex = 4
         Me.OK.Text = "&OK"
         '
-        'Abbrechen
+        'Cancel
         '
         Me.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.Cancel.Location = New System.Drawing.Point(300, 161)
@@ -100,12 +101,24 @@ Partial Class LoginForm1
         Me.Cancel.TabIndex = 5
         Me.Cancel.Text = "&Abbrechen"
         '
-        'LoginForm1
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(175, 129)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(129, 21)
+        Me.CheckBox1.TabIndex = 6
+        Me.CheckBox1.Text = "Save username"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'LoginForm
         '
         Me.AcceptButton = Me.OK
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel
         Me.ClientSize = New System.Drawing.Size(401, 192)
+        Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Cancel)
         Me.Controls.Add(Me.OK)
         Me.Controls.Add(Me.PasswordTextBox)
@@ -116,14 +129,15 @@ Partial Class LoginForm1
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "LoginForm1"
+        Me.Name = "LoginForm"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "LoginForm1"
+        Me.Text = "AVSIB - Login"
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
+    Friend WithEvents CheckBox1 As CheckBox
 End Class

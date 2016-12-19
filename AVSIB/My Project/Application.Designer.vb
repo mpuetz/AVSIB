@@ -14,7 +14,7 @@ Option Explicit On
 
 Namespace My
     
-    'HINWEIS: Diese Datei wird automatisch generiert. Ändern Sie sie nicht direkt. Zum Ändern
+    'HINWEIS: Diese Datei wird automatisch generiert und darf nicht direkt bearbeitet werden. Wenn Sie Änderungen vornehmen möchten,
     ' oder bei in dieser Datei auftretenden Buildfehlern wechseln Sie zum Projekt-Designer.
     ' (Wechseln Sie dazu zu den Projekteigenschaften, oder doppelklicken Sie auf den Knoten "Mein Projekt" im
     ' Projektmappen-Explorer). Nehmen Sie auf der Registerkarte "Anwendung" entsprechende Änderungen vor.
@@ -27,12 +27,12 @@ Namespace My
             Me.IsSingleInstance = false
             Me.EnableVisualStyles = false
             Me.SaveMySettingsOnExit = true
-            Me.ShutDownStyle = Global.Microsoft.VisualBasic.ApplicationServices.ShutdownMode.AfterMainFormCloses
+            Me.ShutDownStyle = Global.Microsoft.VisualBasic.ApplicationServices.ShutdownMode.AfterAllFormsClose
         End Sub
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.AVSIB.AVSIB_Main
+            Me.MainForm = Global.AVSIB.LoginForm
         End Sub
     End Class
 End Namespace

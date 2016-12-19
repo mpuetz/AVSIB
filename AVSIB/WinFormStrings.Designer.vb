@@ -74,6 +74,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die User was added successful! ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property strAddedUser() As String
+            Get
+                Return ResourceManager.GetString("strAddedUser", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Addressees in database:  ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property strAddresseesInDatabase() As String
@@ -151,6 +160,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property strConf2Close() As String
             Get
                 Return ResourceManager.GetString("strConf2Close", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die A new user will be added. Please confirm your password by reentering it. ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property strConfirmPassword() As String
+            Get
+                Return ResourceManager.GetString("strConfirmPassword", resourceCulture)
             End Get
         End Property
         
@@ -371,6 +389,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Empty passwords are not allowed! ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property strNoPassword() As String
+            Get
+                Return ResourceManager.GetString("strNoPassword", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Please choose a street! ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property strNoStreetSelected() As String
@@ -385,6 +412,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property strNothingSelectedDelete() As String
             Get
                 Return ResourceManager.GetString("strNothingSelectedDelete", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die You must provide an username! ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property strNoUsername() As String
+            Get
+                Return ResourceManager.GetString("strNoUsername", resourceCulture)
             End Get
         End Property
         
@@ -515,6 +551,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die User does not exist! ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property strUserNotFound() As String
+            Get
+                Return ResourceManager.GetString("strUserNotFound", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Please enter the time in seconds the program shall wait ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property strWaitInput() As String
@@ -524,11 +569,38 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Wrong Password! ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property strWrongPassword() As String
+            Get
+                Return ResourceManager.GetString("strWrongPassword", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die User added ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property titAddedUser() As String
+            Get
+                Return ResourceManager.GetString("titAddedUser", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Warning ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property titCaution() As String
             Get
                 Return ResourceManager.GetString("titCaution", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die Confirm new password ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property titConfirmPassword() As String
+            Get
+                Return ResourceManager.GetString("titConfirmPassword", resourceCulture)
             End Get
         End Property
         
