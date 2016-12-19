@@ -39,110 +39,77 @@ Partial Class UserManagement
         '
         'ListView1
         '
+        resources.ApplyResources(Me.ListView1, "ListView1")
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2})
         Me.ListView1.FullRowSelect = True
-        Me.ListView1.Location = New System.Drawing.Point(13, 13)
         Me.ListView1.MultiSelect = False
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(431, 440)
-        Me.ListView1.TabIndex = 0
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
         '
         'ColumnHeader1
         '
-        Me.ColumnHeader1.Text = "username"
-        Me.ColumnHeader1.Width = 164
+        resources.ApplyResources(Me.ColumnHeader1, "ColumnHeader1")
         '
         'ColumnHeader2
         '
-        Me.ColumnHeader2.Text = "role"
-        Me.ColumnHeader2.Width = 91
+        resources.ApplyResources(Me.ColumnHeader2, "ColumnHeader2")
         '
         'TBusername
         '
-        Me.TBusername.Location = New System.Drawing.Point(450, 33)
+        resources.ApplyResources(Me.TBusername, "TBusername")
         Me.TBusername.Name = "TBusername"
-        Me.TBusername.Size = New System.Drawing.Size(239, 22)
-        Me.TBusername.TabIndex = 1
         '
         'TBpassword
         '
-        Me.TBpassword.Location = New System.Drawing.Point(450, 90)
+        resources.ApplyResources(Me.TBpassword, "TBpassword")
         Me.TBpassword.Name = "TBpassword"
-        Me.TBpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TBpassword.Size = New System.Drawing.Size(239, 22)
-        Me.TBpassword.TabIndex = 2
         '
         'CBrole
         '
+        resources.ApplyResources(Me.CBrole, "CBrole")
         Me.CBrole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CBrole.FormattingEnabled = True
-        Me.CBrole.Items.AddRange(New Object() {"user", "admin"})
-        Me.CBrole.Location = New System.Drawing.Point(450, 145)
+        Me.CBrole.Items.AddRange(New Object() {resources.GetString("CBrole.Items"), resources.GetString("CBrole.Items1")})
         Me.CBrole.Name = "CBrole"
-        Me.CBrole.Size = New System.Drawing.Size(239, 24)
-        Me.CBrole.TabIndex = 3
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(450, 13)
+        resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(73, 17)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Username"
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(450, 69)
+        resources.ApplyResources(Me.Label2, "Label2")
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 17)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Password"
         '
         'Label3
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(450, 125)
+        resources.ApplyResources(Me.Label3, "Label3")
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(37, 17)
-        Me.Label3.TabIndex = 6
-        Me.Label3.Text = "Role"
         '
         'Bdelete
         '
-        Me.Bdelete.Location = New System.Drawing.Point(448, 175)
+        resources.ApplyResources(Me.Bdelete, "Bdelete")
         Me.Bdelete.Name = "Bdelete"
-        Me.Bdelete.Size = New System.Drawing.Size(49, 39)
-        Me.Bdelete.TabIndex = 7
-        Me.Bdelete.Text = "del"
         Me.Bdelete.UseVisualStyleBackColor = True
         '
         'Bsave
         '
-        Me.Bsave.Location = New System.Drawing.Point(503, 175)
+        resources.ApplyResources(Me.Bsave, "Bsave")
         Me.Bsave.Name = "Bsave"
-        Me.Bsave.Size = New System.Drawing.Size(49, 39)
-        Me.Bsave.TabIndex = 8
-        Me.Bsave.Text = "sav"
         Me.Bsave.UseVisualStyleBackColor = True
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(614, 430)
+        resources.ApplyResources(Me.Button1, "Button1")
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 9
-        Me.Button1.Text = "Menu"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'UserManagement
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(701, 465)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Bsave)
         Me.Controls.Add(Me.Bdelete)
@@ -153,9 +120,7 @@ Partial Class UserManagement
         Me.Controls.Add(Me.TBpassword)
         Me.Controls.Add(Me.TBusername)
         Me.Controls.Add(Me.ListView1)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "UserManagement"
-        Me.Text = "UserManagement"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

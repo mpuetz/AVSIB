@@ -506,6 +506,9 @@
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Zusatz\UserManagement.de-DE.resx">
+      <DependentUpon>UserManagement.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Zusatz\UserManagement.resx">
       <DependentUpon>UserManagement.vb</DependentUpon>
     </EmbeddedResource>

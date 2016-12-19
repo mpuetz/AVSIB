@@ -184,6 +184,18 @@
   <data name="MenuStrip1.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="Label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 17</value>
+  </data>
+  <data name="Label12.Text" xml:space="preserve">
+    <value>Benutzerverwaltung</value>
+  </data>
+  <data name="Label12.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ButtonUserManagement.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Label11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>

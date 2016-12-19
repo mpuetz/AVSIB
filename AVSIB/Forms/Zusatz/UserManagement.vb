@@ -25,6 +25,7 @@ Public Class UserManagement
                 End If
             Else
                 MsgBox(locRM.GetString("strNoUsername"), MsgBoxStyle.Exclamation, locRM.GetString("titError"))
+                TBusername.Focus()
             End If
         Else
             MsgBox(locRM.GetString("strLastUser"), MsgBoxStyle.Exclamation, locRM.GetString("titCaution"))
@@ -44,8 +45,10 @@ Public Class UserManagement
                 updateListView()
             ElseIf TBusername.text = Nothing Then
                 MsgBox(locRM.GetString("strNoUsername"), MsgBoxStyle.Critical, locRM.GetString("titError"))
+                TBusername.Focus()
             ElseIf TBpassword.Text = Nothing Then
                 MsgBox(locRM.GetString("strNoPassword"), MsgBoxStyle.Critical, locRM.GetString("titError"))
+                TBpassword.Focus()
             End If
         Else
             If TBusername.Text <> Nothing And TBpassword.Text <> Nothing Then
@@ -55,8 +58,10 @@ Public Class UserManagement
                 updateListView()
             ElseIf TBusername.Text = Nothing Then
                 MsgBox(locRM.GetString("strNoUsername"), MsgBoxStyle.Critical, locRM.GetString("titError"))
+                TBusername.Focus()
             ElseIf TBpassword.Text = Nothing Then
                 MsgBox(locRM.GetString("strNoPassword"), MsgBoxStyle.Critical, locRM.GetString("titError"))
+                TBpassword.Focus()
             End If
         End If
     End Sub
