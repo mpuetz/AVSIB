@@ -29,6 +29,11 @@ Partial Class AVSIB_Configuration2
         Me.ButtonBack = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.CBBackup = New System.Windows.Forms.ComboBox()
+        Me.CBexport = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -63,10 +68,46 @@ Partial Class AVSIB_Configuration2
         resources.ApplyResources(Me.TextBox2, "TextBox2")
         Me.TextBox2.Name = "TextBox2"
         '
+        'Label3
+        '
+        resources.ApplyResources(Me.Label3, "Label3")
+        Me.Label3.Name = "Label3"
+        '
+        'Label4
+        '
+        resources.ApplyResources(Me.Label4, "Label4")
+        Me.Label4.Name = "Label4"
+        '
+        'CBBackup
+        '
+        Me.CBBackup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CBBackup.FormattingEnabled = True
+        Me.CBBackup.Items.AddRange(New Object() {resources.GetString("CBBackup.Items"), resources.GetString("CBBackup.Items1")})
+        resources.ApplyResources(Me.CBBackup, "CBBackup")
+        Me.CBBackup.Name = "CBBackup"
+        '
+        'CBexport
+        '
+        Me.CBexport.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CBexport.FormattingEnabled = True
+        Me.CBexport.Items.AddRange(New Object() {resources.GetString("CBexport.Items"), resources.GetString("CBexport.Items1")})
+        resources.ApplyResources(Me.CBexport, "CBexport")
+        Me.CBexport.Name = "CBexport"
+        '
+        'Label5
+        '
+        resources.ApplyResources(Me.Label5, "Label5")
+        Me.Label5.Name = "Label5"
+        '
         'AVSIB_Configuration2
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.CBexport)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.CBBackup)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.ButtonBack)
@@ -85,4 +126,9 @@ Partial Class AVSIB_Configuration2
     Friend WithEvents ButtonBack As System.Windows.Forms.Button
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents CBBackup As ComboBox
+    Friend WithEvents CBexport As ComboBox
+    Friend WithEvents Label5 As Label
 End Class

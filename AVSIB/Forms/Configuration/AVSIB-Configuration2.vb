@@ -72,4 +72,5 @@ Public Class AVSIB_Configuration2
             Config2ButtonNext.PerformClick()
         End If
     End Sub
+
 End Class
