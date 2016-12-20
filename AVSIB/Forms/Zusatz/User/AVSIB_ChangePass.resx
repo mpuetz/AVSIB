@@ -118,20 +118,26 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>417, 258</value>
+  </data>
   <data name="BViewR.Size" type="System.Drawing.Size, System.Drawing">
     <value>39, 43</value>
+  </data>
+  <data name="&gt;&gt;BSave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;BViewN.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="BViewR.Text" xml:space="preserve">
-    <value>Button5</value>
+  <data name="&gt;&gt;BViewR.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="Label3.Text" xml:space="preserve">
     <value>Repeat new password</value>
   </data>
-  <data name="&gt;&gt;BViewR.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;TBCur.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="TBNew.TabIndex" type="System.Int32, mscorlib">
@@ -149,8 +155,8 @@
   <data name="&gt;&gt;TBRep.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;BSave.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;BViewR.Name" xml:space="preserve">
+    <value>BViewR</value>
   </data>
   <data name="BMenu.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -164,8 +170,8 @@
   <data name="BViewC.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 37</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>399, 211</value>
+  <data name="&gt;&gt;BSave.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 113</value>
@@ -188,20 +194,20 @@
   <data name="&gt;&gt;BMenu.Name" xml:space="preserve">
     <value>BMenu</value>
   </data>
-  <data name="&gt;&gt;BSave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="BSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 38</value>
+  </data>
+  <data name="TBNew.Size" type="System.Drawing.Size, System.Drawing">
+    <value>329, 22</value>
   </data>
   <data name="&gt;&gt;Label2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Label3.Name" xml:space="preserve">
-    <value>Label3</value>
-  </data>
   <data name="&gt;&gt;Label1.Name" xml:space="preserve">
     <value>Label1</value>
   </data>
-  <data name="BSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 38</value>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>New password</value>
   </data>
   <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -209,14 +215,14 @@
   <data name="TBNew.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 84</value>
   </data>
-  <data name="&gt;&gt;TBNew.Name" xml:space="preserve">
-    <value>TBNew</value>
+  <data name="&gt;&gt;TBRep.Name" xml:space="preserve">
+    <value>TBRep</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="TBCur.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 34</value>
+  <data name="&gt;&gt;TBRep.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;TBNew.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -245,8 +251,8 @@
   <data name="BViewC.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;TBCur.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="TBCur.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 34</value>
   </data>
   <data name="&gt;&gt;BViewC.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -272,8 +278,8 @@
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>119, 17</value>
   </data>
-  <data name="&gt;&gt;TBRep.Name" xml:space="preserve">
-    <value>TBRep</value>
+  <data name="&gt;&gt;BViewC.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="BMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 38</value>
@@ -281,8 +287,11 @@
   <data name="BViewR.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="&gt;&gt;BSave.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;TBNew.Name" xml:space="preserve">
+    <value>TBNew</value>
+  </data>
+  <data name="&gt;&gt;Label3.Name" xml:space="preserve">
+    <value>Label3</value>
   </data>
   <data name="&gt;&gt;TBNew.Parent" xml:space="preserve">
     <value>$this</value>
@@ -296,8 +305,8 @@
   <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;BViewC.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 14</value>
   </data>
   <data name="TBRep.Size" type="System.Drawing.Size, System.Drawing">
     <value>330, 22</value>
@@ -310,6 +319,72 @@
   </data>
   <data name="&gt;&gt;BViewC.Name" xml:space="preserve">
     <value>BViewC</value>
+  </data>
+  <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 64</value>
+  </data>
+  <data name="&gt;&gt;BViewN.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;TBRep.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>AVSIB_ChangePass</value>
+  </data>
+  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>AVSIB - Change Password</value>
+  </data>
+  <data name="BSave.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;TBCur.Name" xml:space="preserve">
+    <value>TBCur</value>
+  </data>
+  <data name="&gt;&gt;BSave.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;BViewR.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TBCur.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="TBCur.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="BMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>312, 162</value>
+  </data>
+  <data name="&gt;&gt;BViewN.Name" xml:space="preserve">
+    <value>BViewN</value>
+  </data>
+  <data name="TBCur.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="&gt;&gt;BViewC.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>399, 211</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 17</value>
+  </data>
+  <data name="&gt;&gt;BMenu.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -653,87 +728,6 @@
         /6xB
 </value>
   </data>
-  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 64</value>
-  </data>
-  <data name="&gt;&gt;TBRep.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BViewN.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;TBRep.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>AVSIB_ChangePass</value>
-  </data>
-  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>AVSIB - Change Password</value>
-  </data>
-  <data name="BViewN.Text" xml:space="preserve">
-    <value>Button4</value>
-  </data>
-  <data name="BSave.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;TBCur.Name" xml:space="preserve">
-    <value>TBCur</value>
-  </data>
-  <data name="&gt;&gt;BViewR.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="BViewC.Text" xml:space="preserve">
-    <value>Button3</value>
-  </data>
-  <data name="&gt;&gt;TBCur.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="TBCur.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="BSave.Text" xml:space="preserve">
-    <value>sav</value>
-  </data>
-  <data name="BMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>312, 162</value>
-  </data>
-  <data name="&gt;&gt;BViewR.Name" xml:space="preserve">
-    <value>BViewR</value>
-  </data>
-  <data name="&gt;&gt;BViewN.Name" xml:space="preserve">
-    <value>BViewN</value>
-  </data>
-  <data name="TBCur.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
-    <value>*</value>
-  </data>
-  <data name="TBNew.Size" type="System.Drawing.Size, System.Drawing">
-    <value>329, 22</value>
-  </data>
-  <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 14</value>
-  </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>New password</value>
-  </data>
-  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 17</value>
-  </data>
-  <data name="&gt;&gt;BMenu.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="TBRep.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
     <value>*</value>
   </data>
@@ -744,9 +738,6 @@
     <value>147, 17</value>
   </data>
   <data name="&gt;&gt;TBCur.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;BViewC.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

@@ -31,6 +31,8 @@ Public Class AVSIB_Configuration2
             FileOperator.Save(Application.StartupPath + "\settings.ini", "Projekt", TextBox2.Text)
             FileOperator.Save(Application.StartupPath + "\settings.ini", "FirstRun", "0")
             first = FileOperator.Load(Application.StartupPath + "\settings.ini", "FirstRun")
+            FileOperator.Save(Application.StartupPath + "\settings.ini", "BackupPermission", CBBackup.SelectedItem)
+            FileOperator.Save(Application.StartupPath + "\settings.ini", "ExportPermission", CBexport.SelectedItem)
             Me.Close()
         ElseIf TextBox1.Text = Nothing Then
             MsgBox(LocRM.GetString("strOrgMissing"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
@@ -73,4 +75,15 @@ Public Class AVSIB_Configuration2
         End If
     End Sub
 
+    Private Sub AVSIB_Configuration2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CBBackup.SelectedIndex = 0
+        CBexport.SelectedIndex = 0
+        Try
+            TextBox1.Text = FileOperator.Load(Application.StartupPath + "\settings.ini", "Organisation")
+            TextBox2.Text = FileOperator.Load(Application.StartupPath + "\settings.ini", "Projekt")
+            CBBackup.SelectedItem = FileOperator.Load(Application.StartupPath + "\settings.ini", "BackupPermission")
+            CBexport.SelectedItem = FileOperator.Load(Application.StartupPath + "\settings.ini", "ExportPermission")
+        Catch
+        End Try
+    End Sub
 End Class

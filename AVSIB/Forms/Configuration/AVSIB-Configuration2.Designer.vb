@@ -80,18 +80,18 @@ Partial Class AVSIB_Configuration2
         '
         'CBBackup
         '
+        resources.ApplyResources(Me.CBBackup, "CBBackup")
         Me.CBBackup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CBBackup.FormattingEnabled = True
         Me.CBBackup.Items.AddRange(New Object() {resources.GetString("CBBackup.Items"), resources.GetString("CBBackup.Items1")})
-        resources.ApplyResources(Me.CBBackup, "CBBackup")
         Me.CBBackup.Name = "CBBackup"
         '
         'CBexport
         '
+        resources.ApplyResources(Me.CBexport, "CBexport")
         Me.CBexport.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CBexport.FormattingEnabled = True
         Me.CBexport.Items.AddRange(New Object() {resources.GetString("CBexport.Items"), resources.GetString("CBexport.Items1")})
-        resources.ApplyResources(Me.CBexport, "CBexport")
         Me.CBexport.Name = "CBexport"
         '
         'Label5

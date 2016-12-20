@@ -23,33 +23,13 @@ Imports System.Resources
 ' This class is mainly used to open the different forms and check, whether all settings are set.
 Public Class AVSIB_Main
     Dim FirstRun As Integer
+    Dim Exportperm As String
+    Dim Backupperm As String
     Private LocRM As New ResourceManager("AVSIB.WinFormStrings", GetType(AVSIB_Main).Assembly)
     Public user As String
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Checks if the settings.txt exists and whether the settings were entered by the user. If not, it starts the configuration form.
         ' If the settings were not done yet, it replaces the database with a blank one.
-        user = LoginForm.user
-        If Benutzer.GetRole(user) = "user" Then
-            Label7.Visible = False
-            Label9.Visible = False
-            Label12.Visible = False
-            MainButtonReset.Enabled = False
-            MainButtonReset.Visible = False
-            ButtonUserManagement.Enabled = False
-            ButtonUserManagement.Visible = False
-            MainButtonConfiguration.Enabled = False
-            MainButtonConfiguration.Visible = False
-        ElseIf Benutzer.GetRole(user) = "admin" Then
-            Label7.Visible = True
-            Label9.Visible = True
-            Label12.Visible = True
-            MainButtonReset.Enabled = True
-            MainButtonReset.Visible = True
-            ButtonUserManagement.Enabled = True
-            ButtonUserManagement.Visible = True
-            MainButtonConfiguration.Enabled = True
-            MainButtonConfiguration.Visible = True
-        End If
         Me.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedSingle
         Me.WindowState = FormWindowState.Maximized
         If IO.File.Exists(Application.StartupPath + "\settings.ini") = False Then
@@ -74,6 +54,56 @@ Public Class AVSIB_Main
             Me.Hide()
         Else
             FirstRun = FileOperator.Load(Application.StartupPath + "\settings.ini", "FirstRun")
+        End If
+        Exportperm = FileOperator.Load(Application.StartupPath + "\settings.ini", "ExportPermission")
+        Backupperm = FileOperator.Load(Application.StartupPath + "\settings.ini", "BackupPermission")
+        user = LoginForm.user
+        If Benutzer.GetRole(user) = "user" Then
+            Label7.Visible = False
+            Label9.Visible = False
+            Label12.Visible = False
+            MainButtonReset.Enabled = False
+            MainButtonReset.Visible = False
+            ButtonUserManagement.Enabled = False
+            ButtonUserManagement.Visible = False
+            MainButtonConfiguration.Enabled = False
+            MainButtonConfiguration.Visible = False
+            If Exportperm = "admin" Then
+                MainButtonExport.Enabled = False
+                MainButtonExport.Visible = False
+                Label5.Visible = False
+            Else
+                MainButtonExport.Enabled = True
+                MainButtonExport.Visible = True
+                Label5.Visible = True
+            End If
+
+            If Backupperm = "admin" Then
+                Button1.Enabled = False
+                Button1.Visible = False
+                Label11.Visible = False
+            Else
+                Button1.Enabled = True
+                Button1.Visible = True
+                Label11.Visible = True
+            End If
+
+        ElseIf Benutzer.GetRole(user) = "admin" Then
+            Label7.Visible = True
+            Label9.Visible = True
+            Label12.Visible = True
+            MainButtonReset.Enabled = True
+            MainButtonReset.Visible = True
+            ButtonUserManagement.Enabled = True
+            ButtonUserManagement.Visible = True
+            MainButtonConfiguration.Enabled = True
+            MainButtonConfiguration.Visible = True
+            MainButtonExport.Enabled = True
+            MainButtonExport.Visible = True
+            Label5.Visible = True
+            Button1.Enabled = True
+            Button1.Visible = True
+            Label11.Visible = True
         End If
     End Sub
 
