@@ -124,8 +124,15 @@
   <data name="Label1.Text" xml:space="preserve">
     <value>Für welche Organisation arbeiten Sie? (Bsp.: Kirchengemeinde XYZ)</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Config2ButtonNext.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
   <data name="Config2ButtonNext.Text" xml:space="preserve">
     <value>Weiter</value>
+  </data>
+  <data name="ButtonBack.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="ButtonBack.Text" xml:space="preserve">
     <value>Zurück</value>
@@ -151,8 +158,14 @@
   <data name="CBBackup.Location" type="System.Drawing.Point, System.Drawing">
     <value>251, 136</value>
   </data>
+  <data name="CBBackup.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
   <data name="CBexport.Location" type="System.Drawing.Point, System.Drawing">
     <value>251, 167</value>
+  </data>
+  <data name="CBexport.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>183, 17</value>

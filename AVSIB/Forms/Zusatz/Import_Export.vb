@@ -37,6 +37,7 @@ Public Class Import_Export
                     System.IO.File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data.mdf", path & "\AVSIB_Data.mdf")
                     System.IO.File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data_log.ldf", path & "\AVSIB_Data_log.ldf")
                     MsgBox(LocRM.GetString("strSuccess"), MsgBoxStyle.Information, LocRM.GetString("titSuccess"))
+                    Log.WriteLog(AVSIB_Main.user, AVSIB_Main.user & " exported database to " & path & "\AVSIB_Data.mdf")
                 Else
                     MsgBox(LocRM.GetString("strAborted"), MsgBoxStyle.Information, LocRM.GetString("titInformation"))
                 End If
@@ -44,6 +45,7 @@ Public Class Import_Export
                 System.IO.File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data.mdf", path & "\AVSIB_Data.mdf")
                 System.IO.File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data_log.ldf", path & "\AVSIB_Data_log.ldf")
                 MsgBox(LocRM.GetString("strSuccess"), MsgBoxStyle.Information, LocRM.GetString("titSuccess"))
+                Log.WriteLog(AVSIB_Main.user, AVSIB_Main.user & " exported database to " & path & "\AVSIB_Data.mdf")
             End If
         End If
     End Sub
@@ -64,6 +66,7 @@ Start:
                 System.IO.File.Copy(directory & "\AVSIB_Data.mdf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data.mdf")
                 System.IO.File.Copy(directory & "\AVSIB_Data_log.ldf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data_log.ldf")
                 MsgBox(LocRM.GetString("strSuccess"), MsgBoxStyle.Information, LocRM.GetString("titSuccess"))
+                Log.WriteLog(AVSIB_Main.user, AVSIB_Main.user & " imported database from " & path & "\AVSIB_Data.mdf")
             Else
                 MsgBox(LocRM.GetString("strFileDoesntExist"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
                 GoTo Start

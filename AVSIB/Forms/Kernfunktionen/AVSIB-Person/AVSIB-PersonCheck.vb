@@ -75,6 +75,7 @@ Public Class AVSIB_PersonCheck
         If filtered = False Then
             ID = Personen.GetID(PersonenCount, SelectedOrder)
             Personen.Delete(ID)
+            Log.WriteLog(AVSIB_Main.user, AVSIB_Main.user & " deleted addressee with id=" & ID & " from database!")
             count = count - 1
             If PersonenCount + 1 <= count Then
                 ID = Personen.GetID(PersonenCount, SelectedOrder)
@@ -108,6 +109,7 @@ Public Class AVSIB_PersonCheck
         ElseIf filtered = True Then
             ID = Personen.GetIDByString(PersonenCount, filterby, SelectedOrder)
             Personen.Delete(ID)
+            Log.WriteLog(AVSIB_Main.user, AVSIB_Main.user & " deleted addressee with id=" & ID & "from database!")
             count = count - 1
             If PersonenCount + 1 <= count Then
                 ID = Personen.GetIDByString(PersonenCount, filterby, SelectedOrder)

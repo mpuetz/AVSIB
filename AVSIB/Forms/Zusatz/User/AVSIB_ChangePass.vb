@@ -35,6 +35,7 @@ Public Class AVSIB_ChangePass
 
                 If hash1 = hash2 Then
                     Benutzer.Update(AVSIB_Main.user, hash1, salt, Benutzer.GetRole(AVSIB_Main.user))
+                    Log.WriteLog(AVSIB_Main.user, AVSIB_Main.user & " changed password!")
                     MsgBox(locRM.GetString("strUpdatedUser"), MsgBoxStyle.Information, locRM.GetString("titUpdatedUser"))
                     hash1 = Nothing
                     hash2 = Nothing

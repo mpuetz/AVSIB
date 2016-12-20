@@ -354,6 +354,7 @@
     <Compile Include="Funktionen\Bezirke.vb" />
     <Compile Include="Funktionen\CPrintListView.vb" />
     <Compile Include="Funktionen\FileOperator.vb" />
+    <Compile Include="Funktionen\Log.vb" />
     <Compile Include="Funktionen\Orte.vb" />
     <Compile Include="Data\OrteDataSet.Designer.vb">
       <AutoGen>True</AutoGen>

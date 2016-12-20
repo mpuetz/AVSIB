@@ -168,6 +168,7 @@ Partial Class AVSIB_Main
         Me.GroupBox1.Controls.Add(Me.MainButtonAusträger)
         Me.GroupBox1.Controls.Add(Me.MainButtonPersonen)
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.TabStop = False
         Me.ToolTip1.SetToolTip(Me.GroupBox1, resources.GetString("GroupBox1.ToolTip"))

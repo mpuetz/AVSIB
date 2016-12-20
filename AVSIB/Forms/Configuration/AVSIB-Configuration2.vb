@@ -33,6 +33,7 @@ Public Class AVSIB_Configuration2
             first = FileOperator.Load(Application.StartupPath + "\settings.ini", "FirstRun")
             FileOperator.Save(Application.StartupPath + "\settings.ini", "BackupPermission", CBBackup.SelectedItem)
             FileOperator.Save(Application.StartupPath + "\settings.ini", "ExportPermission", CBexport.SelectedItem)
+            Log.WriteLog(AVSIB_Main.user, AVSIB_Main.user & " changed settings")
             Me.Close()
         ElseIf TextBox1.Text = Nothing Then
             MsgBox(LocRM.GetString("strOrgMissing"), MsgBoxStyle.Critical, LocRM.GetString("titError"))

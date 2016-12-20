@@ -181,20 +181,11 @@
   <data name="HilfeToolStripMenuItem.Text" xml:space="preserve">
     <value>Hilfe</value>
   </data>
-  <data name="MenuStrip1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="Label13.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 17</value>
   </data>
   <data name="Label13.Text" xml:space="preserve">
     <value>Abmelden</value>
-  </data>
-  <data name="Label13.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="MainButtonChangePassword.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="Label14.Size" type="System.Drawing.Size, System.Drawing">
     <value>114, 17</value>
@@ -202,26 +193,11 @@
   <data name="Label14.Text" xml:space="preserve">
     <value>Passwort ändern</value>
   </data>
-  <data name="Label14.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="MainButtonLogOut.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="Label12.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 17</value>
   </data>
   <data name="Label12.Text" xml:space="preserve">
     <value>Benutzerverwaltung</value>
-  </data>
-  <data name="Label12.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ButtonUserManagement.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Label11.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="Button1.ToolTip" xml:space="preserve">
     <value>Erstellt ein Backup im Programm-Ordner</value>
@@ -232,9 +208,6 @@
   <data name="Label9.Text" xml:space="preserve">
     <value>Einstellungen</value>
   </data>
-  <data name="Label9.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="MainButtonConfiguration.ToolTip" xml:space="preserve">
     <value>Bietet Einstellungsmöglichkeiten zu Ihrer Organisation</value>
   </data>
@@ -244,17 +217,11 @@
   <data name="Label10.Text" xml:space="preserve">
     <value>Ende</value>
   </data>
-  <data name="Label10.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 17</value>
   </data>
   <data name="Label7.Text" xml:space="preserve">
     <value>Zurücksetzen</value>
-  </data>
-  <data name="Label7.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 17</value>
@@ -262,20 +229,11 @@
   <data name="Label8.Text" xml:space="preserve">
     <value>Drucken</value>
   </data>
-  <data name="Label8.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Label5.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 17</value>
   </data>
   <data name="Label6.Text" xml:space="preserve">
     <value>Bezirke</value>
-  </data>
-  <data name="Label6.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 17</value>
@@ -283,17 +241,11 @@
   <data name="Label3.Text" xml:space="preserve">
     <value>Straßen</value>
   </data>
-  <data name="Label3.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 17</value>
   </data>
   <data name="Label4.Text" xml:space="preserve">
     <value>Orte</value>
-  </data>
-  <data name="Label4.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 17</value>
@@ -301,17 +253,11 @@
   <data name="Label2.Text" xml:space="preserve">
     <value>Austräger</value>
   </data>
-  <data name="Label2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 17</value>
   </data>
   <data name="Label1.Text" xml:space="preserve">
     <value>Personen</value>
-  </data>
-  <data name="Label1.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="MainButtonEnde.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -712,9 +658,6 @@
   <data name="GroupBox1.Text" xml:space="preserve">
     <value>Menü</value>
   </data>
-  <data name="GroupBox1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAUAAAAAAAEAIABpCgAAVgAAADAwAAABACAAqCUAAL8KAAAgIAAAAQAgAKgQAABnMAAAGBgAAAEA
@@ -1059,8 +1002,5 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>AVSIB - Hauptmenü</value>
-  </data>
-  <data name="$this.ToolTip" xml:space="preserve">
-    <value />
   </data>
 </root>

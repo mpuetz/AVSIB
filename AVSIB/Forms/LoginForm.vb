@@ -45,6 +45,7 @@ Public Class LoginForm
                 End If
                 ' In the end, the Main Menu is shown and the login prompt closed.
                 user = UsernameTextBox.Text
+                Log.WriteLog(user, user & " logged in!")
                 AVSIB_Main.Show()
                 Close()
             Else
@@ -70,6 +71,7 @@ Public Class LoginForm
         ' On load tries to load the latest username froms settings.ini
         Try
             UsernameTextBox.Text = FileOperator.Load(Application.StartupPath + "\settings.ini", "Username")
+            If UsernameTextBox.Text <> Nothing Then CheckBox1.Checked = True
         Catch ex As Exception
         End Try
     End Sub

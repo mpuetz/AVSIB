@@ -117,8 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;MainButtonBezirke.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="MainButtonPersonen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 28</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="MainButtonChangePassword.TabIndex" type="System.Int32, mscorlib">
@@ -127,8 +128,8 @@
   <data name="&gt;&gt;MenuStrip1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;MainButtonConfiguration.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Label14.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
   </data>
   <data name="&gt;&gt;MainButtonLogOut.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -136,10 +137,9 @@
   <data name="&gt;&gt;MainButtonChangePassword.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Label14.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
+  <data name="&gt;&gt;MainButtonBezirke.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 17</value>
   </data>
@@ -162,14 +162,8 @@
   <data name="&gt;&gt;MainButtonConfiguration.Name" xml:space="preserve">
     <value>MainButtonConfiguration</value>
   </data>
-  <data name="Label11.ToolTip" xml:space="preserve">
+  <data name="$this.ToolTip" xml:space="preserve">
     <value />
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1344, 822</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
     <value>18</value>
@@ -182,9 +176,6 @@
   </data>
   <data name="Label13.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
-  </data>
-  <data name="Label8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
   </data>
   <data name="Label8.Location" type="System.Drawing.Point, System.Drawing">
     <value>818, 69</value>
@@ -204,27 +195,8 @@
   <data name="GroupBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="MainButtonEnde.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        Qk3+AwAAAAAAADYAAAAoAAAADgAAABYAAAABABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////////
-        ////////////////////////////////////////////////AAD///98fHyOjo6MjIyMjIyPj4+Xl5eZ
-        mZmRkZEqKiobGxs5OTnn5+f///8AAP///5WVlf////////////v7+5WVlZKSkpmZmf///////8TExOXl
-        5f///wAA////k5OT////////aGhopaWl////////////////////uLi45OTk////AAD///+Tk5P/////
-        //+Wlpb///////////////////////+4uLjk5OT///8AAP///5OTk////////5OTk///////////////
-        /////////7i4uOTk5P///wAA////k5OT////////lZWR////////////////////////uLi45OTk////
-        AAD///+Tk5P///////+Mi6b///////////////////////+4uLjk5OT///8AAP///5aWk/v6/1lT8REI
-        8mJc8klD8P///////////////7i4uOTk5P///wAA////mpqU1dP/HxfsFg3zJh7yBwDq////////////
-        ////uLi45OTk////AAD///+Tk5P///////9bWKfr7Mz///////////////////+4uLjk5OT///8AAP//
-        /5OTk////////4CBePf39////////////////////7i4uOTk5P///wAA////k5OT////////lZWV////
-        ////////////////////uLi45OTk////AAD///+Tk5P///////+Tk5P///////////////////////+4
-        uLjk5OT///8AAP///5OTk////////5OTk////////////////////////7i4uOTk5P///wAA////k5OT
-        ////////k5OT////////////////////////uLi45OTk////AAD///+Tk5P///////+UlJT/////////
-        //////////////+4uLjk5OT///8AAP///5OTk////////4iIiP///////////////////////7i4uOTk
-        5P///wAA////k5OT////////q6urhISEiIiI7+/v////////////uLi45OTk////AAD///+Tk5P/////
-        //////////////+urq6Ojo6QkJD////IyMjk5OT///8AAP///5iYmIuLi4yMjIyMjIyMjI2NjZWVlZmZ
-        mZiYmC4uLi4uLvHx8f///wAA////////////////////////////////////////////////////////
-        AAA=
-</value>
+  <data name="&gt;&gt;Button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="MainButtonOrte.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -280,9 +252,6 @@
   <data name="&gt;&gt;MainButtonLogOut.Name" xml:space="preserve">
     <value>MainButtonLogOut</value>
   </data>
-  <data name="MainButtonPersonen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 28</value>
-  </data>
   <data name="Label12.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -301,17 +270,14 @@
   <data name="&gt;&gt;Label12.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Label7.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
   <data name="MainButtonEnde.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="&gt;&gt;MenuStrip1.Name" xml:space="preserve">
     <value>MenuStrip1</value>
   </data>
-  <data name="MainButtonLogOut.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 347</value>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Streets</value>
   </data>
   <data name="MainButtonAusträger.ToolTip" xml:space="preserve">
     <value>Manage your roundsmen</value>
@@ -337,8 +303,8 @@
   <data name="Label9.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 17</value>
   </data>
-  <data name="&gt;&gt;Label13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;MainButtonAusträger.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -408,17 +374,11 @@
   <data name="&gt;&gt;Label9.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="Label10.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="&gt;&gt;MainButtonOrte.Name" xml:space="preserve">
     <value>MainButtonOrte</value>
   </data>
   <data name="&gt;&gt;MainButtonLogOut.Parent" xml:space="preserve">
     <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;ToolTip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="MainButtonExport.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -426,14 +386,17 @@
   <data name="MainButtonEnde.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 28</value>
   </data>
-  <data name="MainButtonOrte.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="&gt;&gt;Label10.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
   </data>
   <data name="Label11.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="Label13.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="Label8.Text" xml:space="preserve">
+    <value>Print</value>
   </data>
   <data name="&gt;&gt;Button1.Name" xml:space="preserve">
     <value>Button1</value>
@@ -474,52 +437,11 @@
   <data name="MainButtonDrucken.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="&gt;&gt;Label7.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
+  <data name="&gt;&gt;MainButtonExport.Name" xml:space="preserve">
+    <value>MainButtonExport</value>
   </data>
-  <data name="MainButtonPersonen.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        Qk0yCQAAAAAAADYAAAAoAAAAIQAAABcAAAABABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////////
-        ////////////////////////////////////////////////////////////6urq////////////////
-        ////////////////////////////////////////////AP//////////////////////////////////
-        /+vr65eXl////////////////////9DQ0JWVlf//////////////////////////////////////////
-        /////////////////wD////////////////////////////////////////b29t2dnb////////////w
-        8PB/f3////////////////9tbW3///////9/f3////////////////////////////////8A////////
-        /////////////////////////////////////v7+Y2Nj////////Z2dn////////////////////6enp
-        ra2tsbGx5ubm////////////////////////////////AP//////////////////////////////////
-        /////////////////3p6ellZWf///////////////////////+/v71RXT1ZYUfHx8f//////////////
-        /////////////////wD///////////////////////////////////////////////////////+IiIj/
-        //////////////////////+mqaGrjuSfg9Wusan///////////////////////////////8A////////
-        ////////////////////////////////////////////////hISE////////////////////////////
-        b2GMcGOL////////////////////////////////////AP//////////////////////////////////
-        /////////////////////4SEhP///////////8LCwpycnKGgoLGqqVdPU1BHSvr6+f//////////////
-        /////////////////wD///////////////////////////////////////////////////////+Kior/
-        //+jo6OEhITq6ur////////b//+b0dKo3d+8pqXZ2dn///////////////////////////8A////////
-        ////////////////////////////////////6urqzMzMq6urT09Pk5OT+Pj4////////////hfr/AO/+
-        DISJANTiJf//////////////////////////////////AP//////////////////////////////////
-        /////9zc3Li4uN3d3f///5eXl////////////////////0T9/2mjpaOFk8STjwH5////////////////
-        /////////////////wD///////////////////////////////////////////////////////+Pj4//
-        ///////////////////P//8SzNdhXlUc1t+B/f////////////////////////////////8A////////
-        ////////////////////////////////////////////////lJSU////////////////////////////
-        tv//5///////////////////////////////////////AP//////////////////////////////////
-        /////////////////7m5tmtrZbe3tv//////////////////////////////////////////////////
-        /////////////////wD////////////////////////////////////////////BwcGampdJSGNEQY6Q
-        kJOXl5a/v7////////////////////////////////////////////////////////////8A////////
-        ////////////////////////////////////fnx5////xMO/+/v0/fz5////fnx6////////////////
-        ////////////////////////////////////////////AP//////////////////////////////////
-        /////////21+nKOlqJ6iqtnX1nV9i////3mFmv//////////////////////////////////////////
-        /////////////////wD///////////////////////////////////////////9Sd7tdgMCsv+Gittur
-        vuFJbrM5ZLD///////////////////////////////////////////////////////////8A////////
-        ////////////////////////////////////////scHedJHFXn+8Xn+8tcTg+/z9////////////////
-        ////////////////////////////////////////////AP//////////////////////////////////
-        ////////////////////////////////////////////////////////////////////////////////
-        /////////////////wD/////////////////////////////////////////////////////////////
-        //////////////////////////////////////////////////////////////////////8A////////
-        ////////////////////////////////////////////////////////////////////////////////
-        ////////////////////////////////////////////AP//////////////////////////////////
-        ////////////////////////////////////////////////////////////////////////////////
-        /////////////////wA=
-</value>
+  <data name="&gt;&gt;DateToolStripMenuItem.Name" xml:space="preserve">
+    <value>DateToolStripMenuItem</value>
   </data>
   <data name="Label12.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -533,9 +455,6 @@
   <data name="&gt;&gt;MainButtonAusträger.ZOrder" xml:space="preserve">
     <value>26</value>
   </data>
-  <data name="&gt;&gt;Label8.Name" xml:space="preserve">
-    <value>Label8</value>
-  </data>
   <data name="&gt;&gt;MainButtonBezirke.ZOrder" xml:space="preserve">
     <value>23</value>
   </data>
@@ -545,55 +464,14 @@
   <data name="MainButtonDrucken.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 28</value>
   </data>
-  <data name="MainButtonDrucken.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        Qk0yCQAAAAAAADYAAAAoAAAAIQAAABcAAAABABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////////
-        ////////////////////////////////////////////////////////////////////////////////
-        ////////////////////////////////////////////AP//////////////////////////////////
-        /////5eXl2BgYGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGdnZ0lJSezs7P//////////////////
-        /////////////////wD///////////////////////////////////+ysrJ2dnb/////////////////
-        //////////////////////////9/f3+0tLT///////////////////////////////////8A////////
-        ////////////////////////////JSUl////////////////////////////////////////////////
-        +Pj4Ozs7////////////////////////////////////AP////////////////////////////////r6
-        +jQ0NP///////////////////////////////////////////////////xkZGf//////////////////
-        /////////////////wD///////////////////////////////91dXXf39//////////////////////
-        //////////////////////////////+EhITKysr///////////////////////////////8A////////
-        ////pqamSEhIXFxcW1tbZGRkAAAANjY2KysrKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioq
-        LS0tJCQkODg4YWFhOzs71tbW////////////////////AP///////////3x8fJKSktLS0s7OztDQ0BER
-        EYuLi4KCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgouLixYWFsjIyNnZ2VpaWsDAwP//
-        /////////////////wD///////////+AgICNjY3JycnDw8PIyMgnJydGRkZERERERERERERERERERERE
-        RERERERERERERERERERERERERERGRkYpKSnBwcHPz89ZWVnCwsL///////////////////8A////////
-        ////gICAjY2NycnJw8PDw8PD0tLS0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ
-        0NDQ0tLSxMTEzc3NWVlZwsLC////////////////////AP///////////4CAgI2NjdXGxcrBwMPDw8PD
-        w8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8jIyM/Pz8nJydDQ0NTU1FlZWcLCwv//
-        /////////////////wD///////////+AgICej45G8PmC2d7Px8bIyMjIyMjIyMjIyMjIyMjIyMjIyMjI
-        yMjIyMjIyMjIyMjIyMjOzs6RkZFKSkqQkJA7OzuMjIxjY2PCwsL///////////////////8A////////
-        ////enp6WldWeJGSkJaXkY+PjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2Nj4+PgYGB
-        Tk5Og4ODlZWVk5OTLCwsv7+/////////////////////AP///////////+zs7MDAwNDNzDc1NXNzc4SE
-        hIKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoSEhIyMjGtra0ZGRszMzMLCwvf39///
-        /////////////////wD///////////////////////9SUlL29vb/////////////////////////////
-        ///////////////////////////////j4+NlZWX///////////////////////////////8A////////
-        ////////////////Tk5O6urq////////////////////////////////////////////////////////
-        ////2NjYYmJi////////////////////////////////AP///////////////////////05OTurq6v//
-        /////////////////////////////////////////////////////////9jY2GJiYv//////////////
-        /////////////////wD///////////////////////9OTk7q6ur/////////////////////////////
-        ///////////////////////////////Y2NhiYmL///////////////////////////////8A////////
-        ////////////////Tk5O6urq////////////////////////////////////////////////////////
-        ////2NjYYmJi////////////////////////////////AP///////////////////////05OTvDw8P//
-        /////////////////////////////////////////////////////////97e3mJiYv//////////////
-        /////////////////wD///////////////////////9HR0eqqqrDw8PAwMDAwMDAwMDAwMDAwMDAwMDA
-        wMDAwMDAwMDAwMDAwMDAwMDAwMDExMSbm5tbW1v///////////////////////////////8A////////
-        ////////////////4eHhsrKys7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Oz
-        s7Ozs7Oz5OTk////////////////////////////////AP//////////////////////////////////
-        ////////////////////////////////////////////////////////////////////////////////
-        /////////////////wA=
-</value>
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 17</value>
   </data>
   <data name="&gt;&gt;Label4.Name" xml:space="preserve">
     <value>Label4</value>
   </data>
-  <data name="&gt;&gt;Label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
   </data>
   <data name="&gt;&gt;ToolStripMenuItem1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -613,8 +491,8 @@
   <data name="MainButtonStraßen.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>Streets</value>
+  <data name="&gt;&gt;GroupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Label6.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -640,20 +518,20 @@
   <data name="&gt;&gt;Label3.Name" xml:space="preserve">
     <value>Label3</value>
   </data>
+  <data name="Label7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Label10.Location" type="System.Drawing.Point, System.Drawing">
     <value>92, 281</value>
   </data>
-  <data name="&gt;&gt;MainButtonDrucken.Name" xml:space="preserve">
-    <value>MainButtonDrucken</value>
-  </data>
   <data name="MainButtonDrucken.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="GroupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>116, 98</value>
+  <data name="&gt;&gt;MainButtonConfiguration.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
   </data>
   <data name="&gt;&gt;GroupBox1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -667,11 +545,14 @@
   <data name="Button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
+  <data name="&gt;&gt;MainButtonConfiguration.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
   <data name="Label4.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="MainButtonAusträger.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 28</value>
+  <data name="&gt;&gt;MainButtonExport.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -681,6 +562,9 @@
   </data>
   <data name="MainButtonConfiguration.ToolTip" xml:space="preserve">
     <value>Offers the possibility to customize this program</value>
+  </data>
+  <data name="Label11.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="Label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -712,14 +596,17 @@
   <data name="MainButtonStraßen.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
+  <data name="&gt;&gt;Label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;Label9.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Label14.Text" xml:space="preserve">
     <value>Change password</value>
   </data>
-  <data name="&gt;&gt;Button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="MainButtonChangePassword.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 30</value>
@@ -736,11 +623,17 @@
   <data name="Label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="Label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>92, 353</value>
+  </data>
   <data name="MainButtonReset.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
   <data name="&gt;&gt;MainButtonPersonen.Parent" xml:space="preserve">
     <value>GroupBox1</value>
+  </data>
+  <data name="&gt;&gt;BeendenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>1357, 824</value>
@@ -759,6 +652,9 @@
   </data>
   <data name="MenuStrip1.Text" xml:space="preserve">
     <value>MenuStrip1</value>
+  </data>
+  <data name="MainButtonOrte.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="MainButtonBezirke.Location" type="System.Drawing.Point, System.Drawing">
     <value>536, 62</value>
@@ -781,11 +677,14 @@
   <data name="MainButtonReset.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="&gt;&gt;MainButtonBezirke.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
   <data name="MainButtonEnde.Location" type="System.Drawing.Point, System.Drawing">
     <value>40, 274</value>
   </data>
-  <data name="Label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;Label8.Name" xml:space="preserve">
+    <value>Label8</value>
   </data>
   <data name="DateToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 24</value>
@@ -805,17 +704,14 @@
   <data name="MenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1344, 28</value>
   </data>
-  <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;HilfeToolStripMenuItem.Name" xml:space="preserve">
+    <value>HilfeToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;Label9.Name" xml:space="preserve">
     <value>Label9</value>
   </data>
-  <data name="$this.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Label13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>92, 353</value>
+  <data name="&gt;&gt;ToolTip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -897,14 +793,58 @@
   <data name="Label12.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="MainButtonDrucken.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk0yCQAAAAAAADYAAAAoAAAAIQAAABcAAAABABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////AP//////////////////////////////////
+        /////5eXl2BgYGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGdnZ0lJSezs7P//////////////////
+        /////////////////wD///////////////////////////////////+ysrJ2dnb/////////////////
+        //////////////////////////9/f3+0tLT///////////////////////////////////8A////////
+        ////////////////////////////JSUl////////////////////////////////////////////////
+        +Pj4Ozs7////////////////////////////////////AP////////////////////////////////r6
+        +jQ0NP///////////////////////////////////////////////////xkZGf//////////////////
+        /////////////////wD///////////////////////////////91dXXf39//////////////////////
+        //////////////////////////////+EhITKysr///////////////////////////////8A////////
+        ////pqamSEhIXFxcW1tbZGRkAAAANjY2KysrKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioq
+        LS0tJCQkODg4YWFhOzs71tbW////////////////////AP///////////3x8fJKSktLS0s7OztDQ0BER
+        EYuLi4KCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgouLixYWFsjIyNnZ2VpaWsDAwP//
+        /////////////////wD///////////+AgICNjY3JycnDw8PIyMgnJydGRkZERERERERERERERERERERE
+        RERERERERERERERERERERERERERGRkYpKSnBwcHPz89ZWVnCwsL///////////////////8A////////
+        ////gICAjY2NycnJw8PDw8PD0tLS0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ
+        0NDQ0tLSxMTEzc3NWVlZwsLC////////////////////AP///////////4CAgI2NjdXGxcrBwMPDw8PD
+        w8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8jIyM/Pz8nJydDQ0NTU1FlZWcLCwv//
+        /////////////////wD///////////+AgICej45G8PmC2d7Px8bIyMjIyMjIyMjIyMjIyMjIyMjIyMjI
+        yMjIyMjIyMjIyMjIyMjOzs6RkZFKSkqQkJA7OzuMjIxjY2PCwsL///////////////////8A////////
+        ////enp6WldWeJGSkJaXkY+PjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2Nj4+PgYGB
+        Tk5Og4ODlZWVk5OTLCwsv7+/////////////////////AP///////////+zs7MDAwNDNzDc1NXNzc4SE
+        hIKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoSEhIyMjGtra0ZGRszMzMLCwvf39///
+        /////////////////wD///////////////////////9SUlL29vb/////////////////////////////
+        ///////////////////////////////j4+NlZWX///////////////////////////////8A////////
+        ////////////////Tk5O6urq////////////////////////////////////////////////////////
+        ////2NjYYmJi////////////////////////////////AP///////////////////////05OTurq6v//
+        /////////////////////////////////////////////////////////9jY2GJiYv//////////////
+        /////////////////wD///////////////////////9OTk7q6ur/////////////////////////////
+        ///////////////////////////////Y2NhiYmL///////////////////////////////8A////////
+        ////////////////Tk5O6urq////////////////////////////////////////////////////////
+        ////2NjYYmJi////////////////////////////////AP///////////////////////05OTvDw8P//
+        /////////////////////////////////////////////////////////97e3mJiYv//////////////
+        /////////////////wD///////////////////////9HR0eqqqrDw8PAwMDAwMDAwMDAwMDAwMDAwMDA
+        wMDAwMDAwMDAwMDAwMDAwMDAwMDExMSbm5tbW1v///////////////////////////////8A////////
+        ////////////////4eHhsrKys7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Oz
+        s7Ozs7Oz5OTk////////////////////////////////AP//////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////////wA=
+</value>
+  </data>
   <data name="Label10.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
   <data name="MainButtonEnde.ToolTip" xml:space="preserve">
     <value>Closes this program</value>
   </data>
-  <data name="&gt;&gt;Label10.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
+  <data name="Label14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>347, 353</value>
   </data>
   <data name="MainButtonConfiguration.Location" type="System.Drawing.Point, System.Drawing">
     <value>536, 275</value>
@@ -930,13 +870,10 @@
   <data name="Label9.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
-  <data name="GroupBox1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="&gt;&gt;Hilfe_Button.Name" xml:space="preserve">
-    <value>Hilfe_Button</value>
-  </data>
   <data name="MainButtonPersonen.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="MenuStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="Label9.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
@@ -947,6 +884,9 @@
   </data>
   <data name="Label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;MainButtonBezirke.Name" xml:space="preserve">
+    <value>MainButtonBezirke</value>
   </data>
   <data name="Label11.Text" xml:space="preserve">
     <value>Backup</value>
@@ -1308,14 +1248,17 @@
         /6xB
 </value>
   </data>
-  <data name="MainButtonDrucken.Location" type="System.Drawing.Point, System.Drawing">
-    <value>766, 62</value>
+  <data name="GroupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>116, 98</value>
   </data>
   <data name="&gt;&gt;ButtonUserManagement.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>347, 142</value>
+  </data>
+  <data name="FehlerMelderToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 26</value>
   </data>
   <data name="&gt;&gt;Label7.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1332,8 +1275,14 @@
   <data name="&gt;&gt;Label6.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
+  <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>588, 142</value>
+  </data>
   <data name="ToolStripMenuItem2.ToolTipText" xml:space="preserve">
     <value>Openes a website showing the latest changes to this program</value>
+  </data>
+  <data name="&gt;&gt;Label7.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
   <data name="&gt;&gt;ToolTip1.Name" xml:space="preserve">
     <value>ToolTip1</value>
@@ -1344,8 +1293,49 @@
   <data name="MainButtonOrte.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 28</value>
   </data>
-  <data name="MenuStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="MainButtonPersonen.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk0yCQAAAAAAADYAAAAoAAAAIQAAABcAAAABABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////////
+        ////////////////////////////////////////////////////////////6urq////////////////
+        ////////////////////////////////////////////AP//////////////////////////////////
+        /+vr65eXl////////////////////9DQ0JWVlf//////////////////////////////////////////
+        /////////////////wD////////////////////////////////////////b29t2dnb////////////w
+        8PB/f3////////////////9tbW3///////9/f3////////////////////////////////8A////////
+        /////////////////////////////////////v7+Y2Nj////////Z2dn////////////////////6enp
+        ra2tsbGx5ubm////////////////////////////////AP//////////////////////////////////
+        /////////////////3p6ellZWf///////////////////////+/v71RXT1ZYUfHx8f//////////////
+        /////////////////wD///////////////////////////////////////////////////////+IiIj/
+        //////////////////////+mqaGrjuSfg9Wusan///////////////////////////////8A////////
+        ////////////////////////////////////////////////hISE////////////////////////////
+        b2GMcGOL////////////////////////////////////AP//////////////////////////////////
+        /////////////////////4SEhP///////////8LCwpycnKGgoLGqqVdPU1BHSvr6+f//////////////
+        /////////////////wD///////////////////////////////////////////////////////+Kior/
+        //+jo6OEhITq6ur////////b//+b0dKo3d+8pqXZ2dn///////////////////////////8A////////
+        ////////////////////////////////////6urqzMzMq6urT09Pk5OT+Pj4////////////hfr/AO/+
+        DISJANTiJf//////////////////////////////////AP//////////////////////////////////
+        /////9zc3Li4uN3d3f///5eXl////////////////////0T9/2mjpaOFk8STjwH5////////////////
+        /////////////////wD///////////////////////////////////////////////////////+Pj4//
+        ///////////////////P//8SzNdhXlUc1t+B/f////////////////////////////////8A////////
+        ////////////////////////////////////////////////lJSU////////////////////////////
+        tv//5///////////////////////////////////////AP//////////////////////////////////
+        /////////////////7m5tmtrZbe3tv//////////////////////////////////////////////////
+        /////////////////wD////////////////////////////////////////////BwcGampdJSGNEQY6Q
+        kJOXl5a/v7////////////////////////////////////////////////////////////8A////////
+        ////////////////////////////////////fnx5////xMO/+/v0/fz5////fnx6////////////////
+        ////////////////////////////////////////////AP//////////////////////////////////
+        /////////21+nKOlqJ6iqtnX1nV9i////3mFmv//////////////////////////////////////////
+        /////////////////wD///////////////////////////////////////////9Sd7tdgMCsv+Gittur
+        vuFJbrM5ZLD///////////////////////////////////////////////////////////8A////////
+        ////////////////////////////////////////scHedJHFXn+8Xn+8tcTg+/z9////////////////
+        ////////////////////////////////////////////AP//////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////////wD/////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////8A////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////AP//////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        /////////////////wA=
+</value>
   </data>
   <data name="FehlerMelderToolStripMenuItem.ToolTipText" xml:space="preserve">
     <value>Openes a website, on which you can report bugs you experience while using this program</value>
@@ -1368,13 +1358,7 @@
   <data name="&gt;&gt;MainButtonReset.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;DateToolStripMenuItem.Name" xml:space="preserve">
-    <value>DateToolStripMenuItem</value>
-  </data>
-  <data name="Label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;MainButtonConfiguration.Parent" xml:space="preserve">
+  <data name="&gt;&gt;MainButtonStraßen.Parent" xml:space="preserve">
     <value>GroupBox1</value>
   </data>
   <data name="Label9.Location" type="System.Drawing.Point, System.Drawing">
@@ -1423,9 +1407,6 @@
         ////////////////////////////////////////////////////////////////////////////////
         /////////////////wA=
 </value>
-  </data>
-  <data name="&gt;&gt;MainButtonStraßen.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
   </data>
   <data name="MainButtonOrte.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -1498,8 +1479,11 @@
   <data name="Label14.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 17</value>
   </data>
-  <data name="FehlerMelderToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 26</value>
+  <data name="MainButtonAusträger.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 28</value>
+  </data>
+  <data name="Label8.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
   </data>
   <data name="&gt;&gt;MenuStrip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1516,9 +1500,6 @@
   <data name="Label8.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;MainButtonPersonen.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="Label14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1528,8 +1509,8 @@
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>AVSIB_Main</value>
   </data>
-  <data name="&gt;&gt;MainButtonEnde.ZOrder" xml:space="preserve">
-    <value>19</value>
+  <data name="Label10.ToolTip" xml:space="preserve">
+    <value />
   </data>
   <data name="Label7.Text" xml:space="preserve">
     <value>Reset</value>
@@ -1543,11 +1524,8 @@
   <data name="MainButtonReset.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>TopCenter</value>
   </data>
-  <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
-  </data>
-  <data name="&gt;&gt;Label14.Name" xml:space="preserve">
-    <value>Label14</value>
+  <data name="Label7.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
   </data>
   <data name="MainButtonStraßen.Location" type="System.Drawing.Point, System.Drawing">
     <value>40, 137</value>
@@ -1557,6 +1535,9 @@
   </data>
   <data name="&gt;&gt;MainButtonOrte.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="&gt;&gt;Label12.Parent" xml:space="preserve">
     <value>GroupBox1</value>
@@ -1573,17 +1554,20 @@
   <data name="&gt;&gt;HilfeToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="MainButtonDrucken.Location" type="System.Drawing.Point, System.Drawing">
+    <value>766, 62</value>
+  </data>
   <data name="MainButtonBezirke.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 28</value>
   </data>
-  <data name="Label6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;Label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Label14.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="Label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;Label11.Name" xml:space="preserve">
-    <value>Label11</value>
+  <data name="&gt;&gt;Label14.Name" xml:space="preserve">
+    <value>Label14</value>
   </data>
   <data name="GroupBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -1662,23 +1646,20 @@
   <data name="&gt;&gt;Label14.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ToolStripSeparator2.Name" xml:space="preserve">
-    <value>ToolStripSeparator2</value>
+  <data name="&gt;&gt;MainButtonEnde.ZOrder" xml:space="preserve">
+    <value>19</value>
   </data>
   <data name="ToolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
     <value>154, 6</value>
   </data>
-  <data name="&gt;&gt;GroupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 17</value>
   </data>
-  <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>588, 142</value>
+  <data name="&gt;&gt;ToolStripSeparator2.Name" xml:space="preserve">
+    <value>ToolStripSeparator2</value>
   </data>
-  <data name="&gt;&gt;BeendenToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;Hilfe_Button.Name" xml:space="preserve">
+    <value>Hilfe_Button</value>
   </data>
   <data name="HilfeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 24</value>
@@ -1707,11 +1688,14 @@
   <data name="MainButtonLogOut.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
   </data>
+  <data name="&gt;&gt;Label9.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
+  </data>
   <data name="&gt;&gt;MainButtonExport.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;MainButtonConfiguration.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>
@@ -1719,14 +1703,8 @@
   <data name="Label11.Location" type="System.Drawing.Point, System.Drawing">
     <value>347, 281</value>
   </data>
-  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 17</value>
-  </data>
   <data name="&gt;&gt;MainButtonOrte.Parent" xml:space="preserve">
     <value>GroupBox1</value>
-  </data>
-  <data name="Label14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>347, 353</value>
   </data>
   <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 17</value>
@@ -1740,9 +1718,6 @@
   <data name="ToolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
     <value>157, 26</value>
   </data>
-  <data name="MainButtonPersonen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>295, 62</value>
-  </data>
   <data name="MainButtonLogOut.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -1755,8 +1730,8 @@
   <data name="&gt;&gt;Label10.Name" xml:space="preserve">
     <value>Label10</value>
   </data>
-  <data name="Label3.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+  <data name="MainButtonLogOut.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 347</value>
   </data>
   <data name="Hilfe_Button.ToolTipText" xml:space="preserve">
     <value>Openes a website containing the manual for this program</value>
@@ -1767,11 +1742,11 @@
   <data name="&gt;&gt;Label8.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="MainButtonPersonen.ToolTip" xml:space="preserve">
-    <value>manages the addressees</value>
-  </data>
   <data name="MainButtonBezirke.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
+  </data>
+  <data name="&gt;&gt;MainButtonLogOut.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="BeendenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>108, 26</value>
@@ -1779,14 +1754,17 @@
   <data name="Label2.Text" xml:space="preserve">
     <value>Roundsmen</value>
   </data>
+  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>818, 142</value>
+  </data>
   <data name="MenuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <data name="&gt;&gt;Label2.Name" xml:space="preserve">
     <value>Label2</value>
   </data>
-  <data name="Label8.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+  <data name="&gt;&gt;Label11.Name" xml:space="preserve">
+    <value>Label11</value>
   </data>
   <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1806,23 +1784,26 @@
   <data name="Label7.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="&gt;&gt;MainButtonExport.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Label7.Parent" xml:space="preserve">
     <value>GroupBox1</value>
   </data>
   <data name="ToolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
     <value>157, 26</value>
   </data>
-  <data name="Label8.Text" xml:space="preserve">
-    <value>Print</value>
+  <data name="ToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 6</value>
   </data>
-  <data name="Label7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+  <data name="GroupBox1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="Label3.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
   </data>
   <data name="Label10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="MainButtonOrte.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 62</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1344, 822</value>
   </data>
   <data name="MainButtonBezirke.ToolTip" xml:space="preserve">
     <value>Add streets to your districts</value>
@@ -1857,26 +1838,23 @@
   <data name="&gt;&gt;MainButtonEnde.Parent" xml:space="preserve">
     <value>GroupBox1</value>
   </data>
-  <data name="&gt;&gt;Label9.Parent" xml:space="preserve">
-    <value>GroupBox1</value>
+  <data name="&gt;&gt;Label14.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="&gt;&gt;MainButtonBezirke.Name" xml:space="preserve">
-    <value>MainButtonBezirke</value>
+  <data name="MainButtonPersonen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>295, 62</value>
   </data>
   <data name="&gt;&gt;MainButtonStraßen.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
-  <data name="&gt;&gt;MainButtonLogOut.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;MainButtonDrucken.Name" xml:space="preserve">
+    <value>MainButtonDrucken</value>
   </data>
   <data name="&gt;&gt;Label11.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;HilfeToolStripMenuItem.Name" xml:space="preserve">
-    <value>HilfeToolStripMenuItem</value>
   </data>
   <data name="MainButtonAusträger.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1905,8 +1883,27 @@
   <data name="&gt;&gt;ToolStripSeparator1.Name" xml:space="preserve">
     <value>ToolStripSeparator1</value>
   </data>
-  <data name="InfoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 26</value>
+  <data name="MainButtonEnde.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk3+AwAAAAAAADYAAAAoAAAADgAAABYAAAABABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////////
+        ////////////////////////////////////////////////AAD///98fHyOjo6MjIyMjIyPj4+Xl5eZ
+        mZmRkZEqKiobGxs5OTnn5+f///8AAP///5WVlf////////////v7+5WVlZKSkpmZmf///////8TExOXl
+        5f///wAA////k5OT////////aGhopaWl////////////////////uLi45OTk////AAD///+Tk5P/////
+        //+Wlpb///////////////////////+4uLjk5OT///8AAP///5OTk////////5OTk///////////////
+        /////////7i4uOTk5P///wAA////k5OT////////lZWR////////////////////////uLi45OTk////
+        AAD///+Tk5P///////+Mi6b///////////////////////+4uLjk5OT///8AAP///5aWk/v6/1lT8REI
+        8mJc8klD8P///////////////7i4uOTk5P///wAA////mpqU1dP/HxfsFg3zJh7yBwDq////////////
+        ////uLi45OTk////AAD///+Tk5P///////9bWKfr7Mz///////////////////+4uLjk5OT///8AAP//
+        /5OTk////////4CBePf39////////////////////7i4uOTk5P///wAA////k5OT////////lZWV////
+        ////////////////////uLi45OTk////AAD///+Tk5P///////+Tk5P///////////////////////+4
+        uLjk5OT///8AAP///5OTk////////5OTk////////////////////////7i4uOTk5P///wAA////k5OT
+        ////////k5OT////////////////////////uLi45OTk////AAD///+Tk5P///////+UlJT/////////
+        //////////////+4uLjk5OT///8AAP///5OTk////////4iIiP///////////////////////7i4uOTk
+        5P///wAA////k5OT////////q6urhISEiIiI7+/v////////////uLi45OTk////AAD///+Tk5P/////
+        //////////////+urq6Ojo6QkJD////IyMjk5OT///8AAP///5iYmIuLi4yMjIyMjIyMjI2NjZWVlZmZ
+        mZiYmC4uLi4uLvHx8f///wAA////////////////////////////////////////////////////////
+        AAA=
+</value>
   </data>
   <data name="&gt;&gt;MainButtonReset.Parent" xml:space="preserve">
     <value>GroupBox1</value>
@@ -1914,8 +1911,8 @@
   <data name="Label12.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 17</value>
   </data>
-  <data name="ToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 6</value>
+  <data name="InfoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 26</value>
   </data>
   <data name="MainButtonReset.ToolTip" xml:space="preserve">
     <value>Deletes all settings and Data</value>
@@ -1923,8 +1920,8 @@
   <data name="MainButtonChangePassword.Location" type="System.Drawing.Point, System.Drawing">
     <value>295, 347</value>
   </data>
-  <data name="&gt;&gt;MainButtonBezirke.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="MainButtonPersonen.ToolTip" xml:space="preserve">
+    <value>manages the addressees</value>
   </data>
   <data name="Label5.Text" xml:space="preserve">
     <value>Im-/Export</value>
@@ -1932,8 +1929,8 @@
   <data name="BeendenToolStripMenuItem.Text" xml:space="preserve">
     <value>Exit</value>
   </data>
-  <data name="Label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>818, 142</value>
+  <data name="&gt;&gt;MainButtonPersonen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="GroupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1941,17 +1938,17 @@
   <data name="&gt;&gt;MainButtonPersonen.ZOrder" xml:space="preserve">
     <value>27</value>
   </data>
-  <data name="&gt;&gt;Label7.ZOrder" xml:space="preserve">
-    <value>11</value>
+  <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;GroupBox1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;MainButtonConfiguration.ZOrder" xml:space="preserve">
-    <value>9</value>
+  <data name="Label8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
-  <data name="&gt;&gt;MainButtonExport.Name" xml:space="preserve">
-    <value>MainButtonExport</value>
+  <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
+    <value>GroupBox1</value>
   </data>
   <data name="&gt;&gt;InfoToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1973,6 +1970,9 @@
   </data>
   <data name="ButtonUserManagement.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
+  </data>
+  <data name="MainButtonOrte.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 62</value>
   </data>
   <data name="MainButtonAusträger.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>

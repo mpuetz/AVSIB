@@ -86,6 +86,7 @@ Public Class AVSIB_Drucken
                     PrintDocument1.PrinterSettings = PrintDialog1.PrinterSettings
                     PrintLV.Print(PrintDocument1.PrinterSettings.PrinterName.ToString)
                 End If
+                Log.WriteLog(AVSIB_Main.user, AVSIB_Main.user & " printed district " & SelectedBezirk)
             Next
         End If
     End Sub
@@ -249,6 +250,7 @@ EndLine:
                 PrintDocument1.PrinterSettings = PrintDialog1.PrinterSettings
                 Try
                     PrintLV.Print(PrintDocument1.PrinterSettings.PrinterName.ToString)
+                    Log.WriteLog(AVSIB_Main.user, AVSIB_Main.user & " printed district " & SelectedBezirk & " to pdf")
                 Catch ex As Exception
                     MsgBox(LocRm.GetString("strPrinterFailure"), MsgBoxStyle.Critical, LocRm.GetString("titError"))
                 End Try

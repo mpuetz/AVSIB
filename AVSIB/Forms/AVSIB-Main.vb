@@ -147,6 +147,7 @@ Public Class AVSIB_Main
             System.IO.File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\Data\Reset\AVSIB_Data.mdf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data.mdf")
             System.IO.File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\Data\Reset\AVSIB_Data_log.ldf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data_log.ldf")
             MsgBox(LocRM.GetString("strSuccess"), MsgBoxStyle.Information, LocRM.GetString("titSuccess"))
+            Log.WriteLog(user, user & " reset program!")
             FileOperator.Save(Application.StartupPath + "\settings.ini", "FirstRun", "1")
             FileOperator.Save(Application.StartupPath + "\settings.ini", "ConfigRunning", "0")
             LoginForm.Show()
@@ -200,6 +201,7 @@ Public Class AVSIB_Main
     End Sub
 
     Private Sub MainButtonLogOut_Click(sender As Object, e As EventArgs) Handles MainButtonLogOut.Click
+        Log.WriteLog(user, user & " logged out!")
         LoginForm.Show()
         Close()
     End Sub

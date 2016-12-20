@@ -26,6 +26,7 @@ Public Class UserManagement
                 Else
                     If MsgBox(locRM.GetString("strSure"), MsgBoxStyle.YesNo, locRM.GetString("titSure")) = MsgBoxResult.Yes Then
                         Benutzer.Delete(TBusername.Text)
+                        Log.WriteLog(AVSIB_Main.user, AVSIB_Main.user & " deleted user " & TBusername.Text & " from database!")
                         updateListView()
                     End If
                 End If
@@ -52,6 +53,7 @@ Public Class UserManagement
                 If testhash = Benutzer.HashString(TBpassword.Text, salt) Then
                     Confirm_Password.hash = Nothing
                     Benutzer.Insert(TBusername.Text, Benutzer.HashString(TBpassword.Text, salt), salt, CBrole.SelectedItem.ToString)
+                    Log.WriteLog(AVSIB_Main.user, AVSIB_Main.user & " added user " & TBusername.Text & " to database!")
                     MsgBox(locRM.GetString("strAddedUser"), MsgBoxStyle.Information, locRM.GetString("titAddedUser"))
                     updateListView()
                 End If
@@ -74,6 +76,7 @@ Public Class UserManagement
                     If testhash = Benutzer.HashString(TBpassword.Text, salt) Then
                         Confirm_Password.hash = Nothing
                         Benutzer.Update(TBusername.Text, Benutzer.HashString(TBpassword.Text, salt), salt, CBrole.SelectedItem.ToString)
+                        Log.WriteLog(AVSIB_Main.user, AVSIB_Main.user & " updated user " & TBusername.Text & " in database!")
                         MsgBox(locRM.GetString("strUpdatedUser"), MsgBoxStyle.Information, locRM.GetString("titUpdatedUser"))
                         updateListView()
                     End If
