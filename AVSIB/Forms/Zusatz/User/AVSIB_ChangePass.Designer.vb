@@ -115,6 +115,7 @@ Partial Class AVSIB_ChangePass
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TBCur)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "AVSIB_ChangePass"
         Me.ResumeLayout(False)
         Me.PerformLayout()

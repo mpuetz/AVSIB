@@ -59,6 +59,7 @@ Partial Class Confirm_Password
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Name = "Confirm_Password"
         Me.ResumeLayout(False)
         Me.PerformLayout()

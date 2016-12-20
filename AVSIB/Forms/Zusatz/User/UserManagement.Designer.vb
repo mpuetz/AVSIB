@@ -122,6 +122,7 @@ Partial Class UserManagement
         Me.Controls.Add(Me.TBpassword)
         Me.Controls.Add(Me.TBusername)
         Me.Controls.Add(Me.ListView1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "UserManagement"
         Me.ResumeLayout(False)
         Me.PerformLayout()

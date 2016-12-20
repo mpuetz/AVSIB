@@ -154,10 +154,10 @@
   <data name="&gt;&gt;Button1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TBusername.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
   <data name="TBpassword.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
@@ -184,9 +184,6 @@
   </data>
   <data name="Label2.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>AVSIB - User Management</value>
   </data>
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 17</value>
@@ -224,6 +221,9 @@
   <data name="&gt;&gt;Button1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="&gt;&gt;Label3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -245,8 +245,8 @@
   <data name="Bsave.Text" xml:space="preserve">
     <value />
   </data>
-  <data name="TBusername.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="Label3.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="&gt;&gt;CBrole.Name" xml:space="preserve">
     <value>CBrole</value>
@@ -302,8 +302,8 @@
   <data name="ColumnHeader2.Text" xml:space="preserve">
     <value>role</value>
   </data>
-  <data name="CBrole.Size" type="System.Drawing.Size, System.Drawing">
-    <value>239, 24</value>
+  <data name="Bdelete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 39</value>
   </data>
   <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -314,8 +314,8 @@
   <data name="Button1.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="Label3.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 17</value>
   </data>
   <data name="CBrole.Items1" xml:space="preserve">
     <value>admin</value>
@@ -716,14 +716,14 @@
   <data name="&gt;&gt;ColumnHeader2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Bsave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>AVSIB - User Management</value>
   </data>
   <data name="Button1.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="Bdelete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 39</value>
+  <data name="CBrole.Size" type="System.Drawing.Size, System.Drawing">
+    <value>239, 24</value>
   </data>
   <data name="Bsave.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -740,8 +740,8 @@
   <data name="TBpassword.Size" type="System.Drawing.Size, System.Drawing">
     <value>239, 22</value>
   </data>
-  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 17</value>
+  <data name="&gt;&gt;Bsave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Bsave.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -749,10 +749,10 @@
   <data name="&gt;&gt;CBrole.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="$this.Localizable" type="System.Boolean, mscorlib">
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
-  <data name="$this.Language" type="System.Globalization.CultureInfo, mscorlib">
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>de-DE</value>
-  </data>
+  </metadata>
 </root>
