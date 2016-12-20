@@ -307,6 +307,12 @@
     <Compile Include="Forms\Zusatz\User\AVSIB_ChangePass.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\Zusatz\User\Confirm_Password.Designer.vb">
+      <DependentUpon>Confirm_Password.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Zusatz\User\Confirm_Password.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\Zusatz\Web\Bugs.Designer.vb">
       <DependentUpon>Bugs.vb</DependentUpon>
     </Compile>
@@ -484,6 +490,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Zusatz\User\AVSIB_ChangePass.resx">
       <DependentUpon>AVSIB_ChangePass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Zusatz\User\Confirm_Password.de-DE.resx">
+      <DependentUpon>Confirm_Password.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Zusatz\User\Confirm_Password.resx">
+      <DependentUpon>Confirm_Password.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Zusatz\Web\Bugs.de-DE.resx">
       <DependentUpon>Bugs.vb</DependentUpon>

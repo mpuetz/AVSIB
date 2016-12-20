@@ -46,14 +46,20 @@ Public Class UserManagement
         If Benutzer.UserExists(TBusername.Text) = 0 Then
             If TBusername.Text <> Nothing And TBpassword.Text <> Nothing Then
                 Dim salt As Byte() = Benutzer.CreateSalt()
-                Benutzer.Insert(TBusername.Text, Benutzer.HashString(TBpassword.Text, salt), salt, CBrole.SelectedItem.ToString)
-                MsgBox(locRM.GetString("strAddedUser"), MsgBoxStyle.Information, locRM.GetString("titAddedUser"))
-                updateListView()
-            ElseIf TBusername.text = Nothing Then
-                MsgBox(locRM.GetString("strNoUsername"), MsgBoxStyle.Critical, locRM.GetString("titError"))
-                TBusername.Focus()
-            ElseIf TBpassword.Text = Nothing Then
-                MsgBox(locRM.GetString("strNoPassword"), MsgBoxStyle.Critical, locRM.GetString("titError"))
+                Confirm_Password.salt = salt
+                Confirm_Password.ShowDialog()
+                Dim testhash As String = Confirm_Password.hash
+                If testhash = Benutzer.HashString(TBpassword.Text, salt) Then
+                    Confirm_Password.hash = Nothing
+                    Benutzer.Insert(TBusername.Text, Benutzer.HashString(TBpassword.Text, salt), salt, CBrole.SelectedItem.ToString)
+                    MsgBox(locRM.GetString("strAddedUser"), MsgBoxStyle.Information, locRM.GetString("titAddedUser"))
+                    updateListView()
+                End If
+            ElseIf TBusername.Text = Nothing Then
+                    MsgBox(locRM.GetString("strNoUsername"), MsgBoxStyle.Critical, locRM.GetString("titError"))
+                    TBusername.Focus()
+                ElseIf TBpassword.Text = Nothing Then
+                    MsgBox(locRM.GetString("strNoPassword"), MsgBoxStyle.Critical, locRM.GetString("titError"))
                 TBpassword.Focus()
             End If
         Else
@@ -62,11 +68,17 @@ Public Class UserManagement
                     MsgBox(locRM.GetString("strChangeYourself"), MsgBoxStyle.Critical, locRM.GetString("titError"))
                 Else
                     Dim salt As Byte() = Benutzer.CreateSalt()
-                    Benutzer.Update(TBusername.Text, Benutzer.HashString(TBpassword.Text, salt), salt, CBrole.SelectedItem.ToString)
-                    MsgBox(locRM.GetString("strUpdatedUser"), MsgBoxStyle.Information, locRM.GetString("titUpdatedUser"))
-                    updateListView()
+                    Confirm_Password.salt = salt
+                    Confirm_Password.ShowDialog()
+                    Dim testhash As String = Confirm_Password.hash
+                    If testhash = Benutzer.HashString(TBpassword.Text, salt) Then
+                        Confirm_Password.hash = Nothing
+                        Benutzer.Update(TBusername.Text, Benutzer.HashString(TBpassword.Text, salt), salt, CBrole.SelectedItem.ToString)
+                        MsgBox(locRM.GetString("strUpdatedUser"), MsgBoxStyle.Information, locRM.GetString("titUpdatedUser"))
+                        updateListView()
+                    End If
                 End If
-            ElseIf TBusername.Text = Nothing Then
+                    ElseIf TBusername.Text = Nothing Then
                 MsgBox(locRM.GetString("strNoUsername"), MsgBoxStyle.Critical, locRM.GetString("titError"))
                 TBusername.Focus()
             ElseIf TBpassword.Text = Nothing Then

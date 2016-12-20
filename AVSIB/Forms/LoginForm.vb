@@ -14,11 +14,16 @@ Public Class LoginForm
                 If Benutzer.GetCount() = 0 Then
                     ' If no user exists so far, a new user is added with the provided credentials after
                     ' confirmation of the password by retyping it. The password can not be recovered!
-                    If InputBox(LocRM.GetString("strConfirmPassword"), LocRM.GetString("titConfirmPassword")).ToString = PasswordTextBox.Text Then
-                        Dim salt As Byte() = Benutzer.CreateSalt()
+                    Dim salt As Byte() = Benutzer.CreateSalt()
+                    Confirm_Password.salt = salt
+                    Confirm_Password.ShowDialog()
+                    Dim testhash As String = Confirm_Password.hash
+                    If testhash = Benutzer.HashString(PasswordTextBox.Text, salt) Then
+                        Confirm_Password.hash = Nothing
                         Benutzer.Insert(UsernameTextBox.Text, Benutzer.HashString(PasswordTextBox.Text, salt), salt, "admin")
                         MsgBox(LocRM.GetString("strAddedUser"), MsgBoxStyle.Information, LocRM.GetString("titAddedUser"))
                     Else
+                        Confirm_Password.hash = Nothing
                         ' If the password is not entered correctly the second time a messagebox is shown and no user is created
                         MsgBox(LocRM.GetString("strWrongPassword"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
                     End If

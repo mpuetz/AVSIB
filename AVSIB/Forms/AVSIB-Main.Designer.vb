@@ -38,8 +38,11 @@ Partial Class AVSIB_Main
         Me.InfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.MainButtonChangePassword = New System.Windows.Forms.Button()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.MainButtonLogOut = New System.Windows.Forms.Button()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.ButtonUserManagement = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -53,10 +56,6 @@ Partial Class AVSIB_Main
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.MainButtonChangePassword = New System.Windows.Forms.Button()
-        Me.MainButtonLogOut = New System.Windows.Forms.Button()
-        Me.ButtonUserManagement = New System.Windows.Forms.Button()
         Me.MainButtonEnde = New System.Windows.Forms.Button()
         Me.MainButtonReset = New System.Windows.Forms.Button()
         Me.MainButtonDrucken = New System.Windows.Forms.Button()
@@ -66,73 +65,75 @@ Partial Class AVSIB_Main
         Me.MainButtonOrte = New System.Windows.Forms.Button()
         Me.MainButtonAusträger = New System.Windows.Forms.Button()
         Me.MainButtonPersonen = New System.Windows.Forms.Button()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
+        resources.ApplyResources(Me.MenuStrip1, "MenuStrip1")
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DateToolStripMenuItem, Me.HilfeToolStripMenuItem})
-        resources.ApplyResources(Me.MenuStrip1, "MenuStrip1")
         Me.MenuStrip1.Name = "MenuStrip1"
+        Me.ToolTip1.SetToolTip(Me.MenuStrip1, resources.GetString("MenuStrip1.ToolTip"))
         '
         'DateToolStripMenuItem
         '
+        resources.ApplyResources(Me.DateToolStripMenuItem, "DateToolStripMenuItem")
         Me.DateToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BeendenToolStripMenuItem})
         Me.DateToolStripMenuItem.Name = "DateToolStripMenuItem"
-        resources.ApplyResources(Me.DateToolStripMenuItem, "DateToolStripMenuItem")
         '
         'BeendenToolStripMenuItem
         '
-        Me.BeendenToolStripMenuItem.Name = "BeendenToolStripMenuItem"
         resources.ApplyResources(Me.BeendenToolStripMenuItem, "BeendenToolStripMenuItem")
+        Me.BeendenToolStripMenuItem.Name = "BeendenToolStripMenuItem"
         '
         'HilfeToolStripMenuItem
         '
+        resources.ApplyResources(Me.HilfeToolStripMenuItem, "HilfeToolStripMenuItem")
         Me.HilfeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Hilfe_Button, Me.ToolStripSeparator1, Me.FehlerMelderToolStripMenuItem, Me.ToolStripMenuItem2, Me.ToolStripSeparator2, Me.ToolStripMenuItem3, Me.ToolStripMenuItem1, Me.InfoToolStripMenuItem})
         Me.HilfeToolStripMenuItem.Name = "HilfeToolStripMenuItem"
-        resources.ApplyResources(Me.HilfeToolStripMenuItem, "HilfeToolStripMenuItem")
         '
         'Hilfe_Button
         '
-        Me.Hilfe_Button.Name = "Hilfe_Button"
         resources.ApplyResources(Me.Hilfe_Button, "Hilfe_Button")
+        Me.Hilfe_Button.Name = "Hilfe_Button"
         '
         'ToolStripSeparator1
         '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         resources.ApplyResources(Me.ToolStripSeparator1, "ToolStripSeparator1")
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         '
         'FehlerMelderToolStripMenuItem
         '
-        Me.FehlerMelderToolStripMenuItem.Name = "FehlerMelderToolStripMenuItem"
         resources.ApplyResources(Me.FehlerMelderToolStripMenuItem, "FehlerMelderToolStripMenuItem")
+        Me.FehlerMelderToolStripMenuItem.Name = "FehlerMelderToolStripMenuItem"
         '
         'ToolStripMenuItem2
         '
-        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
         resources.ApplyResources(Me.ToolStripMenuItem2, "ToolStripMenuItem2")
+        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
         '
         'ToolStripSeparator2
         '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
         resources.ApplyResources(Me.ToolStripSeparator2, "ToolStripSeparator2")
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
         '
         'ToolStripMenuItem3
         '
-        Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
         resources.ApplyResources(Me.ToolStripMenuItem3, "ToolStripMenuItem3")
+        Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
         '
         'ToolStripMenuItem1
         '
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
         resources.ApplyResources(Me.ToolStripMenuItem1, "ToolStripMenuItem1")
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
         '
         'InfoToolStripMenuItem
         '
-        Me.InfoToolStripMenuItem.Name = "InfoToolStripMenuItem"
         resources.ApplyResources(Me.InfoToolStripMenuItem, "InfoToolStripMenuItem")
+        Me.InfoToolStripMenuItem.Name = "InfoToolStripMenuItem"
         '
         'GroupBox1
         '
@@ -169,35 +170,67 @@ Partial Class AVSIB_Main
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.TabStop = False
+        Me.ToolTip1.SetToolTip(Me.GroupBox1, resources.GetString("GroupBox1.ToolTip"))
         '
         'Label13
         '
         resources.ApplyResources(Me.Label13, "Label13")
         Me.Label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label13.Name = "Label13"
+        Me.ToolTip1.SetToolTip(Me.Label13, resources.GetString("Label13.ToolTip"))
+        '
+        'MainButtonChangePassword
+        '
+        resources.ApplyResources(Me.MainButtonChangePassword, "MainButtonChangePassword")
+        Me.MainButtonChangePassword.BackColor = System.Drawing.SystemColors.Control
+        Me.MainButtonChangePassword.Image = Global.AVSIB.My.Resources.Resources.PasswordStrength_16x
+        Me.MainButtonChangePassword.Name = "MainButtonChangePassword"
+        Me.ToolTip1.SetToolTip(Me.MainButtonChangePassword, resources.GetString("MainButtonChangePassword.ToolTip"))
+        Me.MainButtonChangePassword.UseVisualStyleBackColor = False
         '
         'Label14
         '
         resources.ApplyResources(Me.Label14, "Label14")
         Me.Label14.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label14.Name = "Label14"
+        Me.ToolTip1.SetToolTip(Me.Label14, resources.GetString("Label14.ToolTip"))
+        '
+        'MainButtonLogOut
+        '
+        resources.ApplyResources(Me.MainButtonLogOut, "MainButtonLogOut")
+        Me.MainButtonLogOut.BackColor = System.Drawing.SystemColors.Control
+        Me.MainButtonLogOut.Image = Global.AVSIB.My.Resources.Resources.lock_16xLG
+        Me.MainButtonLogOut.Name = "MainButtonLogOut"
+        Me.ToolTip1.SetToolTip(Me.MainButtonLogOut, resources.GetString("MainButtonLogOut.ToolTip"))
+        Me.MainButtonLogOut.UseVisualStyleBackColor = False
         '
         'Label12
         '
         resources.ApplyResources(Me.Label12, "Label12")
         Me.Label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label12.Name = "Label12"
+        Me.ToolTip1.SetToolTip(Me.Label12, resources.GetString("Label12.ToolTip"))
+        '
+        'ButtonUserManagement
+        '
+        resources.ApplyResources(Me.ButtonUserManagement, "ButtonUserManagement")
+        Me.ButtonUserManagement.BackColor = System.Drawing.SystemColors.Control
+        Me.ButtonUserManagement.Image = Global.AVSIB.My.Resources.Resources.UserWizard_16x
+        Me.ButtonUserManagement.Name = "ButtonUserManagement"
+        Me.ToolTip1.SetToolTip(Me.ButtonUserManagement, resources.GetString("ButtonUserManagement.ToolTip"))
+        Me.ButtonUserManagement.UseVisualStyleBackColor = False
         '
         'Label11
         '
         resources.ApplyResources(Me.Label11, "Label11")
         Me.Label11.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label11.Name = "Label11"
+        Me.ToolTip1.SetToolTip(Me.Label11, resources.GetString("Label11.ToolTip"))
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.Control
         resources.ApplyResources(Me.Button1, "Button1")
+        Me.Button1.BackColor = System.Drawing.SystemColors.Control
         Me.Button1.Name = "Button1"
         Me.ToolTip1.SetToolTip(Me.Button1, resources.GetString("Button1.ToolTip"))
         Me.Button1.UseVisualStyleBackColor = False
@@ -207,12 +240,13 @@ Partial Class AVSIB_Main
         resources.ApplyResources(Me.Label9, "Label9")
         Me.Label9.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label9.Name = "Label9"
+        Me.ToolTip1.SetToolTip(Me.Label9, resources.GetString("Label9.ToolTip"))
         '
         'MainButtonConfiguration
         '
+        resources.ApplyResources(Me.MainButtonConfiguration, "MainButtonConfiguration")
         Me.MainButtonConfiguration.BackColor = System.Drawing.SystemColors.Control
         Me.MainButtonConfiguration.Image = Global.AVSIB.My.Resources.Resources.SettingsPanel_16x
-        resources.ApplyResources(Me.MainButtonConfiguration, "MainButtonConfiguration")
         Me.MainButtonConfiguration.Name = "MainButtonConfiguration"
         Me.ToolTip1.SetToolTip(Me.MainButtonConfiguration, resources.GetString("MainButtonConfiguration.ToolTip"))
         Me.MainButtonConfiguration.UseVisualStyleBackColor = False
@@ -222,147 +256,132 @@ Partial Class AVSIB_Main
         resources.ApplyResources(Me.Label10, "Label10")
         Me.Label10.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label10.Name = "Label10"
+        Me.ToolTip1.SetToolTip(Me.Label10, resources.GetString("Label10.ToolTip"))
         '
         'Label7
         '
         resources.ApplyResources(Me.Label7, "Label7")
         Me.Label7.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label7.Name = "Label7"
+        Me.ToolTip1.SetToolTip(Me.Label7, resources.GetString("Label7.ToolTip"))
         '
         'Label8
         '
         resources.ApplyResources(Me.Label8, "Label8")
         Me.Label8.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label8.Name = "Label8"
+        Me.ToolTip1.SetToolTip(Me.Label8, resources.GetString("Label8.ToolTip"))
         '
         'Label5
         '
         resources.ApplyResources(Me.Label5, "Label5")
         Me.Label5.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label5.Name = "Label5"
+        Me.ToolTip1.SetToolTip(Me.Label5, resources.GetString("Label5.ToolTip"))
         '
         'Label6
         '
         resources.ApplyResources(Me.Label6, "Label6")
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label6.Name = "Label6"
+        Me.ToolTip1.SetToolTip(Me.Label6, resources.GetString("Label6.ToolTip"))
         '
         'Label3
         '
         resources.ApplyResources(Me.Label3, "Label3")
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label3.Name = "Label3"
+        Me.ToolTip1.SetToolTip(Me.Label3, resources.GetString("Label3.ToolTip"))
         '
         'Label4
         '
         resources.ApplyResources(Me.Label4, "Label4")
         Me.Label4.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label4.Name = "Label4"
+        Me.ToolTip1.SetToolTip(Me.Label4, resources.GetString("Label4.ToolTip"))
         '
         'Label2
         '
         resources.ApplyResources(Me.Label2, "Label2")
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label2.Name = "Label2"
+        Me.ToolTip1.SetToolTip(Me.Label2, resources.GetString("Label2.ToolTip"))
         '
         'Label1
         '
         resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Label1.Name = "Label1"
-        '
-        'MainButtonChangePassword
-        '
-        Me.MainButtonChangePassword.BackColor = System.Drawing.SystemColors.Control
-        Me.MainButtonChangePassword.Image = Global.AVSIB.My.Resources.Resources.PasswordStrength_16x
-        resources.ApplyResources(Me.MainButtonChangePassword, "MainButtonChangePassword")
-        Me.MainButtonChangePassword.Name = "MainButtonChangePassword"
-        Me.MainButtonChangePassword.UseVisualStyleBackColor = False
-        '
-        'MainButtonLogOut
-        '
-        Me.MainButtonLogOut.BackColor = System.Drawing.SystemColors.Control
-        Me.MainButtonLogOut.Image = Global.AVSIB.My.Resources.Resources.lock_16xLG
-        resources.ApplyResources(Me.MainButtonLogOut, "MainButtonLogOut")
-        Me.MainButtonLogOut.Name = "MainButtonLogOut"
-        Me.MainButtonLogOut.UseVisualStyleBackColor = False
-        '
-        'ButtonUserManagement
-        '
-        Me.ButtonUserManagement.BackColor = System.Drawing.SystemColors.Control
-        Me.ButtonUserManagement.Image = Global.AVSIB.My.Resources.Resources.UserWizard_16x
-        resources.ApplyResources(Me.ButtonUserManagement, "ButtonUserManagement")
-        Me.ButtonUserManagement.Name = "ButtonUserManagement"
-        Me.ButtonUserManagement.UseVisualStyleBackColor = False
+        Me.ToolTip1.SetToolTip(Me.Label1, resources.GetString("Label1.ToolTip"))
         '
         'MainButtonEnde
         '
-        Me.MainButtonEnde.BackColor = System.Drawing.SystemColors.Control
         resources.ApplyResources(Me.MainButtonEnde, "MainButtonEnde")
+        Me.MainButtonEnde.BackColor = System.Drawing.SystemColors.Control
         Me.MainButtonEnde.Name = "MainButtonEnde"
         Me.ToolTip1.SetToolTip(Me.MainButtonEnde, resources.GetString("MainButtonEnde.ToolTip"))
         Me.MainButtonEnde.UseVisualStyleBackColor = False
         '
         'MainButtonReset
         '
-        Me.MainButtonReset.BackColor = System.Drawing.SystemColors.Control
         resources.ApplyResources(Me.MainButtonReset, "MainButtonReset")
+        Me.MainButtonReset.BackColor = System.Drawing.SystemColors.Control
         Me.MainButtonReset.Name = "MainButtonReset"
         Me.ToolTip1.SetToolTip(Me.MainButtonReset, resources.GetString("MainButtonReset.ToolTip"))
         Me.MainButtonReset.UseVisualStyleBackColor = False
         '
         'MainButtonDrucken
         '
-        Me.MainButtonDrucken.BackColor = System.Drawing.SystemColors.Control
         resources.ApplyResources(Me.MainButtonDrucken, "MainButtonDrucken")
+        Me.MainButtonDrucken.BackColor = System.Drawing.SystemColors.Control
         Me.MainButtonDrucken.Name = "MainButtonDrucken"
         Me.ToolTip1.SetToolTip(Me.MainButtonDrucken, resources.GetString("MainButtonDrucken.ToolTip"))
         Me.MainButtonDrucken.UseVisualStyleBackColor = False
         '
         'MainButtonExport
         '
-        Me.MainButtonExport.BackColor = System.Drawing.SystemColors.Control
         resources.ApplyResources(Me.MainButtonExport, "MainButtonExport")
+        Me.MainButtonExport.BackColor = System.Drawing.SystemColors.Control
         Me.MainButtonExport.Name = "MainButtonExport"
         Me.ToolTip1.SetToolTip(Me.MainButtonExport, resources.GetString("MainButtonExport.ToolTip"))
         Me.MainButtonExport.UseVisualStyleBackColor = False
         '
         'MainButtonBezirke
         '
-        Me.MainButtonBezirke.BackColor = System.Drawing.SystemColors.Control
         resources.ApplyResources(Me.MainButtonBezirke, "MainButtonBezirke")
+        Me.MainButtonBezirke.BackColor = System.Drawing.SystemColors.Control
         Me.MainButtonBezirke.Name = "MainButtonBezirke"
         Me.ToolTip1.SetToolTip(Me.MainButtonBezirke, resources.GetString("MainButtonBezirke.ToolTip"))
         Me.MainButtonBezirke.UseVisualStyleBackColor = False
         '
         'MainButtonStraßen
         '
-        Me.MainButtonStraßen.BackColor = System.Drawing.SystemColors.Control
         resources.ApplyResources(Me.MainButtonStraßen, "MainButtonStraßen")
+        Me.MainButtonStraßen.BackColor = System.Drawing.SystemColors.Control
         Me.MainButtonStraßen.Name = "MainButtonStraßen"
         Me.ToolTip1.SetToolTip(Me.MainButtonStraßen, resources.GetString("MainButtonStraßen.ToolTip"))
         Me.MainButtonStraßen.UseVisualStyleBackColor = False
         '
         'MainButtonOrte
         '
-        Me.MainButtonOrte.BackColor = System.Drawing.SystemColors.Control
         resources.ApplyResources(Me.MainButtonOrte, "MainButtonOrte")
+        Me.MainButtonOrte.BackColor = System.Drawing.SystemColors.Control
         Me.MainButtonOrte.Name = "MainButtonOrte"
         Me.ToolTip1.SetToolTip(Me.MainButtonOrte, resources.GetString("MainButtonOrte.ToolTip"))
         Me.MainButtonOrte.UseVisualStyleBackColor = False
         '
         'MainButtonAusträger
         '
-        Me.MainButtonAusträger.BackColor = System.Drawing.SystemColors.Control
         resources.ApplyResources(Me.MainButtonAusträger, "MainButtonAusträger")
+        Me.MainButtonAusträger.BackColor = System.Drawing.SystemColors.Control
         Me.MainButtonAusträger.Name = "MainButtonAusträger"
         Me.ToolTip1.SetToolTip(Me.MainButtonAusträger, resources.GetString("MainButtonAusträger.ToolTip"))
         Me.MainButtonAusträger.UseVisualStyleBackColor = False
         '
         'MainButtonPersonen
         '
-        Me.MainButtonPersonen.BackColor = System.Drawing.SystemColors.Control
         resources.ApplyResources(Me.MainButtonPersonen, "MainButtonPersonen")
+        Me.MainButtonPersonen.BackColor = System.Drawing.SystemColors.Control
         Me.MainButtonPersonen.Name = "MainButtonPersonen"
         Me.ToolTip1.SetToolTip(Me.MainButtonPersonen, resources.GetString("MainButtonPersonen.ToolTip"))
         Me.MainButtonPersonen.UseVisualStyleBackColor = False
@@ -375,6 +394,7 @@ Partial Class AVSIB_Main
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "AVSIB_Main"
+        Me.ToolTip1.SetToolTip(Me, resources.GetString("$this.ToolTip"))
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
