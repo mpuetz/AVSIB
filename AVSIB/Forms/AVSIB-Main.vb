@@ -24,7 +24,7 @@ Imports System.Resources
 Public Class AVSIB_Main
     Dim FirstRun As Integer
     Private LocRM As New ResourceManager("AVSIB.WinFormStrings", GetType(AVSIB_Main).Assembly)
-    Dim user As String = LoginForm.user
+    Public ReadOnly user As String = LoginForm.user
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Checks if the settings.txt exists and whether the settings were entered by the user. If not, it starts the configuration form.
         ' If the settings were not done yet, it replaces the database with a blank one.
@@ -174,11 +174,16 @@ Public Class AVSIB_Main
         Statistik.ShowDialog()
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
-
     Private Sub ButtonUserManagement_Click(sender As Object, e As EventArgs) Handles ButtonUserManagement.Click
         UserManagement.ShowDialog()
+    End Sub
+
+    Private Sub MainButtonLogOut_Click(sender As Object, e As EventArgs) Handles MainButtonLogOut.Click
+        LoginForm.Show()
+        Close()
+    End Sub
+
+    Private Sub MainButtonChangePassword_Click(sender As Object, e As EventArgs) Handles MainButtonChangePassword.Click
+
     End Sub
 End Class

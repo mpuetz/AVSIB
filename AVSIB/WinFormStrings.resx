@@ -321,4 +321,10 @@
   <data name="titUpdatedUser" xml:space="preserve">
     <value>Update successful!</value>
   </data>
+  <data name="strDeleteYourself" xml:space="preserve">
+    <value>You must not delete the currently logged in user!</value>
+  </data>
+  <data name="strChangeYourself" xml:space="preserve">
+    <value>You can not change your own data here. Please use "Change Password" in the main menu.</value>
+  </data>
 </root>

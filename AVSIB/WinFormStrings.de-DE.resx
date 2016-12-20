@@ -321,4 +321,10 @@
   <data name="titUpdatedUser" xml:space="preserve">
     <value>Benutzer geändert</value>
   </data>
+  <data name="strChangeYourself" xml:space="preserve">
+    <value>Sie können Ihre eigenen Daten hier nicht ändern. Bitte nutzen Sie den Punkt"Passwort ändern" im Hauptmenü.</value>
+  </data>
+  <data name="strDeleteYourself" xml:space="preserve">
+    <value>Sie können den derzeit eingeloggten Benutzer nicht löschen!</value>
+  </data>
 </root>

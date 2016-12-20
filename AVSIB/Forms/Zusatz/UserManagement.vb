@@ -4,6 +4,7 @@ Public Class UserManagement
     Dim count As Long
     Dim user As String
     Dim locRM As New ResourceManager("AVSIB.WinFormStrings", GetType(UserManagement).Assembly)
+    Dim blockedUser As String = AVSIB_Main.user
     Private Sub UserManagement_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CBrole.SelectedIndex = 0
         updateListView()
@@ -19,12 +20,16 @@ Public Class UserManagement
     Private Sub Bdelete_Click(sender As Object, e As EventArgs) Handles Bdelete.Click
         If count > 1 Then
             If TBusername.Text <> Nothing Then
-                If MsgBox(locRM.GetString("strSure"), MsgBoxStyle.YesNo, locRM.GetString("titSure")) = MsgBoxResult.Yes Then
-                    Benutzer.Delete(TBusername.Text)
-                    updateListView()
+                If TBusername.Text = blockedUser Then
+                    MsgBox(locRM.GetString("strDeleteYourself"), MsgBoxStyle.Critical, locRM.GetString("titError"))
+                Else
+                    If MsgBox(locRM.GetString("strSure"), MsgBoxStyle.YesNo, locRM.GetString("titSure")) = MsgBoxResult.Yes Then
+                        Benutzer.Delete(TBusername.Text)
+                        updateListView()
+                    End If
                 End If
             Else
-                MsgBox(locRM.GetString("strNoUsername"), MsgBoxStyle.Exclamation, locRM.GetString("titError"))
+                    MsgBox(locRM.GetString("strNoUsername"), MsgBoxStyle.Exclamation, locRM.GetString("titError"))
                 TBusername.Focus()
             End If
         Else
@@ -52,10 +57,14 @@ Public Class UserManagement
             End If
         Else
             If TBusername.Text <> Nothing And TBpassword.Text <> Nothing Then
-                Dim salt As Byte() = Benutzer.CreateSalt()
-                Benutzer.Update(TBusername.Text, Benutzer.HashString(TBpassword.Text, salt), salt, CBrole.SelectedItem.ToString)
-                MsgBox(locRM.GetString("strUpdatedUser"), MsgBoxStyle.Information, locRM.GetString("titUpdatedUser"))
-                updateListView()
+                If TBusername.Text = blockedUser Then
+                    MsgBox(locRM.GetString("strChangeYourself"), MsgBoxStyle.Critical, locRM.GetString("titError"))
+                Else
+                    Dim salt As Byte() = Benutzer.CreateSalt()
+                    Benutzer.Update(TBusername.Text, Benutzer.HashString(TBpassword.Text, salt), salt, CBrole.SelectedItem.ToString)
+                    MsgBox(locRM.GetString("strUpdatedUser"), MsgBoxStyle.Information, locRM.GetString("titUpdatedUser"))
+                    updateListView()
+                End If
             ElseIf TBusername.Text = Nothing Then
                 MsgBox(locRM.GetString("strNoUsername"), MsgBoxStyle.Critical, locRM.GetString("titError"))
                 TBusername.Focus()

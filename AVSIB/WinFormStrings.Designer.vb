@@ -137,6 +137,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die You can not change your own data here. Please use &quot;Change Password&quot; in the main menu. ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property strChangeYourself() As String
+            Get
+                Return ResourceManager.GetString("strChangeYourself", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Sucht eine lokalisierte Zeichenfolge, die Please make sure you select each option one time only! ähnelt.
         '''</summary>
         Friend Shared ReadOnly Property strChooseOnce() As String
@@ -178,6 +187,15 @@ Namespace My.Resources
         Friend Shared ReadOnly Property strDate() As String
             Get
                 Return ResourceManager.GetString("strDate", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Sucht eine lokalisierte Zeichenfolge, die You must not delete the currently logged in user! ähnelt.
+        '''</summary>
+        Friend Shared ReadOnly Property strDeleteYourself() As String
+            Get
+                Return ResourceManager.GetString("strDeleteYourself", resourceCulture)
             End Get
         End Property
         
