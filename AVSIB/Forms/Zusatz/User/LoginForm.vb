@@ -71,7 +71,9 @@ Public Class LoginForm
         ' On load tries to load the latest username froms settings.ini
         Try
             UsernameTextBox.Text = FileOperator.Load(Application.StartupPath + "\settings.ini", "Username")
-            If UsernameTextBox.Text <> Nothing Then CheckBox1.Checked = True
+            If UsernameTextBox.Text <> Nothing Then
+                CheckBox1.Checked = True
+            End If
         Catch ex As Exception
         End Try
     End Sub

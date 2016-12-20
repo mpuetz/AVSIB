@@ -369,10 +369,10 @@
     <Compile Include="Funktionen\Personen.vb" />
     <Compile Include="Funktionen\Straße.vb" />
     <Compile Include="GlobalSuppressions.vb" />
-    <Compile Include="Forms\LoginForm.Designer.vb">
+    <Compile Include="Forms\Zusatz\User\LoginForm.Designer.vb">
       <DependentUpon>LoginForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\LoginForm.vb">
+    <Compile Include="Forms\Zusatz\User\LoginForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -438,7 +438,7 @@
     <EmbeddedResource Include="Forms\Kernfunktionen\AVSIB-Straße\AVSIB-Straße.de-DE.resx">
       <DependentUpon>AVSIB-Straße.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LoginForm.de-DE.resx">
+    <EmbeddedResource Include="Forms\Zusatz\User\LoginForm.de-DE.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Zusatz\AboutBox.resx">
@@ -528,7 +528,7 @@
     <EmbeddedResource Include="Forms\Zusatz\Statistik.resx">
       <DependentUpon>Statistik.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LoginForm.resx">
+    <EmbeddedResource Include="Forms\Zusatz\User\LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Zusatz\User\UserManagement.de-DE.resx">
