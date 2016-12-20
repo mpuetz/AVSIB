@@ -24,10 +24,11 @@ Imports System.Resources
 Public Class AVSIB_Main
     Dim FirstRun As Integer
     Private LocRM As New ResourceManager("AVSIB.WinFormStrings", GetType(AVSIB_Main).Assembly)
-    Public ReadOnly user As String = LoginForm.user
+    Public user As String
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Checks if the settings.txt exists and whether the settings were entered by the user. If not, it starts the configuration form.
         ' If the settings were not done yet, it replaces the database with a blank one.
+        user = LoginForm.user
         If Benutzer.GetRole(user) = "user" Then
             Label7.Visible = False
             Label9.Visible = False

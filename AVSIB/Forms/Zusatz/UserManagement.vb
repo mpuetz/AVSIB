@@ -4,8 +4,9 @@ Public Class UserManagement
     Dim count As Long
     Dim user As String
     Dim locRM As New ResourceManager("AVSIB.WinFormStrings", GetType(UserManagement).Assembly)
-    Dim blockedUser As String = AVSIB_Main.user
+    Dim blockedUser As String
     Private Sub UserManagement_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        blockedUser = AVSIB_Main.user
         CBrole.SelectedIndex = 0
         updateListView()
     End Sub
