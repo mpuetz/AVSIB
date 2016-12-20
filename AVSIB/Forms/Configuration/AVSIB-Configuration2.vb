@@ -64,8 +64,8 @@ Public Class AVSIB_Configuration2
             AVSIB_Main.Show()
         Else
             AVSIB_Main.Close()
+            Application.Exit()
         End If
-        Me.Dispose()
     End Sub
 
     Private Sub SKeyDown(sender As Object, e As KeyEventArgs) Handles TextBox2.KeyDown, TextBox1.KeyDown
@@ -76,14 +76,14 @@ Public Class AVSIB_Configuration2
     End Sub
 
     Private Sub AVSIB_Configuration2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CBBackup.SelectedIndex = 0
-        CBexport.SelectedIndex = 0
         Try
             TextBox1.Text = FileOperator.Load(Application.StartupPath + "\settings.ini", "Organisation")
             TextBox2.Text = FileOperator.Load(Application.StartupPath + "\settings.ini", "Projekt")
             CBBackup.SelectedItem = FileOperator.Load(Application.StartupPath + "\settings.ini", "BackupPermission")
             CBexport.SelectedItem = FileOperator.Load(Application.StartupPath + "\settings.ini", "ExportPermission")
         Catch
+            CBBackup.SelectedIndex = 0
+            CBexport.SelectedIndex = 0
         End Try
     End Sub
 End Class

@@ -38,16 +38,6 @@ Public Class AVSIB_Main
             AVSIB_Configuration.Show()
             Me.Hide()
         ElseIf FileOperator.Load(Application.StartupPath + "\settings.ini", "FirstRun") = "1" Then
-            For Each proc In System.Diagnostics.Process.GetProcessesByName("sqlservr")
-                proc.Kill()
-            Next
-            System.Threading.Thread.Sleep(500)
-            System.IO.File.Delete(ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data.mdf")
-            System.IO.File.Delete(ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data_log.ldf")
-            System.IO.File.Delete(Application.StartupPath & "\settings.ini")
-            System.IO.File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\Data\Reset\AVSIB_Data.mdf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data.mdf")
-            System.IO.File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\Data\Reset\AVSIB_Data_log.ldf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data_log.ldf")
-            MsgBox(LocRM.GetString("strSuccess"), MsgBoxStyle.Information, LocRM.GetString("titSuccess"))
             FileOperator.Save(Application.StartupPath + "\settings.ini", "FirstRun", "1")
             FileOperator.Save(Application.StartupPath + "\settings.ini", "ConfigRunning", "0")
             AVSIB_Configuration.Show()
@@ -159,8 +149,8 @@ Public Class AVSIB_Main
             MsgBox(LocRM.GetString("strSuccess"), MsgBoxStyle.Information, LocRM.GetString("titSuccess"))
             FileOperator.Save(Application.StartupPath + "\settings.ini", "FirstRun", "1")
             FileOperator.Save(Application.StartupPath + "\settings.ini", "ConfigRunning", "0")
-            AVSIB_Configuration.Show()
-            Me.Hide()
+            LoginForm.Show()
+            Close()
         End If
     End Sub
 
