@@ -301,22 +301,28 @@
     <Compile Include="Forms\Zusatz\Backup.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Zusatz\Bugs.Designer.vb">
+    <Compile Include="Forms\Zusatz\User\AVSIB_ChangePass.Designer.vb">
+      <DependentUpon>AVSIB_ChangePass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Zusatz\User\AVSIB_ChangePass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Zusatz\Web\Bugs.Designer.vb">
       <DependentUpon>Bugs.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Zusatz\Bugs.vb">
+    <Compile Include="Forms\Zusatz\Web\Bugs.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Zusatz\Changelog.Designer.vb">
+    <Compile Include="Forms\Zusatz\Web\Changelog.Designer.vb">
       <DependentUpon>Changelog.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Zusatz\Changelog.vb">
+    <Compile Include="Forms\Zusatz\Web\Changelog.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Zusatz\Help.Designer.vb">
+    <Compile Include="Forms\Zusatz\Web\Help.Designer.vb">
       <DependentUpon>Help.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Zusatz\Help.vb">
+    <Compile Include="Forms\Zusatz\Web\Help.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Zusatz\Import_Export.Designer.vb">
@@ -331,10 +337,10 @@
     <Compile Include="Forms\Zusatz\Statistik.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Zusatz\UserManagement.Designer.vb">
+    <Compile Include="Forms\Zusatz\User\UserManagement.Designer.vb">
       <DependentUpon>UserManagement.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Zusatz\UserManagement.vb">
+    <Compile Include="Forms\Zusatz\User\UserManagement.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Funktionen\Austräger.vb" />
@@ -356,11 +362,6 @@
     <Compile Include="Funktionen\Personen.vb" />
     <Compile Include="Funktionen\Straße.vb" />
     <Compile Include="GlobalSuppressions.vb" />
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Forms\LoginForm.Designer.vb">
       <DependentUpon>LoginForm.vb</DependentUpon>
     </Compile>
@@ -371,6 +372,11 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -473,22 +479,28 @@
     <EmbeddedResource Include="Forms\Zusatz\Backup.resx">
       <DependentUpon>Backup.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Zusatz\Bugs.de-DE.resx">
+    <EmbeddedResource Include="Forms\Zusatz\User\AVSIB_ChangePass.de-DE.resx">
+      <DependentUpon>AVSIB_ChangePass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Zusatz\User\AVSIB_ChangePass.resx">
+      <DependentUpon>AVSIB_ChangePass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Zusatz\Web\Bugs.de-DE.resx">
       <DependentUpon>Bugs.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Zusatz\Bugs.resx">
+    <EmbeddedResource Include="Forms\Zusatz\Web\Bugs.resx">
       <DependentUpon>Bugs.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Zusatz\Changelog.de-DE.resx">
+    <EmbeddedResource Include="Forms\Zusatz\Web\Changelog.de-DE.resx">
       <DependentUpon>Changelog.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Zusatz\Changelog.resx">
+    <EmbeddedResource Include="Forms\Zusatz\Web\Changelog.resx">
       <DependentUpon>Changelog.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Zusatz\Help.de-DE.resx">
+    <EmbeddedResource Include="Forms\Zusatz\Web\Help.de-DE.resx">
       <DependentUpon>Help.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Zusatz\Help.resx">
+    <EmbeddedResource Include="Forms\Zusatz\Web\Help.resx">
       <DependentUpon>Help.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Zusatz\Import_Export.de-DE.resx">
@@ -506,10 +518,10 @@
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Zusatz\UserManagement.de-DE.resx">
+    <EmbeddedResource Include="Forms\Zusatz\User\UserManagement.de-DE.resx">
       <DependentUpon>UserManagement.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Zusatz\UserManagement.resx">
+    <EmbeddedResource Include="Forms\Zusatz\User\UserManagement.resx">
       <DependentUpon>UserManagement.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -629,6 +641,16 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>AVSIB_Data.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Login_64x.png" />
+    <None Include="Resources\Login_256x.png" />
+    <None Include="Resources\SettingsPanel_16x.png" />
+    <None Include="Resources\UserWizard_16x.png" />
+    <None Include="Resources\PasswordStrength_16x.png" />
+    <None Include="Resources\lock_16xLG.png" />
+    <None Include="Resources\eye_16xLG.png" />
+    <None Include="Resources\VSO_DeleteUser_16x.png" />
+    <None Include="Resources\Save_32x.png" />
+    <None Include="Resources\Save_16x.png" />
     <None Include="Resources\StopFilter_16x.png" />
     <None Include="Resources\Filter_64x.png" />
     <None Include="Resources\StartPause_16x.png" />

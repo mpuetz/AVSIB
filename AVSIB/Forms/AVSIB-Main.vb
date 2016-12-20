@@ -185,6 +185,6 @@ Public Class AVSIB_Main
     End Sub
 
     Private Sub MainButtonChangePassword_Click(sender As Object, e As EventArgs) Handles MainButtonChangePassword.Click
-
+        AVSIB_ChangePass.ShowDialog()
     End Sub
 End Class

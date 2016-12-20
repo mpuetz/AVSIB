@@ -31,7 +31,6 @@ Partial Class LoginForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginForm))
-        Me.LogoPictureBox = New System.Windows.Forms.PictureBox()
         Me.UsernameLabel = New System.Windows.Forms.Label()
         Me.PasswordLabel = New System.Windows.Forms.Label()
         Me.UsernameTextBox = New System.Windows.Forms.TextBox()
@@ -39,14 +38,9 @@ Partial Class LoginForm
         Me.OK = New System.Windows.Forms.Button()
         Me.Cancel = New System.Windows.Forms.Button()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.LogoPictureBox = New System.Windows.Forms.PictureBox()
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'LogoPictureBox
-        '
-        resources.ApplyResources(Me.LogoPictureBox, "LogoPictureBox")
-        Me.LogoPictureBox.Name = "LogoPictureBox"
-        Me.LogoPictureBox.TabStop = False
         '
         'UsernameLabel
         '
@@ -84,6 +78,13 @@ Partial Class LoginForm
         resources.ApplyResources(Me.CheckBox1, "CheckBox1")
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'LogoPictureBox
+        '
+        resources.ApplyResources(Me.LogoPictureBox, "LogoPictureBox")
+        Me.LogoPictureBox.Image = Global.AVSIB.My.Resources.Resources.Login_256x
+        Me.LogoPictureBox.Name = "LogoPictureBox"
+        Me.LogoPictureBox.TabStop = False
         '
         'LoginForm
         '

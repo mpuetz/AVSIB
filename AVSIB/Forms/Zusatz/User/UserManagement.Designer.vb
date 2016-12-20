@@ -91,12 +91,14 @@ Partial Class UserManagement
         'Bdelete
         '
         resources.ApplyResources(Me.Bdelete, "Bdelete")
+        Me.Bdelete.Image = Global.AVSIB.My.Resources.Resources.VSO_DeleteUser_16x
         Me.Bdelete.Name = "Bdelete"
         Me.Bdelete.UseVisualStyleBackColor = True
         '
         'Bsave
         '
         resources.ApplyResources(Me.Bsave, "Bsave")
+        Me.Bsave.Image = Global.AVSIB.My.Resources.Resources.Save_16x
         Me.Bsave.Name = "Bsave"
         Me.Bsave.UseVisualStyleBackColor = True
         '
