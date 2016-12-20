@@ -76,14 +76,11 @@ Public Class AVSIB_Configuration2
     End Sub
 
     Private Sub AVSIB_Configuration2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Try
-            TextBox1.Text = FileOperator.Load(Application.StartupPath + "\settings.ini", "Organisation")
-            TextBox2.Text = FileOperator.Load(Application.StartupPath + "\settings.ini", "Projekt")
-            CBBackup.SelectedItem = FileOperator.Load(Application.StartupPath + "\settings.ini", "BackupPermission")
-            CBexport.SelectedItem = FileOperator.Load(Application.StartupPath + "\settings.ini", "ExportPermission")
-        Catch
-            CBBackup.SelectedIndex = 0
-            CBexport.SelectedIndex = 0
-        End Try
+        TextBox1.Text = FileOperator.Load(Application.StartupPath + "\settings.ini", "Organisation")
+        TextBox2.Text = FileOperator.Load(Application.StartupPath + "\settings.ini", "Projekt")
+        CBBackup.SelectedItem = FileOperator.Load(Application.StartupPath + "\settings.ini", "BackupPermission")
+        CBexport.SelectedItem = FileOperator.Load(Application.StartupPath + "\settings.ini", "ExportPermission")
+        If CBBackup.SelectedItem = "" Then CBBackup.SelectedIndex = 0
+        If CBexport.SelectedItem = "" Then CBexport.SelectedIndex = 0
     End Sub
 End Class
