@@ -101,6 +101,8 @@ Public Class AVSIB_Bezirke
                 BezirkNr = CBBezirk.SelectedItem.ToString
                 Bezirke.Update(strID, BezirkNr)
                 Log.WriteLog(AVSIB_Main.user, AVSIB_Main.user & " added " & Straßen & " in " & PLZ & " " & Ort & " to district " & BezirkNr)
+            ElseIf CBBezirk.SelectedItem.ToString = Bezirke.GetIDByStraße(strID) Then
+                ' No change
             Else
                 Bezirke.Insert(strID, CBBezirk.SelectedItem.ToString)
                 Log.WriteLog(AVSIB_Main.user, AVSIB_Main.user & " added " & Straßen & " in " & PLZ & " " & Ort & " to district " & BezirkNr)
