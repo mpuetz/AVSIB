@@ -154,6 +154,7 @@ Public Class AVSIB_PersonCheck
     End Sub
 
     Private Sub ButtonNext_Click(sender As Object, e As EventArgs) Handles ButtonNext.Click, TSBNext.Click
+        If PauseButton.CheckState = CheckState.Unchecked Then PauseButton.CheckState = CheckState.Checked
         ' This person checks  if there are more persons in the database. If there are, the form will be updated with the data 
         ' else, a messagebox is shown.
         If filtered = False Then
@@ -196,6 +197,7 @@ Public Class AVSIB_PersonCheck
     End Sub
 
     Private Sub ButtonBack_Click(sender As Object, e As EventArgs) Handles ButtonBack.Click, TSBBack.Click
+        If PauseButton.CheckState = CheckState.Unchecked Then PauseButton.CheckState = CheckState.Checked
         'updates the form with the data from the previous person. If there are no more previous persons, a messagebox is shown.
         If filtered = False Then
             If PersonenCount <> 0 Then
@@ -232,6 +234,7 @@ Public Class AVSIB_PersonCheck
     End Sub
 
     Private Sub BindingNavigatorMoveLastItem_Click(sender As Object, e As EventArgs) Handles BindingNavigatorMoveLastItem.Click
+        If PauseButton.CheckState = CheckState.Unchecked Then PauseButton.CheckState = CheckState.Checked
         ' Same as ButtonBack.Click
         If filtered = False Then
             If count <> 0 Then
@@ -270,6 +273,7 @@ Public Class AVSIB_PersonCheck
     End Sub
 
     Private Sub BindingNavigatorMoveFirstItem_Click(sender As Object, e As EventArgs) Handles BindingNavigatorMoveFirstItem.Click
+        If PauseButton.CheckState = CheckState.Unchecked Then PauseButton.CheckState = CheckState.Checked
         ' Updates the form with the data of the first person in the database or shows a messagebox
         If filtered = False Then
             If count <> 0 Then
