@@ -181,24 +181,26 @@
   <data name="HilfeToolStripMenuItem.Text" xml:space="preserve">
     <value>Hilfe</value>
   </data>
-  <data name="MenuStrip1.ToolTip" xml:space="preserve">
-    <value />
+  <data name="Label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 17</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Label11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="Label13.Text" xml:space="preserve">
+    <value>Abmelden</value>
   </data>
-  <data name="Label11.ToolTip" xml:space="preserve">
-    <value />
+  <data name="Label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 17</value>
   </data>
-  <data name="Button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="Label14.Text" xml:space="preserve">
+    <value>Passwort ändern</value>
+  </data>
+  <data name="Label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 17</value>
+  </data>
+  <data name="Label12.Text" xml:space="preserve">
+    <value>Benutzerverwaltung</value>
   </data>
   <data name="Button1.ToolTip" xml:space="preserve">
     <value>Erstellt ein Backup im Programm-Ordner</value>
-  </data>
-  <data name="Label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="Label9.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 17</value>
@@ -206,17 +208,8 @@
   <data name="Label9.Text" xml:space="preserve">
     <value>Einstellungen</value>
   </data>
-  <data name="Label9.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="MainButtonConfiguration.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="MainButtonConfiguration.ToolTip" xml:space="preserve">
     <value>Bietet Einstellungsmöglichkeiten zu Ihrer Organisation</value>
-  </data>
-  <data name="Label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="Label10.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 17</value>
@@ -224,23 +217,11 @@
   <data name="Label10.Text" xml:space="preserve">
     <value>Ende</value>
   </data>
-  <data name="Label10.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="Label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 17</value>
   </data>
   <data name="Label7.Text" xml:space="preserve">
     <value>Zurücksetzen</value>
-  </data>
-  <data name="Label7.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="Label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 17</value>
@@ -248,29 +229,11 @@
   <data name="Label8.Text" xml:space="preserve">
     <value>Drucken</value>
   </data>
-  <data name="Label8.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="Label5.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="Label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 17</value>
   </data>
   <data name="Label6.Text" xml:space="preserve">
     <value>Bezirke</value>
-  </data>
-  <data name="Label6.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 17</value>
@@ -278,23 +241,11 @@
   <data name="Label3.Text" xml:space="preserve">
     <value>Straßen</value>
   </data>
-  <data name="Label3.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 17</value>
   </data>
   <data name="Label4.Text" xml:space="preserve">
     <value>Orte</value>
-  </data>
-  <data name="Label4.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>70, 17</value>
@@ -302,20 +253,11 @@
   <data name="Label2.Text" xml:space="preserve">
     <value>Austräger</value>
   </data>
-  <data name="Label2.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>69, 17</value>
   </data>
   <data name="Label1.Text" xml:space="preserve">
     <value>Personen</value>
-  </data>
-  <data name="Label1.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="MainButtonEnde.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -338,9 +280,6 @@
         mZiYmC4uLi4uLvHx8f///wAA////////////////////////////////////////////////////////
         AAA=
 </value>
-  </data>
-  <data name="MainButtonEnde.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="MainButtonEnde.ToolTip" xml:space="preserve">
     <value>Beendet das Programm</value>
@@ -389,9 +328,6 @@
         /////////////////wA=
 </value>
   </data>
-  <data name="MainButtonReset.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="MainButtonReset.ToolTip" xml:space="preserve">
     <value>Setzt das Programm auf Ursprungswerte zurück</value>
   </data>
@@ -438,9 +374,6 @@
         ////////////////////////////////////////////////////////////////////////////////
         /////////////////wA=
 </value>
-  </data>
-  <data name="MainButtonDrucken.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="MainButtonDrucken.ToolTip" xml:space="preserve">
     <value>Druckt ausgewählte Listen für die Austräger</value>
@@ -489,9 +422,6 @@
         /////////////////wA=
 </value>
   </data>
-  <data name="MainButtonExport.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="MainButtonExport.ToolTip" xml:space="preserve">
     <value>Bietet die Möglichkeit die Datenbank in einem selbstgewählten Ordner zu sichern</value>
   </data>
@@ -538,9 +468,6 @@
         ////////////////////////////////////////////////////////////////////////////////
         /////////////////wA=
 </value>
-  </data>
-  <data name="MainButtonBezirke.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="MainButtonBezirke.ToolTip" xml:space="preserve">
     <value>Ordnet die Straßen den Austräger-Bezirken zu</value>
@@ -589,9 +516,6 @@
         IkyxIkyxIkyxIkyxIgA=
 </value>
   </data>
-  <data name="MainButtonStraßen.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="MainButtonStraßen.ToolTip" xml:space="preserve">
     <value>Verwaltet die Straßen</value>
   </data>
@@ -633,9 +557,6 @@
         ////////////////////////////////////////////////////////////////////////////////
         /////////////////wA=
 </value>
-  </data>
-  <data name="MainButtonOrte.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="MainButtonOrte.ToolTip" xml:space="preserve">
     <value>Verwaltet die Orte</value>
@@ -684,9 +605,6 @@
         /////////////////wA=
 </value>
   </data>
-  <data name="MainButtonAusträger.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="MainButtonAusträger.ToolTip" xml:space="preserve">
     <value>Verwaltet die Austräger</value>
   </data>
@@ -734,17 +652,11 @@
         /////////////////wA=
 </value>
   </data>
-  <data name="MainButtonPersonen.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="MainButtonPersonen.ToolTip" xml:space="preserve">
     <value>Verwaltet die Empfänger</value>
   </data>
   <data name="GroupBox1.Text" xml:space="preserve">
     <value>Menü</value>
-  </data>
-  <data name="GroupBox1.ToolTip" xml:space="preserve">
-    <value />
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1090,8 +1002,5 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>AVSIB - Hauptmenü</value>
-  </data>
-  <data name="$this.ToolTip" xml:space="preserve">
-    <value />
   </data>
 </root>

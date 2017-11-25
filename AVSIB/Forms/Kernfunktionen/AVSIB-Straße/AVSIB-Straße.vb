@@ -92,6 +92,7 @@ Public Class AVSIB_Straße
             ID = Straße.GetIDbyStreet(ListBox1.SelectedItem.ToString, plzselected, ortselected)
             Bezirke.DeleteStraßeByID(ID)
             Straße.Delete(ID, plzselected, ortselected)
+            Log.WriteLog(AVSIB_Main.user, AVSIB_Main.user & " deleted street " & ListBox1.SelectedItem.ToString & " in " & plzselected & " " & ortselected & " from database")
             Dim perscount As Long
             Dim PersID As Long
             perscount = Personen.GetCountByKnown(ListBox1.SelectedItem.ToString, ortselected, plzselected)
@@ -114,6 +115,7 @@ Public Class AVSIB_Straße
         ' When the user clicks on the Add-Button and the TextBox is not empty, the new street will be added.
         If TextBox1.Text <> Nothing Then
             Straße.Insert(TextBox1.Text, plzselected, ortselected)
+            Log.WriteLog(AVSIB_Main.user, AVSIB_Main.user & " added street " & TextBox1.Text & " to " & plzselected & " " & ortselected)
             TextBox1.Text = Nothing
             ListBox1.Items.Clear()
             straßencount = Straße.getCount(ortselected, plzselected)

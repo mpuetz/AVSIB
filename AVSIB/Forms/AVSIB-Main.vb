@@ -23,7 +23,10 @@ Imports System.Resources
 ' This class is mainly used to open the different forms and check, whether all settings are set.
 Public Class AVSIB_Main
     Dim FirstRun As Integer
+    Dim Exportperm As String
+    Dim Backupperm As String
     Private LocRM As New ResourceManager("AVSIB.WinFormStrings", GetType(AVSIB_Main).Assembly)
+    Public user As String
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Checks if the settings.txt exists and whether the settings were entered by the user. If not, it starts the configuration form.
         ' If the settings were not done yet, it replaces the database with a blank one.
@@ -35,22 +38,62 @@ Public Class AVSIB_Main
             AVSIB_Configuration.Show()
             Me.Hide()
         ElseIf FileOperator.Load(Application.StartupPath + "\settings.ini", "FirstRun") = "1" Then
-            For Each proc In System.Diagnostics.Process.GetProcessesByName("sqlservr")
-                proc.Kill()
-            Next
-            System.Threading.Thread.Sleep(500)
-            System.IO.File.Delete(ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data.mdf")
-            System.IO.File.Delete(ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data_log.ldf")
-            System.IO.File.Delete(Application.StartupPath & "\settings.ini")
-            System.IO.File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\Data\Reset\AVSIB_Data.mdf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data.mdf")
-            System.IO.File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\Data\Reset\AVSIB_Data_log.ldf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data_log.ldf")
-            MsgBox(LocRM.GetString("strSuccess"), MsgBoxStyle.Information, LocRM.GetString("titSuccess"))
             FileOperator.Save(Application.StartupPath + "\settings.ini", "FirstRun", "1")
             FileOperator.Save(Application.StartupPath + "\settings.ini", "ConfigRunning", "0")
             AVSIB_Configuration.Show()
             Me.Hide()
         Else
             FirstRun = FileOperator.Load(Application.StartupPath + "\settings.ini", "FirstRun")
+        End If
+        Exportperm = FileOperator.Load(Application.StartupPath + "\settings.ini", "ExportPermission")
+        Backupperm = FileOperator.Load(Application.StartupPath + "\settings.ini", "BackupPermission")
+        user = LoginForm.user
+        If Benutzer.GetRole(user) = "user" Then
+            Label7.Visible = False
+            Label9.Visible = False
+            Label12.Visible = False
+            MainButtonReset.Enabled = False
+            MainButtonReset.Visible = False
+            ButtonUserManagement.Enabled = False
+            ButtonUserManagement.Visible = False
+            MainButtonConfiguration.Enabled = False
+            MainButtonConfiguration.Visible = False
+            If Exportperm = "admin" Then
+                MainButtonExport.Enabled = False
+                MainButtonExport.Visible = False
+                Label5.Visible = False
+            Else
+                MainButtonExport.Enabled = True
+                MainButtonExport.Visible = True
+                Label5.Visible = True
+            End If
+
+            If Backupperm = "admin" Then
+                Button1.Enabled = False
+                Button1.Visible = False
+                Label11.Visible = False
+            Else
+                Button1.Enabled = True
+                Button1.Visible = True
+                Label11.Visible = True
+            End If
+
+        ElseIf Benutzer.GetRole(user) = "admin" Then
+            Label7.Visible = True
+            Label9.Visible = True
+            Label12.Visible = True
+            MainButtonReset.Enabled = True
+            MainButtonReset.Visible = True
+            ButtonUserManagement.Enabled = True
+            ButtonUserManagement.Visible = True
+            MainButtonConfiguration.Enabled = True
+            MainButtonConfiguration.Visible = True
+            MainButtonExport.Enabled = True
+            MainButtonExport.Visible = True
+            Label5.Visible = True
+            Button1.Enabled = True
+            Button1.Visible = True
+            Label11.Visible = True
         End If
     End Sub
 
@@ -104,10 +147,11 @@ Public Class AVSIB_Main
             System.IO.File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\Data\Reset\AVSIB_Data.mdf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data.mdf")
             System.IO.File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\Data\Reset\AVSIB_Data_log.ldf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data_log.ldf")
             MsgBox(LocRM.GetString("strSuccess"), MsgBoxStyle.Information, LocRM.GetString("titSuccess"))
+            Log.WriteLog(user, user & " reset program!")
             FileOperator.Save(Application.StartupPath + "\settings.ini", "FirstRun", "1")
             FileOperator.Save(Application.StartupPath + "\settings.ini", "ConfigRunning", "0")
-            AVSIB_Configuration.Show()
-            Me.Hide()
+            LoginForm.Show()
+            Close()
         End If
     End Sub
 
@@ -152,7 +196,17 @@ Public Class AVSIB_Main
         Statistik.ShowDialog()
     End Sub
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+    Private Sub ButtonUserManagement_Click(sender As Object, e As EventArgs) Handles ButtonUserManagement.Click
+        UserManagement.ShowDialog()
+    End Sub
 
+    Private Sub MainButtonLogOut_Click(sender As Object, e As EventArgs) Handles MainButtonLogOut.Click
+        Log.WriteLog(user, user & " logged out!")
+        LoginForm.Show()
+        Close()
+    End Sub
+
+    Private Sub MainButtonChangePassword_Click(sender As Object, e As EventArgs) Handles MainButtonChangePassword.Click
+        AVSIB_ChangePass.ShowDialog()
     End Sub
 End Class

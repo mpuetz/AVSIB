@@ -44,6 +44,7 @@ Public Class Backup
         Try
             File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data.mdf", Application.StartupPath & "\Data\Backup\" & name & ".mdf")
             File.Copy(ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data_log.ldf", Application.StartupPath & "\Data\Backup\" & name & ".ldf")
+            Log.WriteLog(AVSIB_Main.user, AVSIB_Main.user & " created backup " & name)
             If File.Exists(Application.StartupPath & "\Data\Backup\Backups.ini") = False Then
                 Using File.Create(Application.StartupPath & "\Data\Backup\Backups.ini")
                 End Using
@@ -119,6 +120,7 @@ Public Class Backup
             File.Delete(ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data_log.ldf")
             File.Copy(Application.StartupPath & "\Data\Backup\" & name & ".mdf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data.mdf")
             File.Copy(Application.StartupPath & "\Data\Backup\" & name & ".ldf", ApplicationDeployment.CurrentDeployment.DataDirectory & "\AVSIB_Data_log.ldf")
+            Log.WriteLog(AVSIB_Main.user, AVSIB_Main.user & " restored database " & name)
             MsgBox(LocRM.GetString("strBackupRestore"), MsgBoxStyle.Information, LocRM.GetString("titSuccess"))
         Else
             MsgBox(LocRM.GetString("strNoBackupsSelected"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
@@ -142,6 +144,7 @@ Public Class Backup
             Dim name As String = FileOperator.Load(Application.StartupPath & "\Data\Backup\Backups.ini", ListBox1.SelectedIndex + 1)
             File.Delete(Application.StartupPath & "\Data\Backup\" & name & ".mdf")
             File.Delete(Application.StartupPath & "\Data\Backup\" & name & ".ldf")
+            Log.WriteLog(AVSIB_Main.user, AVSIB_Main.user & " removed backup " & name)
             count = FileOperator.Load(Application.StartupPath & "\Data\Backup\Backups.ini", "Anzahl")
             Dim copy As String
             For i As Integer = ListBox1.SelectedIndex + 1 To count

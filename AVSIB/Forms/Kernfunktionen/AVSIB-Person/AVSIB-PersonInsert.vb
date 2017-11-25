@@ -39,6 +39,7 @@ Public Class AVSIB_PersonInsert
         ' Checks if all necessary informations are provided by the user and then adds the new person to the database. After that, the boxes form is resetted.
         If Nachname.Text <> Nothing And Vorname.Text <> Nothing And HausNr.Text <> Nothing Then
             Personen.Insert(Nachname.Text, Vorname.Text, CBStraße.SelectedItem.ToString, HausNr.Text, Zusatz.Text, PLZAuswahl.SelectedItem, OrtAuswahl.SelectedItem.ToString)
+            Log.WriteLog(AVSIB_Main.user, AVSIB_Main.user & " added addressee to database")
             Nachname.Text = Nothing
             Vorname.Text = Nothing
             HausNr.Text = Nothing

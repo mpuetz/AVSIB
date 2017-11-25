@@ -46,6 +46,7 @@ Public Class AVSIB_Ort
         ' in the database and reloads the list of places.
         If TBPLZ.Text <> Nothing And TBOrt.Text <> Nothing Then
             Orte.Insert(TBPLZ.Text, TBOrt.Text)
+            Log.WriteLog(AVSIB_Main.user, AVSIB_Main.user & " added " & TBPLZ.Text & " " & TBOrt.Text & " to database")
             TBPLZ.Text = Nothing
             TBOrt.Text = Nothing
             ListView1.Items.Clear()
@@ -108,6 +109,7 @@ Public Class AVSIB_Ort
                     ID = Straße.getID(Ort, PLZ, 0)
                     Dim street As String = Straße.GetStraßebyID(ID)
                     Straße.Delete(ID, PLZ, Ort)
+                    Log.WriteLog(AVSIB_Main.user, AVSIB_Main.user & " deleted " & PLZ & " " & Ort & " from database")
                     Bezirke.DeleteStraßeByID(ID)
                     Dim perscount As Long
                     Dim PersID As Long

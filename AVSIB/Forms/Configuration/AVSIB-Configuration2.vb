@@ -31,6 +31,9 @@ Public Class AVSIB_Configuration2
             FileOperator.Save(Application.StartupPath + "\settings.ini", "Projekt", TextBox2.Text)
             FileOperator.Save(Application.StartupPath + "\settings.ini", "FirstRun", "0")
             first = FileOperator.Load(Application.StartupPath + "\settings.ini", "FirstRun")
+            FileOperator.Save(Application.StartupPath + "\settings.ini", "BackupPermission", CBBackup.SelectedItem)
+            FileOperator.Save(Application.StartupPath + "\settings.ini", "ExportPermission", CBexport.SelectedItem)
+            Log.WriteLog(AVSIB_Main.user, AVSIB_Main.user & " changed settings")
             Me.Close()
         ElseIf TextBox1.Text = Nothing Then
             MsgBox(LocRM.GetString("strOrgMissing"), MsgBoxStyle.Critical, LocRM.GetString("titError"))
@@ -62,8 +65,8 @@ Public Class AVSIB_Configuration2
             AVSIB_Main.Show()
         Else
             AVSIB_Main.Close()
+            Application.Exit()
         End If
-        Me.Dispose()
     End Sub
 
     Private Sub SKeyDown(sender As Object, e As KeyEventArgs) Handles TextBox2.KeyDown, TextBox1.KeyDown
@@ -71,5 +74,14 @@ Public Class AVSIB_Configuration2
         If e.KeyCode = Keys.Enter Then
             Config2ButtonNext.PerformClick()
         End If
+    End Sub
+
+    Private Sub AVSIB_Configuration2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TextBox1.Text = FileOperator.Load(Application.StartupPath + "\settings.ini", "Organisation")
+        TextBox2.Text = FileOperator.Load(Application.StartupPath + "\settings.ini", "Projekt")
+        CBBackup.SelectedItem = FileOperator.Load(Application.StartupPath + "\settings.ini", "BackupPermission")
+        CBexport.SelectedItem = FileOperator.Load(Application.StartupPath + "\settings.ini", "ExportPermission")
+        If CBBackup.SelectedItem = "" Then CBBackup.SelectedIndex = 0
+        If CBexport.SelectedItem = "" Then CBexport.SelectedIndex = 0
     End Sub
 End Class

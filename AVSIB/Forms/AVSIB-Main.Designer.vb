@@ -37,6 +37,12 @@ Partial Class AVSIB_Main
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
         Me.InfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.MainButtonChangePassword = New System.Windows.Forms.Button()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.MainButtonLogOut = New System.Windows.Forms.Button()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.ButtonUserManagement = New System.Windows.Forms.Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -133,6 +139,12 @@ Partial Class AVSIB_Main
         '
         resources.ApplyResources(Me.GroupBox1, "GroupBox1")
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.GroupBox1.Controls.Add(Me.Label13)
+        Me.GroupBox1.Controls.Add(Me.MainButtonChangePassword)
+        Me.GroupBox1.Controls.Add(Me.Label14)
+        Me.GroupBox1.Controls.Add(Me.MainButtonLogOut)
+        Me.GroupBox1.Controls.Add(Me.Label12)
+        Me.GroupBox1.Controls.Add(Me.ButtonUserManagement)
         Me.GroupBox1.Controls.Add(Me.Label11)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.Label9)
@@ -156,9 +168,58 @@ Partial Class AVSIB_Main
         Me.GroupBox1.Controls.Add(Me.MainButtonAusträger)
         Me.GroupBox1.Controls.Add(Me.MainButtonPersonen)
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.TabStop = False
         Me.ToolTip1.SetToolTip(Me.GroupBox1, resources.GetString("GroupBox1.ToolTip"))
+        '
+        'Label13
+        '
+        resources.ApplyResources(Me.Label13, "Label13")
+        Me.Label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label13.Name = "Label13"
+        Me.ToolTip1.SetToolTip(Me.Label13, resources.GetString("Label13.ToolTip"))
+        '
+        'MainButtonChangePassword
+        '
+        resources.ApplyResources(Me.MainButtonChangePassword, "MainButtonChangePassword")
+        Me.MainButtonChangePassword.BackColor = System.Drawing.SystemColors.Control
+        Me.MainButtonChangePassword.Image = Global.AVSIB.My.Resources.Resources.PasswordStrength_16x
+        Me.MainButtonChangePassword.Name = "MainButtonChangePassword"
+        Me.ToolTip1.SetToolTip(Me.MainButtonChangePassword, resources.GetString("MainButtonChangePassword.ToolTip"))
+        Me.MainButtonChangePassword.UseVisualStyleBackColor = False
+        '
+        'Label14
+        '
+        resources.ApplyResources(Me.Label14, "Label14")
+        Me.Label14.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label14.Name = "Label14"
+        Me.ToolTip1.SetToolTip(Me.Label14, resources.GetString("Label14.ToolTip"))
+        '
+        'MainButtonLogOut
+        '
+        resources.ApplyResources(Me.MainButtonLogOut, "MainButtonLogOut")
+        Me.MainButtonLogOut.BackColor = System.Drawing.SystemColors.Control
+        Me.MainButtonLogOut.Image = Global.AVSIB.My.Resources.Resources.lock_16xLG
+        Me.MainButtonLogOut.Name = "MainButtonLogOut"
+        Me.ToolTip1.SetToolTip(Me.MainButtonLogOut, resources.GetString("MainButtonLogOut.ToolTip"))
+        Me.MainButtonLogOut.UseVisualStyleBackColor = False
+        '
+        'Label12
+        '
+        resources.ApplyResources(Me.Label12, "Label12")
+        Me.Label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label12.Name = "Label12"
+        Me.ToolTip1.SetToolTip(Me.Label12, resources.GetString("Label12.ToolTip"))
+        '
+        'ButtonUserManagement
+        '
+        resources.ApplyResources(Me.ButtonUserManagement, "ButtonUserManagement")
+        Me.ButtonUserManagement.BackColor = System.Drawing.SystemColors.Control
+        Me.ButtonUserManagement.Image = Global.AVSIB.My.Resources.Resources.UserWizard_16x
+        Me.ButtonUserManagement.Name = "ButtonUserManagement"
+        Me.ToolTip1.SetToolTip(Me.ButtonUserManagement, resources.GetString("ButtonUserManagement.ToolTip"))
+        Me.ButtonUserManagement.UseVisualStyleBackColor = False
         '
         'Label11
         '
@@ -186,6 +247,7 @@ Partial Class AVSIB_Main
         '
         resources.ApplyResources(Me.MainButtonConfiguration, "MainButtonConfiguration")
         Me.MainButtonConfiguration.BackColor = System.Drawing.SystemColors.Control
+        Me.MainButtonConfiguration.Image = Global.AVSIB.My.Resources.Resources.SettingsPanel_16x
         Me.MainButtonConfiguration.Name = "MainButtonConfiguration"
         Me.ToolTip1.SetToolTip(Me.MainButtonConfiguration, resources.GetString("MainButtonConfiguration.ToolTip"))
         Me.MainButtonConfiguration.UseVisualStyleBackColor = False
@@ -379,4 +441,10 @@ Partial Class AVSIB_Main
     Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
     Friend WithEvents ToolStripMenuItem3 As ToolStripMenuItem
+    Friend WithEvents Label12 As Label
+    Friend WithEvents ButtonUserManagement As Button
+    Friend WithEvents Label13 As Label
+    Friend WithEvents MainButtonChangePassword As Button
+    Friend WithEvents Label14 As Label
+    Friend WithEvents MainButtonLogOut As Button
 End Class

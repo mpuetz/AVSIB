@@ -46,9 +46,7 @@ Public Class Personen
         Dim cmd As New SqlCommand
         Dim DAdapter As New SqlDataAdapter
         Dim DataS As New DataSet
-        Dim trashcmd As New SqlCommand
-        trashcmd.Parameters.Add("@sortorder", SqlDbType.NChar).Value = SortOrder
-        Dim sortstring As String = trashcmd.Parameters("@sortorder").Value.ToString
+        Dim sortstring As String = CreateOrderString(SortOrder)
         SQLCon.Open()
         Try
             cmd = New SqlCommand("SELECT Id FROM Personen ORDER BY " & sortstring & ";", SQLCon)
@@ -214,8 +212,7 @@ Public Class Personen
         Dim DAdapter As New SqlDataAdapter
         Dim DataS As New DataSet
         Dim trashcmd As New SqlCommand
-        trashcmd.Parameters.Add("@sortorder", SqlDbType.NChar).Value = Order
-        Dim sortstring As String = trashcmd.Parameters("@sortorder").Value.ToString
+        Dim sortstring As String = CreateOrderString(Order)
         trashcmd.Parameters.Add("@searchstring", SqlDbType.NChar).Value = Searchstring
         Dim search As String = trashcmd.Parameters("@searchstring").Value.ToString
         SQLCon.Open()
@@ -251,5 +248,46 @@ Public Class Personen
             MsgBox(ex, MsgBoxStyle.Critical, "Fehler")
         End Try
         Return 0
+    End Function
+    Private Shared Function CreateOrderString(ByVal Order As String)
+        Dim splitstr As Array = Split(Order, ", ")
+        Dim returnstr As String = ""
+        For Each partstr As String In splitstr
+            If partstr = "Nachname asc" Or partstr = "Nachname" Then
+                returnstr = returnstr & "Nachname asc,"
+            ElseIf partstr = "Nachname desc" Then
+                returnstr = returnstr & "Nachname desc,"
+            ElseIf partstr = "Vorname asc" Or partstr = "Vorname" Then
+                returnstr = returnstr & "Vorname asc,"
+            ElseIf partstr = "Vorname desc" Then
+                returnstr = returnstr & "Vorname desc,"
+            ElseIf partstr = "Straße asc" Or partstr = "Straße" Then
+                returnstr = returnstr & "Straße asc,"
+            ElseIf partstr = "Straße desc" Then
+                returnstr = returnstr & "Straße desc,"
+            ElseIf partstr = "Hausnummer asc" Or partstr = "Hausnummer" Then
+                returnstr = returnstr & "Hausnummer asc,"
+            ElseIf partstr = "Hausnummer desc" Then
+                returnstr = returnstr & "Hausnummer desc,"
+            ElseIf partstr = "Zusatz asc" Or partstr = "Zusatz" Then
+                returnstr = returnstr & "Zusatz asc,"
+            ElseIf partstr = "Zusatz desc" Then
+                returnstr = returnstr & "Zusatz desc,"
+            ElseIf partstr = "Ort asc" Or partstr = "Ort" Then
+                returnstr = returnstr & "Ort asc,"
+            ElseIf partstr = "Ort desc" Then
+                returnstr = returnstr & "Ort desc,"
+            ElseIf partstr = "PLZ asc" Or partstr = "PLZ" Then
+                returnstr = returnstr & "PLZ asc,"
+            ElseIf partstr = "PLZ desc" Then
+                returnstr = returnstr & "PLZ desc,"
+            Else
+                Err.Raise("600", "AVSIB.Personen", "Wrong expression in Order-String! possible security breach!")
+                Return 600
+                Exit Function
+            End If
+        Next
+        returnstr = Left(returnstr, returnstr.Length - 1)
+        Return returnstr
     End Function
 End Class

@@ -2,34 +2,34 @@
 Public Class FileOperator
     Public Shared Function Load(ByVal filePath As String, ByVal searchString As String)
         Try
-            Dim strR As StreamReader = New StreamReader(filePath)
-            Dim line As String
-            searchString = searchString & "="
-            Dim length As Integer = searchString.Length
-            Dim id As String
-
             If File.Exists(filePath) = False Then
                 Err.Raise("513", "AVSIB.FileOperator", "File not found")
                 Exit Function
             End If
 
-            Do
-                line = strR.ReadLine
-                id = Mid(line, 1, length)
-                If id = searchString Then
-                    Dim result As String = Mid(line, length + 1, line.Length)
-                    strR.Close()
-                    Return result
-                    Exit Function
-                End If
-            Loop Until line = Nothing
-            strR.Close()
-        Catch ex As Exception
-            MsgBox(ex.ToString, MsgBoxStyle.Critical, "Error")
-            Err.Raise("515", "AVSIB.FileOperator", ex.ToString)
-            Exit Function
+            Dim strR As StreamReader = New StreamReader(filePath)
+            Dim line As String
+            searchString = searchString & "="
+            Dim length As Integer = searchString.Length
+            Dim id As String
+            Try
+                Do
+                    line = strR.ReadLine
+                    id = Mid(line, 1, length)
+                    If id = searchString Then
+                        Dim result As String = Mid(line, length + 1, line.Length)
+                        strR.Close()
+                        Return result
+                        Exit Function
+                    End If
+                Loop Until line = Nothing
+                strR.Close()
+            Catch ex As Exception
+                Err.Raise("515", "AVSIB.FileOperator", ex.ToString)
+                Exit Function
+            End Try
+        Catch
         End Try
-        Err.Raise("514", "AVSIB.FileOperator", "String not found")
 #Disable Warning BC42105 ' Die Funktion gibt nicht für alle Codepfade einen Wert zurück.
     End Function
 #Enable Warning BC42105 ' Die Funktion gibt nicht für alle Codepfade einen Wert zurück.

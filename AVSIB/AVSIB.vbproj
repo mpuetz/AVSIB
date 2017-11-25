@@ -182,10 +182,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\BenutzerDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BenutzerDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Data\AusträgerDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AusträgerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BenutzerDataSet.vb">
+      <DependentUpon>BenutzerDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Data\BezirkDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -293,22 +301,34 @@
     <Compile Include="Forms\Zusatz\Backup.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Zusatz\Bugs.Designer.vb">
+    <Compile Include="Forms\Zusatz\User\AVSIB_ChangePass.Designer.vb">
+      <DependentUpon>AVSIB_ChangePass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Zusatz\User\AVSIB_ChangePass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Zusatz\User\Confirm_Password.Designer.vb">
+      <DependentUpon>Confirm_Password.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Zusatz\User\Confirm_Password.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Zusatz\Web\Bugs.Designer.vb">
       <DependentUpon>Bugs.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Zusatz\Bugs.vb">
+    <Compile Include="Forms\Zusatz\Web\Bugs.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Zusatz\Changelog.Designer.vb">
+    <Compile Include="Forms\Zusatz\Web\Changelog.Designer.vb">
       <DependentUpon>Changelog.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Zusatz\Changelog.vb">
+    <Compile Include="Forms\Zusatz\Web\Changelog.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Zusatz\Help.Designer.vb">
+    <Compile Include="Forms\Zusatz\Web\Help.Designer.vb">
       <DependentUpon>Help.vb</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Zusatz\Help.vb">
+    <Compile Include="Forms\Zusatz\Web\Help.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Zusatz\Import_Export.Designer.vb">
@@ -323,10 +343,18 @@
     <Compile Include="Forms\Zusatz\Statistik.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\Zusatz\User\UserManagement.Designer.vb">
+      <DependentUpon>UserManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Zusatz\User\UserManagement.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Funktionen\Austräger.vb" />
+    <Compile Include="Funktionen\Benutzer.vb" />
     <Compile Include="Funktionen\Bezirke.vb" />
     <Compile Include="Funktionen\CPrintListView.vb" />
     <Compile Include="Funktionen\FileOperator.vb" />
+    <Compile Include="Funktionen\Log.vb" />
     <Compile Include="Funktionen\Orte.vb" />
     <Compile Include="Data\OrteDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -341,21 +369,21 @@
     <Compile Include="Funktionen\Personen.vb" />
     <Compile Include="Funktionen\Straße.vb" />
     <Compile Include="GlobalSuppressions.vb" />
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
+    <Compile Include="Forms\Zusatz\User\LoginForm.Designer.vb">
+      <DependentUpon>LoginForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="Später implementieren\LoginForm1.Designer.vb">
-      <DependentUpon>LoginForm1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Später implementieren\LoginForm1.vb">
+    <Compile Include="Forms\Zusatz\User\LoginForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -410,6 +438,9 @@
     <EmbeddedResource Include="Forms\Kernfunktionen\AVSIB-Straße\AVSIB-Straße.de-DE.resx">
       <DependentUpon>AVSIB-Straße.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Zusatz\User\LoginForm.de-DE.resx">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Zusatz\AboutBox.resx">
       <DependentUpon>AboutBox.vb</DependentUpon>
     </EmbeddedResource>
@@ -455,22 +486,34 @@
     <EmbeddedResource Include="Forms\Zusatz\Backup.resx">
       <DependentUpon>Backup.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Zusatz\Bugs.de-DE.resx">
+    <EmbeddedResource Include="Forms\Zusatz\User\AVSIB_ChangePass.de-DE.resx">
+      <DependentUpon>AVSIB_ChangePass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Zusatz\User\AVSIB_ChangePass.resx">
+      <DependentUpon>AVSIB_ChangePass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Zusatz\User\Confirm_Password.de-DE.resx">
+      <DependentUpon>Confirm_Password.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Zusatz\User\Confirm_Password.resx">
+      <DependentUpon>Confirm_Password.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Zusatz\Web\Bugs.de-DE.resx">
       <DependentUpon>Bugs.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Zusatz\Bugs.resx">
+    <EmbeddedResource Include="Forms\Zusatz\Web\Bugs.resx">
       <DependentUpon>Bugs.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Zusatz\Changelog.de-DE.resx">
+    <EmbeddedResource Include="Forms\Zusatz\Web\Changelog.de-DE.resx">
       <DependentUpon>Changelog.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Zusatz\Changelog.resx">
+    <EmbeddedResource Include="Forms\Zusatz\Web\Changelog.resx">
       <DependentUpon>Changelog.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Zusatz\Help.de-DE.resx">
+    <EmbeddedResource Include="Forms\Zusatz\Web\Help.de-DE.resx">
       <DependentUpon>Help.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Zusatz\Help.resx">
+    <EmbeddedResource Include="Forms\Zusatz\Web\Help.resx">
       <DependentUpon>Help.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Zusatz\Import_Export.de-DE.resx">
@@ -485,8 +528,14 @@
     <EmbeddedResource Include="Forms\Zusatz\Statistik.resx">
       <DependentUpon>Statistik.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Später implementieren\LoginForm1.resx">
-      <DependentUpon>LoginForm1.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\Zusatz\User\LoginForm.resx">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Zusatz\User\UserManagement.de-DE.resx">
+      <DependentUpon>UserManagement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Zusatz\User\UserManagement.resx">
+      <DependentUpon>UserManagement.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -508,6 +557,17 @@
     <None Include="AVSIB_1_TemporaryKey.pfx" />
     <None Include="AVSIB_TemporaryKey.pfx" />
     <None Include="AVSIB_Test-Key.snk" />
+    <None Include="Data\BenutzerDataSet.xsc">
+      <DependentUpon>BenutzerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Data\BenutzerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BenutzerDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\BenutzerDataSet.xss">
+      <DependentUpon>BenutzerDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Data\AusträgerDataSet.xsc">
       <DependentUpon>AusträgerDataSet.xsd</DependentUpon>
     </None>
@@ -594,6 +654,16 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>AVSIB_Data.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Login_64x.png" />
+    <None Include="Resources\Login_256x.png" />
+    <None Include="Resources\SettingsPanel_16x.png" />
+    <None Include="Resources\UserWizard_16x.png" />
+    <None Include="Resources\PasswordStrength_16x.png" />
+    <None Include="Resources\lock_16xLG.png" />
+    <None Include="Resources\eye_16xLG.png" />
+    <None Include="Resources\VSO_DeleteUser_16x.png" />
+    <None Include="Resources\Save_32x.png" />
+    <None Include="Resources\Save_16x.png" />
     <None Include="Resources\StopFilter_16x.png" />
     <None Include="Resources\Filter_64x.png" />
     <None Include="Resources\StartPause_16x.png" />
@@ -628,7 +698,9 @@
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Später implementieren\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

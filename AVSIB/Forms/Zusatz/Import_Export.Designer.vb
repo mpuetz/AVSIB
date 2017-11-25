@@ -55,7 +55,6 @@ Partial Class Import_Export
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "AVSIB_Data.mdf"
-        resources.ApplyResources(Me.OpenFileDialog1, "OpenFileDialog1")
         '
         'Import_Export
         '
@@ -64,6 +63,7 @@ Partial Class Import_Export
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.B_Export)
         Me.Controls.Add(Me.B_Import)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Name = "Import_Export"
         Me.ResumeLayout(False)
         Me.PerformLayout()

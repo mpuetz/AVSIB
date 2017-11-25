@@ -118,6 +118,61 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>440, 17</value>
+  </data>
+  <data name="Label1.Text" xml:space="preserve">
+    <value>Für welche Organisation arbeiten Sie? (Bsp.: Kirchengemeinde XYZ)</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Config2ButtonNext.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="Config2ButtonNext.Text" xml:space="preserve">
+    <value>Weiter</value>
+  </data>
+  <data name="ButtonBack.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="ButtonBack.Text" xml:space="preserve">
+    <value>Zurück</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>497, 17</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Welche Informationsbroschüre möchten Sie verwalten? (Bsp.: Gemeindebrief)</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>450, 17</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Auswählen, welche Benutzer die folgenden Funktionen nutzen können</value>
+  </data>
+  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 17</value>
+  </data>
+  <data name="Label4.Text" xml:space="preserve">
+    <value>Backups erstellen / widerherstellen</value>
+  </data>
+  <data name="CBBackup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>251, 136</value>
+  </data>
+  <data name="CBBackup.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="CBexport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>251, 167</value>
+  </data>
+  <data name="CBexport.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 17</value>
+  </data>
+  <data name="Label5.Text" xml:space="preserve">
+    <value>Datenbank im- / exportieren</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAUAAAAAAAEAIABpCgAAVgAAADAwAAABACAAqCUAAL8KAAAgIAAAAQAgAKgQAABnMAAAGBgAAAEA
@@ -462,17 +517,5 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>AVSIB - Einstellungen</value>
-  </data>
-  <data name="ButtonBack.Text" xml:space="preserve">
-    <value>Zurück</value>
-  </data>
-  <data name="Config2ButtonNext.Text" xml:space="preserve">
-    <value>Weiter</value>
-  </data>
-  <data name="Label1.Text" xml:space="preserve">
-    <value>Für welche Organisation arbeiten Sie? (Bsp.: Kirchengemeinde XYZ)</value>
-  </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>Welche Informationsbroschüre möchten Sie verwalten? (Bsp.: Gemeindebrief)</value>
   </data>
 </root>

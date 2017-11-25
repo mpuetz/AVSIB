@@ -62,6 +62,7 @@ Public Class AVSIB_Austräger
         If CBBezirk.SelectedItem <> Nothing And CBBezirk.SelectedIndex.ToString IsNot "0" And TBNachname.Text <> Nothing _
             And TBVorname.Text <> Nothing Then
             Austräger.Update(CBBezirk.SelectedItem.ToString, TBNachname.Text, TBVorname.Text)
+            Log.WriteLog(AVSIB_Main.user, AVSIB_Main.user & " updated roundsman for district " & CBBezirk.SelectedItem.ToString)
             TBNachname.Text = Nothing
             TBVorname.Text = Nothing
             CBBezirk.SelectedItem = Nothing
@@ -105,6 +106,7 @@ Public Class AVSIB_Austräger
                 TBVorname.Enabled = True
             End If
             Austräger.InsertNULL(Count)
+            Log.WriteLog(AVSIB_Main.user, AVSIB_Main.user & " added district " & Count)
             CBBezirk.Items.Clear()
             ListView1.Items.Clear()
             CBBezirk.Items.Add(LocRM.GetString("strNew"))
@@ -136,6 +138,7 @@ Public Class AVSIB_Austräger
         Else
             Bezirk = ListView1.FocusedItem.Text
             Austräger.Delete(Bezirk)
+            Log.WriteLog(AVSIB_Main.user, AVSIB_Main.user & " deleted roundsmen for district " & Bezirk)
             CBBezirk.Items.Clear()
             CBBezirk.Items.Add("Neu")
             ListView1.Items.Clear()
